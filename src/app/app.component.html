@@ -3,9 +3,10 @@
   <mat-sidenav #drawer class="sidenav"
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       mode="over"
+      autoFocus="false"
       [opened]="false">
     <mat-toolbar>Menu</mat-toolbar>
-    <app-main-menu></app-main-menu>
+    <app-main-menu [drawer]="drawer"></app-main-menu>
   </mat-sidenav>
   <mat-sidenav-content>
     <router-outlet></router-outlet>

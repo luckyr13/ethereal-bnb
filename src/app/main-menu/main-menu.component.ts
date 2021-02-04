@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-main-menu',
@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-menu.component.scss']
 })
 export class MainMenuComponent implements OnInit {
-
+  @Input() drawer: any;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggle() {
+  	this.drawer.toggle();
   }
 
 }

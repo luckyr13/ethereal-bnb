@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+.text-left {
+	text-align: left;
+}
+
+
+.col-4 {
+	float: left;
+	width: 33.3%;
+}
+
+.col-6 {
+	float: left;
+	width: 50%;
+}
+
+
+@media only screen and (max-width: 768px) {
+	.col-4, .col-6 {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+}
+
+.green {
+	color: #69f0ae;
+}

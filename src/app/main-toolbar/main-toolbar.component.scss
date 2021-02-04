@@ -1,0 +1,60 @@
+
+
+.main-toolbar-spacer {
+  flex: 1 1 auto;
+}
+
+.mat-toolbar {
+	color: #FFF;
+	font-family: 'Potta One', cursive;
+  text-shadow: 2px 2px #383838;
+}
+
+
+.mat-icon {
+	-webkit-animation:spin2 0.2s linear;
+	-moz-animation:spin2 0.2s linear;
+	animation:spin2 0.2s linear;
+}
+	
+.rotate {
+	-webkit-animation:spin 0.2s linear;
+	-moz-animation:spin 0.2s linear;
+	animation:spin 0.2s linear;
+}
+
+@-moz-keyframes spin { to { -moz-transform: rotate(180deg); } }
+@-webkit-keyframes spin { to { -webkit-transform: rotate(180deg); } }
+@keyframes spin { to { -webkit-transform: rotate(180deg); transform:rotate(180deg); } }
+
+
+@-moz-keyframes spin2 { to { -moz-transform: rotate(-180deg); } }
+@-webkit-keyframes spin2 { to { -webkit-transform: rotate(-180deg); } }
+@keyframes spin2 { to { -webkit-transform: rotate(-180deg); transform:rotate(-180deg); } }
+
+.toolbar-title {
+	margin-left: 4px;
+}
+
+.shield {
+	width: 40px;
+}
+
+.coin-icon {
+	font-size: 19px;
+}
+.secondary-toolbar{
+	height: 22px;
+	line-height: 22px;
+	background-color: #000;
+	color: #FFF;
+}
+
+
+@media only screen and (max-width: 768px) {
+	.secondary-toolbar{
+	height: 44px;
+	line-height: 22px;
+	}
+
+}

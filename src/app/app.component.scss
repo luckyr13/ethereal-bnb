@@ -1,0 +1,30 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 220px;
+  background-color: #383838;
+  opacity: 0.94;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+  color: #FFF;
+}
+
+
+.mat-sidenav-container {
+	background: url('../assets/img/ethereal.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+
+}
+
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}

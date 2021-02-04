@@ -1,0 +1,52 @@
+.main-container {
+	
+}
+
+.mt-40 {
+	margin-top: 40px
+}
+
+.mt-80 {
+	margin-top: 80px
+}
+
+
+.btn-start {
+	font-size: 16px;
+	padding: 6px;
+	font-family: 'Potta One', cursive;
+  text-shadow: 2px 2px #383838;
+}
+
+.btn-start .mat-icon {
+	font-size: 26px;
+	margin-top: -10px;
+}
+
+.hide-xs {
+	display: none;
+}
+
+.ethereal-logo {
+	padding: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+	.mt-80 {
+		margin-top: 100px
+	}
+
+	.btn-start .mat-icon {
+		font-size: 32px;
+		margin-top: -10px;
+	}
+	.btn-start {
+		font-size: 22px;
+		padding: 12px;
+	}
+
+	.hide-xs {
+		display: block;
+	}
+
+}

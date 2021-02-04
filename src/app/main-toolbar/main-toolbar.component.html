@@ -1,0 +1,20 @@
+<mat-toolbar >
+  <button
+    type="button"
+    aria-label="Toggle sidenav"
+    mat-icon-button
+    (click)="toggle()">
+    <mat-icon [ngClass]="{rotate: rotate}" aria-label="Side nav toggle icon">menu</mat-icon>
+  </button>
+  <img class="shield" src="./assets/img/magicShieldMini.png"> <span class="toolbar-title">Ethereal's Chronicles</span>
+  <div class="main-toolbar-spacer"></div>
+  <div><mat-icon color="accent" class="coin-icon" aria-label="Coins">monetization_on</mat-icon> <span>0 KPNK</span></div>
+</mat-toolbar>
+<div class="secondary-toolbar">
+	<div class="col-6">
+		<span class="green">Network: </span><span>Not connected</span>
+	</div>
+  <div class="col-6">
+  	<span class="green">User: </span><span>Not connected</span>
+  </div>
+</div>

@@ -1,8 +1,13 @@
-<div>
-  Ethereal's Chronicles
-</div>
-<div>
-  Coming soon ...
-</div>
-
-<router-outlet></router-outlet>
+<app-main-toolbar [drawer]="drawer"></app-main-toolbar>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      mode="over"
+      [opened]="false">
+    <mat-toolbar>Menu</mat-toolbar>
+    <app-main-menu></app-main-menu>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

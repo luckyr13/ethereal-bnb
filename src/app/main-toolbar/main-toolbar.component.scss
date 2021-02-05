@@ -51,11 +51,20 @@
 	color: #FFF;
 }
 
-
+/* Only small devices */
 @media only screen and (max-width: 768px) {
 	.secondary-toolbar{
-	height: 44px;
-	line-height: 22px;
+		height: 44px;
+		line-height: 22px;
+		text-align: center;
+	}
+
+	.toolbar-title {
+		font-size: 16px;
+	}
+
+	.my-balance {
+		font-size: 14px;
 	}
 
 }

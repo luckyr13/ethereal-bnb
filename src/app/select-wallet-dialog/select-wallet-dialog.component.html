@@ -1,5 +1,7 @@
-<h1 mat-dialog-title>Dialog with elements</h1>
-<div mat-dialog-content>This dialog showcases the title, close, content and actions elements.</div>
-<div mat-dialog-actions>
-  <button mat-button mat-dialog-close>Close</button>
-</div>
+<h1>Connect your wallet</h1>
+<mat-nav-list>
+  <a class="binance-btn" mat-list-item (click)="openLink($event)">
+   	<img src="assets/img/binance.png" alt="binance">
+    <span mat-line>Binance Chain Wallet</span>
+  </a>
+</mat-nav-list>

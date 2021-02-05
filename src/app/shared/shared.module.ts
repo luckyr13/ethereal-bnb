@@ -7,6 +7,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+
 
 @NgModule({
   declarations: [],
@@ -20,7 +22,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatIconModule,
     MatListModule,
     MatProgressBarModule,
-    MatDialogModule
+    MatDialogModule,
+    MatBottomSheetModule
   ]
 })
 export class SharedModule { }

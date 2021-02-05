@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth/auth.service';
-import {MatDialog} from '@angular/material/dialog';
+import {MatBottomSheet, MatBottomSheetRef} from '@angular/material/bottom-sheet';
 import { SelectWalletDialogComponent } from '../select-wallet-dialog/select-wallet-dialog.component';
 
 
@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private auth: AuthService,
-    public dialog: MatDialog
+    private _bottomSheet: MatBottomSheet
   ) { }
 
   ngOnInit(): void {
@@ -21,11 +21,11 @@ export class HomeComponent implements OnInit {
   }
 
   start(): void {
-  	this.openSelectWalletModal();
+  	this.openBottomSheet();
   }
 
-  openSelectWalletModal(): void {
-    this.dialog.open(SelectWalletDialogComponent);
+  openBottomSheet(): void {
+    this._bottomSheet.open(SelectWalletDialogComponent);
   }
 
 }

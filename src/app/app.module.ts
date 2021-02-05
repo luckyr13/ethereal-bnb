@@ -9,6 +9,7 @@ import { MainToolbarComponent } from './main-toolbar/main-toolbar.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SelectWalletDialogComponent } from './select-wallet-dialog/select-wallet-dialog.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +17,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     MainMenuComponent,
     MainToolbarComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    SelectWalletDialogComponent
   ],
   imports: [
     BrowserModule,
     SharedModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+  ],
+  entryComponents: [
+    SelectWalletDialogComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

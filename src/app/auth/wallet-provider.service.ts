@@ -7,54 +7,65 @@ import Web3 from 'web3';
   providedIn: 'root'
 })
 export class WalletProviderService {
-	public metamaskProvider: any;
-	public cryptoWalletsProvider: any;
-	public binanceProvider: any;
-	public trustWalletProvider: any;
 	public web3: any;
 
   constructor() {
-  	this.metamaskProvider = window.ethereum ? window.ethereum : null;
-  	this.cryptoWalletsProvider = window.ethereum ? window.ethereum : null;
-  	this.binanceProvider = window.BinanceChain ? window.BinanceChain : null;
+  
   }
 
-  initWeb3() {
-  	const provider = this.getProvider();
-  	const web3 = new Web3(provider);
-  	return web3;
+ async setWeb3(provider: any) {
+    this.web3 = new Web3(provider);
+    const ac1 = await this.web3.eth.requestAccounts();
+    console.log('accs 1', ac1);
+    
+    const accounts = await this.web3.eth.getAccounts();
+    console.log('accs', accounts);
   }
 
-  isMetamask(): boolean {
-  	return !!this.metamaskProvider;
+  async requestAccounts() {
+    let accounts;
+    try {
+      accounts = await this.web3.eth.requestAccounts();
+    } catch (err) {
+      throw Error('Err ${err}');
+    }
+    return accounts;
   }
 
-  isCryptoWallets(): boolean {
-  	return !!this.cryptoWalletsProvider;
+  async getAccounts() {
+    let accounts;
+    try {
+      accounts = await this.web3.eth.getAccounts();
+    } catch (err) {
+      throw Error('Err ${err}');
+    }
+    return accounts;
   }
 
-  isBinance(): boolean {
-  	return !!this.binanceProvider;
+  async getNetworkId() {
+    const networkId = await this.web3.eth.net.getId();
+    return networkId;
   }
 
-  getProvider() {
-  	let provider = null;
-  	if (this.isMetamask()) {
-  		provider = this.metamaskProvider;
-  	} else if (this.isCryptoWallets()) {
-  		provider = this.cryptoWalletsProvider;
-  	} else if (this.isBinance()) {
-  		provider = this.binanceProvider;
-  	}
+  detectBinanceWallet(): boolean {
+    const provider = window && window.BinanceChain ? window.BinanceChain : null;
+    if (!!provider) {
+      this.setWeb3(provider);
+      return true;
+    }
 
-  	if (!provider) {
-  		throw 'Wallet not detected. Please install one';
-  	}
-
-  	return provider;
+    return false;
   }
 
+  async detectMetamaskWallet() {
+    const provider = window && window.ethereum ? window.ethereum : null;
+    if (!!provider) {
+      await this.setWeb3(provider);
+      return true;
+    }
 
+    return false;
+  }
 
 
 }

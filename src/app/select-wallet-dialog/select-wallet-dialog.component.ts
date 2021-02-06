@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MatBottomSheet, MatBottomSheetRef} from '@angular/material/bottom-sheet';
+import { AuthService } from '../auth/auth.service';
 
 @Component({
   selector: 'app-select-wallet-dialog',
@@ -10,11 +11,18 @@ export class SelectWalletDialogComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  constructor(private _bottomSheetRef: MatBottomSheetRef<SelectWalletDialogComponent>) {}
+  constructor(
+  	private _bottomSheetRef: MatBottomSheetRef<SelectWalletDialogComponent>,
+  	private auth: AuthService
+  ) {}
 
-  openLink(event: MouseEvent): void {
+  async connectWallet(option: number) {
     // this._bottomSheetRef.dismiss();
-    event.preventDefault();
+    try {
+    	await this.auth.connect(option);
+    } catch (err) {
+    	console.log(`Error: ${err}`);
+    }
   }
 
 }

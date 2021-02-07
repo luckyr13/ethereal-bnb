@@ -1,17 +1,14 @@
 import { Injectable } from '@angular/core';
 declare const window: any;
 import Web3 from 'web3';
-import { UserSettingsService } from './user-settings.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class WalletProviderService {
 	public web3: any;
-  public accounts: string[];
 
-  constructor(private userSettings: UserSettingsService) {
-    this.accounts = [];
+  constructor() {
   }
 
  setWeb3(provider: any) {
@@ -19,21 +16,14 @@ export class WalletProviderService {
   }
 
   async requestAccounts() {
-    try {
-      this.accounts = await this.web3.eth.requestAccounts();
-    } catch (err) {
-      throw Error('Err ${err}');
-    }
-    return this.accounts;
+    const accounts = await this.web3.eth.requestAccounts();
+    return accounts;
   }
 
   async getAccounts() {
-    try {
-      this.accounts = await this.web3.eth.getAccounts();
-    } catch (err) {
-      throw Error('Err ${err}');
-    }
-    return this.accounts;
+    const accounts = await this.web3.eth.getAccounts();
+    
+    return accounts;
   }
 
   async getNetworkId() {

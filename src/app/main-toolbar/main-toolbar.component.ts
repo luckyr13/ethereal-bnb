@@ -1,4 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { AuthService } from '../auth/auth.service';
+import {MatSnackBar} from '@angular/material/snack-bar';
+import { UserSettingsService } from '../auth/user-settings.service';
 
 @Component({
   selector: 'app-main-toolbar',
@@ -8,8 +11,13 @@ import { Component, OnInit, Input } from '@angular/core';
 export class MainToolbarComponent implements OnInit {
 	rotate: boolean = false;
   @Input() drawer: any;
+  account: string = 'Not detected';
 
-  constructor() {}
+  constructor(
+    private auth: AuthService,
+    private snackbar: MatSnackBar,
+    private userSettings: UserSettingsService
+  ) {}
 
   toggle() {
   	this.drawer.toggle();
@@ -17,7 +25,19 @@ export class MainToolbarComponent implements OnInit {
   }
 
   ngOnInit() {
-  	
+    
+    this.userSettings.account$.subscribe((account) => {
+      this.account = account;
+    });
+    
+  }
+
+  message(msg: string) {
+    this.snackbar.open(msg, 'X', {
+      duration: 3000,
+      horizontalPosition: 'center',
+      verticalPosition: 'top',
+    });
   }
 
 }

@@ -1,45 +1,39 @@
 import { Injectable } from '@angular/core';
 declare const window: any;
 import Web3 from 'web3';
-
+import { UserSettingsService } from './user-settings.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class WalletProviderService {
 	public web3: any;
+  public accounts: string[];
 
-  constructor() {
-  
+  constructor(private userSettings: UserSettingsService) {
+    this.accounts = [];
   }
 
- async setWeb3(provider: any) {
+ setWeb3(provider: any) {
     this.web3 = new Web3(provider);
-    const ac1 = await this.web3.eth.requestAccounts();
-    console.log('accs 1', ac1);
-    
-    const accounts = await this.web3.eth.getAccounts();
-    console.log('accs', accounts);
   }
 
   async requestAccounts() {
-    let accounts;
     try {
-      accounts = await this.web3.eth.requestAccounts();
+      this.accounts = await this.web3.eth.requestAccounts();
     } catch (err) {
       throw Error('Err ${err}');
     }
-    return accounts;
+    return this.accounts;
   }
 
   async getAccounts() {
-    let accounts;
     try {
-      accounts = await this.web3.eth.getAccounts();
+      this.accounts = await this.web3.eth.getAccounts();
     } catch (err) {
       throw Error('Err ${err}');
     }
-    return accounts;
+    return this.accounts;
   }
 
   async getNetworkId() {
@@ -50,17 +44,25 @@ export class WalletProviderService {
   detectBinanceWallet(): boolean {
     const provider = window && window.BinanceChain ? window.BinanceChain : null;
     if (!!provider) {
-      this.setWeb3(provider);
+      try {
+        this.setWeb3(provider);
+      } catch (err) {
+        throw Error(`detectWallet: ${err}`);
+      }
       return true;
     }
 
     return false;
   }
 
-  async detectMetamaskWallet() {
+  detectMetamaskWallet() {
     const provider = window && window.ethereum ? window.ethereum : null;
     if (!!provider) {
-      await this.setWeb3(provider);
+      try {
+        this.setWeb3(provider);
+      } catch (err) {
+        throw Error(`detectWallet: ${err}`);
+      }
       return true;
     }
 

@@ -1,11 +1,12 @@
 <h1>Connect your wallet</h1>
 <mat-nav-list>
-  <a class="binance-btn" mat-list-item (click)="connectWallet(1)">
+  <a class="binance-btn" mat-list-item (click)="connectWallet('binance')">
    	<img src="assets/img/binance.png" alt="binance">
     <span mat-line>Binance Chain Wallet</span>
   </a>
-  <a class="binance-btn" mat-list-item (click)="connectWallet(2)">
-   	<img src="assets/img/binance.png" alt="binance">
+  <a class="binance-btn" mat-list-item (click)="connectWallet('metamask')">
+   	<img src="assets/img/metamask-front.png" alt="binance">
     <span mat-line>Metamask Wallet</span>
+    <span mat-line>*Or Crypto Wallets</span>
   </a>
 </mat-nav-list>

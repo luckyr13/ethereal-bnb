@@ -31,7 +31,9 @@ export class SelectWalletDialogComponent implements OnInit {
       this.message(`Welcome!`, 'success');
       this._bottomSheetRef.dismiss();
     } catch (err) {
+      this.userSettings.deleteUserSettings();
       this.message(`${err}`, 'error');
+
     }
   }
 

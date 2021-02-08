@@ -28,10 +28,18 @@ export class MainToolbarComponent implements OnInit {
 
   ngOnInit() {
     this.userSettings.account$.subscribe((account) => {
-      this.account = account;
+      if (account != '') {
+        this.account = account;
+      } else {
+        this.account = 'Not detected';
+      }
     });
     this.userSettings.network$.subscribe((network) => {
-      this.network = network;
+      if (network != '') {
+        this.network = network;
+      } else {
+        this.network = 'Not connected';
+      }
     });
     this.userSettings.wallet$.subscribe((wallet) => {
       const walletOption = this.userSettings.getWalletOptionOnLocalStorage();

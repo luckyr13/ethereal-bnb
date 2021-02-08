@@ -32,6 +32,7 @@ export class HomeComponent implements OnInit {
       this.userSettings.saveUserSettings(account, networkId, network, option);
       // this.message(`Welcome back!`, 'success');
     } catch (err) {
+      this.userSettings.deleteUserSettings();
       this.message(`${err}`, 'error');
     }
   }

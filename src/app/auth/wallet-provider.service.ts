@@ -91,11 +91,5 @@ export class WalletProviderService {
     });
   }
 
-  onDisconnect() {
-    this.web3.currentProvider.on('disconnect', (data: string) => {
-      window.location.reload();
-    });
-  }
-
 
 }

@@ -64,4 +64,12 @@ export class UserSettingsService {
     this.setNetworkId(networkId);
     this.setNetwork(network);
   }
+
+  deleteUserSettings() {
+    window.sessionStorage.removeItem('wallet');
+    this.setWallet('');
+    this.setAccount('');
+    this.setNetworkId('');
+    this.setNetwork('');
+  }
 }

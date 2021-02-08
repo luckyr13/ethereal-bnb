@@ -26,6 +26,7 @@ export class SelectWalletDialogComponent implements OnInit {
       const account = res.account;
       const networkId = res.networkId;
       const network = res.networkName;
+      this.auth.setWalletChangeListeners();
       this.userSettings.saveUserSettings(account, networkId, network, option);
       this.message(`Welcome!`, 'success');
       this._bottomSheetRef.dismiss();

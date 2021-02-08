@@ -1,5 +1,5 @@
 <mat-progress-bar color="accent" mode="indeterminate" *ngIf="loading"></mat-progress-bar>
-<div class="main-container" *ngIf="!isLoggedIn && !loading">
+<div class="main-container fadeInTransparent" *ngIf="!isLoggedIn && !loading">
 	<div class="col-4 text-center mt-80 hide-xs">
 		<img width="80%" src="./assets/img/baalEnkiSmall.png" alt="Baal Enki" title="Baal Enki">
 	</div>
@@ -16,6 +16,6 @@
 	</div>
 </div>
 
-<div class="main-container" *ngIf="isLoggedIn && !loading">
-	Welcome!
+<div class="main-container fadeInTransparent" *ngIf="isLoggedIn && !loading">
+	<mat-card>Welcome</mat-card>
 </div>

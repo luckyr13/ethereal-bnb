@@ -100,6 +100,11 @@ export class AuthService {
 		return res;
   }
 
+  setWalletChangeListeners() {
+  	this.wps.onAccountsChanged();
+  	this.wps.onChainChanged();
+  }
+
 
 
 }

@@ -28,9 +28,10 @@ export class HomeComponent implements OnInit {
       const account = res.account;
       const networkId = res.networkId;
       const network = res.networkName;
+      this.auth.setWalletChangeListeners();
       this.isLoggedIn = true;
       this.userSettings.saveUserSettings(account, networkId, network, option);
-      this.message(`Welcome back!`, 'success');
+      // this.message(`Welcome back!`, 'success');
     } catch (err) {
       this.message(`${err}`, 'error');
     }
@@ -53,7 +54,7 @@ export class HomeComponent implements OnInit {
     this.loading = true;
     window.setTimeout(async () =>{
       const wallet = this.userSettings.getWalletOptionOnLocalStorage();
-      if (wallet) {
+      if (wallet && wallet != 'null') {
         await this.connectWallet(wallet);
       }
       this.loading = false;

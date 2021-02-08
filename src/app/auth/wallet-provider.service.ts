@@ -76,15 +76,6 @@ export class WalletProviderService {
     return network;
   }
 
-  /*
-  *  It doesn't work
-  */
-  logout() {
-    if (this.web3 && this.web3.close) {
-      this.web3.close();
-    }
-  }
-
   onAccountsChanged() {
     this.web3.currentProvider.on('accountsChanged', (data: string) => {
       window.location.reload();
@@ -96,6 +87,12 @@ export class WalletProviderService {
       // Handle the new chain.
       // Correctly handling chain changes can be complicated.
       // We recommend reloading the page unless you have a very good reason not to.
+      window.location.reload();
+    });
+  }
+
+  onDisconnect() {
+    this.web3.currentProvider.on('disconnect', (data: string) => {
       window.location.reload();
     });
   }

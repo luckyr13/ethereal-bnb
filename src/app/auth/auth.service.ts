@@ -103,6 +103,7 @@ export class AuthService {
   setWalletChangeListeners() {
   	this.wps.onAccountsChanged();
   	this.wps.onChainChanged();
+  	this.wps.onDisconnect();
   }
 
 

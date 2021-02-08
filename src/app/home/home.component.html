@@ -17,5 +17,12 @@
 </div>
 
 <div class="main-container fadeInTransparent" *ngIf="isLoggedIn && !loading">
-	<mat-card>Welcome</mat-card>
+	<mat-card>
+		<div class="text-center">
+			 Welcome
+		</div>
+		<div class="text-center">
+			 <button (click)="start()" mat-raised-button color="accent">CHANGE WALLET</button>
+		</div>
+	</mat-card>
 </div>

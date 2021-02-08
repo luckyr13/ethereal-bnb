@@ -19,7 +19,7 @@ export class UserSettingsService {
 
 	setWallet(option: string) {
     this.wallet.next(option);
-		window.localStorage.setItem('wallet', option);
+		window.sessionStorage.setItem('wallet', option);
 	}
 
 	setAccount(account: string) {
@@ -35,7 +35,7 @@ export class UserSettingsService {
 	}
 
   getWalletOptionOnLocalStorage() {
-    return window.localStorage.getItem('wallet');
+    return window.sessionStorage.getItem('wallet');
   }
 
   constructor() {
@@ -49,7 +49,7 @@ export class UserSettingsService {
   	this.network$ = this.network.asObservable();
     this.wallet$ = this.network.asObservable();
 
-    this.setWallet(window.localStorage.getItem('wallet'));
+    this.setWallet(window.sessionStorage.getItem('wallet'));
 
   }
 
@@ -59,9 +59,9 @@ export class UserSettingsService {
     network: string,
     wallet: string
   ) {
+    this.setWallet(wallet);
     this.setAccount(account);
     this.setNetworkId(networkId);
     this.setNetwork(network);
-    this.setWallet(wallet);
   }
 }

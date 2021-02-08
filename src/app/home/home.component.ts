@@ -29,7 +29,6 @@ export class HomeComponent implements OnInit {
       const networkId = res.networkId;
       const network = res.networkName;
       this.auth.setWalletChangeListeners();
-      this.isLoggedIn = true;
       this.userSettings.saveUserSettings(account, networkId, network, option);
       // this.message(`Welcome back!`, 'success');
     } catch (err) {
@@ -52,6 +51,12 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.loading = true;
+    this.userSettings.account$.subscribe((account) => {
+      if (account && account != 'null') {
+        this.isLoggedIn = true;
+      }
+    });
+
     window.setTimeout(async () =>{
       const wallet = this.userSettings.getWalletOptionOnLocalStorage();
       if (wallet && wallet != 'null') {

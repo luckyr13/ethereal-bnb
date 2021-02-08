@@ -12,6 +12,7 @@ export class MainToolbarComponent implements OnInit {
 	rotate: boolean = false;
   @Input() drawer: any;
   account: string = 'Not detected';
+  network: string = 'Not connected';
 
   constructor(
     private auth: AuthService,
@@ -25,12 +26,15 @@ export class MainToolbarComponent implements OnInit {
   }
 
   ngOnInit() {
-    
     this.userSettings.account$.subscribe((account) => {
       this.account = account;
     });
+    this.userSettings.network$.subscribe((network) => {
+      this.network = network;
+    });
     
   }
+
 
   message(msg: string) {
     this.snackbar.open(msg, 'X', {

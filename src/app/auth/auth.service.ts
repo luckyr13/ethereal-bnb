@@ -14,7 +14,7 @@ export class AuthService {
   *	
   */
   async connectWallet(option: string) {
-  	let res = { networkId: '', account: ''};
+  	let res = { networkId: '', account: '', networkName: ''};
 
 		switch (option) {
 			/*
@@ -40,13 +40,14 @@ export class AuthService {
   }
 
   async connectBinanceWallet() {
-  	let res = { networkId: '', account: ''};
+  	let res = { networkId: '', account: '', networkName: ''};
 
   	// 1. Detect the Binance Smart Chain provider (window.BinanceChain)
 		if (this.wps.detectBinanceWallet()) {
 			try {
 				// 2. Detect which Binance Smart Chain network the user is connected to. 
 				res['networkId'] = await this.wps.getNetworkId();
+				res['networkName'] = this.wps.getNetworkName(res['networkId']);
 				// If Binance Chain is selected, you can fire a network switch request.
 
 				// 3. Get the user's Binance Smart Chain account(s)
@@ -58,7 +59,9 @@ export class AuthService {
 				}
 
 			} catch (err) {
-				throw Error(`Error: ${err}`);
+				const errMessage = Object.prototype.hasOwnProperty.call(err, 'message') ?
+					err.message : 'Error connecting to wallet';
+				throw Error(`${errMessage}`);
 			}
 
 		} else {
@@ -69,12 +72,13 @@ export class AuthService {
   }
 
   async connectMetamaskWallet() {
-  	let res = { networkId: '', account: ''};
+  	let res = { networkId: '', account: '', networkName: ''};
   	// 1. Detect the Ethereum provider (window.ethereum)
 		if (this.wps.detectMetamaskWallet()) {
 			try {
 				// 2. Detect which Ethereum network the user is connected to
 				res['networkId'] = await this.wps.getNetworkId();
+				res['networkName'] = this.wps.getNetworkName(res['networkId']);
 				
 				// 3. Get the user's Ethereum account(s)
 				const accounts = await this.wps.requestAccounts();
@@ -84,7 +88,9 @@ export class AuthService {
 					res['account'] = accounts[0];
 				}
 			} catch (err) {
-				throw Error(`Error: ${err}`);
+				const errMessage = Object.prototype.hasOwnProperty.call(err, 'message') ?
+					err.message : 'Error connecting to wallet';
+				throw Error(`${errMessage}`);
 			}
 
 		} else {
@@ -93,5 +99,7 @@ export class AuthService {
 
 		return res;
   }
+
+
 
 }

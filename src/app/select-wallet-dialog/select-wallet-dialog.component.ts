@@ -21,29 +21,27 @@ export class SelectWalletDialogComponent implements OnInit {
   ) {}
 
   async connectWallet(option: string) {
-    // this._bottomSheetRef.dismiss();
     try {
     	const res: any = await this.auth.connectWallet(option);
       const account = res.account;
       const networkId = res.networkId;
-      this.saveUserSettings(account, networkId, option);
-      this.message(`Network: ${networkId} Account: ${account}`);
+      const network = res.networkName;
+      this.userSettings.saveUserSettings(account, networkId, network, option);
+      this.message(`Welcome!`, 'success');
+      this._bottomSheetRef.dismiss();
     } catch (err) {
-      this.message(`${err}`);
+      this.message(`${err}`, 'error');
     }
   }
 
-  saveUserSettings(account: string, networkId: string, wallet: string) {
-    this.userSettings.setAccount(account);
-    this.userSettings.setNetworkId(networkId);
-    this.userSettings.wallet = wallet;
-  }
+ 
 
-  message(msg: string) {
+  message(msg: string, panelClass: string = '') {
     this.snackbar.open(msg, 'X', {
-      duration: 3000,
+      duration: 5000,
       horizontalPosition: 'center',
       verticalPosition: 'top',
+      panelClass: panelClass
     });
   }
 

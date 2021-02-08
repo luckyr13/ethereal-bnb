@@ -7,6 +7,14 @@ import Web3 from 'web3';
 })
 export class WalletProviderService {
 	public web3: any;
+  private networkIdToName: any = {
+      1: 'ETH Mainnet (1)',
+      3: 'ETH Ropsten (3)',
+      42: 'ETH Kovan (42)',
+      4: 'ETH Rinkeby (4)',
+      5: 'ETH Goerli (5)',
+      56: 'Binance Smart Chain (56)',
+  };
 
   constructor() {
   }
@@ -57,6 +65,23 @@ export class WalletProviderService {
     }
 
     return false;
+  }
+
+  public getNetworkName(networkId: string) {
+    const network: string = Object.prototype.hasOwnProperty.call(
+      this.networkIdToName,
+      networkId
+    ) ? this.networkIdToName[networkId] : `NetworkId=${networkId}`;
+    return network;
+  }
+
+  /*
+  *  It doesn't work
+  */
+  logout() {
+    if (this.web3 && this.web3.close) {
+      this.web3.close();
+    }
   }
 
 

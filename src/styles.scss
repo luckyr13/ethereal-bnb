@@ -36,3 +36,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .green {
 	color: #69f0ae;
 }
+
+.mat-snack-bar-container.error{
+	background-color: #f44336;
+	color: #FFF;
+}
+
+.mat-snack-bar-container.success{
+	background-color: #69f0ae;
+	color: rgba(0,0,0,.87);
+}

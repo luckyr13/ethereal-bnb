@@ -6,7 +6,7 @@ declare const window: any;
   providedIn: 'root'
 })
 export class UserSettingsService {
-	private _wallet: string;
+	private wallet: Subject<string>;
 	private account: Subject<string>;
 	private networkId: Subject<string>;
 	private network: Subject<string>;
@@ -15,15 +15,11 @@ export class UserSettingsService {
   public account$: Observable<string>;
   public networkId$: Observable<string>;
   public network$: Observable<string>;
+  public wallet$: Observable<string>;
 
-
-	get wallet(): string {
-		return this._wallet;
-	}
-
-	set wallet(option: string) {
+	setWallet(option: string) {
+    this.wallet.next(option);
 		window.localStorage.setItem('wallet', option);
-		this._wallet = option;
 	}
 
 	setAccount(account: string) {
@@ -38,15 +34,23 @@ export class UserSettingsService {
 		this.network.next(network);
 	}
 
+  getWalletOptionOnLocalStorage() {
+    return window.localStorage.getItem('wallet');
+  }
+
   constructor() {
-  	this._wallet = window.localStorage.getItem('wallet');
   	this.account = new Subject<string>();
   	this.networkId = new Subject<string>();
   	this.network = new Subject<string>();
-  	
+    this.wallet = new Subject<string>();
+    
   	this.account$ = this.account.asObservable();
   	this.networkId$ = this.networkId.asObservable();
   	this.network$ = this.network.asObservable();
+    this.wallet$ = this.network.asObservable();
+
+    this.setWallet(window.localStorage.getItem('wallet'));
+
   }
 
   saveUserSettings(
@@ -58,6 +62,6 @@ export class UserSettingsService {
     this.setAccount(account);
     this.setNetworkId(networkId);
     this.setNetwork(network);
-    this.wallet = wallet;
+    this.setWallet(wallet);
   }
 }

@@ -13,6 +13,7 @@ export class MainToolbarComponent implements OnInit {
   @Input() drawer: any;
   account: string = 'Not detected';
   network: string = 'Not connected';
+  walletImg: string = '';
 
   constructor(
     private auth: AuthService,
@@ -32,6 +33,21 @@ export class MainToolbarComponent implements OnInit {
     this.userSettings.network$.subscribe((network) => {
       this.network = network;
     });
+    this.userSettings.wallet$.subscribe((wallet) => {
+      const walletOption = this.userSettings.getWalletOptionOnLocalStorage();
+      switch (walletOption) {
+        case 'binance':
+          this.walletImg = 'assets/img/binance.png';
+        break;
+        case 'metamask':
+          this.walletImg = 'assets/img/metamask.png';
+        break;
+        default:
+
+        break;
+      }
+    });
+    
     
   }
 

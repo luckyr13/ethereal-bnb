@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
       const network = res.networkName;
       this.isLoggedIn = true;
       this.userSettings.saveUserSettings(account, networkId, network, option);
-      this.message(`Welcome!`, 'success');
+      this.message(`Welcome back!`, 'success');
     } catch (err) {
       this.message(`${err}`, 'error');
     }
@@ -42,7 +42,7 @@ export class HomeComponent implements OnInit {
     this.snackbar.open(msg, 'X', {
       duration: 5000,
       horizontalPosition: 'center',
-      verticalPosition: 'top',
+      verticalPosition: 'bottom',
       panelClass: panelClass
     });
   }
@@ -52,8 +52,9 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.loading = true;
     window.setTimeout(async () =>{
-      if (this.userSettings.wallet && this.userSettings.wallet != '') {
-        await this.connectWallet(this.userSettings.wallet);
+      const wallet = this.userSettings.getWalletOptionOnLocalStorage();
+      if (wallet) {
+        await this.connectWallet(wallet);
       }
       this.loading = false;
     }, 1000);

@@ -14,6 +14,7 @@ export class WalletProviderService {
       4: 'Ethereum Rinkeby (4)',
       5: 'Ethereum Goerli (5)',
       56: 'Binance Smart Chain (56)',
+      97: 'Binance Smart Chain TESTING Network (97)'
   };
 
   constructor() {

@@ -1,0 +1,429 @@
+{
+  "contractName": "EtherealGame",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.7.5+commit.eb77ed08\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/EtherealGame.sol\":\"EtherealGame\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/EtherealGame.sol\":{\"keccak256\":\"0x64c670c4659aab8ce384f89b57c87e7c2df3dd880b0355fca20b256b148efa7b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9ff2e99bb7ad22ec94c764a8e5a31de0c12b6960fe79846c10a1ff96b1b1fd29\",\"dweb:/ipfs/QmSTeV3farNStFVw3CwvuJgpMcCgb8kNPprzbQStiLsUUe\"]},\"@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0x15e2d5bd4c28a88548074c54d220e8086f638a71ed07e6b3ba5a70066fcf458d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://90faf5851c02f9bd42c5bfb54d4f0421a2612f50ab80b2c4fa24fa3792071cc2\",\"dweb:/ipfs/QmRGM4F2PcGVF85aTfaA9YBhCHHDqrMhRjyp6fGeBTtirb\"]},\"@openzeppelin/contracts/utils/Context.sol\":{\"keccak256\":\"0x8d3cb350f04ff49cfb10aef08d87f19dcbaecc8027b0bed12f3275cd12f38cf0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ded47ec7c96750f9bd04bbbc84f659992d4ba901cb7b532a52cd468272cf378f\",\"dweb:/ipfs/QmfBrGtQP7rZEqEg6Wz6jh2N2Kukpj1z5v3CGWmAqrzm96\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220d054a39050fea30488dd22010594aa915fe7c65b599a23e76519450ed5e76d1264736f6c63430007050033",
+  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220d054a39050fea30488dd22010594aa915fe7c65b599a23e76519450ed5e76d1264736f6c63430007050033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "113:232:1:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "113:232:1:-:0;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity 0.7.5;\r\nimport '@openzeppelin/contracts/access/Ownable.sol';\r\n\r\ncontract EtherealGame\r\n{\r\n\t// Contract status\r\n\tbool private active;\r\n\r\n\t/*\r\n\t*\tContract must be active in order to work :)\r\n\t*/\r\n\tmodifier contractMustBeActive() {\r\n\t\trequire(active, 'Contract is inactive');\r\n\t\t_;\r\n\t}\r\n\r\n\t\r\n\r\n\r\n\r\n}",
+  "sourcePath": "C:/xampp/htdocs/ethereal-bnb/truffle-files/contracts/EtherealGame.sol",
+  "ast": {
+    "absolutePath": "/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/EtherealGame.sol",
+    "exportedSymbols": {
+      "Context": [
+        1601
+      ],
+      "EtherealGame": [
+        17
+      ],
+      "Ownable": [
+        1223
+      ]
+    },
+    "id": 18,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4,
+        "literals": [
+          "solidity",
+          "0.7",
+          ".5"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:22:1"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts/access/Ownable.sol",
+        "file": "@openzeppelin/contracts/access/Ownable.sol",
+        "id": 5,
+        "nodeType": "ImportDirective",
+        "scope": 18,
+        "sourceUnit": 1224,
+        "src": "57:52:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 17,
+        "linearizedBaseContracts": [
+          17
+        ],
+        "name": "EtherealGame",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 7,
+            "mutability": "mutable",
+            "name": "active",
+            "nodeType": "VariableDeclaration",
+            "scope": 17,
+            "src": "161:19:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 6,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "161:4:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 15,
+              "nodeType": "Block",
+              "src": "276:55:1",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 10,
+                        "name": "active",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7,
+                        "src": "289:6:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "hexValue": "436f6e747261637420697320696e616374697665",
+                        "id": 11,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "297:22:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_5c3d33b2fb2c7c6acdb69234082e5babe08c404ef8b3c15b7a09b07fb493a1e4",
+                          "typeString": "literal_string \"Contract is inactive\""
+                        },
+                        "value": "Contract is inactive"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_5c3d33b2fb2c7c6acdb69234082e5babe08c404ef8b3c15b7a09b07fb493a1e4",
+                          "typeString": "literal_string \"Contract is inactive\""
+                        }
+                      ],
+                      "id": 9,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "281:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 12,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "281:39:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 13,
+                  "nodeType": "ExpressionStatement",
+                  "src": "281:39:1"
+                },
+                {
+                  "id": 14,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "325:1:1"
+                }
+              ]
+            },
+            "id": 16,
+            "name": "contractMustBeActive",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 8,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "273:2:1"
+            },
+            "src": "244:87:1",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 18,
+        "src": "113:232:1"
+      }
+    ],
+    "src": "33:312:1"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/EtherealGame.sol",
+      "exportedSymbols": {
+        "Context": [
+          1601
+        ],
+        "EtherealGame": [
+          17
+        ],
+        "Ownable": [
+          1223
+        ]
+      },
+      "license": "MIT"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "0.7",
+            ".5"
+          ]
+        },
+        "id": 4,
+        "name": "PragmaDirective",
+        "src": "33:22:1"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 1224,
+          "absolutePath": "@openzeppelin/contracts/access/Ownable.sol",
+          "file": "@openzeppelin/contracts/access/Ownable.sol",
+          "scope": 18,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 5,
+        "name": "ImportDirective",
+        "src": "57:52:1"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            17
+          ],
+          "name": "EtherealGame",
+          "scope": 18
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "mutability": "mutable",
+              "name": "active",
+              "scope": 17,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "bool",
+              "visibility": "private"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "bool",
+                  "type": "bool"
+                },
+                "id": 6,
+                "name": "ElementaryTypeName",
+                "src": "161:4:1"
+              }
+            ],
+            "id": 7,
+            "name": "VariableDeclaration",
+            "src": "161:19:1"
+          },
+          {
+            "attributes": {
+              "name": "contractMustBeActive",
+              "virtual": false,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 8,
+                "name": "ParameterList",
+                "src": "273:2:1"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                },
+                                {
+                                  "typeIdentifier": "t_stringliteral_5c3d33b2fb2c7c6acdb69234082e5babe08c404ef8b3c15b7a09b07fb493a1e4",
+                                  "typeString": "literal_string \"Contract is inactive\""
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                -18,
+                                -18
+                              ],
+                              "referencedDeclaration": -18,
+                              "type": "function (bool,string memory) pure",
+                              "value": "require"
+                            },
+                            "id": 9,
+                            "name": "Identifier",
+                            "src": "281:7:1"
+                          },
+                          {
+                            "attributes": {
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 7,
+                              "type": "bool",
+                              "value": "active"
+                            },
+                            "id": 10,
+                            "name": "Identifier",
+                            "src": "289:6:1"
+                          },
+                          {
+                            "attributes": {
+                              "hexvalue": "436f6e747261637420697320696e616374697665",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "token": "string",
+                              "type": "literal_string \"Contract is inactive\"",
+                              "value": "Contract is inactive"
+                            },
+                            "id": 11,
+                            "name": "Literal",
+                            "src": "297:22:1"
+                          }
+                        ],
+                        "id": 12,
+                        "name": "FunctionCall",
+                        "src": "281:39:1"
+                      }
+                    ],
+                    "id": 13,
+                    "name": "ExpressionStatement",
+                    "src": "281:39:1"
+                  },
+                  {
+                    "id": 14,
+                    "name": "PlaceholderStatement",
+                    "src": "325:1:1"
+                  }
+                ],
+                "id": 15,
+                "name": "Block",
+                "src": "276:55:1"
+              }
+            ],
+            "id": 16,
+            "name": "ModifierDefinition",
+            "src": "244:87:1"
+          }
+        ],
+        "id": 17,
+        "name": "ContractDefinition",
+        "src": "113:232:1"
+      }
+    ],
+    "id": 18,
+    "name": "SourceUnit",
+    "src": "33:312:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.7.5+commit.eb77ed08.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.3",
+  "updatedAt": "2021-02-12T04:18:20.902Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

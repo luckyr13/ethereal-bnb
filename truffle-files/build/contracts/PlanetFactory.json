@@ -11067,6 +11067,83 @@
     "version": "0.7.5+commit.eb77ed08.Emscripten.clang"
   },
   "networks": {
+    "97": {
+      "events": {
+        "0x89cb8aeac390e3fc9016dc87a4ed02fbbb63c5adafcbb03db9b6227a14fe589d": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "bool",
+              "name": "newStatus",
+              "type": "bool"
+            }
+          ],
+          "name": "ContractStatusUpdated",
+          "type": "event"
+        },
+        "0x77173fe9730b8c94d6e2099a799c4891fb0142645f3e139e87aa71c5f014979a": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "planetId",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "bytes32",
+              "name": "name",
+              "type": "bytes32"
+            }
+          ],
+          "name": "NewPlanetCreated",
+          "type": "event"
+        },
+        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "previousOwner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "newOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event"
+        },
+        "0x7d364863130b2db985ca067bf7ffe3eae1d3e9d99f41b292e0965ea5c3ca8d01": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "planetId",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "bool",
+              "name": "newStatus",
+              "type": "bool"
+            }
+          ],
+          "name": "PlanetStatusUpdated",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x96c86CFbddd43837bC1f82F62fDaD76461474e91",
+      "transactionHash": "0xf142f3635dcf5fa49d9b5fcdbee2cad1f54eb63cdf3ec5108f556983c6061b97"
+    },
     "5777": {
       "events": {
         "0x89cb8aeac390e3fc9016dc87a4ed02fbbb63c5adafcbb03db9b6227a14fe589d": {
@@ -11146,7 +11223,7 @@
     }
   },
   "schemaVersion": "3.3.3",
-  "updatedAt": "2021-02-12T04:24:25.053Z",
+  "updatedAt": "2021-02-12T06:12:31.478Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",

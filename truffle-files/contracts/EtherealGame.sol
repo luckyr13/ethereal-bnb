@@ -6,6 +6,9 @@ contract EtherealGame
 {
 	// Contract status
 	bool private active;
+	address[] players;
+	address public planetContract;
+	address public characterContract;
 
 	/*
 	*	Contract must be active in order to work :)

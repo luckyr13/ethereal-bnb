@@ -1,14 +1,12 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.7.5;
-import '@openzeppelin/contracts/access/Ownable.sol';
+import '@openzeppelin/contracts/access/AccessControl.sol';
 import '@openzeppelin/contracts/math/SafeMath.sol';
 
 /*
-* @notice Create new planets for the Ethereal universe
-* @author luckyr13
+* @title Create new planets for the Ethereal universe
 */
-
-contract PlanetFactory is Ownable
+contract EtherealPlanet is AccessControl
 {
 	using SafeMath for uint256;
 	struct Planet {
@@ -19,7 +17,7 @@ contract PlanetFactory is Ownable
 	}
 
 	constructor() {
-		
+		_setupRole(DEFAULT_ADMIN_ROLE, msg.sender);
 	}
 
 	// Planet's info
@@ -40,7 +38,8 @@ contract PlanetFactory is Ownable
 	modifier isNotEmptyBytes32(bytes32 _s)
 	{
 		require(
-			keccak256(abi.encode(_s)) != keccak256(abi.encode("")),
+			(keccak256(abi.encode(_s)) != keccak256(abi.encode(""))) &&
+			(keccak256(abi.encode(_s)) != keccak256(abi.encode(0x00))),
 			"Empty string not allowed"
 		);
 		_;
@@ -51,7 +50,7 @@ contract PlanetFactory is Ownable
 	*/
 	modifier isPlanetNameAvailable(bytes32 _name) {
 		require(
-			!planetNameExists[keccak256(abi.encode(_name))],
+			!planetNameExists[_name],
 			"Planet name already exists"
 		);
 		_;
@@ -95,16 +94,16 @@ contract PlanetFactory is Ownable
 		string memory _description
 	) 
 		external
-		onlyOwner
 		isContractActive
 		isNotEmptyBytes32(_name)
 		isPlanetNameAvailable(_name)
 		returns (uint id)
 	{
+		require(hasRole(DEFAULT_ADMIN_ROLE, _msgSender()), "createPlanet: must have admin role");
 		totalNumPlanets = totalNumPlanets.add(1);
 		uint256 planetId = totalNumPlanets;
 		planets[planetId] = Planet(_name, _description, 0, true);
-		planetNameExists[keccak256(abi.encode(_name))] = true;
+		planetNameExists[_name] = true;
 		emit NewPlanetCreated(planetId, _name);
 		return planetId;
 	}
@@ -114,14 +113,15 @@ contract PlanetFactory is Ownable
 	*/
 	function activateDeactivatePlanet(uint256 _planetId, bool _active)
 		external
-		onlyOwner
 		isContractActive
 	{
+		require(hasRole(DEFAULT_ADMIN_ROLE, _msgSender()), "activateDeactivatePlanet: must have admin role");
 		// Planet must exist
 		require(
-			keccak256(abi.encode(planets[_planetId].name)) != keccak256(abi.encode("")),
+			planetNameExists[planets[_planetId].name],
 			"Planet doesn't exist"
 		);
+
 		planets[_planetId].active = _active;
 		if (_active) {
 			totalInactivePlanets = totalInactivePlanets.sub(1);
@@ -136,8 +136,9 @@ contract PlanetFactory is Ownable
 	*/
 	function activateDeactivateContract(bool _active)
 		external
-		onlyOwner
 	{
+		require(hasRole(DEFAULT_ADMIN_ROLE, _msgSender()), "activateDeactivateContract: must have admin role");
+
 		active = _active;
 		emit ContractStatusUpdated(_active);
 	}

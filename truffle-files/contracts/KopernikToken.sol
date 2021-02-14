@@ -5,6 +5,10 @@ import '@openzeppelin/contracts/utils/Context.sol';
 import '@openzeppelin/contracts/math/SafeMath.sol';
 import './IBEP20.sol';
 
+/*
+* @title Kopernik BEP20 token for Ethereal Game
+* @dev See https://docs.binance.org/smart-chain/developer/BEP20.html
+*/
 contract KopernikToken is Context, IBEP20, Ownable
 {
   using SafeMath for uint256;
@@ -22,7 +26,7 @@ contract KopernikToken is Context, IBEP20, Ownable
     _name = "KOPERNIK";
     _symbol = "KPKBNB";
     _decimals = 2;
-    _totalSupply = 21000000000;
+    _totalSupply = 210000000000;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);

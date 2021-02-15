@@ -2,11 +2,12 @@
 pragma solidity 0.7.5;
 import '@openzeppelin/contracts/access/AccessControl.sol';
 import '@openzeppelin/contracts/math/SafeMath.sol';
+import "@openzeppelin/contracts/utils/Context.sol";
 
 /*
 * @title Create new planets for the Ethereal universe
 */
-contract EtherealPlanet is AccessControl
+contract EtherealPlanet is Context, AccessControl
 {
 	using SafeMath for uint256;
 	struct Planet {
@@ -14,10 +15,6 @@ contract EtherealPlanet is AccessControl
 		string description;
 		uint256 population;
 		bool active;
-	}
-
-	constructor() {
-		_setupRole(DEFAULT_ADMIN_ROLE, msg.sender);
 	}
 
 	// Planet's info
@@ -84,6 +81,15 @@ contract EtherealPlanet is AccessControl
 	* @dev Log contract status update
 	*/
 	event ContractStatusUpdated(bool newStatus);
+
+
+	/*
+	* @dev Set default admin role to owner
+	*/
+	constructor() {
+		_setupRole(DEFAULT_ADMIN_ROLE, _msgSender());
+		active = true;
+	}
 
 
 	/*

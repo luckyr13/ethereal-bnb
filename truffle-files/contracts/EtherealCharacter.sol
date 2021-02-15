@@ -8,6 +8,12 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721Burnable.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721Pausable.sol";
+import '@openzeppelin/contracts/math/SafeMath.sol';
+import './SafeMath8.sol';
+import './SafeMath16.sol';
+import './SafeMath24.sol';
+import './SafeMath32.sol';
+
 
 /**
  * @dev {ERC721} token, including:
@@ -32,7 +38,15 @@ contract EtherealCharacter is Context, AccessControl, ERC721Burnable, ERC721Paus
     bytes32 public constant PAUSER_ROLE = keccak256("PAUSER_ROLE");
 
     Counters.Counter private _tokenIdTracker;
+    using SafeMath for uint256;
+    using SafeMath8 for uint8;
+    using SafeMath16 for uint16;
+    using SafeMath24 for uint24;
+    using SafeMath32 for uint32;
 
+    /*
+    * @dev Each character can have (control) 2 base elements of nature
+    */
     enum ElementOfNature {
       // Elements of nature
       Air, Water, Earth, Fire,
@@ -60,11 +74,6 @@ contract EtherealCharacter is Context, AccessControl, ERC721Burnable, ERC721Paus
       bytes24 birthdate;
       string description;
       uint256 planetId;
-      uint24 skintone;
-      uint24 haircolor;
-      uint24 eyescolor;
-      uint16 weight;
-      uint16 height;
       uint8 genre;
     }
 
@@ -74,16 +83,16 @@ contract EtherealCharacter is Context, AccessControl, ERC721Burnable, ERC721Paus
       uint24 eyescolor;
       uint16 weight;
       uint16 height;
-      uint8 genre;
+      uint8 bodyType;
     }
 
-    struct CharacterAbilitiesMetadata {
+    struct CharacterAttributesMetadata {
       ElementOfNature primaryElement;
       ElementOfNature secondaryElement;
-      uint8 speed;
-      uint8 stamina;
       uint8 life;
+      uint8 armor;
       uint8 strength;
+      uint8 speed;
       uint8 luck;
       uint8 spirit;
     }
@@ -94,7 +103,7 @@ contract EtherealCharacter is Context, AccessControl, ERC721Burnable, ERC721Paus
     */
     mapping(uint256 => CharacterBaseMetadata) public characterBaseMetadata;
     mapping(uint256 => CharacterPhysicalMetadata) public characterPhysicalMetadata;
-    mapping(uint256 => CharacterAbilitiesMetadata) public characterAbilitiesMetadata;
+    mapping(uint256 => CharacterAttributesMetadata) public characterAttributesMetadata;
     mapping(bytes32 => bool) public characterNameExists;
     
     /**
@@ -146,7 +155,7 @@ contract EtherealCharacter is Context, AccessControl, ERC721Burnable, ERC721Paus
       address to,
       CharacterBaseMetadata memory extraBaseMetaData,
       CharacterPhysicalMetadata memory extraPhysicalMetaData,
-      CharacterAbilitiesMetadata memory extraAbilitiesMetaData
+      CharacterAttributesMetadata memory extraAbilitiesMetaData
     )
         public
         returns (uint256)
@@ -167,9 +176,10 @@ contract EtherealCharacter is Context, AccessControl, ERC721Burnable, ERC721Paus
         uint256 currentTokenId = _tokenIdTracker.current();
         _safeMint(to, currentTokenId);
         _tokenIdTracker.increment();
+        characterNameExists[extraBaseMetaData.name] = true;
         characterBaseMetadata[currentTokenId] = extraBaseMetaData;
         characterPhysicalMetadata[currentTokenId] = extraPhysicalMetaData;
-        characterAbilitiesMetadata[currentTokenId] = extraAbilitiesMetaData;
+        characterAttributesMetadata[currentTokenId] = extraAbilitiesMetaData;
         return currentTokenId;
     }
 
@@ -187,7 +197,7 @@ contract EtherealCharacter is Context, AccessControl, ERC721Burnable, ERC721Paus
         bytes32 tmpChrName = characterBaseMetadata[tokenId].name;
         delete characterNameExists[tmpChrName];
         delete characterBaseMetadata[tokenId];
-        delete characterAbilitiesMetadata[tokenId];
+        delete characterAttributesMetadata[tokenId];
         delete characterPhysicalMetadata[tokenId];
     }
 

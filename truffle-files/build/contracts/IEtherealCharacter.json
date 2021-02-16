@@ -191,18 +191,18 @@
     "absolutePath": "/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealCharacter.sol",
     "exportedSymbols": {
       "IEtherealBase": [
-        1894
+        2144
       ],
       "IEtherealCharacter": [
-        1936
+        2186
       ]
     },
-    "id": 1937,
+    "id": 2187,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1896,
+        "id": 2146,
         "literals": [
           "solidity",
           "0.7",
@@ -212,7 +212,7 @@
         "src": "33:22:6"
       },
       {
-        "id": 1897,
+        "id": 2147,
         "literals": [
           "abicoder",
           "v2"
@@ -223,10 +223,10 @@
       {
         "absolutePath": "/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealBase.sol",
         "file": "./IEtherealBase.sol",
-        "id": 1898,
+        "id": 2148,
         "nodeType": "ImportDirective",
-        "scope": 1937,
-        "sourceUnit": 1895,
+        "scope": 2187,
+        "sourceUnit": 2145,
         "src": "78:29:6",
         "symbolAliases": [],
         "unitAlias": ""
@@ -236,65 +236,65 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 1900,
+              "id": 2150,
               "name": "IEtherealBase",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1894,
+              "referencedDeclaration": 2144,
               "src": "825:13:6",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_IEtherealBase_$1894",
+                "typeIdentifier": "t_contract$_IEtherealBase_$2144",
                 "typeString": "contract IEtherealBase"
               }
             },
-            "id": 1901,
+            "id": 2151,
             "nodeType": "InheritanceSpecifier",
             "src": "825:13:6"
           }
         ],
         "contractDependencies": [
-          1894
+          2144
         ],
         "contractKind": "interface",
         "documentation": {
-          "id": 1899,
+          "id": 2149,
           "nodeType": "StructuredDocumentation",
           "src": "111:680:6",
           "text": " @dev {ERC721} token, including:\n  - ability for holders to burn (destroy) their tokens\n  - a minter role that allows for token minting (creation)\n  - a pauser role that allows to stop all token transfers\n  - token ID and URI autogeneration\n  - includes extra properties to store important metadata\n This contract uses {AccessControl} to lock permissioned functions using the\n different roles - head to its documentation for details.\n The account that deploys the contract will be granted the minter and pauser\n roles, as well as the default admin role, which will let it grant both minter\n and pauser roles to other accounts."
         },
         "fullyImplemented": false,
-        "id": 1936,
+        "id": 2186,
         "linearizedBaseContracts": [
-          1936,
-          1894
+          2186,
+          2144
         ],
         "name": "IEtherealCharacter",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "documentation": {
-              "id": 1902,
+              "id": 2152,
               "nodeType": "StructuredDocumentation",
               "src": "854:83:6",
               "text": " @dev External function to set the base URI for all token IDs. "
             },
             "functionSelector": "55f804b3",
-            "id": 1907,
+            "id": 2157,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "setBaseURI",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1905,
+              "id": 2155,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1904,
+                  "id": 2154,
                   "mutability": "mutable",
                   "name": "_baseURI",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1907,
+                  "scope": 2157,
                   "src": "963:22:6",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -303,7 +303,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1903,
+                    "id": 2153,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "963:6:6",
@@ -318,12 +318,12 @@
               "src": "962:24:6"
             },
             "returnParameters": {
-              "id": 1906,
+              "id": 2156,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "995:0:6"
             },
-            "scope": 1936,
+            "scope": 2186,
             "src": "943:53:6",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -331,29 +331,29 @@
           },
           {
             "documentation": {
-              "id": 1908,
+              "id": 2158,
               "nodeType": "StructuredDocumentation",
               "src": "1004:374:6",
               "text": " @dev Creates a new token for `to`. Its token ID will be automatically\n assigned (and available on the emitted {IERC721-Transfer} event), and the token\n URI autogenerated based on the base URI passed at construction.\n See {ERC721-_mint}.\n Requirements:\n - the caller must have the `MINTER_ROLE`."
             },
             "functionSelector": "af3ca093",
-            "id": 1921,
+            "id": 2171,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "mint",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1917,
+              "id": 2167,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1910,
+                  "id": 2160,
                   "mutability": "mutable",
                   "name": "to",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1921,
+                  "scope": 2171,
                   "src": "1406:10:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -362,7 +362,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1909,
+                    "id": 2159,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1406:7:6",
@@ -376,26 +376,26 @@
                 },
                 {
                   "constant": false,
-                  "id": 1912,
+                  "id": 2162,
                   "mutability": "mutable",
                   "name": "extraBaseMetaData",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1921,
+                  "scope": 2171,
                   "src": "1425:46:6",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_CharacterBaseMetadata_$1844_memory_ptr",
+                    "typeIdentifier": "t_struct$_CharacterBaseMetadata_$2094_memory_ptr",
                     "typeString": "struct IEtherealBase.CharacterBaseMetadata"
                   },
                   "typeName": {
-                    "id": 1911,
+                    "id": 2161,
                     "name": "CharacterBaseMetadata",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 1844,
+                    "referencedDeclaration": 2094,
                     "src": "1425:21:6",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_CharacterBaseMetadata_$1844_storage_ptr",
+                      "typeIdentifier": "t_struct$_CharacterBaseMetadata_$2094_storage_ptr",
                       "typeString": "struct IEtherealBase.CharacterBaseMetadata"
                     }
                   },
@@ -403,26 +403,26 @@
                 },
                 {
                   "constant": false,
-                  "id": 1914,
+                  "id": 2164,
                   "mutability": "mutable",
                   "name": "extraPhysicalMetaData",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1921,
+                  "scope": 2171,
                   "src": "1480:54:6",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_CharacterPhysicalMetadata_$1857_memory_ptr",
+                    "typeIdentifier": "t_struct$_CharacterPhysicalMetadata_$2107_memory_ptr",
                     "typeString": "struct IEtherealBase.CharacterPhysicalMetadata"
                   },
                   "typeName": {
-                    "id": 1913,
+                    "id": 2163,
                     "name": "CharacterPhysicalMetadata",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 1857,
+                    "referencedDeclaration": 2107,
                     "src": "1480:25:6",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_CharacterPhysicalMetadata_$1857_storage_ptr",
+                      "typeIdentifier": "t_struct$_CharacterPhysicalMetadata_$2107_storage_ptr",
                       "typeString": "struct IEtherealBase.CharacterPhysicalMetadata"
                     }
                   },
@@ -430,26 +430,26 @@
                 },
                 {
                   "constant": false,
-                  "id": 1916,
+                  "id": 2166,
                   "mutability": "mutable",
                   "name": "extraAbilitiesMetaData",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1921,
+                  "scope": 2171,
                   "src": "1543:57:6",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_CharacterAttributesMetadata_$1874_memory_ptr",
+                    "typeIdentifier": "t_struct$_CharacterAttributesMetadata_$2124_memory_ptr",
                     "typeString": "struct IEtherealBase.CharacterAttributesMetadata"
                   },
                   "typeName": {
-                    "id": 1915,
+                    "id": 2165,
                     "name": "CharacterAttributesMetadata",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 1874,
+                    "referencedDeclaration": 2124,
                     "src": "1543:27:6",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_CharacterAttributesMetadata_$1874_storage_ptr",
+                      "typeIdentifier": "t_struct$_CharacterAttributesMetadata_$2124_storage_ptr",
                       "typeString": "struct IEtherealBase.CharacterAttributesMetadata"
                     }
                   },
@@ -459,16 +459,16 @@
               "src": "1397:210:6"
             },
             "returnParameters": {
-              "id": 1920,
+              "id": 2170,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1919,
+                  "id": 2169,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1921,
+                  "scope": 2171,
                   "src": "1644:7:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -477,7 +477,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1918,
+                    "id": 2168,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1644:7:6",
@@ -491,7 +491,7 @@
               ],
               "src": "1643:9:6"
             },
-            "scope": 1936,
+            "scope": 2186,
             "src": "1384:269:6",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -499,29 +499,29 @@
           },
           {
             "documentation": {
-              "id": 1922,
+              "id": 2172,
               "nodeType": "StructuredDocumentation",
               "src": "1661:168:6",
               "text": " @dev Burns `tokenId`. See {ERC721-_burn}.\n Requirements:\n - The caller must own `tokenId` or be an approved operator."
             },
             "functionSelector": "42966c68",
-            "id": 1927,
+            "id": 2177,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "burn",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1925,
+              "id": 2175,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1924,
+                  "id": 2174,
                   "mutability": "mutable",
                   "name": "tokenId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1927,
+                  "scope": 2177,
                   "src": "1849:15:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -530,7 +530,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1923,
+                    "id": 2173,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1849:7:6",
@@ -545,12 +545,12 @@
               "src": "1848:17:6"
             },
             "returnParameters": {
-              "id": 1926,
+              "id": 2176,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1874:0:6"
             },
-            "scope": 1936,
+            "scope": 2186,
             "src": "1835:40:6",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -558,31 +558,31 @@
           },
           {
             "documentation": {
-              "id": 1928,
+              "id": 2178,
               "nodeType": "StructuredDocumentation",
               "src": "1883:201:6",
               "text": " @dev Pauses all token transfers.\n See {ERC721Pausable} and {Pausable-_pause}.\n Requirements:\n - the caller must have the `PAUSER_ROLE`."
             },
             "functionSelector": "8456cb59",
-            "id": 1931,
+            "id": 2181,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "pause",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1929,
+              "id": 2179,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2104:2:6"
             },
             "returnParameters": {
-              "id": 1930,
+              "id": 2180,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2115:0:6"
             },
-            "scope": 1936,
+            "scope": 2186,
             "src": "2090:26:6",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -590,38 +590,38 @@
           },
           {
             "documentation": {
-              "id": 1932,
+              "id": 2182,
               "nodeType": "StructuredDocumentation",
               "src": "2124:205:6",
               "text": " @dev Unpauses all token transfers.\n See {ERC721Pausable} and {Pausable-_unpause}.\n Requirements:\n - the caller must have the `PAUSER_ROLE`."
             },
             "functionSelector": "3f4ba83a",
-            "id": 1935,
+            "id": 2185,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "unpause",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1933,
+              "id": 2183,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2351:2:6"
             },
             "returnParameters": {
-              "id": 1934,
+              "id": 2184,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2362:0:6"
             },
-            "scope": 1936,
+            "scope": 2186,
             "src": "2335:28:6",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 1937,
+        "scope": 2187,
         "src": "793:1575:6"
       }
     ],
@@ -632,10 +632,10 @@
       "absolutePath": "/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealCharacter.sol",
       "exportedSymbols": {
         "IEtherealBase": [
-          1894
+          2144
         ],
         "IEtherealCharacter": [
-          1936
+          2186
         ]
       },
       "license": "MIT"
@@ -649,7 +649,7 @@
             ".5"
           ]
         },
-        "id": 1896,
+        "id": 2146,
         "name": "PragmaDirective",
         "src": "33:22:6"
       },
@@ -660,22 +660,22 @@
             "v2"
           ]
         },
-        "id": 1897,
+        "id": 2147,
         "name": "PragmaDirective",
         "src": "57:19:6"
       },
       {
         "attributes": {
-          "SourceUnit": 1895,
+          "SourceUnit": 2145,
           "absolutePath": "/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealBase.sol",
           "file": "./IEtherealBase.sol",
-          "scope": 1937,
+          "scope": 2187,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 1898,
+        "id": 2148,
         "name": "ImportDirective",
         "src": "78:29:6"
       },
@@ -683,23 +683,23 @@
         "attributes": {
           "abstract": false,
           "contractDependencies": [
-            1894
+            2144
           ],
           "contractKind": "interface",
           "fullyImplemented": false,
           "linearizedBaseContracts": [
-            1936,
-            1894
+            2186,
+            2144
           ],
           "name": "IEtherealCharacter",
-          "scope": 1937
+          "scope": 2187
         },
         "children": [
           {
             "attributes": {
               "text": " @dev {ERC721} token, including:\n  - ability for holders to burn (destroy) their tokens\n  - a minter role that allows for token minting (creation)\n  - a pauser role that allows to stop all token transfers\n  - token ID and URI autogeneration\n  - includes extra properties to store important metadata\n This contract uses {AccessControl} to lock permissioned functions using the\n different roles - head to its documentation for details.\n The account that deploys the contract will be granted the minter and pauser\n roles, as well as the default admin role, which will let it grant both minter\n and pauser roles to other accounts."
             },
-            "id": 1899,
+            "id": 2149,
             "name": "StructuredDocumentation",
             "src": "111:680:6"
           },
@@ -709,15 +709,15 @@
               {
                 "attributes": {
                   "name": "IEtherealBase",
-                  "referencedDeclaration": 1894,
+                  "referencedDeclaration": 2144,
                   "type": "contract IEtherealBase"
                 },
-                "id": 1900,
+                "id": 2150,
                 "name": "UserDefinedTypeName",
                 "src": "825:13:6"
               }
             ],
-            "id": 1901,
+            "id": 2151,
             "name": "InheritanceSpecifier",
             "src": "825:13:6"
           },
@@ -731,7 +731,7 @@
                 null
               ],
               "name": "setBaseURI",
-              "scope": 1936,
+              "scope": 2186,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "external"
@@ -741,7 +741,7 @@
                 "attributes": {
                   "text": " @dev External function to set the base URI for all token IDs. "
                 },
-                "id": 1902,
+                "id": 2152,
                 "name": "StructuredDocumentation",
                 "src": "854:83:6"
               },
@@ -752,7 +752,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "_baseURI",
-                      "scope": 1907,
+                      "scope": 2157,
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "type": "string",
@@ -764,17 +764,17 @@
                           "name": "string",
                           "type": "string"
                         },
-                        "id": 1903,
+                        "id": 2153,
                         "name": "ElementaryTypeName",
                         "src": "963:6:6"
                       }
                     ],
-                    "id": 1904,
+                    "id": 2154,
                     "name": "VariableDeclaration",
                     "src": "963:22:6"
                   }
                 ],
-                "id": 1905,
+                "id": 2155,
                 "name": "ParameterList",
                 "src": "962:24:6"
               },
@@ -785,12 +785,12 @@
                   ]
                 },
                 "children": [],
-                "id": 1906,
+                "id": 2156,
                 "name": "ParameterList",
                 "src": "995:0:6"
               }
             ],
-            "id": 1907,
+            "id": 2157,
             "name": "FunctionDefinition",
             "src": "943:53:6"
           },
@@ -804,7 +804,7 @@
                 null
               ],
               "name": "mint",
-              "scope": 1936,
+              "scope": 2186,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "external"
@@ -814,7 +814,7 @@
                 "attributes": {
                   "text": " @dev Creates a new token for `to`. Its token ID will be automatically\n assigned (and available on the emitted {IERC721-Transfer} event), and the token\n URI autogenerated based on the base URI passed at construction.\n See {ERC721-_mint}.\n Requirements:\n - the caller must have the `MINTER_ROLE`."
                 },
-                "id": 1908,
+                "id": 2158,
                 "name": "StructuredDocumentation",
                 "src": "1004:374:6"
               },
@@ -825,7 +825,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "to",
-                      "scope": 1921,
+                      "scope": 2171,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -838,12 +838,12 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 1909,
+                        "id": 2159,
                         "name": "ElementaryTypeName",
                         "src": "1406:7:6"
                       }
                     ],
-                    "id": 1910,
+                    "id": 2160,
                     "name": "VariableDeclaration",
                     "src": "1406:10:6"
                   },
@@ -852,7 +852,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "extraBaseMetaData",
-                      "scope": 1921,
+                      "scope": 2171,
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "type": "struct IEtherealBase.CharacterBaseMetadata",
@@ -862,15 +862,15 @@
                       {
                         "attributes": {
                           "name": "CharacterBaseMetadata",
-                          "referencedDeclaration": 1844,
+                          "referencedDeclaration": 2094,
                           "type": "struct IEtherealBase.CharacterBaseMetadata"
                         },
-                        "id": 1911,
+                        "id": 2161,
                         "name": "UserDefinedTypeName",
                         "src": "1425:21:6"
                       }
                     ],
-                    "id": 1912,
+                    "id": 2162,
                     "name": "VariableDeclaration",
                     "src": "1425:46:6"
                   },
@@ -879,7 +879,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "extraPhysicalMetaData",
-                      "scope": 1921,
+                      "scope": 2171,
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "type": "struct IEtherealBase.CharacterPhysicalMetadata",
@@ -889,15 +889,15 @@
                       {
                         "attributes": {
                           "name": "CharacterPhysicalMetadata",
-                          "referencedDeclaration": 1857,
+                          "referencedDeclaration": 2107,
                           "type": "struct IEtherealBase.CharacterPhysicalMetadata"
                         },
-                        "id": 1913,
+                        "id": 2163,
                         "name": "UserDefinedTypeName",
                         "src": "1480:25:6"
                       }
                     ],
-                    "id": 1914,
+                    "id": 2164,
                     "name": "VariableDeclaration",
                     "src": "1480:54:6"
                   },
@@ -906,7 +906,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "extraAbilitiesMetaData",
-                      "scope": 1921,
+                      "scope": 2171,
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "type": "struct IEtherealBase.CharacterAttributesMetadata",
@@ -916,20 +916,20 @@
                       {
                         "attributes": {
                           "name": "CharacterAttributesMetadata",
-                          "referencedDeclaration": 1874,
+                          "referencedDeclaration": 2124,
                           "type": "struct IEtherealBase.CharacterAttributesMetadata"
                         },
-                        "id": 1915,
+                        "id": 2165,
                         "name": "UserDefinedTypeName",
                         "src": "1543:27:6"
                       }
                     ],
-                    "id": 1916,
+                    "id": 2166,
                     "name": "VariableDeclaration",
                     "src": "1543:57:6"
                   }
                 ],
-                "id": 1917,
+                "id": 2167,
                 "name": "ParameterList",
                 "src": "1397:210:6"
               },
@@ -940,7 +940,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "",
-                      "scope": 1921,
+                      "scope": 2171,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -952,22 +952,22 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 1918,
+                        "id": 2168,
                         "name": "ElementaryTypeName",
                         "src": "1644:7:6"
                       }
                     ],
-                    "id": 1919,
+                    "id": 2169,
                     "name": "VariableDeclaration",
                     "src": "1644:7:6"
                   }
                 ],
-                "id": 1920,
+                "id": 2170,
                 "name": "ParameterList",
                 "src": "1643:9:6"
               }
             ],
-            "id": 1921,
+            "id": 2171,
             "name": "FunctionDefinition",
             "src": "1384:269:6"
           },
@@ -981,7 +981,7 @@
                 null
               ],
               "name": "burn",
-              "scope": 1936,
+              "scope": 2186,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "external"
@@ -991,7 +991,7 @@
                 "attributes": {
                   "text": " @dev Burns `tokenId`. See {ERC721-_burn}.\n Requirements:\n - The caller must own `tokenId` or be an approved operator."
                 },
-                "id": 1922,
+                "id": 2172,
                 "name": "StructuredDocumentation",
                 "src": "1661:168:6"
               },
@@ -1002,7 +1002,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "tokenId",
-                      "scope": 1927,
+                      "scope": 2177,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -1014,17 +1014,17 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 1923,
+                        "id": 2173,
                         "name": "ElementaryTypeName",
                         "src": "1849:7:6"
                       }
                     ],
-                    "id": 1924,
+                    "id": 2174,
                     "name": "VariableDeclaration",
                     "src": "1849:15:6"
                   }
                 ],
-                "id": 1925,
+                "id": 2175,
                 "name": "ParameterList",
                 "src": "1848:17:6"
               },
@@ -1035,12 +1035,12 @@
                   ]
                 },
                 "children": [],
-                "id": 1926,
+                "id": 2176,
                 "name": "ParameterList",
                 "src": "1874:0:6"
               }
             ],
-            "id": 1927,
+            "id": 2177,
             "name": "FunctionDefinition",
             "src": "1835:40:6"
           },
@@ -1054,7 +1054,7 @@
                 null
               ],
               "name": "pause",
-              "scope": 1936,
+              "scope": 2186,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "external"
@@ -1064,7 +1064,7 @@
                 "attributes": {
                   "text": " @dev Pauses all token transfers.\n See {ERC721Pausable} and {Pausable-_pause}.\n Requirements:\n - the caller must have the `PAUSER_ROLE`."
                 },
-                "id": 1928,
+                "id": 2178,
                 "name": "StructuredDocumentation",
                 "src": "1883:201:6"
               },
@@ -1075,7 +1075,7 @@
                   ]
                 },
                 "children": [],
-                "id": 1929,
+                "id": 2179,
                 "name": "ParameterList",
                 "src": "2104:2:6"
               },
@@ -1086,12 +1086,12 @@
                   ]
                 },
                 "children": [],
-                "id": 1930,
+                "id": 2180,
                 "name": "ParameterList",
                 "src": "2115:0:6"
               }
             ],
-            "id": 1931,
+            "id": 2181,
             "name": "FunctionDefinition",
             "src": "2090:26:6"
           },
@@ -1105,7 +1105,7 @@
                 null
               ],
               "name": "unpause",
-              "scope": 1936,
+              "scope": 2186,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "external"
@@ -1115,7 +1115,7 @@
                 "attributes": {
                   "text": " @dev Unpauses all token transfers.\n See {ERC721Pausable} and {Pausable-_unpause}.\n Requirements:\n - the caller must have the `PAUSER_ROLE`."
                 },
-                "id": 1932,
+                "id": 2182,
                 "name": "StructuredDocumentation",
                 "src": "2124:205:6"
               },
@@ -1126,7 +1126,7 @@
                   ]
                 },
                 "children": [],
-                "id": 1933,
+                "id": 2183,
                 "name": "ParameterList",
                 "src": "2351:2:6"
               },
@@ -1137,22 +1137,22 @@
                   ]
                 },
                 "children": [],
-                "id": 1934,
+                "id": 2184,
                 "name": "ParameterList",
                 "src": "2362:0:6"
               }
             ],
-            "id": 1935,
+            "id": 2185,
             "name": "FunctionDefinition",
             "src": "2335:28:6"
           }
         ],
-        "id": 1936,
+        "id": 2186,
         "name": "ContractDefinition",
         "src": "793:1575:6"
       }
     ],
-    "id": 1937,
+    "id": 2187,
     "name": "SourceUnit",
     "src": "33:2335:6"
   },
@@ -1162,7 +1162,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.3",
-  "updatedAt": "2021-02-16T04:43:59.926Z",
+  "updatedAt": "2021-02-16T06:27:27.967Z",
   "devdoc": {
     "details": "{ERC721} token, including:  - ability for holders to burn (destroy) their tokens  - a minter role that allows for token minting (creation)  - a pauser role that allows to stop all token transfers  - token ID and URI autogeneration  - includes extra properties to store important metadata This contract uses {AccessControl} to lock permissioned functions using the different roles - head to its documentation for details. The account that deploys the contract will be granted the minter and pauser roles, as well as the default admin role, which will let it grant both minter and pauser roles to other accounts.",
     "kind": "dev",

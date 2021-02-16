@@ -35,6 +35,16 @@ contract EtherealGame is Context, AccessControl, IEtherealBase
     uint256 player1CharacterId;
     uint256 player2CharacterId;
   }
+
+  struct FightRequest {
+    address contender;
+    bool accepted;
+    bool rejected;
+    bool pending;
+    bool win;
+    bool loss;
+    uint256 expirationDate;
+  }
   
   // Player role to improve access control
   bytes32 public constant PLAYER_ROLE = keccak256("PLAYER_ROLE");
@@ -54,9 +64,13 @@ contract EtherealGame is Context, AccessControl, IEtherealBase
   mapping(bytes32 => bool) public playerNicknameExists;
   mapping(address => bool) public playerIsRegistered;
   
-  // Table of fights
-  Fight[] public fights;
-  uint256 public numFights;
+  // Table of fight requests
+  mapping(address => FightRequest[]) public fightRequests;
+  mapping(address => uint256) public totalFightRequests;
+
+  // Table for Elements of nature probs
+  mapping(ElementOfNature => mapping(ElementOfNature => uint8)) public probabilityOfWinningAgainstElem;
+
   // Statistics
   address public topPlayer;
   uint256 public topFighter;
@@ -114,7 +128,9 @@ contract EtherealGame is Context, AccessControl, IEtherealBase
   event ProbabilityOfWinningUpdate(ElementOfNature indexed _me, ElementOfNature _enemy, uint8 _prob);
   event NewPlayerRegistered(address indexed player, bytes32 name, uint256 totalPlayers);
   event NewCharacterMinted(address indexed player, bytes32 name);
-	
+  event NewFightRequest(address indexed player1, address indexed player2, uint256 id);
+  event NewFightRequestAccepted(address indexed player1, address indexed player2);
+
   /*
   * @dev Set default admin role to owner
   */
@@ -244,7 +260,6 @@ contract EtherealGame is Context, AccessControl, IEtherealBase
   }
 
   
-  mapping(ElementOfNature => mapping(ElementOfNature => uint8)) public probabilityOfWinningAgainstElem;
 
   /*
   * @dev Assign/update probability of my _element defeating _enemy
@@ -263,6 +278,83 @@ contract EtherealGame is Context, AccessControl, IEtherealBase
     probabilityOfWinningAgainstElem[_enemy][_me] = probLoss;
     emit ProbabilityOfWinningUpdate(_enemy, _me, probLoss);
   }
+
+  /*
+  * @dev Request fight
+  */
+  function _requestFight(address _contender)
+    private
+    returns(uint256)
+  {
+    require(
+      IBEP20(kopernikTokenContract).allowance(
+        _msgSender(), address(this)
+      ) >= 1, "Not enough tokens allowed to use"
+    );
+
+    // Initialize as true only the "pending" flag
+    fightRequests[_contender].push(FightRequest(
+        _msgSender(), false, false, true, false, false,
+        block.timestamp + 1 days
+      ));
+    totalFightRequests[_contender] = fightRequests[_contender].length;
+    NewFightRequest(_msgSender(), _contender, totalFightRequests[_contender]);
+    return totalFightRequests[_contender];
+  }
+
+  /*
+  * @dev Accept fight
+  */
+  function _acceptFight(uint256 _fightRequestId)
+    private
+  {
+    require(
+      IBEP20(kopernikTokenContract).allowance(
+        _msgSender(), address(this)
+      ) >= 1, "Not enough tokens allowed to use"
+    );
+    require(
+      _fightRequestId < totalFightRequests[_msgSender()],
+      "Fight index beyond array elements"
+    );
+    require(
+      fightRequests[_msgSender()][_fightRequestId].expirationDate < block.timestamp,
+      "Invitation has expired!"
+    );
+    require(
+      fightRequests[_msgSender()][_fightRequestId].pending,
+      "Invitation was already acceted/rejected"
+    );
+    require(
+      IBEP20(kopernikTokenContract).allowance(
+        fightRequests[_msgSender()][_fightRequestId].contender, address(this)
+      ) >= 1, "Not enough tokens allowed to use"
+    );
+
+    fightRequests[_msgSender()][_fightRequestId].accepted = true;
+    fightRequests[_msgSender()][_fightRequestId].pending = false;
+    
+    NewFightRequestAccepted(
+      _msgSender(), 
+      fightRequests[_msgSender()][_fightRequestId].contender
+    );
+  }
+
+
+  /*
+  * @dev FIGHT!
+  *   returns winner
+  */
+  function _fight(
+    address _character1,
+    address _character2
+  )
+    private
+    returns(address)
+  {
+    return _character1;
+  }
+
 
   /*
   * @dev Create a new player and send initial tokens
@@ -298,6 +390,21 @@ contract EtherealGame is Context, AccessControl, IEtherealBase
       extraAbilitiesMetaData
     );
     return characterId;
+  }
+
+  /*
+  * @dev Request a fight
+  */
+  function requestFight(
+    address _contender
+  )
+    public
+    isContractActive
+    returns(uint256)
+  {
+    require(hasRole(PLAYER_ROLE, _msgSender()), "requestFight: must have player role");
+    uint256 fightId = _requestFight(_contender);
+    return fightId;
   }
 
   /*

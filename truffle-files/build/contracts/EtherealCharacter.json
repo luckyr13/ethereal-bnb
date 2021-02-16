@@ -3571,7 +3571,7 @@
                       }
                     ],
                     "functionName": {
-                      "name": "validator_revert_t_enum$_ElementOfNature_$1833",
+                      "name": "validator_revert_t_enum$_ElementOfNature_$2083",
                       "nodeType": "YulIdentifier",
                       "src": "1314:46:32"
                     },
@@ -3583,7 +3583,7 @@
                 }
               ]
             },
-            "name": "abi_decode_t_enum$_ElementOfNature_$1833",
+            "name": "abi_decode_t_enum$_ElementOfNature_$2083",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -4189,7 +4189,7 @@
                               }
                             ],
                             "functionName": {
-                              "name": "abi_decode_t_enum$_ElementOfNature_$1833",
+                              "name": "abi_decode_t_enum$_ElementOfNature_$2083",
                               "nodeType": "YulIdentifier",
                               "src": "2217:40:32"
                             },
@@ -4289,7 +4289,7 @@
                               }
                             ],
                             "functionName": {
-                              "name": "abi_decode_t_enum$_ElementOfNature_$1833",
+                              "name": "abi_decode_t_enum$_ElementOfNature_$2083",
                               "nodeType": "YulIdentifier",
                               "src": "2409:40:32"
                             },
@@ -4912,7 +4912,7 @@
                 }
               ]
             },
-            "name": "abi_decode_t_struct$_CharacterAttributesMetadata_$1874_memory_ptr",
+            "name": "abi_decode_t_struct$_CharacterAttributesMetadata_$2124_memory_ptr",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -5641,7 +5641,7 @@
                 }
               ]
             },
-            "name": "abi_decode_t_struct$_CharacterBaseMetadata_$1844_memory_ptr",
+            "name": "abi_decode_t_struct$_CharacterBaseMetadata_$2094_memory_ptr",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -6381,7 +6381,7 @@
                 }
               ]
             },
-            "name": "abi_decode_t_struct$_CharacterPhysicalMetadata_$1857_memory_ptr",
+            "name": "abi_decode_t_struct$_CharacterPhysicalMetadata_$2107_memory_ptr",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -8590,7 +8590,7 @@
                           }
                         ],
                         "functionName": {
-                          "name": "abi_decode_t_struct$_CharacterBaseMetadata_$1844_memory_ptr",
+                          "name": "abi_decode_t_struct$_CharacterBaseMetadata_$2094_memory_ptr",
                           "nodeType": "YulIdentifier",
                           "src": "9472:59:32"
                         },
@@ -8663,7 +8663,7 @@
                           }
                         ],
                         "functionName": {
-                          "name": "abi_decode_t_struct$_CharacterPhysicalMetadata_$1857_memory_ptr",
+                          "name": "abi_decode_t_struct$_CharacterPhysicalMetadata_$2107_memory_ptr",
                           "nodeType": "YulIdentifier",
                           "src": "9637:63:32"
                         },
@@ -8736,7 +8736,7 @@
                           }
                         ],
                         "functionName": {
-                          "name": "abi_decode_t_struct$_CharacterAttributesMetadata_$1874_memory_ptr",
+                          "name": "abi_decode_t_struct$_CharacterAttributesMetadata_$2124_memory_ptr",
                           "nodeType": "YulIdentifier",
                           "src": "9807:65:32"
                         },
@@ -8755,7 +8755,7 @@
                 }
               ]
             },
-            "name": "abi_decode_tuple_t_addresst_struct$_CharacterBaseMetadata_$1844_memory_ptrt_struct$_CharacterPhysicalMetadata_$1857_memory_ptrt_struct$_CharacterAttributesMetadata_$1874_memory_ptr",
+            "name": "abi_decode_tuple_t_addresst_struct$_CharacterBaseMetadata_$2094_memory_ptrt_struct$_CharacterPhysicalMetadata_$2107_memory_ptrt_struct$_CharacterAttributesMetadata_$2124_memory_ptr",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -10679,7 +10679,7 @@
                           }
                         ],
                         "functionName": {
-                          "name": "convert_t_enum$_ElementOfNature_$1833_to_t_uint8",
+                          "name": "convert_t_enum$_ElementOfNature_$2083_to_t_uint8",
                           "nodeType": "YulIdentifier",
                           "src": "12922:48:32"
                         },
@@ -10700,7 +10700,7 @@
                 }
               ]
             },
-            "name": "abi_encode_t_enum$_ElementOfNature_$1833_to_t_uint8_fromStack",
+            "name": "abi_encode_t_enum$_ElementOfNature_$2083_to_t_uint8_fromStack",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -13398,7 +13398,7 @@
                       }
                     ],
                     "functionName": {
-                      "name": "abi_encode_t_enum$_ElementOfNature_$1833_to_t_uint8_fromStack",
+                      "name": "abi_encode_t_enum$_ElementOfNature_$2083_to_t_uint8_fromStack",
                       "nodeType": "YulIdentifier",
                       "src": "18620:61:32"
                     },
@@ -13441,7 +13441,7 @@
                       }
                     ],
                     "functionName": {
-                      "name": "abi_encode_t_enum$_ElementOfNature_$1833_to_t_uint8_fromStack",
+                      "name": "abi_encode_t_enum$_ElementOfNature_$2083_to_t_uint8_fromStack",
                       "nodeType": "YulIdentifier",
                       "src": "18715:61:32"
                     },
@@ -13711,7 +13711,7 @@
                 }
               ]
             },
-            "name": "abi_encode_tuple_t_enum$_ElementOfNature_$1833_t_enum$_ElementOfNature_$1833_t_uint8_t_uint8_t_uint8_t_uint8_t_uint8_t_uint8__to_t_uint8_t_uint8_t_uint8_t_uint8_t_uint8_t_uint8_t_uint8_t_uint8__fromStack_reversed",
+            "name": "abi_encode_tuple_t_enum$_ElementOfNature_$2083_t_enum$_ElementOfNature_$2083_t_uint8_t_uint8_t_uint8_t_uint8_t_uint8_t_uint8__to_t_uint8_t_uint8_t_uint8_t_uint8_t_uint8_t_uint8_t_uint8_t_uint8__fromStack_reversed",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -16686,7 +16686,7 @@
                       }
                     ],
                     "functionName": {
-                      "name": "validator_assert_t_enum$_ElementOfNature_$1833",
+                      "name": "validator_assert_t_enum$_ElementOfNature_$2083",
                       "nodeType": "YulIdentifier",
                       "src": "25679:46:32"
                     },
@@ -16698,7 +16698,7 @@
                 }
               ]
             },
-            "name": "cleanup_t_enum$_ElementOfNature_$1833",
+            "name": "cleanup_t_enum$_ElementOfNature_$2083",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -17022,7 +17022,7 @@
                       }
                     ],
                     "functionName": {
-                      "name": "cleanup_t_enum$_ElementOfNature_$1833",
+                      "name": "cleanup_t_enum$_ElementOfNature_$2083",
                       "nodeType": "YulIdentifier",
                       "src": "26272:37:32"
                     },
@@ -17039,7 +17039,7 @@
                 }
               ]
             },
-            "name": "convert_t_enum$_ElementOfNature_$1833_to_t_uint8",
+            "name": "convert_t_enum$_ElementOfNature_$2083_to_t_uint8",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -17665,7 +17665,7 @@
                 }
               ]
             },
-            "name": "validator_assert_t_enum$_ElementOfNature_$1833",
+            "name": "validator_assert_t_enum$_ElementOfNature_$2083",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -18262,7 +18262,7 @@
                 }
               ]
             },
-            "name": "validator_revert_t_enum$_ElementOfNature_$1833",
+            "name": "validator_revert_t_enum$_ElementOfNature_$2083",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -18680,7 +18680,7 @@
           }
         ]
       },
-      "contents": "{\n\n    function abi_decode_t_address(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_address(value)\n    }\n\n    function abi_decode_t_bool(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_bool(value)\n    }\n\n    function abi_decode_t_bytes24(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_bytes24(value)\n    }\n\n    function abi_decode_t_bytes32(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_bytes32(value)\n    }\n\n    function abi_decode_t_bytes4(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_bytes4(value)\n    }\n\n    function abi_decode_t_bytes_memory_ptr(offset, end) -> array {\n        if iszero(slt(add(offset, 0x1f), end)) { revert(0, 0) }\n        let length := calldataload(offset)\n        array := allocateMemory(array_allocation_size_t_bytes_memory_ptr(length))\n        mstore(array, length)\n        let src := add(offset, 0x20)\n        let dst := add(array, 0x20)\n        if gt(add(src, length), end) { revert(0, 0) }\n        copy_calldata_to_memory(src, dst, length)\n    }\n\n    function abi_decode_t_enum$_ElementOfNature_$1833(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_enum$_ElementOfNature_$1833(value)\n    }\n\n    function abi_decode_t_string_memory_ptr(offset, end) -> array {\n        if iszero(slt(add(offset, 0x1f), end)) { revert(0, 0) }\n        let length := calldataload(offset)\n        array := allocateMemory(array_allocation_size_t_string_memory_ptr(length))\n        mstore(array, length)\n        let src := add(offset, 0x20)\n        let dst := add(array, 0x20)\n        if gt(add(src, length), end) { revert(0, 0) }\n        copy_calldata_to_memory(src, dst, length)\n    }\n\n    // struct IEtherealBase.CharacterAttributesMetadata\n    function abi_decode_t_struct$_CharacterAttributesMetadata_$1874_memory_ptr(headStart, end) -> value {\n        if slt(sub(end, headStart), 0x0100) { revert(0, 0) }\n        value := allocateMemory(0x0100)\n\n        {\n            // primaryElement\n\n            let offset := 0\n            mstore(add(value, 0x00), abi_decode_t_enum$_ElementOfNature_$1833(add(headStart, offset), end))\n\n        }\n\n        {\n            // secondaryElement\n\n            let offset := 32\n            mstore(add(value, 0x20), abi_decode_t_enum$_ElementOfNature_$1833(add(headStart, offset), end))\n\n        }\n\n        {\n            // life\n\n            let offset := 64\n            mstore(add(value, 0x40), abi_decode_t_uint8(add(headStart, offset), end))\n\n        }\n\n        {\n            // armor\n\n            let offset := 96\n            mstore(add(value, 0x60), abi_decode_t_uint8(add(headStart, offset), end))\n\n        }\n\n        {\n            // strength\n\n            let offset := 128\n            mstore(add(value, 0x80), abi_decode_t_uint8(add(headStart, offset), end))\n\n        }\n\n        {\n            // speed\n\n            let offset := 160\n            mstore(add(value, 0xa0), abi_decode_t_uint8(add(headStart, offset), end))\n\n        }\n\n        {\n            // luck\n\n            let offset := 192\n            mstore(add(value, 0xc0), abi_decode_t_uint8(add(headStart, offset), end))\n\n        }\n\n        {\n            // spirit\n\n            let offset := 224\n            mstore(add(value, 0xe0), abi_decode_t_uint8(add(headStart, offset), end))\n\n        }\n\n    }\n\n    // struct IEtherealBase.CharacterBaseMetadata\n    function abi_decode_t_struct$_CharacterBaseMetadata_$1844_memory_ptr(headStart, end) -> value {\n        if slt(sub(end, headStart), 0xa0) { revert(0, 0) }\n        value := allocateMemory(0xa0)\n\n        {\n            // name\n\n            let offset := 0\n            mstore(add(value, 0x00), abi_decode_t_bytes32(add(headStart, offset), end))\n\n        }\n\n        {\n            // birthdate\n\n            let offset := 32\n            mstore(add(value, 0x20), abi_decode_t_bytes24(add(headStart, offset), end))\n\n        }\n\n        {\n            // description\n\n            let offset := calldataload(add(headStart, 64))\n            if gt(offset, 0xffffffffffffffff) { revert(0, 0) }\n            mstore(add(value, 0x40), abi_decode_t_string_memory_ptr(add(headStart, offset), end))\n\n        }\n\n        {\n            // planetId\n\n            let offset := 96\n            mstore(add(value, 0x60), abi_decode_t_uint256(add(headStart, offset), end))\n\n        }\n\n        {\n            // genre\n\n            let offset := 128\n            mstore(add(value, 0x80), abi_decode_t_uint8(add(headStart, offset), end))\n\n        }\n\n    }\n\n    // struct IEtherealBase.CharacterPhysicalMetadata\n    function abi_decode_t_struct$_CharacterPhysicalMetadata_$1857_memory_ptr(headStart, end) -> value {\n        if slt(sub(end, headStart), 0xc0) { revert(0, 0) }\n        value := allocateMemory(0xc0)\n\n        {\n            // skintone\n\n            let offset := 0\n            mstore(add(value, 0x00), abi_decode_t_uint24(add(headStart, offset), end))\n\n        }\n\n        {\n            // haircolor\n\n            let offset := 32\n            mstore(add(value, 0x20), abi_decode_t_uint24(add(headStart, offset), end))\n\n        }\n\n        {\n            // eyescolor\n\n            let offset := 64\n            mstore(add(value, 0x40), abi_decode_t_uint24(add(headStart, offset), end))\n\n        }\n\n        {\n            // weight\n\n            let offset := 96\n            mstore(add(value, 0x60), abi_decode_t_uint16(add(headStart, offset), end))\n\n        }\n\n        {\n            // height\n\n            let offset := 128\n            mstore(add(value, 0x80), abi_decode_t_uint16(add(headStart, offset), end))\n\n        }\n\n        {\n            // bodyType\n\n            let offset := 160\n            mstore(add(value, 0xa0), abi_decode_t_uint8(add(headStart, offset), end))\n\n        }\n\n    }\n\n    function abi_decode_t_uint16(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_uint16(value)\n    }\n\n    function abi_decode_t_uint24(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_uint24(value)\n    }\n\n    function abi_decode_t_uint256(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_uint256(value)\n    }\n\n    function abi_decode_t_uint8(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_uint8(value)\n    }\n\n    function abi_decode_tuple_t_address(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n\n        {\n            let offset := 0\n            value0 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_addresst_address(headStart, dataEnd) -> value0, value1 {\n        if slt(sub(dataEnd, headStart), 64) { revert(0, 0) }\n\n        {\n            let offset := 0\n            value0 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n        {\n            let offset := 32\n            value1 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_addresst_addresst_uint256(headStart, dataEnd) -> value0, value1, value2 {\n        if slt(sub(dataEnd, headStart), 96) { revert(0, 0) }\n\n        {\n            let offset := 0\n            value0 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n        {\n            let offset := 32\n            value1 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n        {\n            let offset := 64\n            value2 := abi_decode_t_uint256(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_addresst_addresst_uint256t_bytes_memory_ptr(headStart, dataEnd) -> value0, value1, value2, value3 {\n        if slt(sub(dataEnd, headStart), 128) { revert(0, 0) }\n\n        {\n            let offset := 0\n            value0 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n        {\n            let offset := 32\n            value1 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n        {\n            let offset := 64\n            value2 := abi_decode_t_uint256(add(headStart, offset), dataEnd)\n        }\n\n        {\n            let offset := calldataload(add(headStart, 96))\n            if gt(offset, 0xffffffffffffffff) { revert(0, 0) }\n            value3 := abi_decode_t_bytes_memory_ptr(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_addresst_bool(headStart, dataEnd) -> value0, value1 {\n        if slt(sub(dataEnd, headStart), 64) { revert(0, 0) }\n\n        {\n            let offset := 0\n            value0 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n        {\n            let offset := 32\n            value1 := abi_decode_t_bool(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_addresst_struct$_CharacterBaseMetadata_$1844_memory_ptrt_struct$_CharacterPhysicalMetadata_$1857_memory_ptrt_struct$_CharacterAttributesMetadata_$1874_memory_ptr(headStart, dataEnd) -> value0, value1, value2, value3 {\n        if slt(sub(dataEnd, headStart), 512) { revert(0, 0) }\n\n        {\n            let offset := 0\n            value0 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n        {\n            let offset := calldataload(add(headStart, 32))\n            if gt(offset, 0xffffffffffffffff) { revert(0, 0) }\n            value1 := abi_decode_t_struct$_CharacterBaseMetadata_$1844_memory_ptr(add(headStart, offset), dataEnd)\n        }\n\n        {\n            let offset := 64\n            value2 := abi_decode_t_struct$_CharacterPhysicalMetadata_$1857_memory_ptr(add(headStart, offset), dataEnd)\n        }\n\n        {\n            let offset := 256\n            value3 := abi_decode_t_struct$_CharacterAttributesMetadata_$1874_memory_ptr(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_addresst_uint256(headStart, dataEnd) -> value0, value1 {\n        if slt(sub(dataEnd, headStart), 64) { revert(0, 0) }\n\n        {\n            let offset := 0\n            value0 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n        {\n            let offset := 32\n            value1 := abi_decode_t_uint256(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_bytes32(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n\n        {\n            let offset := 0\n            value0 := abi_decode_t_bytes32(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_bytes32t_address(headStart, dataEnd) -> value0, value1 {\n        if slt(sub(dataEnd, headStart), 64) { revert(0, 0) }\n\n        {\n            let offset := 0\n            value0 := abi_decode_t_bytes32(add(headStart, offset), dataEnd)\n        }\n\n        {\n            let offset := 32\n            value1 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_bytes32t_uint256(headStart, dataEnd) -> value0, value1 {\n        if slt(sub(dataEnd, headStart), 64) { revert(0, 0) }\n\n        {\n            let offset := 0\n            value0 := abi_decode_t_bytes32(add(headStart, offset), dataEnd)\n        }\n\n        {\n            let offset := 32\n            value1 := abi_decode_t_uint256(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_bytes4(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n\n        {\n            let offset := 0\n            value0 := abi_decode_t_bytes4(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_string_memory_ptr(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n\n        {\n            let offset := calldataload(add(headStart, 0))\n            if gt(offset, 0xffffffffffffffff) { revert(0, 0) }\n            value0 := abi_decode_t_string_memory_ptr(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_uint256(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n\n        {\n            let offset := 0\n            value0 := abi_decode_t_uint256(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_encode_t_address_to_t_address_fromStack(value, pos) {\n        mstore(pos, cleanup_t_address(value))\n    }\n\n    function abi_encode_t_bool_to_t_bool_fromStack(value, pos) {\n        mstore(pos, cleanup_t_bool(value))\n    }\n\n    function abi_encode_t_bytes24_to_t_bytes24_fromStack(value, pos) {\n        mstore(pos, cleanup_t_bytes24(value))\n    }\n\n    function abi_encode_t_bytes32_to_t_bytes32_fromStack(value, pos) {\n        mstore(pos, cleanup_t_bytes32(value))\n    }\n\n    function abi_encode_t_enum$_ElementOfNature_$1833_to_t_uint8_fromStack(value, pos) {\n        mstore(pos, convert_t_enum$_ElementOfNature_$1833_to_t_uint8(value))\n    }\n\n    function abi_encode_t_rational_0_by_1_to_t_uint8_fromStack(value, pos) {\n        mstore(pos, convert_t_rational_0_by_1_to_t_uint8(value))\n    }\n\n    function abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value, pos) -> end {\n        let length := array_length_t_string_memory_ptr(value)\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, length)\n        copy_memory_to_memory(add(value, 0x20), pos, length)\n        end := add(pos, round_up_to_mul_of_32(length))\n    }\n\n    function abi_encode_t_stringliteral_26100241ce62f39e64fda63025a82029149e5ab0ba4f8981d6d3fa49d04844f4_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 53)\n\n        mstore(add(pos, 0), \"EtherealCharacter: character nam\")\n\n        mstore(add(pos, 32), \"e should not be empty\")\n\n        end := add(pos, 64)\n    }\n\n    function abi_encode_t_stringliteral_40c9c95e9f416c51c55d88e1508883bb887c746928503de15b750cf10a750aef_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 62)\n\n        mstore(add(pos, 0), \"ERC721PresetMinterPauserAutoId: \")\n\n        mstore(add(pos, 32), \"must have pauser role to pause\")\n\n        end := add(pos, 64)\n    }\n\n    function abi_encode_t_stringliteral_48ff42fbd120fc22f3ab02dd5f69dedc84599a2e70c9d40b03f3caad8e5cd3a9_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 53)\n\n        mstore(add(pos, 0), \"EtherealCharacter: must have adm\")\n\n        mstore(add(pos, 32), \"in role to setBaseURI\")\n\n        end := add(pos, 64)\n    }\n\n    function abi_encode_t_stringliteral_b0c4fffc799c55551beeb62874e50ed570456fdd787f22a539ceb634ad744bdf_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 48)\n\n        mstore(add(pos, 0), \"EtherealCharacter: must have min\")\n\n        mstore(add(pos, 32), \"ter role to mint\")\n\n        end := add(pos, 64)\n    }\n\n    function abi_encode_t_stringliteral_ba788f342fa3a97c5bc82f368c727aa71890125c7e276b2a913d49329dfdf19c_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 76)\n\n        mstore(add(pos, 0), \"EtherealCharacter: name already \")\n\n    mstore(add(pos, 32), \"taken by another user :) Choose \")\n\n    mstore(add(pos, 64), \"another one!\")\n\n    end := add(pos, 96)\n}\n\nfunction abi_encode_t_stringliteral_c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470_to_t_string_memory_ptr_fromStack(pos) -> end {\n    pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 0)\n\n    end := add(pos, 0)\n}\n\nfunction abi_encode_t_stringliteral_ee6b7e810d7b317242d4688e6943ff4dd7897bb01d903b1a666812481b12a4f1_to_t_string_memory_ptr_fromStack(pos) -> end {\n    pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 48)\n\n    mstore(add(pos, 0), \"ERC721Burnable: caller is not ow\")\n\n    mstore(add(pos, 32), \"ner nor approved\")\n\n    end := add(pos, 64)\n}\n\nfunction abi_encode_t_stringliteral_f3877585dfb2235e1900eee5d9e32a457b9d6148f93823a62cb07ae76c6585a8_to_t_string_memory_ptr_fromStack(pos) -> end {\n    pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 64)\n\n    mstore(add(pos, 0), \"ERC721PresetMinterPauserAutoId: \")\n\n    mstore(add(pos, 32), \"must have pauser role to unpause\")\n\n    end := add(pos, 64)\n}\n\nfunction abi_encode_t_uint16_to_t_uint16_fromStack(value, pos) {\n    mstore(pos, cleanup_t_uint16(value))\n}\n\nfunction abi_encode_t_uint24_to_t_uint24_fromStack(value, pos) {\n    mstore(pos, cleanup_t_uint24(value))\n}\n\nfunction abi_encode_t_uint256_to_t_uint256_fromStack(value, pos) {\n    mstore(pos, cleanup_t_uint256(value))\n}\n\nfunction abi_encode_t_uint8_to_t_uint8_fromStack(value, pos) {\n    mstore(pos, cleanup_t_uint8(value))\n}\n\nfunction abi_encode_tuple_t_address__to_t_address__fromStack_reversed(headStart , value0) -> tail {\n    tail := add(headStart, 32)\n\n    abi_encode_t_address_to_t_address_fromStack(value0,  add(headStart, 0))\n\n}\n\nfunction abi_encode_tuple_t_bool__to_t_bool__fromStack_reversed(headStart , value0) -> tail {\n    tail := add(headStart, 32)\n\n    abi_encode_t_bool_to_t_bool_fromStack(value0,  add(headStart, 0))\n\n}\n\nfunction abi_encode_tuple_t_bytes32__to_t_bytes32__fromStack_reversed(headStart , value0) -> tail {\n    tail := add(headStart, 32)\n\n    abi_encode_t_bytes32_to_t_bytes32_fromStack(value0,  add(headStart, 0))\n\n}\n\nfunction abi_encode_tuple_t_bytes32_t_bytes24_t_string_memory_ptr_t_uint256_t_uint8__to_t_bytes32_t_bytes24_t_string_memory_ptr_t_uint256_t_uint8__fromStack_reversed(headStart , value4, value3, value2, value1, value0) -> tail {\n    tail := add(headStart, 160)\n\n    abi_encode_t_bytes32_to_t_bytes32_fromStack(value0,  add(headStart, 0))\n\n    abi_encode_t_bytes24_to_t_bytes24_fromStack(value1,  add(headStart, 32))\n\n    mstore(add(headStart, 64), sub(tail, headStart))\n    tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value2,  tail)\n\n    abi_encode_t_uint256_to_t_uint256_fromStack(value3,  add(headStart, 96))\n\n    abi_encode_t_uint8_to_t_uint8_fromStack(value4,  add(headStart, 128))\n\n}\n\nfunction abi_encode_tuple_t_enum$_ElementOfNature_$1833_t_enum$_ElementOfNature_$1833_t_uint8_t_uint8_t_uint8_t_uint8_t_uint8_t_uint8__to_t_uint8_t_uint8_t_uint8_t_uint8_t_uint8_t_uint8_t_uint8_t_uint8__fromStack_reversed(headStart , value7, value6, value5, value4, value3, value2, value1, value0) -> tail {\n    tail := add(headStart, 256)\n\n    abi_encode_t_enum$_ElementOfNature_$1833_to_t_uint8_fromStack(value0,  add(headStart, 0))\n\n    abi_encode_t_enum$_ElementOfNature_$1833_to_t_uint8_fromStack(value1,  add(headStart, 32))\n\n    abi_encode_t_uint8_to_t_uint8_fromStack(value2,  add(headStart, 64))\n\n    abi_encode_t_uint8_to_t_uint8_fromStack(value3,  add(headStart, 96))\n\n    abi_encode_t_uint8_to_t_uint8_fromStack(value4,  add(headStart, 128))\n\n    abi_encode_t_uint8_to_t_uint8_fromStack(value5,  add(headStart, 160))\n\n    abi_encode_t_uint8_to_t_uint8_fromStack(value6,  add(headStart, 192))\n\n    abi_encode_t_uint8_to_t_uint8_fromStack(value7,  add(headStart, 224))\n\n}\n\nfunction abi_encode_tuple_t_rational_0_by_1__to_t_uint8__fromStack_reversed(headStart , value0) -> tail {\n    tail := add(headStart, 32)\n\n    abi_encode_t_rational_0_by_1_to_t_uint8_fromStack(value0,  add(headStart, 0))\n\n}\n\nfunction abi_encode_tuple_t_string_memory_ptr__to_t_string_memory_ptr__fromStack_reversed(headStart , value0) -> tail {\n    tail := add(headStart, 32)\n\n    mstore(add(headStart, 0), sub(tail, headStart))\n    tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value0,  tail)\n\n}\n\nfunction abi_encode_tuple_t_stringliteral_26100241ce62f39e64fda63025a82029149e5ab0ba4f8981d6d3fa49d04844f4__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n    tail := add(headStart, 32)\n\n    mstore(add(headStart, 0), sub(tail, headStart))\n    tail := abi_encode_t_stringliteral_26100241ce62f39e64fda63025a82029149e5ab0ba4f8981d6d3fa49d04844f4_to_t_string_memory_ptr_fromStack( tail)\n\n}\n\nfunction abi_encode_tuple_t_stringliteral_40c9c95e9f416c51c55d88e1508883bb887c746928503de15b750cf10a750aef__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n    tail := add(headStart, 32)\n\n    mstore(add(headStart, 0), sub(tail, headStart))\n    tail := abi_encode_t_stringliteral_40c9c95e9f416c51c55d88e1508883bb887c746928503de15b750cf10a750aef_to_t_string_memory_ptr_fromStack( tail)\n\n}\n\nfunction abi_encode_tuple_t_stringliteral_48ff42fbd120fc22f3ab02dd5f69dedc84599a2e70c9d40b03f3caad8e5cd3a9__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n    tail := add(headStart, 32)\n\n    mstore(add(headStart, 0), sub(tail, headStart))\n    tail := abi_encode_t_stringliteral_48ff42fbd120fc22f3ab02dd5f69dedc84599a2e70c9d40b03f3caad8e5cd3a9_to_t_string_memory_ptr_fromStack( tail)\n\n}\n\nfunction abi_encode_tuple_t_stringliteral_b0c4fffc799c55551beeb62874e50ed570456fdd787f22a539ceb634ad744bdf__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n    tail := add(headStart, 32)\n\n    mstore(add(headStart, 0), sub(tail, headStart))\n    tail := abi_encode_t_stringliteral_b0c4fffc799c55551beeb62874e50ed570456fdd787f22a539ceb634ad744bdf_to_t_string_memory_ptr_fromStack( tail)\n\n}\n\nfunction abi_encode_tuple_t_stringliteral_ba788f342fa3a97c5bc82f368c727aa71890125c7e276b2a913d49329dfdf19c__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n    tail := add(headStart, 32)\n\n    mstore(add(headStart, 0), sub(tail, headStart))\n    tail := abi_encode_t_stringliteral_ba788f342fa3a97c5bc82f368c727aa71890125c7e276b2a913d49329dfdf19c_to_t_string_memory_ptr_fromStack( tail)\n\n}\n\nfunction abi_encode_tuple_t_stringliteral_c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n    tail := add(headStart, 32)\n\n    mstore(add(headStart, 0), sub(tail, headStart))\n    tail := abi_encode_t_stringliteral_c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470_to_t_string_memory_ptr_fromStack( tail)\n\n}\n\nfunction abi_encode_tuple_t_stringliteral_ee6b7e810d7b317242d4688e6943ff4dd7897bb01d903b1a666812481b12a4f1__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n    tail := add(headStart, 32)\n\n    mstore(add(headStart, 0), sub(tail, headStart))\n    tail := abi_encode_t_stringliteral_ee6b7e810d7b317242d4688e6943ff4dd7897bb01d903b1a666812481b12a4f1_to_t_string_memory_ptr_fromStack( tail)\n\n}\n\nfunction abi_encode_tuple_t_stringliteral_f3877585dfb2235e1900eee5d9e32a457b9d6148f93823a62cb07ae76c6585a8__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n    tail := add(headStart, 32)\n\n    mstore(add(headStart, 0), sub(tail, headStart))\n    tail := abi_encode_t_stringliteral_f3877585dfb2235e1900eee5d9e32a457b9d6148f93823a62cb07ae76c6585a8_to_t_string_memory_ptr_fromStack( tail)\n\n}\n\nfunction abi_encode_tuple_t_uint24_t_uint24_t_uint24_t_uint16_t_uint16_t_uint8__to_t_uint24_t_uint24_t_uint24_t_uint16_t_uint16_t_uint8__fromStack_reversed(headStart , value5, value4, value3, value2, value1, value0) -> tail {\n    tail := add(headStart, 192)\n\n    abi_encode_t_uint24_to_t_uint24_fromStack(value0,  add(headStart, 0))\n\n    abi_encode_t_uint24_to_t_uint24_fromStack(value1,  add(headStart, 32))\n\n    abi_encode_t_uint24_to_t_uint24_fromStack(value2,  add(headStart, 64))\n\n    abi_encode_t_uint16_to_t_uint16_fromStack(value3,  add(headStart, 96))\n\n    abi_encode_t_uint16_to_t_uint16_fromStack(value4,  add(headStart, 128))\n\n    abi_encode_t_uint8_to_t_uint8_fromStack(value5,  add(headStart, 160))\n\n}\n\nfunction abi_encode_tuple_t_uint256__to_t_uint256__fromStack_reversed(headStart , value0) -> tail {\n    tail := add(headStart, 32)\n\n    abi_encode_t_uint256_to_t_uint256_fromStack(value0,  add(headStart, 0))\n\n}\n\nfunction allocateMemory(size) -> memPtr {\n    memPtr := mload(64)\n    let newFreePtr := add(memPtr, size)\n    // protect against overflow\n    if or(gt(newFreePtr, 0xffffffffffffffff), lt(newFreePtr, memPtr)) { panic_error() }\n    mstore(64, newFreePtr)\n}\n\nfunction array_allocation_size_t_bytes_memory_ptr(length) -> size {\n    // Make sure we can allocate memory without overflow\n    if gt(length, 0xffffffffffffffff) { panic_error() }\n\n    // round up\n    size := and(add(length, 0x1f), not(0x1f))\n\n    // add length slot\n    size := add(size, 0x20)\n\n}\n\nfunction array_allocation_size_t_string_memory_ptr(length) -> size {\n    // Make sure we can allocate memory without overflow\n    if gt(length, 0xffffffffffffffff) { panic_error() }\n\n    // round up\n    size := and(add(length, 0x1f), not(0x1f))\n\n    // add length slot\n    size := add(size, 0x20)\n\n}\n\nfunction array_length_t_string_memory_ptr(value) -> length {\n\n    length := mload(value)\n\n}\n\nfunction array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, length) -> updated_pos {\n    mstore(pos, length)\n    updated_pos := add(pos, 0x20)\n}\n\nfunction cleanup_t_address(value) -> cleaned {\n    cleaned := cleanup_t_uint160(value)\n}\n\nfunction cleanup_t_bool(value) -> cleaned {\n    cleaned := iszero(iszero(value))\n}\n\nfunction cleanup_t_bytes24(value) -> cleaned {\n    cleaned := and(value, 0xffffffffffffffffffffffffffffffffffffffffffffffff0000000000000000)\n}\n\nfunction cleanup_t_bytes32(value) -> cleaned {\n    cleaned := value\n}\n\nfunction cleanup_t_bytes4(value) -> cleaned {\n    cleaned := and(value, 0xffffffff00000000000000000000000000000000000000000000000000000000)\n}\n\nfunction cleanup_t_enum$_ElementOfNature_$1833(value) -> cleaned {\n    cleaned := value validator_assert_t_enum$_ElementOfNature_$1833(value)\n}\n\nfunction cleanup_t_uint16(value) -> cleaned {\n    cleaned := and(value, 0xffff)\n}\n\nfunction cleanup_t_uint160(value) -> cleaned {\n    cleaned := and(value, 0xffffffffffffffffffffffffffffffffffffffff)\n}\n\nfunction cleanup_t_uint24(value) -> cleaned {\n    cleaned := and(value, 0xffffff)\n}\n\nfunction cleanup_t_uint256(value) -> cleaned {\n    cleaned := value\n}\n\nfunction cleanup_t_uint8(value) -> cleaned {\n    cleaned := and(value, 0xff)\n}\n\nfunction convert_t_enum$_ElementOfNature_$1833_to_t_uint8(value) -> converted {\n    converted := cleanup_t_enum$_ElementOfNature_$1833(value)\n}\n\nfunction convert_t_rational_0_by_1_to_t_uint8(value) -> converted {\n    converted := cleanup_t_uint8(value)\n}\n\nfunction copy_calldata_to_memory(src, dst, length) {\n    calldatacopy(dst, src, length)\n    // clear end\n    mstore(add(dst, length), 0)\n}\n\nfunction copy_memory_to_memory(src, dst, length) {\n    let i := 0\n    for { } lt(i, length) { i := add(i, 32) }\n    {\n        mstore(add(dst, i), mload(add(src, i)))\n    }\n    if gt(i, length)\n    {\n        // clear end\n        mstore(add(dst, length), 0)\n    }\n}\n\nfunction panic_error() {\n    invalid()\n}\n\nfunction round_up_to_mul_of_32(value) -> result {\n    result := and(add(value, 31), not(31))\n}\n\nfunction validator_assert_t_enum$_ElementOfNature_$1833(value) {\n    if iszero(lt(value, 13)) { panic_error() }\n}\n\nfunction validator_revert_t_address(value) {\n    if iszero(eq(value, cleanup_t_address(value))) { revert(0, 0) }\n}\n\nfunction validator_revert_t_bool(value) {\n    if iszero(eq(value, cleanup_t_bool(value))) { revert(0, 0) }\n}\n\nfunction validator_revert_t_bytes24(value) {\n    if iszero(eq(value, cleanup_t_bytes24(value))) { revert(0, 0) }\n}\n\nfunction validator_revert_t_bytes32(value) {\n    if iszero(eq(value, cleanup_t_bytes32(value))) { revert(0, 0) }\n}\n\nfunction validator_revert_t_bytes4(value) {\n    if iszero(eq(value, cleanup_t_bytes4(value))) { revert(0, 0) }\n}\n\nfunction validator_revert_t_enum$_ElementOfNature_$1833(value) {\n    if iszero(lt(value, 13)) { revert(0, 0) }\n}\n\nfunction validator_revert_t_uint16(value) {\n    if iszero(eq(value, cleanup_t_uint16(value))) { revert(0, 0) }\n}\n\nfunction validator_revert_t_uint24(value) {\n    if iszero(eq(value, cleanup_t_uint24(value))) { revert(0, 0) }\n}\n\nfunction validator_revert_t_uint256(value) {\n    if iszero(eq(value, cleanup_t_uint256(value))) { revert(0, 0) }\n}\n\nfunction validator_revert_t_uint8(value) {\n    if iszero(eq(value, cleanup_t_uint8(value))) { revert(0, 0) }\n}\n\n}\n",
+      "contents": "{\n\n    function abi_decode_t_address(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_address(value)\n    }\n\n    function abi_decode_t_bool(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_bool(value)\n    }\n\n    function abi_decode_t_bytes24(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_bytes24(value)\n    }\n\n    function abi_decode_t_bytes32(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_bytes32(value)\n    }\n\n    function abi_decode_t_bytes4(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_bytes4(value)\n    }\n\n    function abi_decode_t_bytes_memory_ptr(offset, end) -> array {\n        if iszero(slt(add(offset, 0x1f), end)) { revert(0, 0) }\n        let length := calldataload(offset)\n        array := allocateMemory(array_allocation_size_t_bytes_memory_ptr(length))\n        mstore(array, length)\n        let src := add(offset, 0x20)\n        let dst := add(array, 0x20)\n        if gt(add(src, length), end) { revert(0, 0) }\n        copy_calldata_to_memory(src, dst, length)\n    }\n\n    function abi_decode_t_enum$_ElementOfNature_$2083(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_enum$_ElementOfNature_$2083(value)\n    }\n\n    function abi_decode_t_string_memory_ptr(offset, end) -> array {\n        if iszero(slt(add(offset, 0x1f), end)) { revert(0, 0) }\n        let length := calldataload(offset)\n        array := allocateMemory(array_allocation_size_t_string_memory_ptr(length))\n        mstore(array, length)\n        let src := add(offset, 0x20)\n        let dst := add(array, 0x20)\n        if gt(add(src, length), end) { revert(0, 0) }\n        copy_calldata_to_memory(src, dst, length)\n    }\n\n    // struct IEtherealBase.CharacterAttributesMetadata\n    function abi_decode_t_struct$_CharacterAttributesMetadata_$2124_memory_ptr(headStart, end) -> value {\n        if slt(sub(end, headStart), 0x0100) { revert(0, 0) }\n        value := allocateMemory(0x0100)\n\n        {\n            // primaryElement\n\n            let offset := 0\n            mstore(add(value, 0x00), abi_decode_t_enum$_ElementOfNature_$2083(add(headStart, offset), end))\n\n        }\n\n        {\n            // secondaryElement\n\n            let offset := 32\n            mstore(add(value, 0x20), abi_decode_t_enum$_ElementOfNature_$2083(add(headStart, offset), end))\n\n        }\n\n        {\n            // life\n\n            let offset := 64\n            mstore(add(value, 0x40), abi_decode_t_uint8(add(headStart, offset), end))\n\n        }\n\n        {\n            // armor\n\n            let offset := 96\n            mstore(add(value, 0x60), abi_decode_t_uint8(add(headStart, offset), end))\n\n        }\n\n        {\n            // strength\n\n            let offset := 128\n            mstore(add(value, 0x80), abi_decode_t_uint8(add(headStart, offset), end))\n\n        }\n\n        {\n            // speed\n\n            let offset := 160\n            mstore(add(value, 0xa0), abi_decode_t_uint8(add(headStart, offset), end))\n\n        }\n\n        {\n            // luck\n\n            let offset := 192\n            mstore(add(value, 0xc0), abi_decode_t_uint8(add(headStart, offset), end))\n\n        }\n\n        {\n            // spirit\n\n            let offset := 224\n            mstore(add(value, 0xe0), abi_decode_t_uint8(add(headStart, offset), end))\n\n        }\n\n    }\n\n    // struct IEtherealBase.CharacterBaseMetadata\n    function abi_decode_t_struct$_CharacterBaseMetadata_$2094_memory_ptr(headStart, end) -> value {\n        if slt(sub(end, headStart), 0xa0) { revert(0, 0) }\n        value := allocateMemory(0xa0)\n\n        {\n            // name\n\n            let offset := 0\n            mstore(add(value, 0x00), abi_decode_t_bytes32(add(headStart, offset), end))\n\n        }\n\n        {\n            // birthdate\n\n            let offset := 32\n            mstore(add(value, 0x20), abi_decode_t_bytes24(add(headStart, offset), end))\n\n        }\n\n        {\n            // description\n\n            let offset := calldataload(add(headStart, 64))\n            if gt(offset, 0xffffffffffffffff) { revert(0, 0) }\n            mstore(add(value, 0x40), abi_decode_t_string_memory_ptr(add(headStart, offset), end))\n\n        }\n\n        {\n            // planetId\n\n            let offset := 96\n            mstore(add(value, 0x60), abi_decode_t_uint256(add(headStart, offset), end))\n\n        }\n\n        {\n            // genre\n\n            let offset := 128\n            mstore(add(value, 0x80), abi_decode_t_uint8(add(headStart, offset), end))\n\n        }\n\n    }\n\n    // struct IEtherealBase.CharacterPhysicalMetadata\n    function abi_decode_t_struct$_CharacterPhysicalMetadata_$2107_memory_ptr(headStart, end) -> value {\n        if slt(sub(end, headStart), 0xc0) { revert(0, 0) }\n        value := allocateMemory(0xc0)\n\n        {\n            // skintone\n\n            let offset := 0\n            mstore(add(value, 0x00), abi_decode_t_uint24(add(headStart, offset), end))\n\n        }\n\n        {\n            // haircolor\n\n            let offset := 32\n            mstore(add(value, 0x20), abi_decode_t_uint24(add(headStart, offset), end))\n\n        }\n\n        {\n            // eyescolor\n\n            let offset := 64\n            mstore(add(value, 0x40), abi_decode_t_uint24(add(headStart, offset), end))\n\n        }\n\n        {\n            // weight\n\n            let offset := 96\n            mstore(add(value, 0x60), abi_decode_t_uint16(add(headStart, offset), end))\n\n        }\n\n        {\n            // height\n\n            let offset := 128\n            mstore(add(value, 0x80), abi_decode_t_uint16(add(headStart, offset), end))\n\n        }\n\n        {\n            // bodyType\n\n            let offset := 160\n            mstore(add(value, 0xa0), abi_decode_t_uint8(add(headStart, offset), end))\n\n        }\n\n    }\n\n    function abi_decode_t_uint16(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_uint16(value)\n    }\n\n    function abi_decode_t_uint24(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_uint24(value)\n    }\n\n    function abi_decode_t_uint256(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_uint256(value)\n    }\n\n    function abi_decode_t_uint8(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_uint8(value)\n    }\n\n    function abi_decode_tuple_t_address(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n\n        {\n            let offset := 0\n            value0 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_addresst_address(headStart, dataEnd) -> value0, value1 {\n        if slt(sub(dataEnd, headStart), 64) { revert(0, 0) }\n\n        {\n            let offset := 0\n            value0 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n        {\n            let offset := 32\n            value1 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_addresst_addresst_uint256(headStart, dataEnd) -> value0, value1, value2 {\n        if slt(sub(dataEnd, headStart), 96) { revert(0, 0) }\n\n        {\n            let offset := 0\n            value0 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n        {\n            let offset := 32\n            value1 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n        {\n            let offset := 64\n            value2 := abi_decode_t_uint256(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_addresst_addresst_uint256t_bytes_memory_ptr(headStart, dataEnd) -> value0, value1, value2, value3 {\n        if slt(sub(dataEnd, headStart), 128) { revert(0, 0) }\n\n        {\n            let offset := 0\n            value0 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n        {\n            let offset := 32\n            value1 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n        {\n            let offset := 64\n            value2 := abi_decode_t_uint256(add(headStart, offset), dataEnd)\n        }\n\n        {\n            let offset := calldataload(add(headStart, 96))\n            if gt(offset, 0xffffffffffffffff) { revert(0, 0) }\n            value3 := abi_decode_t_bytes_memory_ptr(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_addresst_bool(headStart, dataEnd) -> value0, value1 {\n        if slt(sub(dataEnd, headStart), 64) { revert(0, 0) }\n\n        {\n            let offset := 0\n            value0 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n        {\n            let offset := 32\n            value1 := abi_decode_t_bool(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_addresst_struct$_CharacterBaseMetadata_$2094_memory_ptrt_struct$_CharacterPhysicalMetadata_$2107_memory_ptrt_struct$_CharacterAttributesMetadata_$2124_memory_ptr(headStart, dataEnd) -> value0, value1, value2, value3 {\n        if slt(sub(dataEnd, headStart), 512) { revert(0, 0) }\n\n        {\n            let offset := 0\n            value0 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n        {\n            let offset := calldataload(add(headStart, 32))\n            if gt(offset, 0xffffffffffffffff) { revert(0, 0) }\n            value1 := abi_decode_t_struct$_CharacterBaseMetadata_$2094_memory_ptr(add(headStart, offset), dataEnd)\n        }\n\n        {\n            let offset := 64\n            value2 := abi_decode_t_struct$_CharacterPhysicalMetadata_$2107_memory_ptr(add(headStart, offset), dataEnd)\n        }\n\n        {\n            let offset := 256\n            value3 := abi_decode_t_struct$_CharacterAttributesMetadata_$2124_memory_ptr(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_addresst_uint256(headStart, dataEnd) -> value0, value1 {\n        if slt(sub(dataEnd, headStart), 64) { revert(0, 0) }\n\n        {\n            let offset := 0\n            value0 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n        {\n            let offset := 32\n            value1 := abi_decode_t_uint256(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_bytes32(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n\n        {\n            let offset := 0\n            value0 := abi_decode_t_bytes32(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_bytes32t_address(headStart, dataEnd) -> value0, value1 {\n        if slt(sub(dataEnd, headStart), 64) { revert(0, 0) }\n\n        {\n            let offset := 0\n            value0 := abi_decode_t_bytes32(add(headStart, offset), dataEnd)\n        }\n\n        {\n            let offset := 32\n            value1 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_bytes32t_uint256(headStart, dataEnd) -> value0, value1 {\n        if slt(sub(dataEnd, headStart), 64) { revert(0, 0) }\n\n        {\n            let offset := 0\n            value0 := abi_decode_t_bytes32(add(headStart, offset), dataEnd)\n        }\n\n        {\n            let offset := 32\n            value1 := abi_decode_t_uint256(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_bytes4(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n\n        {\n            let offset := 0\n            value0 := abi_decode_t_bytes4(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_string_memory_ptr(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n\n        {\n            let offset := calldataload(add(headStart, 0))\n            if gt(offset, 0xffffffffffffffff) { revert(0, 0) }\n            value0 := abi_decode_t_string_memory_ptr(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_uint256(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n\n        {\n            let offset := 0\n            value0 := abi_decode_t_uint256(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_encode_t_address_to_t_address_fromStack(value, pos) {\n        mstore(pos, cleanup_t_address(value))\n    }\n\n    function abi_encode_t_bool_to_t_bool_fromStack(value, pos) {\n        mstore(pos, cleanup_t_bool(value))\n    }\n\n    function abi_encode_t_bytes24_to_t_bytes24_fromStack(value, pos) {\n        mstore(pos, cleanup_t_bytes24(value))\n    }\n\n    function abi_encode_t_bytes32_to_t_bytes32_fromStack(value, pos) {\n        mstore(pos, cleanup_t_bytes32(value))\n    }\n\n    function abi_encode_t_enum$_ElementOfNature_$2083_to_t_uint8_fromStack(value, pos) {\n        mstore(pos, convert_t_enum$_ElementOfNature_$2083_to_t_uint8(value))\n    }\n\n    function abi_encode_t_rational_0_by_1_to_t_uint8_fromStack(value, pos) {\n        mstore(pos, convert_t_rational_0_by_1_to_t_uint8(value))\n    }\n\n    function abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value, pos) -> end {\n        let length := array_length_t_string_memory_ptr(value)\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, length)\n        copy_memory_to_memory(add(value, 0x20), pos, length)\n        end := add(pos, round_up_to_mul_of_32(length))\n    }\n\n    function abi_encode_t_stringliteral_26100241ce62f39e64fda63025a82029149e5ab0ba4f8981d6d3fa49d04844f4_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 53)\n\n        mstore(add(pos, 0), \"EtherealCharacter: character nam\")\n\n        mstore(add(pos, 32), \"e should not be empty\")\n\n        end := add(pos, 64)\n    }\n\n    function abi_encode_t_stringliteral_40c9c95e9f416c51c55d88e1508883bb887c746928503de15b750cf10a750aef_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 62)\n\n        mstore(add(pos, 0), \"ERC721PresetMinterPauserAutoId: \")\n\n        mstore(add(pos, 32), \"must have pauser role to pause\")\n\n        end := add(pos, 64)\n    }\n\n    function abi_encode_t_stringliteral_48ff42fbd120fc22f3ab02dd5f69dedc84599a2e70c9d40b03f3caad8e5cd3a9_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 53)\n\n        mstore(add(pos, 0), \"EtherealCharacter: must have adm\")\n\n        mstore(add(pos, 32), \"in role to setBaseURI\")\n\n        end := add(pos, 64)\n    }\n\n    function abi_encode_t_stringliteral_b0c4fffc799c55551beeb62874e50ed570456fdd787f22a539ceb634ad744bdf_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 48)\n\n        mstore(add(pos, 0), \"EtherealCharacter: must have min\")\n\n        mstore(add(pos, 32), \"ter role to mint\")\n\n        end := add(pos, 64)\n    }\n\n    function abi_encode_t_stringliteral_ba788f342fa3a97c5bc82f368c727aa71890125c7e276b2a913d49329dfdf19c_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 76)\n\n        mstore(add(pos, 0), \"EtherealCharacter: name already \")\n\n    mstore(add(pos, 32), \"taken by another user :) Choose \")\n\n    mstore(add(pos, 64), \"another one!\")\n\n    end := add(pos, 96)\n}\n\nfunction abi_encode_t_stringliteral_c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470_to_t_string_memory_ptr_fromStack(pos) -> end {\n    pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 0)\n\n    end := add(pos, 0)\n}\n\nfunction abi_encode_t_stringliteral_ee6b7e810d7b317242d4688e6943ff4dd7897bb01d903b1a666812481b12a4f1_to_t_string_memory_ptr_fromStack(pos) -> end {\n    pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 48)\n\n    mstore(add(pos, 0), \"ERC721Burnable: caller is not ow\")\n\n    mstore(add(pos, 32), \"ner nor approved\")\n\n    end := add(pos, 64)\n}\n\nfunction abi_encode_t_stringliteral_f3877585dfb2235e1900eee5d9e32a457b9d6148f93823a62cb07ae76c6585a8_to_t_string_memory_ptr_fromStack(pos) -> end {\n    pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 64)\n\n    mstore(add(pos, 0), \"ERC721PresetMinterPauserAutoId: \")\n\n    mstore(add(pos, 32), \"must have pauser role to unpause\")\n\n    end := add(pos, 64)\n}\n\nfunction abi_encode_t_uint16_to_t_uint16_fromStack(value, pos) {\n    mstore(pos, cleanup_t_uint16(value))\n}\n\nfunction abi_encode_t_uint24_to_t_uint24_fromStack(value, pos) {\n    mstore(pos, cleanup_t_uint24(value))\n}\n\nfunction abi_encode_t_uint256_to_t_uint256_fromStack(value, pos) {\n    mstore(pos, cleanup_t_uint256(value))\n}\n\nfunction abi_encode_t_uint8_to_t_uint8_fromStack(value, pos) {\n    mstore(pos, cleanup_t_uint8(value))\n}\n\nfunction abi_encode_tuple_t_address__to_t_address__fromStack_reversed(headStart , value0) -> tail {\n    tail := add(headStart, 32)\n\n    abi_encode_t_address_to_t_address_fromStack(value0,  add(headStart, 0))\n\n}\n\nfunction abi_encode_tuple_t_bool__to_t_bool__fromStack_reversed(headStart , value0) -> tail {\n    tail := add(headStart, 32)\n\n    abi_encode_t_bool_to_t_bool_fromStack(value0,  add(headStart, 0))\n\n}\n\nfunction abi_encode_tuple_t_bytes32__to_t_bytes32__fromStack_reversed(headStart , value0) -> tail {\n    tail := add(headStart, 32)\n\n    abi_encode_t_bytes32_to_t_bytes32_fromStack(value0,  add(headStart, 0))\n\n}\n\nfunction abi_encode_tuple_t_bytes32_t_bytes24_t_string_memory_ptr_t_uint256_t_uint8__to_t_bytes32_t_bytes24_t_string_memory_ptr_t_uint256_t_uint8__fromStack_reversed(headStart , value4, value3, value2, value1, value0) -> tail {\n    tail := add(headStart, 160)\n\n    abi_encode_t_bytes32_to_t_bytes32_fromStack(value0,  add(headStart, 0))\n\n    abi_encode_t_bytes24_to_t_bytes24_fromStack(value1,  add(headStart, 32))\n\n    mstore(add(headStart, 64), sub(tail, headStart))\n    tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value2,  tail)\n\n    abi_encode_t_uint256_to_t_uint256_fromStack(value3,  add(headStart, 96))\n\n    abi_encode_t_uint8_to_t_uint8_fromStack(value4,  add(headStart, 128))\n\n}\n\nfunction abi_encode_tuple_t_enum$_ElementOfNature_$2083_t_enum$_ElementOfNature_$2083_t_uint8_t_uint8_t_uint8_t_uint8_t_uint8_t_uint8__to_t_uint8_t_uint8_t_uint8_t_uint8_t_uint8_t_uint8_t_uint8_t_uint8__fromStack_reversed(headStart , value7, value6, value5, value4, value3, value2, value1, value0) -> tail {\n    tail := add(headStart, 256)\n\n    abi_encode_t_enum$_ElementOfNature_$2083_to_t_uint8_fromStack(value0,  add(headStart, 0))\n\n    abi_encode_t_enum$_ElementOfNature_$2083_to_t_uint8_fromStack(value1,  add(headStart, 32))\n\n    abi_encode_t_uint8_to_t_uint8_fromStack(value2,  add(headStart, 64))\n\n    abi_encode_t_uint8_to_t_uint8_fromStack(value3,  add(headStart, 96))\n\n    abi_encode_t_uint8_to_t_uint8_fromStack(value4,  add(headStart, 128))\n\n    abi_encode_t_uint8_to_t_uint8_fromStack(value5,  add(headStart, 160))\n\n    abi_encode_t_uint8_to_t_uint8_fromStack(value6,  add(headStart, 192))\n\n    abi_encode_t_uint8_to_t_uint8_fromStack(value7,  add(headStart, 224))\n\n}\n\nfunction abi_encode_tuple_t_rational_0_by_1__to_t_uint8__fromStack_reversed(headStart , value0) -> tail {\n    tail := add(headStart, 32)\n\n    abi_encode_t_rational_0_by_1_to_t_uint8_fromStack(value0,  add(headStart, 0))\n\n}\n\nfunction abi_encode_tuple_t_string_memory_ptr__to_t_string_memory_ptr__fromStack_reversed(headStart , value0) -> tail {\n    tail := add(headStart, 32)\n\n    mstore(add(headStart, 0), sub(tail, headStart))\n    tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value0,  tail)\n\n}\n\nfunction abi_encode_tuple_t_stringliteral_26100241ce62f39e64fda63025a82029149e5ab0ba4f8981d6d3fa49d04844f4__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n    tail := add(headStart, 32)\n\n    mstore(add(headStart, 0), sub(tail, headStart))\n    tail := abi_encode_t_stringliteral_26100241ce62f39e64fda63025a82029149e5ab0ba4f8981d6d3fa49d04844f4_to_t_string_memory_ptr_fromStack( tail)\n\n}\n\nfunction abi_encode_tuple_t_stringliteral_40c9c95e9f416c51c55d88e1508883bb887c746928503de15b750cf10a750aef__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n    tail := add(headStart, 32)\n\n    mstore(add(headStart, 0), sub(tail, headStart))\n    tail := abi_encode_t_stringliteral_40c9c95e9f416c51c55d88e1508883bb887c746928503de15b750cf10a750aef_to_t_string_memory_ptr_fromStack( tail)\n\n}\n\nfunction abi_encode_tuple_t_stringliteral_48ff42fbd120fc22f3ab02dd5f69dedc84599a2e70c9d40b03f3caad8e5cd3a9__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n    tail := add(headStart, 32)\n\n    mstore(add(headStart, 0), sub(tail, headStart))\n    tail := abi_encode_t_stringliteral_48ff42fbd120fc22f3ab02dd5f69dedc84599a2e70c9d40b03f3caad8e5cd3a9_to_t_string_memory_ptr_fromStack( tail)\n\n}\n\nfunction abi_encode_tuple_t_stringliteral_b0c4fffc799c55551beeb62874e50ed570456fdd787f22a539ceb634ad744bdf__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n    tail := add(headStart, 32)\n\n    mstore(add(headStart, 0), sub(tail, headStart))\n    tail := abi_encode_t_stringliteral_b0c4fffc799c55551beeb62874e50ed570456fdd787f22a539ceb634ad744bdf_to_t_string_memory_ptr_fromStack( tail)\n\n}\n\nfunction abi_encode_tuple_t_stringliteral_ba788f342fa3a97c5bc82f368c727aa71890125c7e276b2a913d49329dfdf19c__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n    tail := add(headStart, 32)\n\n    mstore(add(headStart, 0), sub(tail, headStart))\n    tail := abi_encode_t_stringliteral_ba788f342fa3a97c5bc82f368c727aa71890125c7e276b2a913d49329dfdf19c_to_t_string_memory_ptr_fromStack( tail)\n\n}\n\nfunction abi_encode_tuple_t_stringliteral_c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n    tail := add(headStart, 32)\n\n    mstore(add(headStart, 0), sub(tail, headStart))\n    tail := abi_encode_t_stringliteral_c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470_to_t_string_memory_ptr_fromStack( tail)\n\n}\n\nfunction abi_encode_tuple_t_stringliteral_ee6b7e810d7b317242d4688e6943ff4dd7897bb01d903b1a666812481b12a4f1__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n    tail := add(headStart, 32)\n\n    mstore(add(headStart, 0), sub(tail, headStart))\n    tail := abi_encode_t_stringliteral_ee6b7e810d7b317242d4688e6943ff4dd7897bb01d903b1a666812481b12a4f1_to_t_string_memory_ptr_fromStack( tail)\n\n}\n\nfunction abi_encode_tuple_t_stringliteral_f3877585dfb2235e1900eee5d9e32a457b9d6148f93823a62cb07ae76c6585a8__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n    tail := add(headStart, 32)\n\n    mstore(add(headStart, 0), sub(tail, headStart))\n    tail := abi_encode_t_stringliteral_f3877585dfb2235e1900eee5d9e32a457b9d6148f93823a62cb07ae76c6585a8_to_t_string_memory_ptr_fromStack( tail)\n\n}\n\nfunction abi_encode_tuple_t_uint24_t_uint24_t_uint24_t_uint16_t_uint16_t_uint8__to_t_uint24_t_uint24_t_uint24_t_uint16_t_uint16_t_uint8__fromStack_reversed(headStart , value5, value4, value3, value2, value1, value0) -> tail {\n    tail := add(headStart, 192)\n\n    abi_encode_t_uint24_to_t_uint24_fromStack(value0,  add(headStart, 0))\n\n    abi_encode_t_uint24_to_t_uint24_fromStack(value1,  add(headStart, 32))\n\n    abi_encode_t_uint24_to_t_uint24_fromStack(value2,  add(headStart, 64))\n\n    abi_encode_t_uint16_to_t_uint16_fromStack(value3,  add(headStart, 96))\n\n    abi_encode_t_uint16_to_t_uint16_fromStack(value4,  add(headStart, 128))\n\n    abi_encode_t_uint8_to_t_uint8_fromStack(value5,  add(headStart, 160))\n\n}\n\nfunction abi_encode_tuple_t_uint256__to_t_uint256__fromStack_reversed(headStart , value0) -> tail {\n    tail := add(headStart, 32)\n\n    abi_encode_t_uint256_to_t_uint256_fromStack(value0,  add(headStart, 0))\n\n}\n\nfunction allocateMemory(size) -> memPtr {\n    memPtr := mload(64)\n    let newFreePtr := add(memPtr, size)\n    // protect against overflow\n    if or(gt(newFreePtr, 0xffffffffffffffff), lt(newFreePtr, memPtr)) { panic_error() }\n    mstore(64, newFreePtr)\n}\n\nfunction array_allocation_size_t_bytes_memory_ptr(length) -> size {\n    // Make sure we can allocate memory without overflow\n    if gt(length, 0xffffffffffffffff) { panic_error() }\n\n    // round up\n    size := and(add(length, 0x1f), not(0x1f))\n\n    // add length slot\n    size := add(size, 0x20)\n\n}\n\nfunction array_allocation_size_t_string_memory_ptr(length) -> size {\n    // Make sure we can allocate memory without overflow\n    if gt(length, 0xffffffffffffffff) { panic_error() }\n\n    // round up\n    size := and(add(length, 0x1f), not(0x1f))\n\n    // add length slot\n    size := add(size, 0x20)\n\n}\n\nfunction array_length_t_string_memory_ptr(value) -> length {\n\n    length := mload(value)\n\n}\n\nfunction array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, length) -> updated_pos {\n    mstore(pos, length)\n    updated_pos := add(pos, 0x20)\n}\n\nfunction cleanup_t_address(value) -> cleaned {\n    cleaned := cleanup_t_uint160(value)\n}\n\nfunction cleanup_t_bool(value) -> cleaned {\n    cleaned := iszero(iszero(value))\n}\n\nfunction cleanup_t_bytes24(value) -> cleaned {\n    cleaned := and(value, 0xffffffffffffffffffffffffffffffffffffffffffffffff0000000000000000)\n}\n\nfunction cleanup_t_bytes32(value) -> cleaned {\n    cleaned := value\n}\n\nfunction cleanup_t_bytes4(value) -> cleaned {\n    cleaned := and(value, 0xffffffff00000000000000000000000000000000000000000000000000000000)\n}\n\nfunction cleanup_t_enum$_ElementOfNature_$2083(value) -> cleaned {\n    cleaned := value validator_assert_t_enum$_ElementOfNature_$2083(value)\n}\n\nfunction cleanup_t_uint16(value) -> cleaned {\n    cleaned := and(value, 0xffff)\n}\n\nfunction cleanup_t_uint160(value) -> cleaned {\n    cleaned := and(value, 0xffffffffffffffffffffffffffffffffffffffff)\n}\n\nfunction cleanup_t_uint24(value) -> cleaned {\n    cleaned := and(value, 0xffffff)\n}\n\nfunction cleanup_t_uint256(value) -> cleaned {\n    cleaned := value\n}\n\nfunction cleanup_t_uint8(value) -> cleaned {\n    cleaned := and(value, 0xff)\n}\n\nfunction convert_t_enum$_ElementOfNature_$2083_to_t_uint8(value) -> converted {\n    converted := cleanup_t_enum$_ElementOfNature_$2083(value)\n}\n\nfunction convert_t_rational_0_by_1_to_t_uint8(value) -> converted {\n    converted := cleanup_t_uint8(value)\n}\n\nfunction copy_calldata_to_memory(src, dst, length) {\n    calldatacopy(dst, src, length)\n    // clear end\n    mstore(add(dst, length), 0)\n}\n\nfunction copy_memory_to_memory(src, dst, length) {\n    let i := 0\n    for { } lt(i, length) { i := add(i, 32) }\n    {\n        mstore(add(dst, i), mload(add(src, i)))\n    }\n    if gt(i, length)\n    {\n        // clear end\n        mstore(add(dst, length), 0)\n    }\n}\n\nfunction panic_error() {\n    invalid()\n}\n\nfunction round_up_to_mul_of_32(value) -> result {\n    result := and(add(value, 31), not(31))\n}\n\nfunction validator_assert_t_enum$_ElementOfNature_$2083(value) {\n    if iszero(lt(value, 13)) { panic_error() }\n}\n\nfunction validator_revert_t_address(value) {\n    if iszero(eq(value, cleanup_t_address(value))) { revert(0, 0) }\n}\n\nfunction validator_revert_t_bool(value) {\n    if iszero(eq(value, cleanup_t_bool(value))) { revert(0, 0) }\n}\n\nfunction validator_revert_t_bytes24(value) {\n    if iszero(eq(value, cleanup_t_bytes24(value))) { revert(0, 0) }\n}\n\nfunction validator_revert_t_bytes32(value) {\n    if iszero(eq(value, cleanup_t_bytes32(value))) { revert(0, 0) }\n}\n\nfunction validator_revert_t_bytes4(value) {\n    if iszero(eq(value, cleanup_t_bytes4(value))) { revert(0, 0) }\n}\n\nfunction validator_revert_t_enum$_ElementOfNature_$2083(value) {\n    if iszero(lt(value, 13)) { revert(0, 0) }\n}\n\nfunction validator_revert_t_uint16(value) {\n    if iszero(eq(value, cleanup_t_uint16(value))) { revert(0, 0) }\n}\n\nfunction validator_revert_t_uint24(value) {\n    if iszero(eq(value, cleanup_t_uint24(value))) { revert(0, 0) }\n}\n\nfunction validator_revert_t_uint256(value) {\n    if iszero(eq(value, cleanup_t_uint256(value))) { revert(0, 0) }\n}\n\nfunction validator_revert_t_uint8(value) {\n    if iszero(eq(value, cleanup_t_uint8(value))) { revert(0, 0) }\n}\n\n}\n",
       "id": 32,
       "language": "Yul",
       "name": "#utility.yul"
@@ -18694,64 +18694,64 @@
     "absolutePath": "/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/EtherealCharacter.sol",
     "exportedSymbols": {
       "AccessControl": [
-        3598
+        3848
       ],
       "Address": [
-        5630
+        5880
       ],
       "Context": [
-        5653
+        5903
       ],
       "Counters": [
-        5703
+        5953
       ],
       "ERC165": [
-        3765
+        4015
       ],
       "ERC721": [
-        5075
+        5325
       ],
       "ERC721Burnable": [
-        5105
+        5355
       ],
       "ERC721Pausable": [
-        5142
+        5392
       ],
       "EnumerableMap": [
-        6263
+        6513
       ],
       "EnumerableSet": [
-        6755
+        7005
       ],
       "EtherealCharacter": [
         335
       ],
       "IERC165": [
-        3777
+        4027
       ],
       "IERC721": [
-        5258
+        5508
       ],
       "IERC721Enumerable": [
-        5289
+        5539
       ],
       "IERC721Metadata": [
-        5316
+        5566
       ],
       "IERC721Receiver": [
-        5334
+        5584
       ],
       "IEtherealBase": [
-        1894
+        2144
       ],
       "Pausable": [
-        6847
+        7097
       ],
       "SafeMath": [
-        4132
+        4382
       ],
       "Strings": [
-        6934
+        7184
       ]
     },
     "id": 336,
@@ -18783,7 +18783,7 @@
         "id": 3,
         "nodeType": "ImportDirective",
         "scope": 336,
-        "sourceUnit": 3599,
+        "sourceUnit": 3849,
         "src": "80:58:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -18794,7 +18794,7 @@
         "id": 4,
         "nodeType": "ImportDirective",
         "scope": 336,
-        "sourceUnit": 5654,
+        "sourceUnit": 5904,
         "src": "140:51:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -18805,7 +18805,7 @@
         "id": 5,
         "nodeType": "ImportDirective",
         "scope": 336,
-        "sourceUnit": 5704,
+        "sourceUnit": 5954,
         "src": "193:52:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -18816,7 +18816,7 @@
         "id": 6,
         "nodeType": "ImportDirective",
         "scope": 336,
-        "sourceUnit": 5076,
+        "sourceUnit": 5326,
         "src": "247:57:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -18827,7 +18827,7 @@
         "id": 7,
         "nodeType": "ImportDirective",
         "scope": 336,
-        "sourceUnit": 5106,
+        "sourceUnit": 5356,
         "src": "306:65:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -18838,7 +18838,7 @@
         "id": 8,
         "nodeType": "ImportDirective",
         "scope": 336,
-        "sourceUnit": 5143,
+        "sourceUnit": 5393,
         "src": "373:65:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -18849,7 +18849,7 @@
         "id": 9,
         "nodeType": "ImportDirective",
         "scope": 336,
-        "sourceUnit": 4133,
+        "sourceUnit": 4383,
         "src": "440:51:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -18860,7 +18860,7 @@
         "id": 10,
         "nodeType": "ImportDirective",
         "scope": 336,
-        "sourceUnit": 1895,
+        "sourceUnit": 2145,
         "src": "493:29:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -18873,10 +18873,10 @@
               "id": 12,
               "name": "Context",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 5653,
+              "referencedDeclaration": 5903,
               "src": "1240:7:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Context_$5653",
+                "typeIdentifier": "t_contract$_Context_$5903",
                 "typeString": "contract Context"
               }
             },
@@ -18889,10 +18889,10 @@
               "id": 14,
               "name": "AccessControl",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 3598,
+              "referencedDeclaration": 3848,
               "src": "1249:13:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_AccessControl_$3598",
+                "typeIdentifier": "t_contract$_AccessControl_$3848",
                 "typeString": "contract AccessControl"
               }
             },
@@ -18905,10 +18905,10 @@
               "id": 16,
               "name": "ERC721Burnable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 5105,
+              "referencedDeclaration": 5355,
               "src": "1264:14:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC721Burnable_$5105",
+                "typeIdentifier": "t_contract$_ERC721Burnable_$5355",
                 "typeString": "contract ERC721Burnable"
               }
             },
@@ -18921,10 +18921,10 @@
               "id": 18,
               "name": "ERC721Pausable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 5142,
+              "referencedDeclaration": 5392,
               "src": "1280:14:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC721Pausable_$5142",
+                "typeIdentifier": "t_contract$_ERC721Pausable_$5392",
                 "typeString": "contract ERC721Pausable"
               }
             },
@@ -18937,10 +18937,10 @@
               "id": 20,
               "name": "IEtherealBase",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1894,
+              "referencedDeclaration": 2144,
               "src": "1296:13:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_IEtherealBase_$1894",
+                "typeIdentifier": "t_contract$_IEtherealBase_$2144",
                 "typeString": "contract IEtherealBase"
               }
             },
@@ -18950,18 +18950,18 @@
           }
         ],
         "contractDependencies": [
-          1894,
-          3598,
-          3765,
-          3777,
-          5075,
-          5105,
-          5142,
-          5258,
-          5289,
-          5316,
-          5653,
-          6847
+          2144,
+          3848,
+          4015,
+          4027,
+          5325,
+          5355,
+          5392,
+          5508,
+          5539,
+          5566,
+          5903,
+          7097
         ],
         "contractKind": "contract",
         "documentation": {
@@ -18974,18 +18974,18 @@
         "id": 335,
         "linearizedBaseContracts": [
           335,
-          1894,
-          5142,
-          6847,
-          5105,
-          5075,
-          5289,
-          5316,
-          5258,
-          3765,
-          3777,
-          3598,
-          5653
+          2144,
+          5392,
+          7097,
+          5355,
+          5325,
+          5539,
+          5566,
+          5508,
+          4015,
+          4027,
+          3848,
+          5903
         ],
         "name": "EtherealCharacter",
         "nodeType": "ContractDefinition",
@@ -18996,10 +18996,10 @@
               "id": 22,
               "name": "Counters",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 5703,
+              "referencedDeclaration": 5953,
               "src": "1323:8:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Counters_$5703",
+                "typeIdentifier": "t_contract$_Counters_$5953",
                 "typeString": "library Counters"
               }
             },
@@ -19009,10 +19009,10 @@
               "id": 23,
               "name": "Counters.Counter",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 5663,
+              "referencedDeclaration": 5913,
               "src": "1336:16:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_Counter_$5663_storage_ptr",
+                "typeIdentifier": "t_struct$_Counter_$5913_storage_ptr",
                 "typeString": "struct Counters.Counter"
               }
             }
@@ -19186,17 +19186,17 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_struct$_Counter_$5663_storage",
+              "typeIdentifier": "t_struct$_Counter_$5913_storage",
               "typeString": "struct Counters.Counter"
             },
             "typeName": {
               "id": 35,
               "name": "Counters.Counter",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 5663,
+              "referencedDeclaration": 5913,
               "src": "1501:16:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_Counter_$5663_storage_ptr",
+                "typeIdentifier": "t_struct$_Counter_$5913_storage_ptr",
                 "typeString": "struct Counters.Counter"
               }
             },
@@ -19208,10 +19208,10 @@
               "id": 37,
               "name": "SafeMath",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 4132,
+              "referencedDeclaration": 4382,
               "src": "1554:8:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_SafeMath_$4132",
+                "typeIdentifier": "t_contract$_SafeMath_$4382",
                 "typeString": "library SafeMath"
               }
             },
@@ -19246,7 +19246,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_CharacterBaseMetadata_$1844_storage_$",
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_CharacterBaseMetadata_$2094_storage_$",
               "typeString": "mapping(uint256 => struct IEtherealBase.CharacterBaseMetadata)"
             },
             "typeName": {
@@ -19264,17 +19264,17 @@
               "nodeType": "Mapping",
               "src": "1649:41:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_CharacterBaseMetadata_$1844_storage_$",
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_CharacterBaseMetadata_$2094_storage_$",
                 "typeString": "mapping(uint256 => struct IEtherealBase.CharacterBaseMetadata)"
               },
               "valueType": {
                 "id": 42,
                 "name": "CharacterBaseMetadata",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 1844,
+                "referencedDeclaration": 2094,
                 "src": "1668:21:0",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_CharacterBaseMetadata_$1844_storage_ptr",
+                  "typeIdentifier": "t_struct$_CharacterBaseMetadata_$2094_storage_ptr",
                   "typeString": "struct IEtherealBase.CharacterBaseMetadata"
                 }
               }
@@ -19293,7 +19293,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_CharacterPhysicalMetadata_$1857_storage_$",
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_CharacterPhysicalMetadata_$2107_storage_$",
               "typeString": "mapping(uint256 => struct IEtherealBase.CharacterPhysicalMetadata)"
             },
             "typeName": {
@@ -19311,17 +19311,17 @@
               "nodeType": "Mapping",
               "src": "1726:45:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_CharacterPhysicalMetadata_$1857_storage_$",
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_CharacterPhysicalMetadata_$2107_storage_$",
                 "typeString": "mapping(uint256 => struct IEtherealBase.CharacterPhysicalMetadata)"
               },
               "valueType": {
                 "id": 46,
                 "name": "CharacterPhysicalMetadata",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 1857,
+                "referencedDeclaration": 2107,
                 "src": "1745:25:0",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_CharacterPhysicalMetadata_$1857_storage_ptr",
+                  "typeIdentifier": "t_struct$_CharacterPhysicalMetadata_$2107_storage_ptr",
                   "typeString": "struct IEtherealBase.CharacterPhysicalMetadata"
                 }
               }
@@ -19340,7 +19340,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_CharacterAttributesMetadata_$1874_storage_$",
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_CharacterAttributesMetadata_$2124_storage_$",
               "typeString": "mapping(uint256 => struct IEtherealBase.CharacterAttributesMetadata)"
             },
             "typeName": {
@@ -19358,17 +19358,17 @@
               "nodeType": "Mapping",
               "src": "1811:47:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_CharacterAttributesMetadata_$1874_storage_$",
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_CharacterAttributesMetadata_$2124_storage_$",
                 "typeString": "mapping(uint256 => struct IEtherealBase.CharacterAttributesMetadata)"
               },
               "valueType": {
                 "id": 50,
                 "name": "CharacterAttributesMetadata",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 1874,
+                "referencedDeclaration": 2124,
                 "src": "1830:27:0",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_CharacterAttributesMetadata_$1874_storage_ptr",
+                  "typeIdentifier": "t_struct$_CharacterAttributesMetadata_$2124_storage_ptr",
                   "typeString": "struct IEtherealBase.CharacterAttributesMetadata"
                 }
               }
@@ -19482,7 +19482,7 @@
                         "name": "DEFAULT_ADMIN_ROLE",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3341,
+                        "referencedDeclaration": 3591,
                         "src": "2484:18:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes32",
@@ -19497,7 +19497,7 @@
                           "name": "_msgSender",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 5641,
+                          "referencedDeclaration": 5891,
                           "src": "2504:10:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_view$__$returns$_t_address_payable_$",
@@ -19535,7 +19535,7 @@
                       "name": "_setupRole",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3524,
+                      "referencedDeclaration": 3774,
                       "src": "2473:10:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_bytes32_$_t_address_$returns$__$",
@@ -19584,7 +19584,7 @@
                           "name": "_msgSender",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 5641,
+                          "referencedDeclaration": 5891,
                           "src": "2554:10:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_view$__$returns$_t_address_payable_$",
@@ -19622,7 +19622,7 @@
                       "name": "_setupRole",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3524,
+                      "referencedDeclaration": 3774,
                       "src": "2530:10:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_bytes32_$_t_address_$returns$__$",
@@ -19671,7 +19671,7 @@
                           "name": "_msgSender",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 5641,
+                          "referencedDeclaration": 5891,
                           "src": "2602:10:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_view$__$returns$_t_address_payable_$",
@@ -19709,7 +19709,7 @@
                       "name": "_setupRole",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3524,
+                      "referencedDeclaration": 3774,
                       "src": "2578:10:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_bytes32_$_t_address_$returns$__$",
@@ -19762,7 +19762,7 @@
                       "name": "_setBaseURI",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4982,
+                      "referencedDeclaration": 5232,
                       "src": "2628:11:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_string_memory_ptr_$returns$__$",
@@ -19833,10 +19833,10 @@
                   "name": "ERC721",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 5075,
+                  "referencedDeclaration": 5325,
                   "src": "2441:6:0",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_ERC721_$5075_$",
+                    "typeIdentifier": "t_type$_t_contract$_ERC721_$5325_$",
                     "typeString": "type(contract ERC721)"
                   }
                 },
@@ -19959,7 +19959,7 @@
                             "name": "DEFAULT_ADMIN_ROLE",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3341,
+                            "referencedDeclaration": 3591,
                             "src": "2847:18:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_bytes32",
@@ -19974,7 +19974,7 @@
                               "name": "_msgSender",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 5641,
+                              "referencedDeclaration": 5891,
                               "src": "2867:10:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_view$__$returns$_t_address_payable_$",
@@ -20012,7 +20012,7 @@
                           "name": "hasRole",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3387,
+                          "referencedDeclaration": 3637,
                           "src": "2839:7:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_view$_t_bytes32_$_t_address_$returns$_t_bool_$",
@@ -20122,7 +20122,7 @@
                       "name": "_setBaseURI",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4982,
+                      "referencedDeclaration": 5232,
                       "src": "2964:11:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_string_memory_ptr_$returns$__$",
@@ -20292,7 +20292,7 @@
                               "name": "_msgSender",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 5641,
+                              "referencedDeclaration": 5891,
                               "src": "3727:10:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_view$__$returns$_t_address_payable_$",
@@ -20330,7 +20330,7 @@
                           "name": "hasRole",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3387,
+                          "referencedDeclaration": 3637,
                           "src": "3706:7:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_view$_t_bytes32_$_t_address_$returns$_t_bool_$",
@@ -20449,7 +20449,7 @@
                                       "referencedDeclaration": 127,
                                       "src": "3845:17:0",
                                       "typeDescriptions": {
-                                        "typeIdentifier": "t_struct$_CharacterBaseMetadata_$1844_memory_ptr",
+                                        "typeIdentifier": "t_struct$_CharacterBaseMetadata_$2094_memory_ptr",
                                         "typeString": "struct IEtherealBase.CharacterBaseMetadata memory"
                                       }
                                     },
@@ -20460,7 +20460,7 @@
                                     "lValueRequested": false,
                                     "memberName": "name",
                                     "nodeType": "MemberAccess",
-                                    "referencedDeclaration": 1835,
+                                    "referencedDeclaration": 2085,
                                     "src": "3845:22:0",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_bytes32",
@@ -20684,7 +20684,7 @@
                                       "referencedDeclaration": 127,
                                       "src": "3934:17:0",
                                       "typeDescriptions": {
-                                        "typeIdentifier": "t_struct$_CharacterBaseMetadata_$1844_memory_ptr",
+                                        "typeIdentifier": "t_struct$_CharacterBaseMetadata_$2094_memory_ptr",
                                         "typeString": "struct IEtherealBase.CharacterBaseMetadata memory"
                                       }
                                     },
@@ -20695,7 +20695,7 @@
                                     "lValueRequested": false,
                                     "memberName": "name",
                                     "nodeType": "MemberAccess",
-                                    "referencedDeclaration": 1835,
+                                    "referencedDeclaration": 2085,
                                     "src": "3934:22:0",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_bytes32",
@@ -20997,7 +20997,7 @@
                               "referencedDeclaration": 127,
                               "src": "4120:17:0",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_struct$_CharacterBaseMetadata_$1844_memory_ptr",
+                                "typeIdentifier": "t_struct$_CharacterBaseMetadata_$2094_memory_ptr",
                                 "typeString": "struct IEtherealBase.CharacterBaseMetadata memory"
                               }
                             },
@@ -21008,7 +21008,7 @@
                             "lValueRequested": false,
                             "memberName": "name",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 1835,
+                            "referencedDeclaration": 2085,
                             "src": "4120:22:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_bytes32",
@@ -21137,7 +21137,7 @@
                         "referencedDeclaration": 36,
                         "src": "4435:15:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Counter_$5663_storage",
+                          "typeIdentifier": "t_struct$_Counter_$5913_storage",
                           "typeString": "struct Counters.Counter storage ref"
                         }
                       },
@@ -21148,10 +21148,10 @@
                       "lValueRequested": false,
                       "memberName": "current",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 5674,
+                      "referencedDeclaration": 5924,
                       "src": "4435:23:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_view$_t_struct$_Counter_$5663_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_Counter_$5663_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_Counter_$5913_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_Counter_$5913_storage_ptr_$",
                         "typeString": "function (struct Counters.Counter storage pointer) view returns (uint256)"
                       }
                     },
@@ -21216,10 +21216,10 @@
                       "name": "_safeMint",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4720,
-                        4749
+                        4970,
+                        4999
                       ],
-                      "referencedDeclaration": 4720,
+                      "referencedDeclaration": 4970,
                       "src": "4471:9:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$__$",
@@ -21258,7 +21258,7 @@
                         "referencedDeclaration": 36,
                         "src": "4511:15:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Counter_$5663_storage",
+                          "typeIdentifier": "t_struct$_Counter_$5913_storage",
                           "typeString": "struct Counters.Counter storage ref"
                         }
                       },
@@ -21269,10 +21269,10 @@
                       "lValueRequested": false,
                       "memberName": "increment",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 5686,
+                      "referencedDeclaration": 5936,
                       "src": "4511:25:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Counter_$5663_storage_ptr_$returns$__$bound_to$_t_struct$_Counter_$5663_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Counter_$5913_storage_ptr_$returns$__$bound_to$_t_struct$_Counter_$5913_storage_ptr_$",
                         "typeString": "function (struct Counters.Counter storage pointer)"
                       }
                     },
@@ -21325,7 +21325,7 @@
                           "referencedDeclaration": 127,
                           "src": "4569:17:0",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_CharacterBaseMetadata_$1844_memory_ptr",
+                            "typeIdentifier": "t_struct$_CharacterBaseMetadata_$2094_memory_ptr",
                             "typeString": "struct IEtherealBase.CharacterBaseMetadata memory"
                           }
                         },
@@ -21336,7 +21336,7 @@
                         "lValueRequested": false,
                         "memberName": "name",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 1835,
+                        "referencedDeclaration": 2085,
                         "src": "4569:22:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes32",
@@ -21398,7 +21398,7 @@
                         "referencedDeclaration": 44,
                         "src": "4610:21:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_CharacterBaseMetadata_$1844_storage_$",
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_CharacterBaseMetadata_$2094_storage_$",
                           "typeString": "mapping(uint256 => struct IEtherealBase.CharacterBaseMetadata storage ref)"
                         }
                       },
@@ -21422,7 +21422,7 @@
                       "nodeType": "IndexAccess",
                       "src": "4610:37:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_CharacterBaseMetadata_$1844_storage",
+                        "typeIdentifier": "t_struct$_CharacterBaseMetadata_$2094_storage",
                         "typeString": "struct IEtherealBase.CharacterBaseMetadata storage ref"
                       }
                     },
@@ -21436,13 +21436,13 @@
                       "referencedDeclaration": 127,
                       "src": "4650:17:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_CharacterBaseMetadata_$1844_memory_ptr",
+                        "typeIdentifier": "t_struct$_CharacterBaseMetadata_$2094_memory_ptr",
                         "typeString": "struct IEtherealBase.CharacterBaseMetadata memory"
                       }
                     },
                     "src": "4610:57:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_CharacterBaseMetadata_$1844_storage",
+                      "typeIdentifier": "t_struct$_CharacterBaseMetadata_$2094_storage",
                       "typeString": "struct IEtherealBase.CharacterBaseMetadata storage ref"
                     }
                   },
@@ -21466,7 +21466,7 @@
                         "referencedDeclaration": 48,
                         "src": "4678:25:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_CharacterPhysicalMetadata_$1857_storage_$",
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_CharacterPhysicalMetadata_$2107_storage_$",
                           "typeString": "mapping(uint256 => struct IEtherealBase.CharacterPhysicalMetadata storage ref)"
                         }
                       },
@@ -21490,7 +21490,7 @@
                       "nodeType": "IndexAccess",
                       "src": "4678:41:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_CharacterPhysicalMetadata_$1857_storage",
+                        "typeIdentifier": "t_struct$_CharacterPhysicalMetadata_$2107_storage",
                         "typeString": "struct IEtherealBase.CharacterPhysicalMetadata storage ref"
                       }
                     },
@@ -21504,13 +21504,13 @@
                       "referencedDeclaration": 129,
                       "src": "4722:21:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_CharacterPhysicalMetadata_$1857_memory_ptr",
+                        "typeIdentifier": "t_struct$_CharacterPhysicalMetadata_$2107_memory_ptr",
                         "typeString": "struct IEtherealBase.CharacterPhysicalMetadata memory"
                       }
                     },
                     "src": "4678:65:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_CharacterPhysicalMetadata_$1857_storage",
+                      "typeIdentifier": "t_struct$_CharacterPhysicalMetadata_$2107_storage",
                       "typeString": "struct IEtherealBase.CharacterPhysicalMetadata storage ref"
                     }
                   },
@@ -21534,7 +21534,7 @@
                         "referencedDeclaration": 52,
                         "src": "4754:27:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_CharacterAttributesMetadata_$1874_storage_$",
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_CharacterAttributesMetadata_$2124_storage_$",
                           "typeString": "mapping(uint256 => struct IEtherealBase.CharacterAttributesMetadata storage ref)"
                         }
                       },
@@ -21558,7 +21558,7 @@
                       "nodeType": "IndexAccess",
                       "src": "4754:43:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_CharacterAttributesMetadata_$1874_storage",
+                        "typeIdentifier": "t_struct$_CharacterAttributesMetadata_$2124_storage",
                         "typeString": "struct IEtherealBase.CharacterAttributesMetadata storage ref"
                       }
                     },
@@ -21572,13 +21572,13 @@
                       "referencedDeclaration": 131,
                       "src": "4800:22:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_CharacterAttributesMetadata_$1874_memory_ptr",
+                        "typeIdentifier": "t_struct$_CharacterAttributesMetadata_$2124_memory_ptr",
                         "typeString": "struct IEtherealBase.CharacterAttributesMetadata memory"
                       }
                     },
                     "src": "4754:68:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_CharacterAttributesMetadata_$1874_storage",
+                      "typeIdentifier": "t_struct$_CharacterAttributesMetadata_$2124_storage",
                       "typeString": "struct IEtherealBase.CharacterAttributesMetadata storage ref"
                     }
                   },
@@ -21661,17 +21661,17 @@
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_CharacterBaseMetadata_$1844_memory_ptr",
+                    "typeIdentifier": "t_struct$_CharacterBaseMetadata_$2094_memory_ptr",
                     "typeString": "struct IEtherealBase.CharacterBaseMetadata"
                   },
                   "typeName": {
                     "id": 126,
                     "name": "CharacterBaseMetadata",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 1844,
+                    "referencedDeclaration": 2094,
                     "src": "3456:21:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_CharacterBaseMetadata_$1844_storage_ptr",
+                      "typeIdentifier": "t_struct$_CharacterBaseMetadata_$2094_storage_ptr",
                       "typeString": "struct IEtherealBase.CharacterBaseMetadata"
                     }
                   },
@@ -21688,17 +21688,17 @@
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_CharacterPhysicalMetadata_$1857_memory_ptr",
+                    "typeIdentifier": "t_struct$_CharacterPhysicalMetadata_$2107_memory_ptr",
                     "typeString": "struct IEtherealBase.CharacterPhysicalMetadata"
                   },
                   "typeName": {
                     "id": 128,
                     "name": "CharacterPhysicalMetadata",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 1857,
+                    "referencedDeclaration": 2107,
                     "src": "3511:25:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_CharacterPhysicalMetadata_$1857_storage_ptr",
+                      "typeIdentifier": "t_struct$_CharacterPhysicalMetadata_$2107_storage_ptr",
                       "typeString": "struct IEtherealBase.CharacterPhysicalMetadata"
                     }
                   },
@@ -21715,17 +21715,17 @@
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_CharacterAttributesMetadata_$1874_memory_ptr",
+                    "typeIdentifier": "t_struct$_CharacterAttributesMetadata_$2124_memory_ptr",
                     "typeString": "struct IEtherealBase.CharacterAttributesMetadata"
                   },
                   "typeName": {
                     "id": 130,
                     "name": "CharacterAttributesMetadata",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 1874,
+                    "referencedDeclaration": 2124,
                     "src": "3574:27:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_CharacterAttributesMetadata_$1874_storage_ptr",
+                      "typeIdentifier": "t_struct$_CharacterAttributesMetadata_$2124_storage_ptr",
                       "typeString": "struct IEtherealBase.CharacterAttributesMetadata"
                     }
                   },
@@ -21775,7 +21775,7 @@
           },
           {
             "baseFunctions": [
-              5104
+              5354
             ],
             "body": {
               "id": 278,
@@ -21795,7 +21795,7 @@
                               "name": "_msgSender",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 5641,
+                              "referencedDeclaration": 5891,
                               "src": "5182:10:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_view$__$returns$_t_address_payable_$",
@@ -21845,7 +21845,7 @@
                           "name": "_isApprovedOrOwner",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 4705,
+                          "referencedDeclaration": 4955,
                           "src": "5163:18:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_view$_t_address_$_t_uint256_$returns$_t_bool_$",
@@ -21955,7 +21955,7 @@
                       "name": "_burn",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4877,
+                      "referencedDeclaration": 5127,
                       "src": "5268:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$returns$__$",
@@ -22024,7 +22024,7 @@
                         "referencedDeclaration": 44,
                         "src": "5314:21:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_CharacterBaseMetadata_$1844_storage_$",
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_CharacterBaseMetadata_$2094_storage_$",
                           "typeString": "mapping(uint256 => struct IEtherealBase.CharacterBaseMetadata storage ref)"
                         }
                       },
@@ -22048,7 +22048,7 @@
                       "nodeType": "IndexAccess",
                       "src": "5314:30:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_CharacterBaseMetadata_$1844_storage",
+                        "typeIdentifier": "t_struct$_CharacterBaseMetadata_$2094_storage",
                         "typeString": "struct IEtherealBase.CharacterBaseMetadata storage ref"
                       }
                     },
@@ -22059,7 +22059,7 @@
                     "lValueRequested": false,
                     "memberName": "name",
                     "nodeType": "MemberAccess",
-                    "referencedDeclaration": 1835,
+                    "referencedDeclaration": 2085,
                     "src": "5314:35:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
@@ -22146,7 +22146,7 @@
                         "referencedDeclaration": 44,
                         "src": "5416:21:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_CharacterBaseMetadata_$1844_storage_$",
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_CharacterBaseMetadata_$2094_storage_$",
                           "typeString": "mapping(uint256 => struct IEtherealBase.CharacterBaseMetadata storage ref)"
                         }
                       },
@@ -22170,7 +22170,7 @@
                       "nodeType": "IndexAccess",
                       "src": "5416:30:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_CharacterBaseMetadata_$1844_storage",
+                        "typeIdentifier": "t_struct$_CharacterBaseMetadata_$2094_storage",
                         "typeString": "struct IEtherealBase.CharacterBaseMetadata storage ref"
                       }
                     },
@@ -22203,7 +22203,7 @@
                         "referencedDeclaration": 52,
                         "src": "5464:27:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_CharacterAttributesMetadata_$1874_storage_$",
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_CharacterAttributesMetadata_$2124_storage_$",
                           "typeString": "mapping(uint256 => struct IEtherealBase.CharacterAttributesMetadata storage ref)"
                         }
                       },
@@ -22227,7 +22227,7 @@
                       "nodeType": "IndexAccess",
                       "src": "5464:36:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_CharacterAttributesMetadata_$1874_storage",
+                        "typeIdentifier": "t_struct$_CharacterAttributesMetadata_$2124_storage",
                         "typeString": "struct IEtherealBase.CharacterAttributesMetadata storage ref"
                       }
                     },
@@ -22260,7 +22260,7 @@
                         "referencedDeclaration": 48,
                         "src": "5518:25:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_CharacterPhysicalMetadata_$1857_storage_$",
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_CharacterPhysicalMetadata_$2107_storage_$",
                           "typeString": "mapping(uint256 => struct IEtherealBase.CharacterPhysicalMetadata storage ref)"
                         }
                       },
@@ -22284,7 +22284,7 @@
                       "nodeType": "IndexAccess",
                       "src": "5518:34:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_CharacterPhysicalMetadata_$1857_storage",
+                        "typeIdentifier": "t_struct$_CharacterPhysicalMetadata_$2107_storage",
                         "typeString": "struct IEtherealBase.CharacterPhysicalMetadata storage ref"
                       }
                     },
@@ -22394,7 +22394,7 @@
                               "name": "_msgSender",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 5641,
+                              "referencedDeclaration": 5891,
                               "src": "5847:10:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_view$__$returns$_t_address_payable_$",
@@ -22432,7 +22432,7 @@
                           "name": "hasRole",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3387,
+                          "referencedDeclaration": 3637,
                           "src": "5826:7:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_view$_t_bytes32_$_t_address_$returns$_t_bool_$",
@@ -22524,7 +22524,7 @@
                       "name": "_pause",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6830,
+                      "referencedDeclaration": 7080,
                       "src": "5938:6:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
@@ -22614,7 +22614,7 @@
                               "name": "_msgSender",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 5641,
+                              "referencedDeclaration": 5891,
                               "src": "6247:10:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_view$__$returns$_t_address_payable_$",
@@ -22652,7 +22652,7 @@
                           "name": "hasRole",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3387,
+                          "referencedDeclaration": 3637,
                           "src": "6226:7:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_view$_t_bytes32_$_t_address_$returns$_t_bool_$",
@@ -22744,7 +22744,7 @@
                       "name": "_unpause",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6846,
+                      "referencedDeclaration": 7096,
                       "src": "6340:8:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
@@ -22805,8 +22805,8 @@
           },
           {
             "baseFunctions": [
-              5074,
-              5141
+              5324,
+              5391
             ],
             "body": {
               "id": 333,
@@ -22887,7 +22887,7 @@
                       "lValueRequested": false,
                       "memberName": "_beforeTokenTransfer",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 5141,
+                      "referencedDeclaration": 5391,
                       "src": "6500:26:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
@@ -22929,10 +22929,10 @@
                   "id": 321,
                   "name": "ERC721",
                   "nodeType": "UserDefinedTypeName",
-                  "referencedDeclaration": 5075,
+                  "referencedDeclaration": 5325,
                   "src": "6465:6:0",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_ERC721_$5075",
+                    "typeIdentifier": "t_contract$_ERC721_$5325",
                     "typeString": "contract ERC721"
                   }
                 },
@@ -22940,10 +22940,10 @@
                   "id": 322,
                   "name": "ERC721Pausable",
                   "nodeType": "UserDefinedTypeName",
-                  "referencedDeclaration": 5142,
+                  "referencedDeclaration": 5392,
                   "src": "6473:14:0",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_ERC721Pausable_$5142",
+                    "typeIdentifier": "t_contract$_ERC721Pausable_$5392",
                     "typeString": "contract ERC721Pausable"
                   }
                 }
@@ -23061,64 +23061,64 @@
       "absolutePath": "/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/EtherealCharacter.sol",
       "exportedSymbols": {
         "AccessControl": [
-          3598
+          3848
         ],
         "Address": [
-          5630
+          5880
         ],
         "Context": [
-          5653
+          5903
         ],
         "Counters": [
-          5703
+          5953
         ],
         "ERC165": [
-          3765
+          4015
         ],
         "ERC721": [
-          5075
+          5325
         ],
         "ERC721Burnable": [
-          5105
+          5355
         ],
         "ERC721Pausable": [
-          5142
+          5392
         ],
         "EnumerableMap": [
-          6263
+          6513
         ],
         "EnumerableSet": [
-          6755
+          7005
         ],
         "EtherealCharacter": [
           335
         ],
         "IERC165": [
-          3777
+          4027
         ],
         "IERC721": [
-          5258
+          5508
         ],
         "IERC721Enumerable": [
-          5289
+          5539
         ],
         "IERC721Metadata": [
-          5316
+          5566
         ],
         "IERC721Receiver": [
-          5334
+          5584
         ],
         "IEtherealBase": [
-          1894
+          2144
         ],
         "Pausable": [
-          6847
+          7097
         ],
         "SafeMath": [
-          4132
+          4382
         ],
         "Strings": [
-          6934
+          7184
         ]
       },
       "license": "MIT"
@@ -23149,7 +23149,7 @@
       },
       {
         "attributes": {
-          "SourceUnit": 3599,
+          "SourceUnit": 3849,
           "absolutePath": "@openzeppelin/contracts/access/AccessControl.sol",
           "file": "@openzeppelin/contracts/access/AccessControl.sol",
           "scope": 336,
@@ -23164,7 +23164,7 @@
       },
       {
         "attributes": {
-          "SourceUnit": 5654,
+          "SourceUnit": 5904,
           "absolutePath": "@openzeppelin/contracts/utils/Context.sol",
           "file": "@openzeppelin/contracts/utils/Context.sol",
           "scope": 336,
@@ -23179,7 +23179,7 @@
       },
       {
         "attributes": {
-          "SourceUnit": 5704,
+          "SourceUnit": 5954,
           "absolutePath": "@openzeppelin/contracts/utils/Counters.sol",
           "file": "@openzeppelin/contracts/utils/Counters.sol",
           "scope": 336,
@@ -23194,7 +23194,7 @@
       },
       {
         "attributes": {
-          "SourceUnit": 5076,
+          "SourceUnit": 5326,
           "absolutePath": "@openzeppelin/contracts/token/ERC721/ERC721.sol",
           "file": "@openzeppelin/contracts/token/ERC721/ERC721.sol",
           "scope": 336,
@@ -23209,7 +23209,7 @@
       },
       {
         "attributes": {
-          "SourceUnit": 5106,
+          "SourceUnit": 5356,
           "absolutePath": "@openzeppelin/contracts/token/ERC721/ERC721Burnable.sol",
           "file": "@openzeppelin/contracts/token/ERC721/ERC721Burnable.sol",
           "scope": 336,
@@ -23224,7 +23224,7 @@
       },
       {
         "attributes": {
-          "SourceUnit": 5143,
+          "SourceUnit": 5393,
           "absolutePath": "@openzeppelin/contracts/token/ERC721/ERC721Pausable.sol",
           "file": "@openzeppelin/contracts/token/ERC721/ERC721Pausable.sol",
           "scope": 336,
@@ -23239,7 +23239,7 @@
       },
       {
         "attributes": {
-          "SourceUnit": 4133,
+          "SourceUnit": 4383,
           "absolutePath": "@openzeppelin/contracts/math/SafeMath.sol",
           "file": "@openzeppelin/contracts/math/SafeMath.sol",
           "scope": 336,
@@ -23254,7 +23254,7 @@
       },
       {
         "attributes": {
-          "SourceUnit": 1895,
+          "SourceUnit": 2145,
           "absolutePath": "/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealBase.sol",
           "file": "./IEtherealBase.sol",
           "scope": 336,
@@ -23271,35 +23271,35 @@
         "attributes": {
           "abstract": false,
           "contractDependencies": [
-            1894,
-            3598,
-            3765,
-            3777,
-            5075,
-            5105,
-            5142,
-            5258,
-            5289,
-            5316,
-            5653,
-            6847
+            2144,
+            3848,
+            4015,
+            4027,
+            5325,
+            5355,
+            5392,
+            5508,
+            5539,
+            5566,
+            5903,
+            7097
           ],
           "contractKind": "contract",
           "fullyImplemented": true,
           "linearizedBaseContracts": [
             335,
-            1894,
-            5142,
-            6847,
-            5105,
-            5075,
-            5289,
-            5316,
-            5258,
-            3765,
-            3777,
-            3598,
-            5653
+            2144,
+            5392,
+            7097,
+            5355,
+            5325,
+            5539,
+            5566,
+            5508,
+            4015,
+            4027,
+            3848,
+            5903
           ],
           "name": "EtherealCharacter",
           "scope": 336
@@ -23319,7 +23319,7 @@
               {
                 "attributes": {
                   "name": "Context",
-                  "referencedDeclaration": 5653,
+                  "referencedDeclaration": 5903,
                   "type": "contract Context"
                 },
                 "id": 12,
@@ -23337,7 +23337,7 @@
               {
                 "attributes": {
                   "name": "AccessControl",
-                  "referencedDeclaration": 3598,
+                  "referencedDeclaration": 3848,
                   "type": "contract AccessControl"
                 },
                 "id": 14,
@@ -23355,7 +23355,7 @@
               {
                 "attributes": {
                   "name": "ERC721Burnable",
-                  "referencedDeclaration": 5105,
+                  "referencedDeclaration": 5355,
                   "type": "contract ERC721Burnable"
                 },
                 "id": 16,
@@ -23373,7 +23373,7 @@
               {
                 "attributes": {
                   "name": "ERC721Pausable",
-                  "referencedDeclaration": 5142,
+                  "referencedDeclaration": 5392,
                   "type": "contract ERC721Pausable"
                 },
                 "id": 18,
@@ -23391,7 +23391,7 @@
               {
                 "attributes": {
                   "name": "IEtherealBase",
-                  "referencedDeclaration": 1894,
+                  "referencedDeclaration": 2144,
                   "type": "contract IEtherealBase"
                 },
                 "id": 20,
@@ -23408,7 +23408,7 @@
               {
                 "attributes": {
                   "name": "Counters",
-                  "referencedDeclaration": 5703,
+                  "referencedDeclaration": 5953,
                   "type": "library Counters"
                 },
                 "id": 22,
@@ -23418,7 +23418,7 @@
               {
                 "attributes": {
                   "name": "Counters.Counter",
-                  "referencedDeclaration": 5663,
+                  "referencedDeclaration": 5913,
                   "type": "struct Counters.Counter"
                 },
                 "id": 23,
@@ -23607,7 +23607,7 @@
               {
                 "attributes": {
                   "name": "Counters.Counter",
-                  "referencedDeclaration": 5663,
+                  "referencedDeclaration": 5913,
                   "type": "struct Counters.Counter"
                 },
                 "id": 35,
@@ -23624,7 +23624,7 @@
               {
                 "attributes": {
                   "name": "SafeMath",
-                  "referencedDeclaration": 4132,
+                  "referencedDeclaration": 4382,
                   "type": "library SafeMath"
                 },
                 "id": 37,
@@ -23675,7 +23675,7 @@
                   {
                     "attributes": {
                       "name": "CharacterBaseMetadata",
-                      "referencedDeclaration": 1844,
+                      "referencedDeclaration": 2094,
                       "type": "struct IEtherealBase.CharacterBaseMetadata"
                     },
                     "id": 42,
@@ -23730,7 +23730,7 @@
                   {
                     "attributes": {
                       "name": "CharacterPhysicalMetadata",
-                      "referencedDeclaration": 1857,
+                      "referencedDeclaration": 2107,
                       "type": "struct IEtherealBase.CharacterPhysicalMetadata"
                     },
                     "id": 46,
@@ -23777,7 +23777,7 @@
                   {
                     "attributes": {
                       "name": "CharacterAttributesMetadata",
-                      "referencedDeclaration": 1874,
+                      "referencedDeclaration": 2124,
                       "type": "struct IEtherealBase.CharacterAttributesMetadata"
                     },
                     "id": 50,
@@ -24016,7 +24016,7 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 5075,
+                      "referencedDeclaration": 5325,
                       "type": "type(contract ERC721)",
                       "value": "ERC721"
                     },
@@ -24089,7 +24089,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 3524,
+                              "referencedDeclaration": 3774,
                               "type": "function (bytes32,address)",
                               "value": "_setupRole"
                             },
@@ -24102,7 +24102,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 3341,
+                              "referencedDeclaration": 3591,
                               "type": "bytes32",
                               "value": "DEFAULT_ADMIN_ROLE"
                             },
@@ -24136,7 +24136,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 5641,
+                                  "referencedDeclaration": 5891,
                                   "type": "function () view returns (address payable)",
                                   "value": "_msgSender"
                                 },
@@ -24191,7 +24191,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 3524,
+                              "referencedDeclaration": 3774,
                               "type": "function (bytes32,address)",
                               "value": "_setupRole"
                             },
@@ -24238,7 +24238,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 5641,
+                                  "referencedDeclaration": 5891,
                                   "type": "function () view returns (address payable)",
                                   "value": "_msgSender"
                                 },
@@ -24293,7 +24293,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 3524,
+                              "referencedDeclaration": 3774,
                               "type": "function (bytes32,address)",
                               "value": "_setupRole"
                             },
@@ -24340,7 +24340,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 5641,
+                                  "referencedDeclaration": 5891,
                                   "type": "function () view returns (address payable)",
                                   "value": "_msgSender"
                                 },
@@ -24391,7 +24391,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 4982,
+                              "referencedDeclaration": 5232,
                               "type": "function (string memory)",
                               "value": "_setBaseURI"
                             },
@@ -24573,7 +24573,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 3387,
+                                  "referencedDeclaration": 3637,
                                   "type": "function (bytes32,address) view returns (bool)",
                                   "value": "hasRole"
                                 },
@@ -24586,7 +24586,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 3341,
+                                  "referencedDeclaration": 3591,
                                   "type": "bytes32",
                                   "value": "DEFAULT_ADMIN_ROLE"
                                 },
@@ -24620,7 +24620,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 5641,
+                                      "referencedDeclaration": 5891,
                                       "type": "function () view returns (address payable)",
                                       "value": "_msgSender"
                                     },
@@ -24691,7 +24691,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 4982,
+                              "referencedDeclaration": 5232,
                               "type": "function (string memory)",
                               "value": "_setBaseURI"
                             },
@@ -24859,7 +24859,7 @@
                       {
                         "attributes": {
                           "name": "CharacterBaseMetadata",
-                          "referencedDeclaration": 1844,
+                          "referencedDeclaration": 2094,
                           "type": "struct IEtherealBase.CharacterBaseMetadata"
                         },
                         "id": 126,
@@ -24886,7 +24886,7 @@
                       {
                         "attributes": {
                           "name": "CharacterPhysicalMetadata",
-                          "referencedDeclaration": 1857,
+                          "referencedDeclaration": 2107,
                           "type": "struct IEtherealBase.CharacterPhysicalMetadata"
                         },
                         "id": 128,
@@ -24913,7 +24913,7 @@
                       {
                         "attributes": {
                           "name": "CharacterAttributesMetadata",
-                          "referencedDeclaration": 1874,
+                          "referencedDeclaration": 2124,
                           "type": "struct IEtherealBase.CharacterAttributesMetadata"
                         },
                         "id": 130,
@@ -25036,7 +25036,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 3387,
+                                  "referencedDeclaration": 3637,
                                   "type": "function (bytes32,address) view returns (bool)",
                                   "value": "hasRole"
                                 },
@@ -25083,7 +25083,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 5641,
+                                      "referencedDeclaration": 5891,
                                       "type": "function () view returns (address payable)",
                                       "value": "_msgSender"
                                     },
@@ -25285,7 +25285,7 @@
                                               "isPure": false,
                                               "lValueRequested": false,
                                               "member_name": "name",
-                                              "referencedDeclaration": 1835,
+                                              "referencedDeclaration": 2085,
                                               "type": "bytes32"
                                             },
                                             "children": [
@@ -25534,7 +25534,7 @@
                                               "isPure": false,
                                               "lValueRequested": false,
                                               "member_name": "name",
-                                              "referencedDeclaration": 1835,
+                                              "referencedDeclaration": 2085,
                                               "type": "bytes32"
                                             },
                                             "children": [
@@ -25790,7 +25790,7 @@
                                       "isPure": false,
                                       "lValueRequested": false,
                                       "member_name": "name",
-                                      "referencedDeclaration": 1835,
+                                      "referencedDeclaration": 2085,
                                       "type": "bytes32"
                                     },
                                     "children": [
@@ -25908,7 +25908,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "current",
-                              "referencedDeclaration": 5674,
+                              "referencedDeclaration": 5924,
                               "type": "function (struct Counters.Counter storage pointer) view returns (uint256)"
                             },
                             "children": [
@@ -25970,10 +25970,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                4720,
-                                4749
+                                4970,
+                                4999
                               ],
-                              "referencedDeclaration": 4720,
+                              "referencedDeclaration": 4970,
                               "type": "function (address,uint256)",
                               "value": "_safeMint"
                             },
@@ -26047,7 +26047,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "increment",
-                              "referencedDeclaration": 5686,
+                              "referencedDeclaration": 5936,
                               "type": "function (struct Counters.Counter storage pointer)"
                             },
                             "children": [
@@ -26120,7 +26120,7 @@
                                   "isPure": false,
                                   "lValueRequested": false,
                                   "member_name": "name",
-                                  "referencedDeclaration": 1835,
+                                  "referencedDeclaration": 2085,
                                   "type": "bytes32"
                                 },
                                 "children": [
@@ -26433,7 +26433,7 @@
           {
             "attributes": {
               "baseFunctions": [
-                5104
+                5354
               ],
               "functionSelector": "42966c68",
               "implemented": true,
@@ -26584,7 +26584,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 4705,
+                                  "referencedDeclaration": 4955,
                                   "type": "function (address,uint256) view returns (bool)",
                                   "value": "_isApprovedOrOwner"
                                 },
@@ -26618,7 +26618,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 5641,
+                                      "referencedDeclaration": 5891,
                                       "type": "function () view returns (address payable)",
                                       "value": "_msgSender"
                                     },
@@ -26702,7 +26702,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 4877,
+                              "referencedDeclaration": 5127,
                               "type": "function (uint256)",
                               "value": "_burn"
                             },
@@ -26773,7 +26773,7 @@
                           "isPure": false,
                           "lValueRequested": false,
                           "member_name": "name",
-                          "referencedDeclaration": 1835,
+                          "referencedDeclaration": 2085,
                           "type": "bytes32"
                         },
                         "children": [
@@ -27208,7 +27208,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 3387,
+                                  "referencedDeclaration": 3637,
                                   "type": "function (bytes32,address) view returns (bool)",
                                   "value": "hasRole"
                                 },
@@ -27255,7 +27255,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 5641,
+                                      "referencedDeclaration": 5891,
                                       "type": "function () view returns (address payable)",
                                       "value": "_msgSender"
                                     },
@@ -27326,7 +27326,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 6830,
+                              "referencedDeclaration": 7080,
                               "type": "function ()",
                               "value": "_pause"
                             },
@@ -27473,7 +27473,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 3387,
+                                  "referencedDeclaration": 3637,
                                   "type": "function (bytes32,address) view returns (bool)",
                                   "value": "hasRole"
                                 },
@@ -27520,7 +27520,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 5641,
+                                      "referencedDeclaration": 5891,
                                       "type": "function () view returns (address payable)",
                                       "value": "_msgSender"
                                     },
@@ -27591,7 +27591,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 6846,
+                              "referencedDeclaration": 7096,
                               "type": "function ()",
                               "value": "_unpause"
                             },
@@ -27622,8 +27622,8 @@
           {
             "attributes": {
               "baseFunctions": [
-                5074,
-                5141
+                5324,
+                5391
               ],
               "implemented": true,
               "isConstructor": false,
@@ -27643,7 +27643,7 @@
                   {
                     "attributes": {
                       "name": "ERC721",
-                      "referencedDeclaration": 5075,
+                      "referencedDeclaration": 5325,
                       "type": "contract ERC721"
                     },
                     "id": 321,
@@ -27653,7 +27653,7 @@
                   {
                     "attributes": {
                       "name": "ERC721Pausable",
-                      "referencedDeclaration": 5142,
+                      "referencedDeclaration": 5392,
                       "type": "contract ERC721Pausable"
                     },
                     "id": 322,
@@ -27803,7 +27803,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "_beforeTokenTransfer",
-                              "referencedDeclaration": 5141,
+                              "referencedDeclaration": 5391,
                               "type": "function (address,address,uint256)"
                             },
                             "children": [
@@ -27900,7 +27900,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.3",
-  "updatedAt": "2021-02-16T04:43:59.724Z",
+  "updatedAt": "2021-02-16T06:27:27.633Z",
   "devdoc": {
     "details": "{ERC721} token, including:  - ability for holders to burn (destroy) their tokens  - a minter role that allows for token minting (creation)  - a pauser role that allows to stop all token transfers  - token ID and URI autogeneration  - includes extra properties to store important metadata This contract uses {AccessControl} to lock permissioned functions using the different roles - head to its documentation for details. The account that deploys the contract will be granted the minter and pauser roles, as well as the default admin role, which will let it grant both minter and pauser roles to other accounts.",
     "events": {

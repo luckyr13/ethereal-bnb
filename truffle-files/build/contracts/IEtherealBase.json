@@ -1,0 +1,1920 @@
+{
+  "contractName": "IEtherealBase",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.7.5+commit.eb77ed08\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"details\":\"{ERC721} token, including:\",\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealBase.sol\":\"IEtherealBase\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealBase.sol\":{\"keccak256\":\"0xf02692b6fc3bcdb976cda458807bb61499bea5b0dd7a8d047bbcbf1f18b59a87\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://debc711120ec5cfa1701c007ccb23910a07048eb1ef2868142d137f2c3f0e641\",\"dweb:/ipfs/QmVzNYfZRKdbhVRCYvyGDbgeRL1bn4n4K2GY4D8z5JUzmX\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity 0.7.5;\r\npragma abicoder v2;\r\n\r\n/**\r\n * @dev {ERC721} token, including:\r\n */\r\ninterface IEtherealBase {  \r\n   /*\r\n    * @dev Each character can have (control) 2 base elements of nature\r\n    */\r\n    enum ElementOfNature {\r\n      // Elements of nature\r\n      Air, Water, Earth, Fire,\r\n      // Spiritual elements\r\n      Aether,\r\n      // Machine elements\r\n      ElectroMetal,\r\n      // Special elements\r\n      Ice,\r\n      Thunder, \r\n      Psychic,\r\n      Ghost,\r\n      DinoPower,\r\n      Poison,\r\n      // Ultra elements\r\n      DivinaMagicae\r\n    }\r\n\r\n    /**\r\n    * @dev Character extra metadata\r\n    */\r\n    struct CharacterBaseMetadata {\r\n      bytes32 name;\r\n      bytes24 birthdate;\r\n      string description;\r\n      uint256 planetId;\r\n      uint8 genre;\r\n    }\r\n\r\n    struct CharacterPhysicalMetadata {\r\n      uint24 skintone;\r\n      uint24 haircolor;\r\n      uint24 eyescolor;\r\n      uint16 weight;\r\n      uint16 height;\r\n      uint8 bodyType;\r\n    }\r\n\r\n    struct CharacterAttributesMetadata {\r\n      ElementOfNature primaryElement;\r\n      ElementOfNature secondaryElement;\r\n      uint8 life;\r\n      uint8 armor;\r\n      uint8 strength;\r\n      uint8 speed;\r\n      uint8 luck;\r\n      uint8 spirit;\r\n    }\r\n\r\n\r\n    /**\r\n    * @dev Character extra metadata\r\n    */\r\n    struct WeaponMetadata {\r\n      bytes32 name;\r\n      ElementOfNature strongAgainstElement;\r\n      ElementOfNature weakAgainstElement;\r\n      uint8 life;\r\n      uint8 armor;\r\n      uint8 strength;\r\n      uint8 speed;\r\n      uint8 luck;\r\n      uint8 spirit;\r\n    }\r\n}",
+  "sourcePath": "C:\\xampp\\htdocs\\ethereal-bnb\\truffle-files\\contracts\\IEtherealBase.sol",
+  "ast": {
+    "absolutePath": "/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealBase.sol",
+    "exportedSymbols": {
+      "IEtherealBase": [
+        1894
+      ]
+    },
+    "id": 1895,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1817,
+        "literals": [
+          "solidity",
+          "0.7",
+          ".5"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:22:5"
+      },
+      {
+        "id": 1818,
+        "literals": [
+          "abicoder",
+          "v2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "57:19:5"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 1819,
+          "nodeType": "StructuredDocumentation",
+          "src": "80:44:5",
+          "text": " @dev {ERC721} token, including:"
+        },
+        "fullyImplemented": true,
+        "id": 1894,
+        "linearizedBaseContracts": [
+          1894
+        ],
+        "name": "IEtherealBase",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "IEtherealBase.ElementOfNature",
+            "id": 1833,
+            "members": [
+              {
+                "id": 1820,
+                "name": "Air",
+                "nodeType": "EnumValue",
+                "src": "305:3:5"
+              },
+              {
+                "id": 1821,
+                "name": "Water",
+                "nodeType": "EnumValue",
+                "src": "310:5:5"
+              },
+              {
+                "id": 1822,
+                "name": "Earth",
+                "nodeType": "EnumValue",
+                "src": "317:5:5"
+              },
+              {
+                "id": 1823,
+                "name": "Fire",
+                "nodeType": "EnumValue",
+                "src": "324:4:5"
+              },
+              {
+                "id": 1824,
+                "name": "Aether",
+                "nodeType": "EnumValue",
+                "src": "366:6:5"
+              },
+              {
+                "id": 1825,
+                "name": "ElectroMetal",
+                "nodeType": "EnumValue",
+                "src": "408:12:5"
+              },
+              {
+                "id": 1826,
+                "name": "Ice",
+                "nodeType": "EnumValue",
+                "src": "456:3:5"
+              },
+              {
+                "id": 1827,
+                "name": "Thunder",
+                "nodeType": "EnumValue",
+                "src": "468:7:5"
+              },
+              {
+                "id": 1828,
+                "name": "Psychic",
+                "nodeType": "EnumValue",
+                "src": "485:7:5"
+              },
+              {
+                "id": 1829,
+                "name": "Ghost",
+                "nodeType": "EnumValue",
+                "src": "501:5:5"
+              },
+              {
+                "id": 1830,
+                "name": "DinoPower",
+                "nodeType": "EnumValue",
+                "src": "515:9:5"
+              },
+              {
+                "id": 1831,
+                "name": "Poison",
+                "nodeType": "EnumValue",
+                "src": "533:6:5"
+              },
+              {
+                "id": 1832,
+                "name": "DivinaMagicae",
+                "nodeType": "EnumValue",
+                "src": "573:13:5"
+              }
+            ],
+            "name": "ElementOfNature",
+            "nodeType": "EnumDefinition",
+            "src": "246:347:5"
+          },
+          {
+            "canonicalName": "IEtherealBase.CharacterBaseMetadata",
+            "id": 1844,
+            "members": [
+              {
+                "constant": false,
+                "id": 1835,
+                "mutability": "mutable",
+                "name": "name",
+                "nodeType": "VariableDeclaration",
+                "scope": 1844,
+                "src": "693:12:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 1834,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "693:7:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1837,
+                "mutability": "mutable",
+                "name": "birthdate",
+                "nodeType": "VariableDeclaration",
+                "scope": 1844,
+                "src": "714:17:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes24",
+                  "typeString": "bytes24"
+                },
+                "typeName": {
+                  "id": 1836,
+                  "name": "bytes24",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "714:7:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes24",
+                    "typeString": "bytes24"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1839,
+                "mutability": "mutable",
+                "name": "description",
+                "nodeType": "VariableDeclaration",
+                "scope": 1844,
+                "src": "740:18:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1838,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "740:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1841,
+                "mutability": "mutable",
+                "name": "planetId",
+                "nodeType": "VariableDeclaration",
+                "scope": 1844,
+                "src": "767:16:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1840,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "767:7:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1843,
+                "mutability": "mutable",
+                "name": "genre",
+                "nodeType": "VariableDeclaration",
+                "scope": 1844,
+                "src": "792:11:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 1842,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "792:5:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "CharacterBaseMetadata",
+            "nodeType": "StructDefinition",
+            "scope": 1894,
+            "src": "655:156:5",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "IEtherealBase.CharacterPhysicalMetadata",
+            "id": 1857,
+            "members": [
+              {
+                "constant": false,
+                "id": 1846,
+                "mutability": "mutable",
+                "name": "skintone",
+                "nodeType": "VariableDeclaration",
+                "scope": 1857,
+                "src": "861:15:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint24",
+                  "typeString": "uint24"
+                },
+                "typeName": {
+                  "id": 1845,
+                  "name": "uint24",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "861:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint24",
+                    "typeString": "uint24"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1848,
+                "mutability": "mutable",
+                "name": "haircolor",
+                "nodeType": "VariableDeclaration",
+                "scope": 1857,
+                "src": "885:16:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint24",
+                  "typeString": "uint24"
+                },
+                "typeName": {
+                  "id": 1847,
+                  "name": "uint24",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "885:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint24",
+                    "typeString": "uint24"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1850,
+                "mutability": "mutable",
+                "name": "eyescolor",
+                "nodeType": "VariableDeclaration",
+                "scope": 1857,
+                "src": "910:16:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint24",
+                  "typeString": "uint24"
+                },
+                "typeName": {
+                  "id": 1849,
+                  "name": "uint24",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "910:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint24",
+                    "typeString": "uint24"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1852,
+                "mutability": "mutable",
+                "name": "weight",
+                "nodeType": "VariableDeclaration",
+                "scope": 1857,
+                "src": "935:13:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint16",
+                  "typeString": "uint16"
+                },
+                "typeName": {
+                  "id": 1851,
+                  "name": "uint16",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "935:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1854,
+                "mutability": "mutable",
+                "name": "height",
+                "nodeType": "VariableDeclaration",
+                "scope": 1857,
+                "src": "957:13:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint16",
+                  "typeString": "uint16"
+                },
+                "typeName": {
+                  "id": 1853,
+                  "name": "uint16",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "957:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1856,
+                "mutability": "mutable",
+                "name": "bodyType",
+                "nodeType": "VariableDeclaration",
+                "scope": 1857,
+                "src": "979:14:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 1855,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "979:5:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "CharacterPhysicalMetadata",
+            "nodeType": "StructDefinition",
+            "scope": 1894,
+            "src": "819:182:5",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "IEtherealBase.CharacterAttributesMetadata",
+            "id": 1874,
+            "members": [
+              {
+                "constant": false,
+                "id": 1859,
+                "mutability": "mutable",
+                "name": "primaryElement",
+                "nodeType": "VariableDeclaration",
+                "scope": 1874,
+                "src": "1053:30:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_ElementOfNature_$1833",
+                  "typeString": "enum IEtherealBase.ElementOfNature"
+                },
+                "typeName": {
+                  "id": 1858,
+                  "name": "ElementOfNature",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 1833,
+                  "src": "1053:15:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_ElementOfNature_$1833",
+                    "typeString": "enum IEtherealBase.ElementOfNature"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1861,
+                "mutability": "mutable",
+                "name": "secondaryElement",
+                "nodeType": "VariableDeclaration",
+                "scope": 1874,
+                "src": "1092:32:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_ElementOfNature_$1833",
+                  "typeString": "enum IEtherealBase.ElementOfNature"
+                },
+                "typeName": {
+                  "id": 1860,
+                  "name": "ElementOfNature",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 1833,
+                  "src": "1092:15:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_ElementOfNature_$1833",
+                    "typeString": "enum IEtherealBase.ElementOfNature"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1863,
+                "mutability": "mutable",
+                "name": "life",
+                "nodeType": "VariableDeclaration",
+                "scope": 1874,
+                "src": "1133:10:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 1862,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1133:5:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1865,
+                "mutability": "mutable",
+                "name": "armor",
+                "nodeType": "VariableDeclaration",
+                "scope": 1874,
+                "src": "1152:11:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 1864,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1152:5:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1867,
+                "mutability": "mutable",
+                "name": "strength",
+                "nodeType": "VariableDeclaration",
+                "scope": 1874,
+                "src": "1172:14:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 1866,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1172:5:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1869,
+                "mutability": "mutable",
+                "name": "speed",
+                "nodeType": "VariableDeclaration",
+                "scope": 1874,
+                "src": "1195:11:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 1868,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1195:5:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1871,
+                "mutability": "mutable",
+                "name": "luck",
+                "nodeType": "VariableDeclaration",
+                "scope": 1874,
+                "src": "1215:10:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 1870,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1215:5:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1873,
+                "mutability": "mutable",
+                "name": "spirit",
+                "nodeType": "VariableDeclaration",
+                "scope": 1874,
+                "src": "1234:12:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 1872,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1234:5:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "CharacterAttributesMetadata",
+            "nodeType": "StructDefinition",
+            "scope": 1894,
+            "src": "1009:245:5",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "IEtherealBase.WeaponMetadata",
+            "id": 1893,
+            "members": [
+              {
+                "constant": false,
+                "id": 1876,
+                "mutability": "mutable",
+                "name": "name",
+                "nodeType": "VariableDeclaration",
+                "scope": 1893,
+                "src": "1349:12:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 1875,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1349:7:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1878,
+                "mutability": "mutable",
+                "name": "strongAgainstElement",
+                "nodeType": "VariableDeclaration",
+                "scope": 1893,
+                "src": "1370:36:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_ElementOfNature_$1833",
+                  "typeString": "enum IEtherealBase.ElementOfNature"
+                },
+                "typeName": {
+                  "id": 1877,
+                  "name": "ElementOfNature",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 1833,
+                  "src": "1370:15:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_ElementOfNature_$1833",
+                    "typeString": "enum IEtherealBase.ElementOfNature"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1880,
+                "mutability": "mutable",
+                "name": "weakAgainstElement",
+                "nodeType": "VariableDeclaration",
+                "scope": 1893,
+                "src": "1415:34:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_ElementOfNature_$1833",
+                  "typeString": "enum IEtherealBase.ElementOfNature"
+                },
+                "typeName": {
+                  "id": 1879,
+                  "name": "ElementOfNature",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 1833,
+                  "src": "1415:15:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_ElementOfNature_$1833",
+                    "typeString": "enum IEtherealBase.ElementOfNature"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1882,
+                "mutability": "mutable",
+                "name": "life",
+                "nodeType": "VariableDeclaration",
+                "scope": 1893,
+                "src": "1458:10:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 1881,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1458:5:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1884,
+                "mutability": "mutable",
+                "name": "armor",
+                "nodeType": "VariableDeclaration",
+                "scope": 1893,
+                "src": "1477:11:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 1883,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1477:5:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1886,
+                "mutability": "mutable",
+                "name": "strength",
+                "nodeType": "VariableDeclaration",
+                "scope": 1893,
+                "src": "1497:14:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 1885,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1497:5:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1888,
+                "mutability": "mutable",
+                "name": "speed",
+                "nodeType": "VariableDeclaration",
+                "scope": 1893,
+                "src": "1520:11:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 1887,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1520:5:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1890,
+                "mutability": "mutable",
+                "name": "luck",
+                "nodeType": "VariableDeclaration",
+                "scope": 1893,
+                "src": "1540:10:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 1889,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1540:5:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1892,
+                "mutability": "mutable",
+                "name": "spirit",
+                "nodeType": "VariableDeclaration",
+                "scope": 1893,
+                "src": "1559:12:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 1891,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1559:5:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "WeaponMetadata",
+            "nodeType": "StructDefinition",
+            "scope": 1894,
+            "src": "1318:261:5",
+            "visibility": "public"
+          }
+        ],
+        "scope": 1895,
+        "src": "126:1456:5"
+      }
+    ],
+    "src": "33:1549:5"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealBase.sol",
+      "exportedSymbols": {
+        "IEtherealBase": [
+          1894
+        ]
+      },
+      "license": "MIT"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "0.7",
+            ".5"
+          ]
+        },
+        "id": 1817,
+        "name": "PragmaDirective",
+        "src": "33:22:5"
+      },
+      {
+        "attributes": {
+          "literals": [
+            "abicoder",
+            "v2"
+          ]
+        },
+        "id": 1818,
+        "name": "PragmaDirective",
+        "src": "57:19:5"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            1894
+          ],
+          "name": "IEtherealBase",
+          "scope": 1895
+        },
+        "children": [
+          {
+            "attributes": {
+              "text": " @dev {ERC721} token, including:"
+            },
+            "id": 1819,
+            "name": "StructuredDocumentation",
+            "src": "80:44:5"
+          },
+          {
+            "attributes": {
+              "canonicalName": "IEtherealBase.ElementOfNature",
+              "name": "ElementOfNature"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "Air"
+                },
+                "id": 1820,
+                "name": "EnumValue",
+                "src": "305:3:5"
+              },
+              {
+                "attributes": {
+                  "name": "Water"
+                },
+                "id": 1821,
+                "name": "EnumValue",
+                "src": "310:5:5"
+              },
+              {
+                "attributes": {
+                  "name": "Earth"
+                },
+                "id": 1822,
+                "name": "EnumValue",
+                "src": "317:5:5"
+              },
+              {
+                "attributes": {
+                  "name": "Fire"
+                },
+                "id": 1823,
+                "name": "EnumValue",
+                "src": "324:4:5"
+              },
+              {
+                "attributes": {
+                  "name": "Aether"
+                },
+                "id": 1824,
+                "name": "EnumValue",
+                "src": "366:6:5"
+              },
+              {
+                "attributes": {
+                  "name": "ElectroMetal"
+                },
+                "id": 1825,
+                "name": "EnumValue",
+                "src": "408:12:5"
+              },
+              {
+                "attributes": {
+                  "name": "Ice"
+                },
+                "id": 1826,
+                "name": "EnumValue",
+                "src": "456:3:5"
+              },
+              {
+                "attributes": {
+                  "name": "Thunder"
+                },
+                "id": 1827,
+                "name": "EnumValue",
+                "src": "468:7:5"
+              },
+              {
+                "attributes": {
+                  "name": "Psychic"
+                },
+                "id": 1828,
+                "name": "EnumValue",
+                "src": "485:7:5"
+              },
+              {
+                "attributes": {
+                  "name": "Ghost"
+                },
+                "id": 1829,
+                "name": "EnumValue",
+                "src": "501:5:5"
+              },
+              {
+                "attributes": {
+                  "name": "DinoPower"
+                },
+                "id": 1830,
+                "name": "EnumValue",
+                "src": "515:9:5"
+              },
+              {
+                "attributes": {
+                  "name": "Poison"
+                },
+                "id": 1831,
+                "name": "EnumValue",
+                "src": "533:6:5"
+              },
+              {
+                "attributes": {
+                  "name": "DivinaMagicae"
+                },
+                "id": 1832,
+                "name": "EnumValue",
+                "src": "573:13:5"
+              }
+            ],
+            "id": 1833,
+            "name": "EnumDefinition",
+            "src": "246:347:5"
+          },
+          {
+            "attributes": {
+              "canonicalName": "IEtherealBase.CharacterBaseMetadata",
+              "name": "CharacterBaseMetadata",
+              "scope": 1894,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "name",
+                  "scope": 1844,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bytes32",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bytes32",
+                      "type": "bytes32"
+                    },
+                    "id": 1834,
+                    "name": "ElementaryTypeName",
+                    "src": "693:7:5"
+                  }
+                ],
+                "id": 1835,
+                "name": "VariableDeclaration",
+                "src": "693:12:5"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "birthdate",
+                  "scope": 1844,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bytes24",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bytes24",
+                      "type": "bytes24"
+                    },
+                    "id": 1836,
+                    "name": "ElementaryTypeName",
+                    "src": "714:7:5"
+                  }
+                ],
+                "id": 1837,
+                "name": "VariableDeclaration",
+                "src": "714:17:5"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "description",
+                  "scope": 1844,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 1838,
+                    "name": "ElementaryTypeName",
+                    "src": "740:6:5"
+                  }
+                ],
+                "id": 1839,
+                "name": "VariableDeclaration",
+                "src": "740:18:5"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "planetId",
+                  "scope": 1844,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 1840,
+                    "name": "ElementaryTypeName",
+                    "src": "767:7:5"
+                  }
+                ],
+                "id": 1841,
+                "name": "VariableDeclaration",
+                "src": "767:16:5"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "genre",
+                  "scope": 1844,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint8",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint8",
+                      "type": "uint8"
+                    },
+                    "id": 1842,
+                    "name": "ElementaryTypeName",
+                    "src": "792:5:5"
+                  }
+                ],
+                "id": 1843,
+                "name": "VariableDeclaration",
+                "src": "792:11:5"
+              }
+            ],
+            "id": 1844,
+            "name": "StructDefinition",
+            "src": "655:156:5"
+          },
+          {
+            "attributes": {
+              "canonicalName": "IEtherealBase.CharacterPhysicalMetadata",
+              "name": "CharacterPhysicalMetadata",
+              "scope": 1894,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "skintone",
+                  "scope": 1857,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint24",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint24",
+                      "type": "uint24"
+                    },
+                    "id": 1845,
+                    "name": "ElementaryTypeName",
+                    "src": "861:6:5"
+                  }
+                ],
+                "id": 1846,
+                "name": "VariableDeclaration",
+                "src": "861:15:5"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "haircolor",
+                  "scope": 1857,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint24",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint24",
+                      "type": "uint24"
+                    },
+                    "id": 1847,
+                    "name": "ElementaryTypeName",
+                    "src": "885:6:5"
+                  }
+                ],
+                "id": 1848,
+                "name": "VariableDeclaration",
+                "src": "885:16:5"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "eyescolor",
+                  "scope": 1857,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint24",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint24",
+                      "type": "uint24"
+                    },
+                    "id": 1849,
+                    "name": "ElementaryTypeName",
+                    "src": "910:6:5"
+                  }
+                ],
+                "id": 1850,
+                "name": "VariableDeclaration",
+                "src": "910:16:5"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "weight",
+                  "scope": 1857,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint16",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint16",
+                      "type": "uint16"
+                    },
+                    "id": 1851,
+                    "name": "ElementaryTypeName",
+                    "src": "935:6:5"
+                  }
+                ],
+                "id": 1852,
+                "name": "VariableDeclaration",
+                "src": "935:13:5"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "height",
+                  "scope": 1857,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint16",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint16",
+                      "type": "uint16"
+                    },
+                    "id": 1853,
+                    "name": "ElementaryTypeName",
+                    "src": "957:6:5"
+                  }
+                ],
+                "id": 1854,
+                "name": "VariableDeclaration",
+                "src": "957:13:5"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "bodyType",
+                  "scope": 1857,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint8",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint8",
+                      "type": "uint8"
+                    },
+                    "id": 1855,
+                    "name": "ElementaryTypeName",
+                    "src": "979:5:5"
+                  }
+                ],
+                "id": 1856,
+                "name": "VariableDeclaration",
+                "src": "979:14:5"
+              }
+            ],
+            "id": 1857,
+            "name": "StructDefinition",
+            "src": "819:182:5"
+          },
+          {
+            "attributes": {
+              "canonicalName": "IEtherealBase.CharacterAttributesMetadata",
+              "name": "CharacterAttributesMetadata",
+              "scope": 1894,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "primaryElement",
+                  "scope": 1874,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "enum IEtherealBase.ElementOfNature",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "ElementOfNature",
+                      "referencedDeclaration": 1833,
+                      "type": "enum IEtherealBase.ElementOfNature"
+                    },
+                    "id": 1858,
+                    "name": "UserDefinedTypeName",
+                    "src": "1053:15:5"
+                  }
+                ],
+                "id": 1859,
+                "name": "VariableDeclaration",
+                "src": "1053:30:5"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "secondaryElement",
+                  "scope": 1874,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "enum IEtherealBase.ElementOfNature",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "ElementOfNature",
+                      "referencedDeclaration": 1833,
+                      "type": "enum IEtherealBase.ElementOfNature"
+                    },
+                    "id": 1860,
+                    "name": "UserDefinedTypeName",
+                    "src": "1092:15:5"
+                  }
+                ],
+                "id": 1861,
+                "name": "VariableDeclaration",
+                "src": "1092:32:5"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "life",
+                  "scope": 1874,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint8",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint8",
+                      "type": "uint8"
+                    },
+                    "id": 1862,
+                    "name": "ElementaryTypeName",
+                    "src": "1133:5:5"
+                  }
+                ],
+                "id": 1863,
+                "name": "VariableDeclaration",
+                "src": "1133:10:5"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "armor",
+                  "scope": 1874,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint8",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint8",
+                      "type": "uint8"
+                    },
+                    "id": 1864,
+                    "name": "ElementaryTypeName",
+                    "src": "1152:5:5"
+                  }
+                ],
+                "id": 1865,
+                "name": "VariableDeclaration",
+                "src": "1152:11:5"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "strength",
+                  "scope": 1874,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint8",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint8",
+                      "type": "uint8"
+                    },
+                    "id": 1866,
+                    "name": "ElementaryTypeName",
+                    "src": "1172:5:5"
+                  }
+                ],
+                "id": 1867,
+                "name": "VariableDeclaration",
+                "src": "1172:14:5"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "speed",
+                  "scope": 1874,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint8",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint8",
+                      "type": "uint8"
+                    },
+                    "id": 1868,
+                    "name": "ElementaryTypeName",
+                    "src": "1195:5:5"
+                  }
+                ],
+                "id": 1869,
+                "name": "VariableDeclaration",
+                "src": "1195:11:5"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "luck",
+                  "scope": 1874,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint8",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint8",
+                      "type": "uint8"
+                    },
+                    "id": 1870,
+                    "name": "ElementaryTypeName",
+                    "src": "1215:5:5"
+                  }
+                ],
+                "id": 1871,
+                "name": "VariableDeclaration",
+                "src": "1215:10:5"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "spirit",
+                  "scope": 1874,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint8",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint8",
+                      "type": "uint8"
+                    },
+                    "id": 1872,
+                    "name": "ElementaryTypeName",
+                    "src": "1234:5:5"
+                  }
+                ],
+                "id": 1873,
+                "name": "VariableDeclaration",
+                "src": "1234:12:5"
+              }
+            ],
+            "id": 1874,
+            "name": "StructDefinition",
+            "src": "1009:245:5"
+          },
+          {
+            "attributes": {
+              "canonicalName": "IEtherealBase.WeaponMetadata",
+              "name": "WeaponMetadata",
+              "scope": 1894,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "name",
+                  "scope": 1893,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bytes32",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bytes32",
+                      "type": "bytes32"
+                    },
+                    "id": 1875,
+                    "name": "ElementaryTypeName",
+                    "src": "1349:7:5"
+                  }
+                ],
+                "id": 1876,
+                "name": "VariableDeclaration",
+                "src": "1349:12:5"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "strongAgainstElement",
+                  "scope": 1893,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "enum IEtherealBase.ElementOfNature",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "ElementOfNature",
+                      "referencedDeclaration": 1833,
+                      "type": "enum IEtherealBase.ElementOfNature"
+                    },
+                    "id": 1877,
+                    "name": "UserDefinedTypeName",
+                    "src": "1370:15:5"
+                  }
+                ],
+                "id": 1878,
+                "name": "VariableDeclaration",
+                "src": "1370:36:5"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "weakAgainstElement",
+                  "scope": 1893,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "enum IEtherealBase.ElementOfNature",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "ElementOfNature",
+                      "referencedDeclaration": 1833,
+                      "type": "enum IEtherealBase.ElementOfNature"
+                    },
+                    "id": 1879,
+                    "name": "UserDefinedTypeName",
+                    "src": "1415:15:5"
+                  }
+                ],
+                "id": 1880,
+                "name": "VariableDeclaration",
+                "src": "1415:34:5"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "life",
+                  "scope": 1893,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint8",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint8",
+                      "type": "uint8"
+                    },
+                    "id": 1881,
+                    "name": "ElementaryTypeName",
+                    "src": "1458:5:5"
+                  }
+                ],
+                "id": 1882,
+                "name": "VariableDeclaration",
+                "src": "1458:10:5"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "armor",
+                  "scope": 1893,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint8",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint8",
+                      "type": "uint8"
+                    },
+                    "id": 1883,
+                    "name": "ElementaryTypeName",
+                    "src": "1477:5:5"
+                  }
+                ],
+                "id": 1884,
+                "name": "VariableDeclaration",
+                "src": "1477:11:5"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "strength",
+                  "scope": 1893,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint8",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint8",
+                      "type": "uint8"
+                    },
+                    "id": 1885,
+                    "name": "ElementaryTypeName",
+                    "src": "1497:5:5"
+                  }
+                ],
+                "id": 1886,
+                "name": "VariableDeclaration",
+                "src": "1497:14:5"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "speed",
+                  "scope": 1893,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint8",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint8",
+                      "type": "uint8"
+                    },
+                    "id": 1887,
+                    "name": "ElementaryTypeName",
+                    "src": "1520:5:5"
+                  }
+                ],
+                "id": 1888,
+                "name": "VariableDeclaration",
+                "src": "1520:11:5"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "luck",
+                  "scope": 1893,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint8",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint8",
+                      "type": "uint8"
+                    },
+                    "id": 1889,
+                    "name": "ElementaryTypeName",
+                    "src": "1540:5:5"
+                  }
+                ],
+                "id": 1890,
+                "name": "VariableDeclaration",
+                "src": "1540:10:5"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "spirit",
+                  "scope": 1893,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint8",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint8",
+                      "type": "uint8"
+                    },
+                    "id": 1891,
+                    "name": "ElementaryTypeName",
+                    "src": "1559:5:5"
+                  }
+                ],
+                "id": 1892,
+                "name": "VariableDeclaration",
+                "src": "1559:12:5"
+              }
+            ],
+            "id": 1893,
+            "name": "StructDefinition",
+            "src": "1318:261:5"
+          }
+        ],
+        "id": 1894,
+        "name": "ContractDefinition",
+        "src": "126:1456:5"
+      }
+    ],
+    "id": 1895,
+    "name": "SourceUnit",
+    "src": "33:1549:5"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.7.5+commit.eb77ed08.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.3",
+  "updatedAt": "2021-02-16T04:43:59.924Z",
+  "devdoc": {
+    "details": "{ERC721} token, including:",
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

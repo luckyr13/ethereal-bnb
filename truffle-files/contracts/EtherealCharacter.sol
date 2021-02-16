@@ -9,10 +9,7 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721Burnable.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721Pausable.sol";
 import '@openzeppelin/contracts/math/SafeMath.sol';
-import './SafeMath8.sol';
-import './SafeMath16.sol';
-import './SafeMath24.sol';
-import './SafeMath32.sol';
+import './IEtherealBase.sol';
 
 
 /**
@@ -31,7 +28,7 @@ import './SafeMath32.sol';
  * roles, as well as the default admin role, which will let it grant both minter
  * and pauser roles to other accounts.
  */
-contract EtherealCharacter is Context, AccessControl, ERC721Burnable, ERC721Pausable {
+contract EtherealCharacter is Context, AccessControl, ERC721Burnable, ERC721Pausable, IEtherealBase {
     using Counters for Counters.Counter;
 
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
@@ -39,63 +36,6 @@ contract EtherealCharacter is Context, AccessControl, ERC721Burnable, ERC721Paus
 
     Counters.Counter private _tokenIdTracker;
     using SafeMath for uint256;
-    using SafeMath8 for uint8;
-    using SafeMath16 for uint16;
-    using SafeMath24 for uint24;
-    using SafeMath32 for uint32;
-
-    /*
-    * @dev Each character can have (control) 2 base elements of nature
-    */
-    enum ElementOfNature {
-      // Elements of nature
-      Air, Water, Earth, Fire,
-      // Spiritual elements
-      Aether,
-      // Machine elements
-      ElectroMetal,
-      // Special elements
-      Ice,
-      Thunder, 
-      Psychic,
-      Ghost,
-      DinoPower,
-      Poison,
-      // Ultra elements
-      DivinaMagicae
-    }
-
-    /**
-    * @dev Character extra metadata
-    */
-    
-    struct CharacterBaseMetadata {
-      bytes32 name;
-      bytes24 birthdate;
-      string description;
-      uint256 planetId;
-      uint8 genre;
-    }
-
-    struct CharacterPhysicalMetadata {
-      uint24 skintone;
-      uint24 haircolor;
-      uint24 eyescolor;
-      uint16 weight;
-      uint16 height;
-      uint8 bodyType;
-    }
-
-    struct CharacterAttributesMetadata {
-      ElementOfNature primaryElement;
-      ElementOfNature secondaryElement;
-      uint8 life;
-      uint8 armor;
-      uint8 strength;
-      uint8 speed;
-      uint8 luck;
-      uint8 spirit;
-    }
 
    
     /**

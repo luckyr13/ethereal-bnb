@@ -13,6 +13,7 @@ import './SafeMath8.sol';
 import './SafeMath16.sol';
 import './SafeMath24.sol';
 import './SafeMath32.sol';
+import './IEtherealBase.sol';
 
 
 /**
@@ -31,7 +32,7 @@ import './SafeMath32.sol';
  * roles, as well as the default admin role, which will let it grant both minter
  * and pauser roles to other accounts.
  */
-contract EtherealWeapon is Context, AccessControl, ERC721Burnable, ERC721Pausable {
+contract EtherealWeapon is Context, AccessControl, ERC721Burnable, ERC721Pausable, IEtherealBase {
     using Counters for Counters.Counter;
 
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
@@ -44,44 +45,6 @@ contract EtherealWeapon is Context, AccessControl, ERC721Burnable, ERC721Pausabl
     using SafeMath24 for uint24;
     using SafeMath32 for uint32;
     
-    /*
-    * @dev Each character can have (control) 2 base elements of nature
-    */
-    enum ElementOfNature {
-      // Elements of nature
-      Air, Water, Earth, Fire,
-      // Spiritual elements
-      Aether,
-      // Machine elements
-      ElectroMetal,
-      // Special elements
-      Ice,
-      Thunder, 
-      Psychic,
-      Ghost,
-      DinoPower,
-      Poison,
-      // Ultra elements
-      DivinaMagicae
-    }
-
-    /**
-    * @dev Character extra metadata
-    */
-    struct WeaponMetadata {
-      bytes32 name;
-      ElementOfNature strongAgainstElement;
-      ElementOfNature weakAgainstElement;
-      uint8 life;
-      uint8 armor;
-      uint8 strength;
-      uint8 speed;
-      uint8 luck;
-      uint8 spirit;
-    }
-
-
-   
     /**
     * @dev Character extra metadata tables
     */
@@ -140,7 +103,7 @@ contract EtherealWeapon is Context, AccessControl, ERC721Burnable, ERC721Pausabl
         public
         returns (uint256)
     {
-        require(hasRole(MINTER_ROLE, _msgSender()), "EtherealWeapon: must have minter role to mint");
+        require(hasRole(MINTER_ROLE, _msgSender()), "EtherealWeaponMint: must have minter role to mint");
         require(
           keccak256(abi.encode(extraBaseMetaData.name)) != keccak256(abi.encode("")) &&
           keccak256(abi.encode(extraBaseMetaData.name)) != keccak256(abi.encode(0x00)),

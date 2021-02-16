@@ -5,11 +5,22 @@ pragma abicoder v2;
 import '@openzeppelin/contracts/access/AccessControl.sol';
 import "@openzeppelin/contracts/utils/Context.sol";
 import '@openzeppelin/contracts/math/SafeMath.sol';
+import './SafeMath8.sol';
+import './SafeMath16.sol';
+import './SafeMath24.sol';
+import './SafeMath32.sol';
+import './IEtherealBase.sol';
 import './IEtherealCharacter.sol';
 import './IBEP20.sol';
 
-contract EtherealGame is Context, AccessControl
+contract EtherealGame is Context, AccessControl, IEtherealBase
 {
+  using SafeMath for uint256;
+  using SafeMath8 for uint8;
+  using SafeMath16 for uint16;
+  using SafeMath24 for uint24;
+  using SafeMath32 for uint32;
+
   struct Player {
     bytes32 nickname;
     uint32 wins;
@@ -98,8 +109,11 @@ contract EtherealGame is Context, AccessControl
   /*
   * @dev Log contract status update
   */
-  event ContractStatusUpdated(bool newStatus);
-  event LibContractAddressUpdated(address newAddress, bytes32 contractName);
+  event ContractStatusUpdate(bool newStatus);
+  event LibContractAddressUpdate(address newAddress, bytes32 contractName);
+  event ProbabilityOfWinningUpdate(ElementOfNature indexed _me, ElementOfNature _enemy, uint8 _prob);
+  event NewPlayerRegistered(address indexed player, bytes32 name, uint256 totalPlayers);
+  event NewCharacterMinted(address indexed player, bytes32 name);
 	
   /*
   * @dev Set default admin role to owner
@@ -127,7 +141,7 @@ contract EtherealGame is Context, AccessControl
     private
   {
     planetContract = _contract;
-    emit LibContractAddressUpdated(_contract, 'planet');
+    emit LibContractAddressUpdate(_contract, 'planet');
   }
 
   /*
@@ -137,7 +151,7 @@ contract EtherealGame is Context, AccessControl
     private
   {
     characterContract = _contract;
-    emit LibContractAddressUpdated(_contract, 'character');
+    emit LibContractAddressUpdate(_contract, 'character');
   }
 
   /*
@@ -147,7 +161,7 @@ contract EtherealGame is Context, AccessControl
     private
   {
     weaponsContract = _contract;
-    emit LibContractAddressUpdated(_contract, 'weapon');
+    emit LibContractAddressUpdate(_contract, 'weapon');
   }
 
   /*
@@ -157,7 +171,7 @@ contract EtherealGame is Context, AccessControl
     private
   {
     kopernikTokenContract = _contract;
-    emit LibContractAddressUpdated(_contract, 'kopernik');
+    emit LibContractAddressUpdate(_contract, 'kopernik');
   }
 
   /*
@@ -175,6 +189,7 @@ contract EtherealGame is Context, AccessControl
     playerIsRegistered[_msgSender()] = true;
     numPlayers = players.length;
     _setupRole(PLAYER_ROLE, _msgSender());
+    emit NewPlayerRegistered(_msgSender(), _name, numPlayers);
   }
 
   /*
@@ -187,7 +202,7 @@ contract EtherealGame is Context, AccessControl
     uint256 etherealBalance = KopernikToken.balanceOf(address(this));
     // Check contract balance
     if (etherealBalance < initialTokens) {
-      revert("Not enough balance on Ethereal balance!");
+      revert("Not enough balance on EtherealGame contract!");
     }
     if (!KopernikToken.transfer(_to, initialTokens)) {
       revert("Error transfering tokens");
@@ -196,34 +211,57 @@ contract EtherealGame is Context, AccessControl
 
   /*
   * @dev Create a new character
+  *
+  * CharacterBaseMetadata {
+  *    bytes32 name;
+  *    bytes24 birthdate;
+  *    string description;
+  *    uint256 planetId;
+  *    uint8 genre;
+  *  }
+  *
   */
-  function _createCharacter(bytes32 _name)
+  function _createCharacter(
+    // BaseMetadata
+    CharacterBaseMetadata memory extraBaseMetaData,
+    // PhysicalMetadata
+    CharacterPhysicalMetadata memory extraPhysicalMetaData,
+    // AttributesMetadata
+    CharacterAttributesMetadata memory extraAbilitiesMetaData
+  )
     private
-    isNotEmptyBytes32(_name)
     returns (uint256)
   {
-    
-    IEtherealCharacter.ElementOfNature primaryElement = IEtherealCharacter.ElementOfNature.Air;
-    IEtherealCharacter.ElementOfNature secondaryElement = IEtherealCharacter.ElementOfNature.Water;
-    
     IEtherealCharacter CharacterContract = IEtherealCharacter(characterContract);
-    IEtherealCharacter.CharacterBaseMetadata memory extraBaseMetaData = IEtherealCharacter.CharacterBaseMetadata(
-      _name, "", "", 1, 0
-    );
-    IEtherealCharacter.CharacterPhysicalMetadata memory extraPhysicalMetaData = IEtherealCharacter.CharacterPhysicalMetadata(
-      1, 1, 1, 1, 1, 1
-    );
-    IEtherealCharacter.CharacterAttributesMetadata memory extraAbilitiesMetaData = IEtherealCharacter.CharacterAttributesMetadata(
-      primaryElement, secondaryElement, 1, 1, 1, 1, 1, 1
-    );
-
     uint256 characterId = CharacterContract.mint(
       _msgSender(),
       extraBaseMetaData,
       extraPhysicalMetaData,
       extraAbilitiesMetaData
     );
+    emit NewCharacterMinted(_msgSender(), extraBaseMetaData.name);
     return characterId;
+  }
+
+  
+  mapping(ElementOfNature => mapping(ElementOfNature => uint8)) public probabilityOfWinningAgainstElem;
+
+  /*
+  * @dev Assign/update probability of my _element defeating _enemy
+  */
+  function _assignProbabilityOfWinning(
+    ElementOfNature _me,
+    ElementOfNature _enemy,
+    uint8 _probWin
+  )
+    private
+  {
+    require (_probWin <= 100, "Probability must be between 0 and 100");
+    uint8 probLoss = 100 - _probWin;
+    probabilityOfWinningAgainstElem[_me][_enemy] = _probWin;
+    emit ProbabilityOfWinningUpdate(_me, _enemy, _probWin);
+    probabilityOfWinningAgainstElem[_enemy][_me] = probLoss;
+    emit ProbabilityOfWinningUpdate(_enemy, _me, probLoss);
   }
 
   /*
@@ -240,19 +278,44 @@ contract EtherealGame is Context, AccessControl
   /*
   * @dev Create a new character
   */
-  function createCharacter(bytes32 _name)
+  function createCharacter(
+    // BaseMetadata
+    CharacterBaseMetadata memory extraBaseMetaData,
+    // PhysicalMetadata
+    CharacterPhysicalMetadata memory extraPhysicalMetaData,
+    // AttributesMetadata
+    CharacterAttributesMetadata memory extraAbilitiesMetaData
+  )
     public
     isContractActive
     returns(uint256)
   {
-    require(hasRole(PLAYER_ROLE, _msgSender()), "activateDeactivateContract: must have player role");
+    require(hasRole(PLAYER_ROLE, _msgSender()), "createCharacter: must have player role");
 
-    uint256 characterId = _createCharacter(_name);
+    uint256 characterId = _createCharacter(
+      extraBaseMetaData,
+      extraPhysicalMetaData,
+      extraAbilitiesMetaData
+    );
     return characterId;
   }
 
   /*
-  * @notice Update contract status
+  * @dev Assign/update probability of my _element defeating _enemy
+  */
+  function assignProbabilityOfWinning(
+    ElementOfNature _me,
+    ElementOfNature _enemy,
+    uint8 _probWin
+  )
+    external
+  {
+    require(hasRole(DEFAULT_ADMIN_ROLE, _msgSender()), "assignProbabilityOfWinning: must have admin role");
+    _assignProbabilityOfWinning(_me, _enemy, _probWin);
+  }
+
+  /*
+  * @dev Update contract status
   */
   function activateDeactivateContract(bool _active)
     external
@@ -260,7 +323,7 @@ contract EtherealGame is Context, AccessControl
     require(hasRole(DEFAULT_ADMIN_ROLE, _msgSender()), "activateDeactivateContract: must have admin role");
 
     active = _active;
-    emit ContractStatusUpdated(_active);
+    emit ContractStatusUpdate(_active);
   }
 
 

@@ -38,6 +38,8 @@ contract EtherealGame is Context, AccessControl, IEtherealBase
 
   struct FightRequest {
     address contender;
+    uint256 contenderCharacterId;
+    uint256 myCharacterId;
     bool accepted;
     bool rejected;
     bool pending;
@@ -282,7 +284,7 @@ contract EtherealGame is Context, AccessControl, IEtherealBase
   /*
   * @dev Request fight
   */
-  function _requestFight(address _contender)
+  function _requestFight(address _contender, uint256 _characterId)
     private
     returns(uint256)
   {
@@ -291,11 +293,15 @@ contract EtherealGame is Context, AccessControl, IEtherealBase
         _msgSender(), address(this)
       ) >= 1, "Not enough tokens allowed to use"
     );
+    require(
+      IEtherealCharacter(characterContract).ownerOf(_characterId) == _msgSender(),
+      "Sender is not the owner of the character"
+    );
 
     // Initialize as true only the "pending" flag
     fightRequests[_contender].push(FightRequest(
-        _msgSender(), false, false, true, false, false,
-        block.timestamp + 1 days
+        _msgSender(), _characterId, 0, false, false, true, false, false,
+        block.timestamp + 15 minutes
       ));
     totalFightRequests[_contender] = fightRequests[_contender].length;
     NewFightRequest(_msgSender(), _contender, totalFightRequests[_contender]);
@@ -305,14 +311,9 @@ contract EtherealGame is Context, AccessControl, IEtherealBase
   /*
   * @dev Accept fight
   */
-  function _acceptFight(uint256 _fightRequestId)
+  function _acceptFight(uint256 _fightRequestId, uint256 _myCharacterId)
     private
   {
-    require(
-      IBEP20(kopernikTokenContract).allowance(
-        _msgSender(), address(this)
-      ) >= 1, "Not enough tokens allowed to use"
-    );
     require(
       _fightRequestId < totalFightRequests[_msgSender()],
       "Fight index beyond array elements"
@@ -327,17 +328,39 @@ contract EtherealGame is Context, AccessControl, IEtherealBase
     );
     require(
       IBEP20(kopernikTokenContract).allowance(
+        _msgSender(), address(this)
+      ) >= 1, "Not enough tokens allowed to use"
+    );
+    require(
+      IBEP20(kopernikTokenContract).allowance(
         fightRequests[_msgSender()][_fightRequestId].contender, address(this)
       ) >= 1, "Not enough tokens allowed to use"
     );
+    require(
+      IEtherealCharacter(characterContract).ownerOf(_myCharacterId) == _msgSender(),
+      "Sender is not the owner of the character"
+    );
 
+    // Update status of Fight Request log
     fightRequests[_msgSender()][_fightRequestId].accepted = true;
     fightRequests[_msgSender()][_fightRequestId].pending = false;
-    
+    fightRequests[_msgSender()][_fightRequestId].myCharacterId = _myCharacterId;
     NewFightRequestAccepted(
       _msgSender(), 
       fightRequests[_msgSender()][_fightRequestId].contender
     );
+
+    // FIGHT
+    uint256 winner;
+    uint8 prob;
+    (winner, prob) = _fight(_myCharacterId, fightRequests[_msgSender()][_fightRequestId].contenderCharacterId);
+
+    // IF PLAYER 1 WINS (IF I WIN)
+    if (winner == _myCharacterId) {
+
+    } else {
+
+    }
   }
 
 
@@ -346,13 +369,65 @@ contract EtherealGame is Context, AccessControl, IEtherealBase
   *   returns winner
   */
   function _fight(
-    address _character1,
-    address _character2
+    uint256 _character1Id,
+    uint256 _character2Id
   )
     private
-    returns(address)
+    view
+    returns(uint256, uint8)
   {
-    return _character1;
+    CharacterAttributesMetadata memory _ch1 = IEtherealCharacter(characterContract).characterAttributesMetadata(_character1Id);
+    ElementOfNature p1_primaryElement = _ch1.primaryElement;
+    ElementOfNature p1_secondaryElement = _ch1.secondaryElement;
+    uint8 p1_life = _ch1.life;
+    uint8 p1_armor = _ch1.armor;
+    uint8 p1_strength = _ch1.strength;
+    uint8 p1_speed = _ch1.speed;
+    uint8 p1_luck = _ch1.luck;
+    uint8 p1_spirit = _ch1.spirit;
+
+    CharacterAttributesMetadata memory _ch2 = IEtherealCharacter(characterContract).characterAttributesMetadata(_character2Id);
+    ElementOfNature p2_primaryElement = _ch2.primaryElement;
+    ElementOfNature p2_secondaryElement = _ch2.secondaryElement;
+    uint8 p2_life = _ch2.life;
+    uint8 p2_armor = _ch2.armor;
+    uint8 p2_strength = _ch2.strength;
+    uint8 p2_speed = _ch2.speed;
+    uint8 p2_luck = _ch2.luck;
+    uint8 p2_spirit = _ch2.spirit;
+
+    uint8 probPrimaryElem1 = probabilityOfWinningAgainstElem[p1_primaryElement][p2_primaryElement];
+    uint8 probPrimaryElem2 = probabilityOfWinningAgainstElem[p1_primaryElement][p2_secondaryElement];
+    
+    uint8 probSecondaryElem1 = probabilityOfWinningAgainstElem[p1_secondaryElement][p2_primaryElement];
+    uint8 probSecondaryElem2 = probabilityOfWinningAgainstElem[p1_secondaryElement][p2_secondaryElement];
+    
+    uint8 probFinalElements = (
+      probPrimaryElem1.add(probPrimaryElem2).add(probSecondaryElem1).add(probSecondaryElem2)
+    ).div(4);
+
+    uint8 probLife = p1_life > p2_life ? 100 : 0;
+    uint8 probArmor = p1_armor > p2_armor ? 100 : 0;
+    uint8 probStrength = p1_strength > p2_strength ? 100 : 0;
+    uint8 probSpeed = p1_speed > p2_speed ? 100 : 0;
+    uint8 probLuck = p1_luck > p2_luck ? 100 : 0;
+    uint8 probSpirit = p1_spirit > p2_spirit ? 100 : 0;
+    uint8 probFinal = (
+      probLife.add(probArmor).add(probStrength).add(probSpeed).add(probLuck).add(probSpirit).add(probFinalElements)
+    ).div(7);
+
+    uint256 winner = 0;
+    probFinal = probFinal % 100;
+
+    if (probFinal >= 49 && probFinal <= 51) {
+      winner = 0;
+    } else if (probFinal > 51) {
+      winner = _character1Id;
+    } else {
+      winner = _character2Id;
+    }
+
+    return (winner, probFinal);
   }
 
 
@@ -396,14 +471,15 @@ contract EtherealGame is Context, AccessControl, IEtherealBase
   * @dev Request a fight
   */
   function requestFight(
-    address _contender
+    address _contender,
+    uint256 _characterId
   )
     public
     isContractActive
     returns(uint256)
   {
     require(hasRole(PLAYER_ROLE, _msgSender()), "requestFight: must have player role");
-    uint256 fightId = _requestFight(_contender);
+    uint256 fightId = _requestFight(_contender, _characterId);
     return fightId;
   }
 

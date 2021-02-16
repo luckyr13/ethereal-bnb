@@ -15,31 +15,31 @@
     "absolutePath": "/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealBase.sol",
     "exportedSymbols": {
       "IEtherealBase": [
-        2144
+        1380
       ]
     },
-    "id": 2145,
+    "id": 1381,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2067,
+        "id": 1303,
         "literals": [
           "solidity",
           "0.7",
           ".5"
         ],
         "nodeType": "PragmaDirective",
-        "src": "33:22:5"
+        "src": "33:22:2"
       },
       {
-        "id": 2068,
+        "id": 1304,
         "literals": [
           "abicoder",
           "v2"
         ],
         "nodeType": "PragmaDirective",
-        "src": "57:19:5"
+        "src": "57:19:2"
       },
       {
         "abstract": false,
@@ -47,118 +47,118 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "documentation": {
-          "id": 2069,
+          "id": 1305,
           "nodeType": "StructuredDocumentation",
-          "src": "80:44:5",
+          "src": "80:44:2",
           "text": " @dev {ERC721} token, including:"
         },
         "fullyImplemented": true,
-        "id": 2144,
+        "id": 1380,
         "linearizedBaseContracts": [
-          2144
+          1380
         ],
         "name": "IEtherealBase",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "IEtherealBase.ElementOfNature",
-            "id": 2083,
+            "id": 1319,
             "members": [
               {
-                "id": 2070,
+                "id": 1306,
                 "name": "Air",
                 "nodeType": "EnumValue",
-                "src": "305:3:5"
+                "src": "305:3:2"
               },
               {
-                "id": 2071,
+                "id": 1307,
                 "name": "Water",
                 "nodeType": "EnumValue",
-                "src": "310:5:5"
+                "src": "310:5:2"
               },
               {
-                "id": 2072,
+                "id": 1308,
                 "name": "Earth",
                 "nodeType": "EnumValue",
-                "src": "317:5:5"
+                "src": "317:5:2"
               },
               {
-                "id": 2073,
+                "id": 1309,
                 "name": "Fire",
                 "nodeType": "EnumValue",
-                "src": "324:4:5"
+                "src": "324:4:2"
               },
               {
-                "id": 2074,
+                "id": 1310,
                 "name": "Aether",
                 "nodeType": "EnumValue",
-                "src": "366:6:5"
+                "src": "366:6:2"
               },
               {
-                "id": 2075,
+                "id": 1311,
                 "name": "ElectroMetal",
                 "nodeType": "EnumValue",
-                "src": "408:12:5"
+                "src": "408:12:2"
               },
               {
-                "id": 2076,
+                "id": 1312,
                 "name": "Ice",
                 "nodeType": "EnumValue",
-                "src": "456:3:5"
+                "src": "456:3:2"
               },
               {
-                "id": 2077,
+                "id": 1313,
                 "name": "Thunder",
                 "nodeType": "EnumValue",
-                "src": "468:7:5"
+                "src": "468:7:2"
               },
               {
-                "id": 2078,
+                "id": 1314,
                 "name": "Psychic",
                 "nodeType": "EnumValue",
-                "src": "485:7:5"
+                "src": "485:7:2"
               },
               {
-                "id": 2079,
+                "id": 1315,
                 "name": "Ghost",
                 "nodeType": "EnumValue",
-                "src": "501:5:5"
+                "src": "501:5:2"
               },
               {
-                "id": 2080,
+                "id": 1316,
                 "name": "DinoPower",
                 "nodeType": "EnumValue",
-                "src": "515:9:5"
+                "src": "515:9:2"
               },
               {
-                "id": 2081,
+                "id": 1317,
                 "name": "Poison",
                 "nodeType": "EnumValue",
-                "src": "533:6:5"
+                "src": "533:6:2"
               },
               {
-                "id": 2082,
+                "id": 1318,
                 "name": "DivinaMagicae",
                 "nodeType": "EnumValue",
-                "src": "573:13:5"
+                "src": "573:13:2"
               }
             ],
             "name": "ElementOfNature",
             "nodeType": "EnumDefinition",
-            "src": "246:347:5"
+            "src": "246:347:2"
           },
           {
             "canonicalName": "IEtherealBase.CharacterBaseMetadata",
-            "id": 2094,
+            "id": 1330,
             "members": [
               {
                 "constant": false,
-                "id": 2085,
+                "id": 1321,
                 "mutability": "mutable",
                 "name": "name",
                 "nodeType": "VariableDeclaration",
-                "scope": 2094,
-                "src": "693:12:5",
+                "scope": 1330,
+                "src": "693:12:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -166,10 +166,10 @@
                   "typeString": "bytes32"
                 },
                 "typeName": {
-                  "id": 2084,
+                  "id": 1320,
                   "name": "bytes32",
                   "nodeType": "ElementaryTypeName",
-                  "src": "693:7:5",
+                  "src": "693:7:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_bytes32",
                     "typeString": "bytes32"
@@ -179,12 +179,12 @@
               },
               {
                 "constant": false,
-                "id": 2087,
+                "id": 1323,
                 "mutability": "mutable",
                 "name": "birthdate",
                 "nodeType": "VariableDeclaration",
-                "scope": 2094,
-                "src": "714:17:5",
+                "scope": 1330,
+                "src": "714:17:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -192,10 +192,10 @@
                   "typeString": "bytes24"
                 },
                 "typeName": {
-                  "id": 2086,
+                  "id": 1322,
                   "name": "bytes24",
                   "nodeType": "ElementaryTypeName",
-                  "src": "714:7:5",
+                  "src": "714:7:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_bytes24",
                     "typeString": "bytes24"
@@ -205,12 +205,12 @@
               },
               {
                 "constant": false,
-                "id": 2089,
+                "id": 1325,
                 "mutability": "mutable",
                 "name": "description",
                 "nodeType": "VariableDeclaration",
-                "scope": 2094,
-                "src": "740:18:5",
+                "scope": 1330,
+                "src": "740:18:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -218,10 +218,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 2088,
+                  "id": 1324,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "740:6:5",
+                  "src": "740:6:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -231,12 +231,12 @@
               },
               {
                 "constant": false,
-                "id": 2091,
+                "id": 1327,
                 "mutability": "mutable",
                 "name": "planetId",
                 "nodeType": "VariableDeclaration",
-                "scope": 2094,
-                "src": "767:16:5",
+                "scope": 1330,
+                "src": "767:16:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -244,10 +244,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 2090,
+                  "id": 1326,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
-                  "src": "767:7:5",
+                  "src": "767:7:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -257,12 +257,12 @@
               },
               {
                 "constant": false,
-                "id": 2093,
+                "id": 1329,
                 "mutability": "mutable",
                 "name": "genre",
                 "nodeType": "VariableDeclaration",
-                "scope": 2094,
-                "src": "792:11:5",
+                "scope": 1330,
+                "src": "792:11:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -270,10 +270,10 @@
                   "typeString": "uint8"
                 },
                 "typeName": {
-                  "id": 2092,
+                  "id": 1328,
                   "name": "uint8",
                   "nodeType": "ElementaryTypeName",
-                  "src": "792:5:5",
+                  "src": "792:5:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint8",
                     "typeString": "uint8"
@@ -284,22 +284,22 @@
             ],
             "name": "CharacterBaseMetadata",
             "nodeType": "StructDefinition",
-            "scope": 2144,
-            "src": "655:156:5",
+            "scope": 1380,
+            "src": "655:156:2",
             "visibility": "public"
           },
           {
             "canonicalName": "IEtherealBase.CharacterPhysicalMetadata",
-            "id": 2107,
+            "id": 1343,
             "members": [
               {
                 "constant": false,
-                "id": 2096,
+                "id": 1332,
                 "mutability": "mutable",
                 "name": "skintone",
                 "nodeType": "VariableDeclaration",
-                "scope": 2107,
-                "src": "861:15:5",
+                "scope": 1343,
+                "src": "861:15:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -307,10 +307,10 @@
                   "typeString": "uint24"
                 },
                 "typeName": {
-                  "id": 2095,
+                  "id": 1331,
                   "name": "uint24",
                   "nodeType": "ElementaryTypeName",
-                  "src": "861:6:5",
+                  "src": "861:6:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint24",
                     "typeString": "uint24"
@@ -320,12 +320,12 @@
               },
               {
                 "constant": false,
-                "id": 2098,
+                "id": 1334,
                 "mutability": "mutable",
                 "name": "haircolor",
                 "nodeType": "VariableDeclaration",
-                "scope": 2107,
-                "src": "885:16:5",
+                "scope": 1343,
+                "src": "885:16:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -333,10 +333,10 @@
                   "typeString": "uint24"
                 },
                 "typeName": {
-                  "id": 2097,
+                  "id": 1333,
                   "name": "uint24",
                   "nodeType": "ElementaryTypeName",
-                  "src": "885:6:5",
+                  "src": "885:6:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint24",
                     "typeString": "uint24"
@@ -346,12 +346,12 @@
               },
               {
                 "constant": false,
-                "id": 2100,
+                "id": 1336,
                 "mutability": "mutable",
                 "name": "eyescolor",
                 "nodeType": "VariableDeclaration",
-                "scope": 2107,
-                "src": "910:16:5",
+                "scope": 1343,
+                "src": "910:16:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -359,10 +359,10 @@
                   "typeString": "uint24"
                 },
                 "typeName": {
-                  "id": 2099,
+                  "id": 1335,
                   "name": "uint24",
                   "nodeType": "ElementaryTypeName",
-                  "src": "910:6:5",
+                  "src": "910:6:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint24",
                     "typeString": "uint24"
@@ -372,12 +372,12 @@
               },
               {
                 "constant": false,
-                "id": 2102,
+                "id": 1338,
                 "mutability": "mutable",
                 "name": "weight",
                 "nodeType": "VariableDeclaration",
-                "scope": 2107,
-                "src": "935:13:5",
+                "scope": 1343,
+                "src": "935:13:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -385,10 +385,10 @@
                   "typeString": "uint16"
                 },
                 "typeName": {
-                  "id": 2101,
+                  "id": 1337,
                   "name": "uint16",
                   "nodeType": "ElementaryTypeName",
-                  "src": "935:6:5",
+                  "src": "935:6:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint16",
                     "typeString": "uint16"
@@ -398,12 +398,12 @@
               },
               {
                 "constant": false,
-                "id": 2104,
+                "id": 1340,
                 "mutability": "mutable",
                 "name": "height",
                 "nodeType": "VariableDeclaration",
-                "scope": 2107,
-                "src": "957:13:5",
+                "scope": 1343,
+                "src": "957:13:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -411,10 +411,10 @@
                   "typeString": "uint16"
                 },
                 "typeName": {
-                  "id": 2103,
+                  "id": 1339,
                   "name": "uint16",
                   "nodeType": "ElementaryTypeName",
-                  "src": "957:6:5",
+                  "src": "957:6:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint16",
                     "typeString": "uint16"
@@ -424,12 +424,12 @@
               },
               {
                 "constant": false,
-                "id": 2106,
+                "id": 1342,
                 "mutability": "mutable",
                 "name": "bodyType",
                 "nodeType": "VariableDeclaration",
-                "scope": 2107,
-                "src": "979:14:5",
+                "scope": 1343,
+                "src": "979:14:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -437,10 +437,10 @@
                   "typeString": "uint8"
                 },
                 "typeName": {
-                  "id": 2105,
+                  "id": 1341,
                   "name": "uint8",
                   "nodeType": "ElementaryTypeName",
-                  "src": "979:5:5",
+                  "src": "979:5:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint8",
                     "typeString": "uint8"
@@ -451,36 +451,36 @@
             ],
             "name": "CharacterPhysicalMetadata",
             "nodeType": "StructDefinition",
-            "scope": 2144,
-            "src": "819:182:5",
+            "scope": 1380,
+            "src": "819:182:2",
             "visibility": "public"
           },
           {
             "canonicalName": "IEtherealBase.CharacterAttributesMetadata",
-            "id": 2124,
+            "id": 1360,
             "members": [
               {
                 "constant": false,
-                "id": 2109,
+                "id": 1345,
                 "mutability": "mutable",
                 "name": "primaryElement",
                 "nodeType": "VariableDeclaration",
-                "scope": 2124,
-                "src": "1053:30:5",
+                "scope": 1360,
+                "src": "1053:30:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_enum$_ElementOfNature_$2083",
+                  "typeIdentifier": "t_enum$_ElementOfNature_$1319",
                   "typeString": "enum IEtherealBase.ElementOfNature"
                 },
                 "typeName": {
-                  "id": 2108,
+                  "id": 1344,
                   "name": "ElementOfNature",
                   "nodeType": "UserDefinedTypeName",
-                  "referencedDeclaration": 2083,
-                  "src": "1053:15:5",
+                  "referencedDeclaration": 1319,
+                  "src": "1053:15:2",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_ElementOfNature_$2083",
+                    "typeIdentifier": "t_enum$_ElementOfNature_$1319",
                     "typeString": "enum IEtherealBase.ElementOfNature"
                   }
                 },
@@ -488,26 +488,26 @@
               },
               {
                 "constant": false,
-                "id": 2111,
+                "id": 1347,
                 "mutability": "mutable",
                 "name": "secondaryElement",
                 "nodeType": "VariableDeclaration",
-                "scope": 2124,
-                "src": "1092:32:5",
+                "scope": 1360,
+                "src": "1092:32:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_enum$_ElementOfNature_$2083",
+                  "typeIdentifier": "t_enum$_ElementOfNature_$1319",
                   "typeString": "enum IEtherealBase.ElementOfNature"
                 },
                 "typeName": {
-                  "id": 2110,
+                  "id": 1346,
                   "name": "ElementOfNature",
                   "nodeType": "UserDefinedTypeName",
-                  "referencedDeclaration": 2083,
-                  "src": "1092:15:5",
+                  "referencedDeclaration": 1319,
+                  "src": "1092:15:2",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_ElementOfNature_$2083",
+                    "typeIdentifier": "t_enum$_ElementOfNature_$1319",
                     "typeString": "enum IEtherealBase.ElementOfNature"
                   }
                 },
@@ -515,12 +515,12 @@
               },
               {
                 "constant": false,
-                "id": 2113,
+                "id": 1349,
                 "mutability": "mutable",
                 "name": "life",
                 "nodeType": "VariableDeclaration",
-                "scope": 2124,
-                "src": "1133:10:5",
+                "scope": 1360,
+                "src": "1133:10:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -528,10 +528,10 @@
                   "typeString": "uint8"
                 },
                 "typeName": {
-                  "id": 2112,
+                  "id": 1348,
                   "name": "uint8",
                   "nodeType": "ElementaryTypeName",
-                  "src": "1133:5:5",
+                  "src": "1133:5:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint8",
                     "typeString": "uint8"
@@ -541,12 +541,12 @@
               },
               {
                 "constant": false,
-                "id": 2115,
+                "id": 1351,
                 "mutability": "mutable",
                 "name": "armor",
                 "nodeType": "VariableDeclaration",
-                "scope": 2124,
-                "src": "1152:11:5",
+                "scope": 1360,
+                "src": "1152:11:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -554,10 +554,10 @@
                   "typeString": "uint8"
                 },
                 "typeName": {
-                  "id": 2114,
+                  "id": 1350,
                   "name": "uint8",
                   "nodeType": "ElementaryTypeName",
-                  "src": "1152:5:5",
+                  "src": "1152:5:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint8",
                     "typeString": "uint8"
@@ -567,12 +567,12 @@
               },
               {
                 "constant": false,
-                "id": 2117,
+                "id": 1353,
                 "mutability": "mutable",
                 "name": "strength",
                 "nodeType": "VariableDeclaration",
-                "scope": 2124,
-                "src": "1172:14:5",
+                "scope": 1360,
+                "src": "1172:14:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -580,10 +580,10 @@
                   "typeString": "uint8"
                 },
                 "typeName": {
-                  "id": 2116,
+                  "id": 1352,
                   "name": "uint8",
                   "nodeType": "ElementaryTypeName",
-                  "src": "1172:5:5",
+                  "src": "1172:5:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint8",
                     "typeString": "uint8"
@@ -593,12 +593,12 @@
               },
               {
                 "constant": false,
-                "id": 2119,
+                "id": 1355,
                 "mutability": "mutable",
                 "name": "speed",
                 "nodeType": "VariableDeclaration",
-                "scope": 2124,
-                "src": "1195:11:5",
+                "scope": 1360,
+                "src": "1195:11:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -606,10 +606,10 @@
                   "typeString": "uint8"
                 },
                 "typeName": {
-                  "id": 2118,
+                  "id": 1354,
                   "name": "uint8",
                   "nodeType": "ElementaryTypeName",
-                  "src": "1195:5:5",
+                  "src": "1195:5:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint8",
                     "typeString": "uint8"
@@ -619,12 +619,12 @@
               },
               {
                 "constant": false,
-                "id": 2121,
+                "id": 1357,
                 "mutability": "mutable",
                 "name": "luck",
                 "nodeType": "VariableDeclaration",
-                "scope": 2124,
-                "src": "1215:10:5",
+                "scope": 1360,
+                "src": "1215:10:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -632,10 +632,10 @@
                   "typeString": "uint8"
                 },
                 "typeName": {
-                  "id": 2120,
+                  "id": 1356,
                   "name": "uint8",
                   "nodeType": "ElementaryTypeName",
-                  "src": "1215:5:5",
+                  "src": "1215:5:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint8",
                     "typeString": "uint8"
@@ -645,12 +645,12 @@
               },
               {
                 "constant": false,
-                "id": 2123,
+                "id": 1359,
                 "mutability": "mutable",
                 "name": "spirit",
                 "nodeType": "VariableDeclaration",
-                "scope": 2124,
-                "src": "1234:12:5",
+                "scope": 1360,
+                "src": "1234:12:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -658,10 +658,10 @@
                   "typeString": "uint8"
                 },
                 "typeName": {
-                  "id": 2122,
+                  "id": 1358,
                   "name": "uint8",
                   "nodeType": "ElementaryTypeName",
-                  "src": "1234:5:5",
+                  "src": "1234:5:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint8",
                     "typeString": "uint8"
@@ -672,22 +672,22 @@
             ],
             "name": "CharacterAttributesMetadata",
             "nodeType": "StructDefinition",
-            "scope": 2144,
-            "src": "1009:245:5",
+            "scope": 1380,
+            "src": "1009:245:2",
             "visibility": "public"
           },
           {
             "canonicalName": "IEtherealBase.WeaponMetadata",
-            "id": 2143,
+            "id": 1379,
             "members": [
               {
                 "constant": false,
-                "id": 2126,
+                "id": 1362,
                 "mutability": "mutable",
                 "name": "name",
                 "nodeType": "VariableDeclaration",
-                "scope": 2143,
-                "src": "1349:12:5",
+                "scope": 1379,
+                "src": "1349:12:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -695,10 +695,10 @@
                   "typeString": "bytes32"
                 },
                 "typeName": {
-                  "id": 2125,
+                  "id": 1361,
                   "name": "bytes32",
                   "nodeType": "ElementaryTypeName",
-                  "src": "1349:7:5",
+                  "src": "1349:7:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_bytes32",
                     "typeString": "bytes32"
@@ -708,26 +708,26 @@
               },
               {
                 "constant": false,
-                "id": 2128,
+                "id": 1364,
                 "mutability": "mutable",
                 "name": "strongAgainstElement",
                 "nodeType": "VariableDeclaration",
-                "scope": 2143,
-                "src": "1370:36:5",
+                "scope": 1379,
+                "src": "1370:36:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_enum$_ElementOfNature_$2083",
+                  "typeIdentifier": "t_enum$_ElementOfNature_$1319",
                   "typeString": "enum IEtherealBase.ElementOfNature"
                 },
                 "typeName": {
-                  "id": 2127,
+                  "id": 1363,
                   "name": "ElementOfNature",
                   "nodeType": "UserDefinedTypeName",
-                  "referencedDeclaration": 2083,
-                  "src": "1370:15:5",
+                  "referencedDeclaration": 1319,
+                  "src": "1370:15:2",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_ElementOfNature_$2083",
+                    "typeIdentifier": "t_enum$_ElementOfNature_$1319",
                     "typeString": "enum IEtherealBase.ElementOfNature"
                   }
                 },
@@ -735,26 +735,26 @@
               },
               {
                 "constant": false,
-                "id": 2130,
+                "id": 1366,
                 "mutability": "mutable",
                 "name": "weakAgainstElement",
                 "nodeType": "VariableDeclaration",
-                "scope": 2143,
-                "src": "1415:34:5",
+                "scope": 1379,
+                "src": "1415:34:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_enum$_ElementOfNature_$2083",
+                  "typeIdentifier": "t_enum$_ElementOfNature_$1319",
                   "typeString": "enum IEtherealBase.ElementOfNature"
                 },
                 "typeName": {
-                  "id": 2129,
+                  "id": 1365,
                   "name": "ElementOfNature",
                   "nodeType": "UserDefinedTypeName",
-                  "referencedDeclaration": 2083,
-                  "src": "1415:15:5",
+                  "referencedDeclaration": 1319,
+                  "src": "1415:15:2",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_ElementOfNature_$2083",
+                    "typeIdentifier": "t_enum$_ElementOfNature_$1319",
                     "typeString": "enum IEtherealBase.ElementOfNature"
                   }
                 },
@@ -762,12 +762,12 @@
               },
               {
                 "constant": false,
-                "id": 2132,
+                "id": 1368,
                 "mutability": "mutable",
                 "name": "life",
                 "nodeType": "VariableDeclaration",
-                "scope": 2143,
-                "src": "1458:10:5",
+                "scope": 1379,
+                "src": "1458:10:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -775,10 +775,10 @@
                   "typeString": "uint8"
                 },
                 "typeName": {
-                  "id": 2131,
+                  "id": 1367,
                   "name": "uint8",
                   "nodeType": "ElementaryTypeName",
-                  "src": "1458:5:5",
+                  "src": "1458:5:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint8",
                     "typeString": "uint8"
@@ -788,12 +788,12 @@
               },
               {
                 "constant": false,
-                "id": 2134,
+                "id": 1370,
                 "mutability": "mutable",
                 "name": "armor",
                 "nodeType": "VariableDeclaration",
-                "scope": 2143,
-                "src": "1477:11:5",
+                "scope": 1379,
+                "src": "1477:11:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -801,10 +801,10 @@
                   "typeString": "uint8"
                 },
                 "typeName": {
-                  "id": 2133,
+                  "id": 1369,
                   "name": "uint8",
                   "nodeType": "ElementaryTypeName",
-                  "src": "1477:5:5",
+                  "src": "1477:5:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint8",
                     "typeString": "uint8"
@@ -814,12 +814,12 @@
               },
               {
                 "constant": false,
-                "id": 2136,
+                "id": 1372,
                 "mutability": "mutable",
                 "name": "strength",
                 "nodeType": "VariableDeclaration",
-                "scope": 2143,
-                "src": "1497:14:5",
+                "scope": 1379,
+                "src": "1497:14:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -827,10 +827,10 @@
                   "typeString": "uint8"
                 },
                 "typeName": {
-                  "id": 2135,
+                  "id": 1371,
                   "name": "uint8",
                   "nodeType": "ElementaryTypeName",
-                  "src": "1497:5:5",
+                  "src": "1497:5:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint8",
                     "typeString": "uint8"
@@ -840,12 +840,12 @@
               },
               {
                 "constant": false,
-                "id": 2138,
+                "id": 1374,
                 "mutability": "mutable",
                 "name": "speed",
                 "nodeType": "VariableDeclaration",
-                "scope": 2143,
-                "src": "1520:11:5",
+                "scope": 1379,
+                "src": "1520:11:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -853,10 +853,10 @@
                   "typeString": "uint8"
                 },
                 "typeName": {
-                  "id": 2137,
+                  "id": 1373,
                   "name": "uint8",
                   "nodeType": "ElementaryTypeName",
-                  "src": "1520:5:5",
+                  "src": "1520:5:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint8",
                     "typeString": "uint8"
@@ -866,12 +866,12 @@
               },
               {
                 "constant": false,
-                "id": 2140,
+                "id": 1376,
                 "mutability": "mutable",
                 "name": "luck",
                 "nodeType": "VariableDeclaration",
-                "scope": 2143,
-                "src": "1540:10:5",
+                "scope": 1379,
+                "src": "1540:10:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -879,10 +879,10 @@
                   "typeString": "uint8"
                 },
                 "typeName": {
-                  "id": 2139,
+                  "id": 1375,
                   "name": "uint8",
                   "nodeType": "ElementaryTypeName",
-                  "src": "1540:5:5",
+                  "src": "1540:5:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint8",
                     "typeString": "uint8"
@@ -892,12 +892,12 @@
               },
               {
                 "constant": false,
-                "id": 2142,
+                "id": 1378,
                 "mutability": "mutable",
                 "name": "spirit",
                 "nodeType": "VariableDeclaration",
-                "scope": 2143,
-                "src": "1559:12:5",
+                "scope": 1379,
+                "src": "1559:12:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -905,10 +905,10 @@
                   "typeString": "uint8"
                 },
                 "typeName": {
-                  "id": 2141,
+                  "id": 1377,
                   "name": "uint8",
                   "nodeType": "ElementaryTypeName",
-                  "src": "1559:5:5",
+                  "src": "1559:5:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint8",
                     "typeString": "uint8"
@@ -919,23 +919,23 @@
             ],
             "name": "WeaponMetadata",
             "nodeType": "StructDefinition",
-            "scope": 2144,
-            "src": "1318:261:5",
+            "scope": 1380,
+            "src": "1318:261:2",
             "visibility": "public"
           }
         ],
-        "scope": 2145,
-        "src": "126:1456:5"
+        "scope": 1381,
+        "src": "126:1456:2"
       }
     ],
-    "src": "33:1549:5"
+    "src": "33:1549:2"
   },
   "legacyAST": {
     "attributes": {
       "absolutePath": "/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealBase.sol",
       "exportedSymbols": {
         "IEtherealBase": [
-          2144
+          1380
         ]
       },
       "license": "MIT"
@@ -949,9 +949,9 @@
             ".5"
           ]
         },
-        "id": 2067,
+        "id": 1303,
         "name": "PragmaDirective",
-        "src": "33:22:5"
+        "src": "33:22:2"
       },
       {
         "attributes": {
@@ -960,9 +960,9 @@
             "v2"
           ]
         },
-        "id": 2068,
+        "id": 1304,
         "name": "PragmaDirective",
-        "src": "57:19:5"
+        "src": "57:19:2"
       },
       {
         "attributes": {
@@ -976,19 +976,19 @@
           "contractKind": "interface",
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            2144
+            1380
           ],
           "name": "IEtherealBase",
-          "scope": 2145
+          "scope": 1381
         },
         "children": [
           {
             "attributes": {
               "text": " @dev {ERC721} token, including:"
             },
-            "id": 2069,
+            "id": 1305,
             "name": "StructuredDocumentation",
-            "src": "80:44:5"
+            "src": "80:44:2"
           },
           {
             "attributes": {
@@ -1000,116 +1000,116 @@
                 "attributes": {
                   "name": "Air"
                 },
-                "id": 2070,
+                "id": 1306,
                 "name": "EnumValue",
-                "src": "305:3:5"
+                "src": "305:3:2"
               },
               {
                 "attributes": {
                   "name": "Water"
                 },
-                "id": 2071,
+                "id": 1307,
                 "name": "EnumValue",
-                "src": "310:5:5"
+                "src": "310:5:2"
               },
               {
                 "attributes": {
                   "name": "Earth"
                 },
-                "id": 2072,
+                "id": 1308,
                 "name": "EnumValue",
-                "src": "317:5:5"
+                "src": "317:5:2"
               },
               {
                 "attributes": {
                   "name": "Fire"
                 },
-                "id": 2073,
+                "id": 1309,
                 "name": "EnumValue",
-                "src": "324:4:5"
+                "src": "324:4:2"
               },
               {
                 "attributes": {
                   "name": "Aether"
                 },
-                "id": 2074,
+                "id": 1310,
                 "name": "EnumValue",
-                "src": "366:6:5"
+                "src": "366:6:2"
               },
               {
                 "attributes": {
                   "name": "ElectroMetal"
                 },
-                "id": 2075,
+                "id": 1311,
                 "name": "EnumValue",
-                "src": "408:12:5"
+                "src": "408:12:2"
               },
               {
                 "attributes": {
                   "name": "Ice"
                 },
-                "id": 2076,
+                "id": 1312,
                 "name": "EnumValue",
-                "src": "456:3:5"
+                "src": "456:3:2"
               },
               {
                 "attributes": {
                   "name": "Thunder"
                 },
-                "id": 2077,
+                "id": 1313,
                 "name": "EnumValue",
-                "src": "468:7:5"
+                "src": "468:7:2"
               },
               {
                 "attributes": {
                   "name": "Psychic"
                 },
-                "id": 2078,
+                "id": 1314,
                 "name": "EnumValue",
-                "src": "485:7:5"
+                "src": "485:7:2"
               },
               {
                 "attributes": {
                   "name": "Ghost"
                 },
-                "id": 2079,
+                "id": 1315,
                 "name": "EnumValue",
-                "src": "501:5:5"
+                "src": "501:5:2"
               },
               {
                 "attributes": {
                   "name": "DinoPower"
                 },
-                "id": 2080,
+                "id": 1316,
                 "name": "EnumValue",
-                "src": "515:9:5"
+                "src": "515:9:2"
               },
               {
                 "attributes": {
                   "name": "Poison"
                 },
-                "id": 2081,
+                "id": 1317,
                 "name": "EnumValue",
-                "src": "533:6:5"
+                "src": "533:6:2"
               },
               {
                 "attributes": {
                   "name": "DivinaMagicae"
                 },
-                "id": 2082,
+                "id": 1318,
                 "name": "EnumValue",
-                "src": "573:13:5"
+                "src": "573:13:2"
               }
             ],
-            "id": 2083,
+            "id": 1319,
             "name": "EnumDefinition",
-            "src": "246:347:5"
+            "src": "246:347:2"
           },
           {
             "attributes": {
               "canonicalName": "IEtherealBase.CharacterBaseMetadata",
               "name": "CharacterBaseMetadata",
-              "scope": 2144,
+              "scope": 1380,
               "visibility": "public"
             },
             "children": [
@@ -1118,7 +1118,7 @@
                   "constant": false,
                   "mutability": "mutable",
                   "name": "name",
-                  "scope": 2094,
+                  "scope": 1330,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "bytes32",
@@ -1130,21 +1130,21 @@
                       "name": "bytes32",
                       "type": "bytes32"
                     },
-                    "id": 2084,
+                    "id": 1320,
                     "name": "ElementaryTypeName",
-                    "src": "693:7:5"
+                    "src": "693:7:2"
                   }
                 ],
-                "id": 2085,
+                "id": 1321,
                 "name": "VariableDeclaration",
-                "src": "693:12:5"
+                "src": "693:12:2"
               },
               {
                 "attributes": {
                   "constant": false,
                   "mutability": "mutable",
                   "name": "birthdate",
-                  "scope": 2094,
+                  "scope": 1330,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "bytes24",
@@ -1156,21 +1156,21 @@
                       "name": "bytes24",
                       "type": "bytes24"
                     },
-                    "id": 2086,
+                    "id": 1322,
                     "name": "ElementaryTypeName",
-                    "src": "714:7:5"
+                    "src": "714:7:2"
                   }
                 ],
-                "id": 2087,
+                "id": 1323,
                 "name": "VariableDeclaration",
-                "src": "714:17:5"
+                "src": "714:17:2"
               },
               {
                 "attributes": {
                   "constant": false,
                   "mutability": "mutable",
                   "name": "description",
-                  "scope": 2094,
+                  "scope": 1330,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "string",
@@ -1182,21 +1182,21 @@
                       "name": "string",
                       "type": "string"
                     },
-                    "id": 2088,
+                    "id": 1324,
                     "name": "ElementaryTypeName",
-                    "src": "740:6:5"
+                    "src": "740:6:2"
                   }
                 ],
-                "id": 2089,
+                "id": 1325,
                 "name": "VariableDeclaration",
-                "src": "740:18:5"
+                "src": "740:18:2"
               },
               {
                 "attributes": {
                   "constant": false,
                   "mutability": "mutable",
                   "name": "planetId",
-                  "scope": 2094,
+                  "scope": 1330,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint256",
@@ -1208,21 +1208,21 @@
                       "name": "uint256",
                       "type": "uint256"
                     },
-                    "id": 2090,
+                    "id": 1326,
                     "name": "ElementaryTypeName",
-                    "src": "767:7:5"
+                    "src": "767:7:2"
                   }
                 ],
-                "id": 2091,
+                "id": 1327,
                 "name": "VariableDeclaration",
-                "src": "767:16:5"
+                "src": "767:16:2"
               },
               {
                 "attributes": {
                   "constant": false,
                   "mutability": "mutable",
                   "name": "genre",
-                  "scope": 2094,
+                  "scope": 1330,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint8",
@@ -1234,25 +1234,25 @@
                       "name": "uint8",
                       "type": "uint8"
                     },
-                    "id": 2092,
+                    "id": 1328,
                     "name": "ElementaryTypeName",
-                    "src": "792:5:5"
+                    "src": "792:5:2"
                   }
                 ],
-                "id": 2093,
+                "id": 1329,
                 "name": "VariableDeclaration",
-                "src": "792:11:5"
+                "src": "792:11:2"
               }
             ],
-            "id": 2094,
+            "id": 1330,
             "name": "StructDefinition",
-            "src": "655:156:5"
+            "src": "655:156:2"
           },
           {
             "attributes": {
               "canonicalName": "IEtherealBase.CharacterPhysicalMetadata",
               "name": "CharacterPhysicalMetadata",
-              "scope": 2144,
+              "scope": 1380,
               "visibility": "public"
             },
             "children": [
@@ -1261,7 +1261,7 @@
                   "constant": false,
                   "mutability": "mutable",
                   "name": "skintone",
-                  "scope": 2107,
+                  "scope": 1343,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint24",
@@ -1273,21 +1273,21 @@
                       "name": "uint24",
                       "type": "uint24"
                     },
-                    "id": 2095,
+                    "id": 1331,
                     "name": "ElementaryTypeName",
-                    "src": "861:6:5"
+                    "src": "861:6:2"
                   }
                 ],
-                "id": 2096,
+                "id": 1332,
                 "name": "VariableDeclaration",
-                "src": "861:15:5"
+                "src": "861:15:2"
               },
               {
                 "attributes": {
                   "constant": false,
                   "mutability": "mutable",
                   "name": "haircolor",
-                  "scope": 2107,
+                  "scope": 1343,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint24",
@@ -1299,21 +1299,21 @@
                       "name": "uint24",
                       "type": "uint24"
                     },
-                    "id": 2097,
+                    "id": 1333,
                     "name": "ElementaryTypeName",
-                    "src": "885:6:5"
+                    "src": "885:6:2"
                   }
                 ],
-                "id": 2098,
+                "id": 1334,
                 "name": "VariableDeclaration",
-                "src": "885:16:5"
+                "src": "885:16:2"
               },
               {
                 "attributes": {
                   "constant": false,
                   "mutability": "mutable",
                   "name": "eyescolor",
-                  "scope": 2107,
+                  "scope": 1343,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint24",
@@ -1325,21 +1325,21 @@
                       "name": "uint24",
                       "type": "uint24"
                     },
-                    "id": 2099,
+                    "id": 1335,
                     "name": "ElementaryTypeName",
-                    "src": "910:6:5"
+                    "src": "910:6:2"
                   }
                 ],
-                "id": 2100,
+                "id": 1336,
                 "name": "VariableDeclaration",
-                "src": "910:16:5"
+                "src": "910:16:2"
               },
               {
                 "attributes": {
                   "constant": false,
                   "mutability": "mutable",
                   "name": "weight",
-                  "scope": 2107,
+                  "scope": 1343,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint16",
@@ -1351,21 +1351,21 @@
                       "name": "uint16",
                       "type": "uint16"
                     },
-                    "id": 2101,
+                    "id": 1337,
                     "name": "ElementaryTypeName",
-                    "src": "935:6:5"
+                    "src": "935:6:2"
                   }
                 ],
-                "id": 2102,
+                "id": 1338,
                 "name": "VariableDeclaration",
-                "src": "935:13:5"
+                "src": "935:13:2"
               },
               {
                 "attributes": {
                   "constant": false,
                   "mutability": "mutable",
                   "name": "height",
-                  "scope": 2107,
+                  "scope": 1343,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint16",
@@ -1377,21 +1377,21 @@
                       "name": "uint16",
                       "type": "uint16"
                     },
-                    "id": 2103,
+                    "id": 1339,
                     "name": "ElementaryTypeName",
-                    "src": "957:6:5"
+                    "src": "957:6:2"
                   }
                 ],
-                "id": 2104,
+                "id": 1340,
                 "name": "VariableDeclaration",
-                "src": "957:13:5"
+                "src": "957:13:2"
               },
               {
                 "attributes": {
                   "constant": false,
                   "mutability": "mutable",
                   "name": "bodyType",
-                  "scope": 2107,
+                  "scope": 1343,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint8",
@@ -1403,25 +1403,25 @@
                       "name": "uint8",
                       "type": "uint8"
                     },
-                    "id": 2105,
+                    "id": 1341,
                     "name": "ElementaryTypeName",
-                    "src": "979:5:5"
+                    "src": "979:5:2"
                   }
                 ],
-                "id": 2106,
+                "id": 1342,
                 "name": "VariableDeclaration",
-                "src": "979:14:5"
+                "src": "979:14:2"
               }
             ],
-            "id": 2107,
+            "id": 1343,
             "name": "StructDefinition",
-            "src": "819:182:5"
+            "src": "819:182:2"
           },
           {
             "attributes": {
               "canonicalName": "IEtherealBase.CharacterAttributesMetadata",
               "name": "CharacterAttributesMetadata",
-              "scope": 2144,
+              "scope": 1380,
               "visibility": "public"
             },
             "children": [
@@ -1430,7 +1430,7 @@
                   "constant": false,
                   "mutability": "mutable",
                   "name": "primaryElement",
-                  "scope": 2124,
+                  "scope": 1360,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "enum IEtherealBase.ElementOfNature",
@@ -1440,24 +1440,24 @@
                   {
                     "attributes": {
                       "name": "ElementOfNature",
-                      "referencedDeclaration": 2083,
+                      "referencedDeclaration": 1319,
                       "type": "enum IEtherealBase.ElementOfNature"
                     },
-                    "id": 2108,
+                    "id": 1344,
                     "name": "UserDefinedTypeName",
-                    "src": "1053:15:5"
+                    "src": "1053:15:2"
                   }
                 ],
-                "id": 2109,
+                "id": 1345,
                 "name": "VariableDeclaration",
-                "src": "1053:30:5"
+                "src": "1053:30:2"
               },
               {
                 "attributes": {
                   "constant": false,
                   "mutability": "mutable",
                   "name": "secondaryElement",
-                  "scope": 2124,
+                  "scope": 1360,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "enum IEtherealBase.ElementOfNature",
@@ -1467,24 +1467,24 @@
                   {
                     "attributes": {
                       "name": "ElementOfNature",
-                      "referencedDeclaration": 2083,
+                      "referencedDeclaration": 1319,
                       "type": "enum IEtherealBase.ElementOfNature"
                     },
-                    "id": 2110,
+                    "id": 1346,
                     "name": "UserDefinedTypeName",
-                    "src": "1092:15:5"
+                    "src": "1092:15:2"
                   }
                 ],
-                "id": 2111,
+                "id": 1347,
                 "name": "VariableDeclaration",
-                "src": "1092:32:5"
+                "src": "1092:32:2"
               },
               {
                 "attributes": {
                   "constant": false,
                   "mutability": "mutable",
                   "name": "life",
-                  "scope": 2124,
+                  "scope": 1360,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint8",
@@ -1496,21 +1496,21 @@
                       "name": "uint8",
                       "type": "uint8"
                     },
-                    "id": 2112,
+                    "id": 1348,
                     "name": "ElementaryTypeName",
-                    "src": "1133:5:5"
+                    "src": "1133:5:2"
                   }
                 ],
-                "id": 2113,
+                "id": 1349,
                 "name": "VariableDeclaration",
-                "src": "1133:10:5"
+                "src": "1133:10:2"
               },
               {
                 "attributes": {
                   "constant": false,
                   "mutability": "mutable",
                   "name": "armor",
-                  "scope": 2124,
+                  "scope": 1360,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint8",
@@ -1522,21 +1522,21 @@
                       "name": "uint8",
                       "type": "uint8"
                     },
-                    "id": 2114,
+                    "id": 1350,
                     "name": "ElementaryTypeName",
-                    "src": "1152:5:5"
+                    "src": "1152:5:2"
                   }
                 ],
-                "id": 2115,
+                "id": 1351,
                 "name": "VariableDeclaration",
-                "src": "1152:11:5"
+                "src": "1152:11:2"
               },
               {
                 "attributes": {
                   "constant": false,
                   "mutability": "mutable",
                   "name": "strength",
-                  "scope": 2124,
+                  "scope": 1360,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint8",
@@ -1548,21 +1548,21 @@
                       "name": "uint8",
                       "type": "uint8"
                     },
-                    "id": 2116,
+                    "id": 1352,
                     "name": "ElementaryTypeName",
-                    "src": "1172:5:5"
+                    "src": "1172:5:2"
                   }
                 ],
-                "id": 2117,
+                "id": 1353,
                 "name": "VariableDeclaration",
-                "src": "1172:14:5"
+                "src": "1172:14:2"
               },
               {
                 "attributes": {
                   "constant": false,
                   "mutability": "mutable",
                   "name": "speed",
-                  "scope": 2124,
+                  "scope": 1360,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint8",
@@ -1574,21 +1574,21 @@
                       "name": "uint8",
                       "type": "uint8"
                     },
-                    "id": 2118,
+                    "id": 1354,
                     "name": "ElementaryTypeName",
-                    "src": "1195:5:5"
+                    "src": "1195:5:2"
                   }
                 ],
-                "id": 2119,
+                "id": 1355,
                 "name": "VariableDeclaration",
-                "src": "1195:11:5"
+                "src": "1195:11:2"
               },
               {
                 "attributes": {
                   "constant": false,
                   "mutability": "mutable",
                   "name": "luck",
-                  "scope": 2124,
+                  "scope": 1360,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint8",
@@ -1600,21 +1600,21 @@
                       "name": "uint8",
                       "type": "uint8"
                     },
-                    "id": 2120,
+                    "id": 1356,
                     "name": "ElementaryTypeName",
-                    "src": "1215:5:5"
+                    "src": "1215:5:2"
                   }
                 ],
-                "id": 2121,
+                "id": 1357,
                 "name": "VariableDeclaration",
-                "src": "1215:10:5"
+                "src": "1215:10:2"
               },
               {
                 "attributes": {
                   "constant": false,
                   "mutability": "mutable",
                   "name": "spirit",
-                  "scope": 2124,
+                  "scope": 1360,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint8",
@@ -1626,25 +1626,25 @@
                       "name": "uint8",
                       "type": "uint8"
                     },
-                    "id": 2122,
+                    "id": 1358,
                     "name": "ElementaryTypeName",
-                    "src": "1234:5:5"
+                    "src": "1234:5:2"
                   }
                 ],
-                "id": 2123,
+                "id": 1359,
                 "name": "VariableDeclaration",
-                "src": "1234:12:5"
+                "src": "1234:12:2"
               }
             ],
-            "id": 2124,
+            "id": 1360,
             "name": "StructDefinition",
-            "src": "1009:245:5"
+            "src": "1009:245:2"
           },
           {
             "attributes": {
               "canonicalName": "IEtherealBase.WeaponMetadata",
               "name": "WeaponMetadata",
-              "scope": 2144,
+              "scope": 1380,
               "visibility": "public"
             },
             "children": [
@@ -1653,7 +1653,7 @@
                   "constant": false,
                   "mutability": "mutable",
                   "name": "name",
-                  "scope": 2143,
+                  "scope": 1379,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "bytes32",
@@ -1665,21 +1665,21 @@
                       "name": "bytes32",
                       "type": "bytes32"
                     },
-                    "id": 2125,
+                    "id": 1361,
                     "name": "ElementaryTypeName",
-                    "src": "1349:7:5"
+                    "src": "1349:7:2"
                   }
                 ],
-                "id": 2126,
+                "id": 1362,
                 "name": "VariableDeclaration",
-                "src": "1349:12:5"
+                "src": "1349:12:2"
               },
               {
                 "attributes": {
                   "constant": false,
                   "mutability": "mutable",
                   "name": "strongAgainstElement",
-                  "scope": 2143,
+                  "scope": 1379,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "enum IEtherealBase.ElementOfNature",
@@ -1689,24 +1689,24 @@
                   {
                     "attributes": {
                       "name": "ElementOfNature",
-                      "referencedDeclaration": 2083,
+                      "referencedDeclaration": 1319,
                       "type": "enum IEtherealBase.ElementOfNature"
                     },
-                    "id": 2127,
+                    "id": 1363,
                     "name": "UserDefinedTypeName",
-                    "src": "1370:15:5"
+                    "src": "1370:15:2"
                   }
                 ],
-                "id": 2128,
+                "id": 1364,
                 "name": "VariableDeclaration",
-                "src": "1370:36:5"
+                "src": "1370:36:2"
               },
               {
                 "attributes": {
                   "constant": false,
                   "mutability": "mutable",
                   "name": "weakAgainstElement",
-                  "scope": 2143,
+                  "scope": 1379,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "enum IEtherealBase.ElementOfNature",
@@ -1716,24 +1716,24 @@
                   {
                     "attributes": {
                       "name": "ElementOfNature",
-                      "referencedDeclaration": 2083,
+                      "referencedDeclaration": 1319,
                       "type": "enum IEtherealBase.ElementOfNature"
                     },
-                    "id": 2129,
+                    "id": 1365,
                     "name": "UserDefinedTypeName",
-                    "src": "1415:15:5"
+                    "src": "1415:15:2"
                   }
                 ],
-                "id": 2130,
+                "id": 1366,
                 "name": "VariableDeclaration",
-                "src": "1415:34:5"
+                "src": "1415:34:2"
               },
               {
                 "attributes": {
                   "constant": false,
                   "mutability": "mutable",
                   "name": "life",
-                  "scope": 2143,
+                  "scope": 1379,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint8",
@@ -1745,21 +1745,21 @@
                       "name": "uint8",
                       "type": "uint8"
                     },
-                    "id": 2131,
+                    "id": 1367,
                     "name": "ElementaryTypeName",
-                    "src": "1458:5:5"
+                    "src": "1458:5:2"
                   }
                 ],
-                "id": 2132,
+                "id": 1368,
                 "name": "VariableDeclaration",
-                "src": "1458:10:5"
+                "src": "1458:10:2"
               },
               {
                 "attributes": {
                   "constant": false,
                   "mutability": "mutable",
                   "name": "armor",
-                  "scope": 2143,
+                  "scope": 1379,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint8",
@@ -1771,21 +1771,21 @@
                       "name": "uint8",
                       "type": "uint8"
                     },
-                    "id": 2133,
+                    "id": 1369,
                     "name": "ElementaryTypeName",
-                    "src": "1477:5:5"
+                    "src": "1477:5:2"
                   }
                 ],
-                "id": 2134,
+                "id": 1370,
                 "name": "VariableDeclaration",
-                "src": "1477:11:5"
+                "src": "1477:11:2"
               },
               {
                 "attributes": {
                   "constant": false,
                   "mutability": "mutable",
                   "name": "strength",
-                  "scope": 2143,
+                  "scope": 1379,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint8",
@@ -1797,21 +1797,21 @@
                       "name": "uint8",
                       "type": "uint8"
                     },
-                    "id": 2135,
+                    "id": 1371,
                     "name": "ElementaryTypeName",
-                    "src": "1497:5:5"
+                    "src": "1497:5:2"
                   }
                 ],
-                "id": 2136,
+                "id": 1372,
                 "name": "VariableDeclaration",
-                "src": "1497:14:5"
+                "src": "1497:14:2"
               },
               {
                 "attributes": {
                   "constant": false,
                   "mutability": "mutable",
                   "name": "speed",
-                  "scope": 2143,
+                  "scope": 1379,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint8",
@@ -1823,21 +1823,21 @@
                       "name": "uint8",
                       "type": "uint8"
                     },
-                    "id": 2137,
+                    "id": 1373,
                     "name": "ElementaryTypeName",
-                    "src": "1520:5:5"
+                    "src": "1520:5:2"
                   }
                 ],
-                "id": 2138,
+                "id": 1374,
                 "name": "VariableDeclaration",
-                "src": "1520:11:5"
+                "src": "1520:11:2"
               },
               {
                 "attributes": {
                   "constant": false,
                   "mutability": "mutable",
                   "name": "luck",
-                  "scope": 2143,
+                  "scope": 1379,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint8",
@@ -1849,21 +1849,21 @@
                       "name": "uint8",
                       "type": "uint8"
                     },
-                    "id": 2139,
+                    "id": 1375,
                     "name": "ElementaryTypeName",
-                    "src": "1540:5:5"
+                    "src": "1540:5:2"
                   }
                 ],
-                "id": 2140,
+                "id": 1376,
                 "name": "VariableDeclaration",
-                "src": "1540:10:5"
+                "src": "1540:10:2"
               },
               {
                 "attributes": {
                   "constant": false,
                   "mutability": "mutable",
                   "name": "spirit",
-                  "scope": 2143,
+                  "scope": 1379,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint8",
@@ -1875,29 +1875,29 @@
                       "name": "uint8",
                       "type": "uint8"
                     },
-                    "id": 2141,
+                    "id": 1377,
                     "name": "ElementaryTypeName",
-                    "src": "1559:5:5"
+                    "src": "1559:5:2"
                   }
                 ],
-                "id": 2142,
+                "id": 1378,
                 "name": "VariableDeclaration",
-                "src": "1559:12:5"
+                "src": "1559:12:2"
               }
             ],
-            "id": 2143,
+            "id": 1379,
             "name": "StructDefinition",
-            "src": "1318:261:5"
+            "src": "1318:261:2"
           }
         ],
-        "id": 2144,
+        "id": 1380,
         "name": "ContractDefinition",
-        "src": "126:1456:5"
+        "src": "126:1456:2"
       }
     ],
-    "id": 2145,
+    "id": 1381,
     "name": "SourceUnit",
-    "src": "33:1549:5"
+    "src": "33:1549:2"
   },
   "compiler": {
     "name": "solc",
@@ -1905,7 +1905,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.3",
-  "updatedAt": "2021-02-16T06:27:27.957Z",
+  "updatedAt": "2021-02-16T08:06:43.491Z",
   "devdoc": {
     "details": "{ERC721} token, including:",
     "kind": "dev",

@@ -20,7 +20,13 @@ import './IEtherealBase.sol';
  * and pauser roles to other accounts.
  */
 interface IEtherealCharacter is IEtherealBase {
-
+    /**
+    * @dev Character extra metadata tables
+    */
+    function characterBaseMetadata(uint256 _tokenId) external view returns(CharacterBaseMetadata memory);
+    function characterPhysicalMetadata(uint256 _tokenId) external view returns(CharacterPhysicalMetadata memory);
+    function characterAttributesMetadata(uint256 _tokenId) external view returns(CharacterAttributesMetadata memory);
+    function characterNameExists(uint256 _tokenId) external view returns(bool);
     
     /**
      * @dev External function to set the base URI for all token IDs. 
@@ -77,5 +83,10 @@ interface IEtherealCharacter is IEtherealBase {
      * - the caller must have the `PAUSER_ROLE`.
      */
     function unpause() external;
+
+    /**
+     * @dev See {IERC721-ownerOf}.
+     */
+    function ownerOf(uint256 tokenId) external returns (address);
 
 }

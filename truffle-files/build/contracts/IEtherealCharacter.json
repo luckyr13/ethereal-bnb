@@ -4,6 +4,183 @@
     {
       "inputs": [
         {
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "characterBaseMetadata",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "bytes32",
+              "name": "name",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes24",
+              "name": "birthdate",
+              "type": "bytes24"
+            },
+            {
+              "internalType": "string",
+              "name": "description",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "planetId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint8",
+              "name": "genre",
+              "type": "uint8"
+            }
+          ],
+          "internalType": "struct IEtherealBase.CharacterBaseMetadata",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "characterPhysicalMetadata",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint24",
+              "name": "skintone",
+              "type": "uint24"
+            },
+            {
+              "internalType": "uint24",
+              "name": "haircolor",
+              "type": "uint24"
+            },
+            {
+              "internalType": "uint24",
+              "name": "eyescolor",
+              "type": "uint24"
+            },
+            {
+              "internalType": "uint16",
+              "name": "weight",
+              "type": "uint16"
+            },
+            {
+              "internalType": "uint16",
+              "name": "height",
+              "type": "uint16"
+            },
+            {
+              "internalType": "uint8",
+              "name": "bodyType",
+              "type": "uint8"
+            }
+          ],
+          "internalType": "struct IEtherealBase.CharacterPhysicalMetadata",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "characterAttributesMetadata",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "enum IEtherealBase.ElementOfNature",
+              "name": "primaryElement",
+              "type": "uint8"
+            },
+            {
+              "internalType": "enum IEtherealBase.ElementOfNature",
+              "name": "secondaryElement",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "life",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "armor",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "strength",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "speed",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "luck",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "spirit",
+              "type": "uint8"
+            }
+          ],
+          "internalType": "struct IEtherealBase.CharacterAttributesMetadata",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "characterNameExists",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
           "internalType": "string",
           "name": "_baseURI",
           "type": "string"
@@ -175,9 +352,28 @@
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "ownerOf",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.7.5+commit.eb77ed08\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"burn\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"components\":[{\"internalType\":\"bytes32\",\"name\":\"name\",\"type\":\"bytes32\"},{\"internalType\":\"bytes24\",\"name\":\"birthdate\",\"type\":\"bytes24\"},{\"internalType\":\"string\",\"name\":\"description\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"planetId\",\"type\":\"uint256\"},{\"internalType\":\"uint8\",\"name\":\"genre\",\"type\":\"uint8\"}],\"internalType\":\"struct IEtherealBase.CharacterBaseMetadata\",\"name\":\"extraBaseMetaData\",\"type\":\"tuple\"},{\"components\":[{\"internalType\":\"uint24\",\"name\":\"skintone\",\"type\":\"uint24\"},{\"internalType\":\"uint24\",\"name\":\"haircolor\",\"type\":\"uint24\"},{\"internalType\":\"uint24\",\"name\":\"eyescolor\",\"type\":\"uint24\"},{\"internalType\":\"uint16\",\"name\":\"weight\",\"type\":\"uint16\"},{\"internalType\":\"uint16\",\"name\":\"height\",\"type\":\"uint16\"},{\"internalType\":\"uint8\",\"name\":\"bodyType\",\"type\":\"uint8\"}],\"internalType\":\"struct IEtherealBase.CharacterPhysicalMetadata\",\"name\":\"extraPhysicalMetaData\",\"type\":\"tuple\"},{\"components\":[{\"internalType\":\"enum IEtherealBase.ElementOfNature\",\"name\":\"primaryElement\",\"type\":\"uint8\"},{\"internalType\":\"enum IEtherealBase.ElementOfNature\",\"name\":\"secondaryElement\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"life\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"armor\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"strength\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"speed\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"luck\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"spirit\",\"type\":\"uint8\"}],\"internalType\":\"struct IEtherealBase.CharacterAttributesMetadata\",\"name\":\"extraAbilitiesMetaData\",\"type\":\"tuple\"}],\"name\":\"mint\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"pause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_baseURI\",\"type\":\"string\"}],\"name\":\"setBaseURI\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"unpause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"{ERC721} token, including:  - ability for holders to burn (destroy) their tokens  - a minter role that allows for token minting (creation)  - a pauser role that allows to stop all token transfers  - token ID and URI autogeneration  - includes extra properties to store important metadata This contract uses {AccessControl} to lock permissioned functions using the different roles - head to its documentation for details. The account that deploys the contract will be granted the minter and pauser roles, as well as the default admin role, which will let it grant both minter and pauser roles to other accounts.\",\"kind\":\"dev\",\"methods\":{\"burn(uint256)\":{\"details\":\"Burns `tokenId`. See {ERC721-_burn}. Requirements: - The caller must own `tokenId` or be an approved operator.\"},\"mint(address,(bytes32,bytes24,string,uint256,uint8),(uint24,uint24,uint24,uint16,uint16,uint8),(uint8,uint8,uint8,uint8,uint8,uint8,uint8,uint8))\":{\"details\":\"Creates a new token for `to`. Its token ID will be automatically assigned (and available on the emitted {IERC721-Transfer} event), and the token URI autogenerated based on the base URI passed at construction. See {ERC721-_mint}. Requirements: - the caller must have the `MINTER_ROLE`.\"},\"pause()\":{\"details\":\"Pauses all token transfers. See {ERC721Pausable} and {Pausable-_pause}. Requirements: - the caller must have the `PAUSER_ROLE`.\"},\"setBaseURI(string)\":{\"details\":\"External function to set the base URI for all token IDs. \"},\"unpause()\":{\"details\":\"Unpauses all token transfers. See {ERC721Pausable} and {Pausable-_unpause}. Requirements: - the caller must have the `PAUSER_ROLE`.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealCharacter.sol\":\"IEtherealCharacter\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealBase.sol\":{\"keccak256\":\"0xf02692b6fc3bcdb976cda458807bb61499bea5b0dd7a8d047bbcbf1f18b59a87\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://debc711120ec5cfa1701c007ccb23910a07048eb1ef2868142d137f2c3f0e641\",\"dweb:/ipfs/QmVzNYfZRKdbhVRCYvyGDbgeRL1bn4n4K2GY4D8z5JUzmX\"]},\"/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealCharacter.sol\":{\"keccak256\":\"0x6a22d6855945a4dfba73a8ac66f59167872cd2577fbeabc2341177b94c7d4565\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://11956f8e40dee777bda9f0b31d3d126a77782e2aa46ff6651a1760e77da848be\",\"dweb:/ipfs/QmXvfZRPzBa3yaaATuUEmV1gvvV9AA3kin6GktQv6beZkJ\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.7.5+commit.eb77ed08\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"burn\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"characterAttributesMetadata\",\"outputs\":[{\"components\":[{\"internalType\":\"enum IEtherealBase.ElementOfNature\",\"name\":\"primaryElement\",\"type\":\"uint8\"},{\"internalType\":\"enum IEtherealBase.ElementOfNature\",\"name\":\"secondaryElement\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"life\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"armor\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"strength\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"speed\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"luck\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"spirit\",\"type\":\"uint8\"}],\"internalType\":\"struct IEtherealBase.CharacterAttributesMetadata\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"characterBaseMetadata\",\"outputs\":[{\"components\":[{\"internalType\":\"bytes32\",\"name\":\"name\",\"type\":\"bytes32\"},{\"internalType\":\"bytes24\",\"name\":\"birthdate\",\"type\":\"bytes24\"},{\"internalType\":\"string\",\"name\":\"description\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"planetId\",\"type\":\"uint256\"},{\"internalType\":\"uint8\",\"name\":\"genre\",\"type\":\"uint8\"}],\"internalType\":\"struct IEtherealBase.CharacterBaseMetadata\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"characterNameExists\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"characterPhysicalMetadata\",\"outputs\":[{\"components\":[{\"internalType\":\"uint24\",\"name\":\"skintone\",\"type\":\"uint24\"},{\"internalType\":\"uint24\",\"name\":\"haircolor\",\"type\":\"uint24\"},{\"internalType\":\"uint24\",\"name\":\"eyescolor\",\"type\":\"uint24\"},{\"internalType\":\"uint16\",\"name\":\"weight\",\"type\":\"uint16\"},{\"internalType\":\"uint16\",\"name\":\"height\",\"type\":\"uint16\"},{\"internalType\":\"uint8\",\"name\":\"bodyType\",\"type\":\"uint8\"}],\"internalType\":\"struct IEtherealBase.CharacterPhysicalMetadata\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"components\":[{\"internalType\":\"bytes32\",\"name\":\"name\",\"type\":\"bytes32\"},{\"internalType\":\"bytes24\",\"name\":\"birthdate\",\"type\":\"bytes24\"},{\"internalType\":\"string\",\"name\":\"description\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"planetId\",\"type\":\"uint256\"},{\"internalType\":\"uint8\",\"name\":\"genre\",\"type\":\"uint8\"}],\"internalType\":\"struct IEtherealBase.CharacterBaseMetadata\",\"name\":\"extraBaseMetaData\",\"type\":\"tuple\"},{\"components\":[{\"internalType\":\"uint24\",\"name\":\"skintone\",\"type\":\"uint24\"},{\"internalType\":\"uint24\",\"name\":\"haircolor\",\"type\":\"uint24\"},{\"internalType\":\"uint24\",\"name\":\"eyescolor\",\"type\":\"uint24\"},{\"internalType\":\"uint16\",\"name\":\"weight\",\"type\":\"uint16\"},{\"internalType\":\"uint16\",\"name\":\"height\",\"type\":\"uint16\"},{\"internalType\":\"uint8\",\"name\":\"bodyType\",\"type\":\"uint8\"}],\"internalType\":\"struct IEtherealBase.CharacterPhysicalMetadata\",\"name\":\"extraPhysicalMetaData\",\"type\":\"tuple\"},{\"components\":[{\"internalType\":\"enum IEtherealBase.ElementOfNature\",\"name\":\"primaryElement\",\"type\":\"uint8\"},{\"internalType\":\"enum IEtherealBase.ElementOfNature\",\"name\":\"secondaryElement\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"life\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"armor\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"strength\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"speed\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"luck\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"spirit\",\"type\":\"uint8\"}],\"internalType\":\"struct IEtherealBase.CharacterAttributesMetadata\",\"name\":\"extraAbilitiesMetaData\",\"type\":\"tuple\"}],\"name\":\"mint\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"ownerOf\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"pause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_baseURI\",\"type\":\"string\"}],\"name\":\"setBaseURI\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"unpause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"{ERC721} token, including:  - ability for holders to burn (destroy) their tokens  - a minter role that allows for token minting (creation)  - a pauser role that allows to stop all token transfers  - token ID and URI autogeneration  - includes extra properties to store important metadata This contract uses {AccessControl} to lock permissioned functions using the different roles - head to its documentation for details. The account that deploys the contract will be granted the minter and pauser roles, as well as the default admin role, which will let it grant both minter and pauser roles to other accounts.\",\"kind\":\"dev\",\"methods\":{\"burn(uint256)\":{\"details\":\"Burns `tokenId`. See {ERC721-_burn}. Requirements: - The caller must own `tokenId` or be an approved operator.\"},\"characterBaseMetadata(uint256)\":{\"details\":\"Character extra metadata tables\"},\"mint(address,(bytes32,bytes24,string,uint256,uint8),(uint24,uint24,uint24,uint16,uint16,uint8),(uint8,uint8,uint8,uint8,uint8,uint8,uint8,uint8))\":{\"details\":\"Creates a new token for `to`. Its token ID will be automatically assigned (and available on the emitted {IERC721-Transfer} event), and the token URI autogenerated based on the base URI passed at construction. See {ERC721-_mint}. Requirements: - the caller must have the `MINTER_ROLE`.\"},\"ownerOf(uint256)\":{\"details\":\"See {IERC721-ownerOf}.\"},\"pause()\":{\"details\":\"Pauses all token transfers. See {ERC721Pausable} and {Pausable-_pause}. Requirements: - the caller must have the `PAUSER_ROLE`.\"},\"setBaseURI(string)\":{\"details\":\"External function to set the base URI for all token IDs. \"},\"unpause()\":{\"details\":\"Unpauses all token transfers. See {ERC721Pausable} and {Pausable-_unpause}. Requirements: - the caller must have the `PAUSER_ROLE`.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealCharacter.sol\":\"IEtherealCharacter\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealBase.sol\":{\"keccak256\":\"0xf02692b6fc3bcdb976cda458807bb61499bea5b0dd7a8d047bbcbf1f18b59a87\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://debc711120ec5cfa1701c007ccb23910a07048eb1ef2868142d137f2c3f0e641\",\"dweb:/ipfs/QmVzNYfZRKdbhVRCYvyGDbgeRL1bn4n4K2GY4D8z5JUzmX\"]},\"/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealCharacter.sol\":{\"keccak256\":\"0xc87cbbd18fa9bb368bd478b8b517eff633e6ff1b8af005afa714b1b84a3192a8\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://76d331dc4741dada6a8f247e0fc44e604dce37819e2fd280600b8a569e298b74\",\"dweb:/ipfs/QmT8KNZJGA6LyHRevohipW4LpjGsVGaw6tBeLKCKKVviQ5\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
@@ -185,49 +381,49 @@
   "deployedGeneratedSources": [],
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity 0.7.5;\r\npragma abicoder v2;\r\nimport './IEtherealBase.sol';\r\n\r\n/**\r\n * @dev {ERC721} token, including:\r\n *\r\n *  - ability for holders to burn (destroy) their tokens\r\n *  - a minter role that allows for token minting (creation)\r\n *  - a pauser role that allows to stop all token transfers\r\n *  - token ID and URI autogeneration\r\n *  - includes extra properties to store important metadata\r\n *\r\n * This contract uses {AccessControl} to lock permissioned functions using the\r\n * different roles - head to its documentation for details.\r\n *\r\n * The account that deploys the contract will be granted the minter and pauser\r\n * roles, as well as the default admin role, which will let it grant both minter\r\n * and pauser roles to other accounts.\r\n */\r\ninterface IEtherealCharacter is IEtherealBase {\r\n\r\n    \r\n    /**\r\n     * @dev External function to set the base URI for all token IDs. \r\n     */\r\n    function setBaseURI(string memory _baseURI) external;\r\n\r\n    /**\r\n     * @dev Creates a new token for `to`. Its token ID will be automatically\r\n     * assigned (and available on the emitted {IERC721-Transfer} event), and the token\r\n     * URI autogenerated based on the base URI passed at construction.\r\n     *\r\n     * See {ERC721-_mint}.\r\n     *\r\n     * Requirements:\r\n     *\r\n     * - the caller must have the `MINTER_ROLE`.\r\n     */\r\n    function mint(\r\n      address to,\r\n      CharacterBaseMetadata memory extraBaseMetaData,\r\n      CharacterPhysicalMetadata memory extraPhysicalMetaData,\r\n      CharacterAttributesMetadata memory extraAbilitiesMetaData\r\n    )\r\n        external\r\n        returns (uint256);\r\n\r\n    /**\r\n     * @dev Burns `tokenId`. See {ERC721-_burn}.\r\n     *\r\n     * Requirements:\r\n     *\r\n     * - The caller must own `tokenId` or be an approved operator.\r\n     */\r\n    function burn(uint256 tokenId) external;\r\n\r\n    /**\r\n     * @dev Pauses all token transfers.\r\n     *\r\n     * See {ERC721Pausable} and {Pausable-_pause}.\r\n     *\r\n     * Requirements:\r\n     *\r\n     * - the caller must have the `PAUSER_ROLE`.\r\n     */\r\n    function pause() external;\r\n\r\n    /**\r\n     * @dev Unpauses all token transfers.\r\n     *\r\n     * See {ERC721Pausable} and {Pausable-_unpause}.\r\n     *\r\n     * Requirements:\r\n     *\r\n     * - the caller must have the `PAUSER_ROLE`.\r\n     */\r\n    function unpause() external;\r\n\r\n}",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity 0.7.5;\r\npragma abicoder v2;\r\nimport './IEtherealBase.sol';\r\n\r\n/**\r\n * @dev {ERC721} token, including:\r\n *\r\n *  - ability for holders to burn (destroy) their tokens\r\n *  - a minter role that allows for token minting (creation)\r\n *  - a pauser role that allows to stop all token transfers\r\n *  - token ID and URI autogeneration\r\n *  - includes extra properties to store important metadata\r\n *\r\n * This contract uses {AccessControl} to lock permissioned functions using the\r\n * different roles - head to its documentation for details.\r\n *\r\n * The account that deploys the contract will be granted the minter and pauser\r\n * roles, as well as the default admin role, which will let it grant both minter\r\n * and pauser roles to other accounts.\r\n */\r\ninterface IEtherealCharacter is IEtherealBase {\r\n    /**\r\n    * @dev Character extra metadata tables\r\n    */\r\n    function characterBaseMetadata(uint256 _tokenId) external view returns(CharacterBaseMetadata memory);\r\n    function characterPhysicalMetadata(uint256 _tokenId) external view returns(CharacterPhysicalMetadata memory);\r\n    function characterAttributesMetadata(uint256 _tokenId) external view returns(CharacterAttributesMetadata memory);\r\n    function characterNameExists(uint256 _tokenId) external view returns(bool);\r\n    \r\n    /**\r\n     * @dev External function to set the base URI for all token IDs. \r\n     */\r\n    function setBaseURI(string memory _baseURI) external;\r\n\r\n    /**\r\n     * @dev Creates a new token for `to`. Its token ID will be automatically\r\n     * assigned (and available on the emitted {IERC721-Transfer} event), and the token\r\n     * URI autogenerated based on the base URI passed at construction.\r\n     *\r\n     * See {ERC721-_mint}.\r\n     *\r\n     * Requirements:\r\n     *\r\n     * - the caller must have the `MINTER_ROLE`.\r\n     */\r\n    function mint(\r\n      address to,\r\n      CharacterBaseMetadata memory extraBaseMetaData,\r\n      CharacterPhysicalMetadata memory extraPhysicalMetaData,\r\n      CharacterAttributesMetadata memory extraAbilitiesMetaData\r\n    )\r\n        external\r\n        returns (uint256);\r\n\r\n    /**\r\n     * @dev Burns `tokenId`. See {ERC721-_burn}.\r\n     *\r\n     * Requirements:\r\n     *\r\n     * - The caller must own `tokenId` or be an approved operator.\r\n     */\r\n    function burn(uint256 tokenId) external;\r\n\r\n    /**\r\n     * @dev Pauses all token transfers.\r\n     *\r\n     * See {ERC721Pausable} and {Pausable-_pause}.\r\n     *\r\n     * Requirements:\r\n     *\r\n     * - the caller must have the `PAUSER_ROLE`.\r\n     */\r\n    function pause() external;\r\n\r\n    /**\r\n     * @dev Unpauses all token transfers.\r\n     *\r\n     * See {ERC721Pausable} and {Pausable-_unpause}.\r\n     *\r\n     * Requirements:\r\n     *\r\n     * - the caller must have the `PAUSER_ROLE`.\r\n     */\r\n    function unpause() external;\r\n\r\n    /**\r\n     * @dev See {IERC721-ownerOf}.\r\n     */\r\n    function ownerOf(uint256 tokenId) external returns (address);\r\n\r\n}",
   "sourcePath": "C:\\xampp\\htdocs\\ethereal-bnb\\truffle-files\\contracts\\IEtherealCharacter.sol",
   "ast": {
     "absolutePath": "/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealCharacter.sol",
     "exportedSymbols": {
       "IEtherealBase": [
-        2144
+        1380
       ],
       "IEtherealCharacter": [
-        2186
+        1459
       ]
     },
-    "id": 2187,
+    "id": 1460,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2146,
+        "id": 1382,
         "literals": [
           "solidity",
           "0.7",
           ".5"
         ],
         "nodeType": "PragmaDirective",
-        "src": "33:22:6"
+        "src": "33:22:3"
       },
       {
-        "id": 2147,
+        "id": 1383,
         "literals": [
           "abicoder",
           "v2"
         ],
         "nodeType": "PragmaDirective",
-        "src": "57:19:6"
+        "src": "57:19:3"
       },
       {
         "absolutePath": "/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealBase.sol",
         "file": "./IEtherealBase.sol",
-        "id": 2148,
+        "id": 1384,
         "nodeType": "ImportDirective",
-        "scope": 2187,
-        "sourceUnit": 2145,
-        "src": "78:29:6",
+        "scope": 1460,
+        "sourceUnit": 1381,
+        "src": "78:29:3",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -236,66 +432,395 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 2150,
+              "id": 1386,
               "name": "IEtherealBase",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2144,
-              "src": "825:13:6",
+              "referencedDeclaration": 1380,
+              "src": "825:13:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_IEtherealBase_$2144",
+                "typeIdentifier": "t_contract$_IEtherealBase_$1380",
                 "typeString": "contract IEtherealBase"
               }
             },
-            "id": 2151,
+            "id": 1387,
             "nodeType": "InheritanceSpecifier",
-            "src": "825:13:6"
+            "src": "825:13:3"
           }
         ],
         "contractDependencies": [
-          2144
+          1380
         ],
         "contractKind": "interface",
         "documentation": {
-          "id": 2149,
+          "id": 1385,
           "nodeType": "StructuredDocumentation",
-          "src": "111:680:6",
+          "src": "111:680:3",
           "text": " @dev {ERC721} token, including:\n  - ability for holders to burn (destroy) their tokens\n  - a minter role that allows for token minting (creation)\n  - a pauser role that allows to stop all token transfers\n  - token ID and URI autogeneration\n  - includes extra properties to store important metadata\n This contract uses {AccessControl} to lock permissioned functions using the\n different roles - head to its documentation for details.\n The account that deploys the contract will be granted the minter and pauser\n roles, as well as the default admin role, which will let it grant both minter\n and pauser roles to other accounts."
         },
         "fullyImplemented": false,
-        "id": 2186,
+        "id": 1459,
         "linearizedBaseContracts": [
-          2186,
-          2144
+          1459,
+          1380
         ],
         "name": "IEtherealCharacter",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "documentation": {
-              "id": 2152,
+              "id": 1388,
               "nodeType": "StructuredDocumentation",
-              "src": "854:83:6",
+              "src": "846:55:3",
+              "text": " @dev Character extra metadata tables"
+            },
+            "functionSelector": "4e39cafc",
+            "id": 1395,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "characterBaseMetadata",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1391,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1390,
+                  "mutability": "mutable",
+                  "name": "_tokenId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1395,
+                  "src": "938:16:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1389,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "938:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "937:18:3"
+            },
+            "returnParameters": {
+              "id": 1394,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1393,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1395,
+                  "src": "978:28:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_CharacterBaseMetadata_$1330_memory_ptr",
+                    "typeString": "struct IEtherealBase.CharacterBaseMetadata"
+                  },
+                  "typeName": {
+                    "id": 1392,
+                    "name": "CharacterBaseMetadata",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 1330,
+                    "src": "978:21:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_CharacterBaseMetadata_$1330_storage_ptr",
+                      "typeString": "struct IEtherealBase.CharacterBaseMetadata"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "977:30:3"
+            },
+            "scope": 1459,
+            "src": "907:101:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "eeff53f0",
+            "id": 1402,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "characterPhysicalMetadata",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1398,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1397,
+                  "mutability": "mutable",
+                  "name": "_tokenId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1402,
+                  "src": "1049:16:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1396,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1049:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1048:18:3"
+            },
+            "returnParameters": {
+              "id": 1401,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1400,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1402,
+                  "src": "1089:32:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_CharacterPhysicalMetadata_$1343_memory_ptr",
+                    "typeString": "struct IEtherealBase.CharacterPhysicalMetadata"
+                  },
+                  "typeName": {
+                    "id": 1399,
+                    "name": "CharacterPhysicalMetadata",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 1343,
+                    "src": "1089:25:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_CharacterPhysicalMetadata_$1343_storage_ptr",
+                      "typeString": "struct IEtherealBase.CharacterPhysicalMetadata"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1088:34:3"
+            },
+            "scope": 1459,
+            "src": "1014:109:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "e1d65d7f",
+            "id": 1409,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "characterAttributesMetadata",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1405,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1404,
+                  "mutability": "mutable",
+                  "name": "_tokenId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1409,
+                  "src": "1166:16:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1403,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1166:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1165:18:3"
+            },
+            "returnParameters": {
+              "id": 1408,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1407,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1409,
+                  "src": "1206:34:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_CharacterAttributesMetadata_$1360_memory_ptr",
+                    "typeString": "struct IEtherealBase.CharacterAttributesMetadata"
+                  },
+                  "typeName": {
+                    "id": 1406,
+                    "name": "CharacterAttributesMetadata",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 1360,
+                    "src": "1206:27:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_CharacterAttributesMetadata_$1360_storage_ptr",
+                      "typeString": "struct IEtherealBase.CharacterAttributesMetadata"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1205:36:3"
+            },
+            "scope": 1459,
+            "src": "1129:113:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "bbaaa478",
+            "id": 1416,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "characterNameExists",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1412,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1411,
+                  "mutability": "mutable",
+                  "name": "_tokenId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1416,
+                  "src": "1277:16:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1410,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1277:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1276:18:3"
+            },
+            "returnParameters": {
+              "id": 1415,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1414,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1416,
+                  "src": "1317:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1413,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1317:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1316:6:3"
+            },
+            "scope": 1459,
+            "src": "1248:75:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 1417,
+              "nodeType": "StructuredDocumentation",
+              "src": "1335:83:3",
               "text": " @dev External function to set the base URI for all token IDs. "
             },
             "functionSelector": "55f804b3",
-            "id": 2157,
+            "id": 1422,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "setBaseURI",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2155,
+              "id": 1420,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2154,
+                  "id": 1419,
                   "mutability": "mutable",
                   "name": "_baseURI",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2157,
-                  "src": "963:22:6",
+                  "scope": 1422,
+                  "src": "1444:22:3",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -303,10 +828,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 2153,
+                    "id": 1418,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "963:6:6",
+                    "src": "1444:6:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -315,46 +840,46 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "962:24:6"
+              "src": "1443:24:3"
             },
             "returnParameters": {
-              "id": 2156,
+              "id": 1421,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "995:0:6"
+              "src": "1476:0:3"
             },
-            "scope": 2186,
-            "src": "943:53:6",
+            "scope": 1459,
+            "src": "1424:53:3",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
             "documentation": {
-              "id": 2158,
+              "id": 1423,
               "nodeType": "StructuredDocumentation",
-              "src": "1004:374:6",
+              "src": "1485:374:3",
               "text": " @dev Creates a new token for `to`. Its token ID will be automatically\n assigned (and available on the emitted {IERC721-Transfer} event), and the token\n URI autogenerated based on the base URI passed at construction.\n See {ERC721-_mint}.\n Requirements:\n - the caller must have the `MINTER_ROLE`."
             },
             "functionSelector": "af3ca093",
-            "id": 2171,
+            "id": 1436,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "mint",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2167,
+              "id": 1432,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2160,
+                  "id": 1425,
                   "mutability": "mutable",
                   "name": "to",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2171,
-                  "src": "1406:10:6",
+                  "scope": 1436,
+                  "src": "1887:10:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -362,10 +887,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2159,
+                    "id": 1424,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1406:7:6",
+                    "src": "1887:7:3",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -376,26 +901,26 @@
                 },
                 {
                   "constant": false,
-                  "id": 2162,
+                  "id": 1427,
                   "mutability": "mutable",
                   "name": "extraBaseMetaData",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2171,
-                  "src": "1425:46:6",
+                  "scope": 1436,
+                  "src": "1906:46:3",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_CharacterBaseMetadata_$2094_memory_ptr",
+                    "typeIdentifier": "t_struct$_CharacterBaseMetadata_$1330_memory_ptr",
                     "typeString": "struct IEtherealBase.CharacterBaseMetadata"
                   },
                   "typeName": {
-                    "id": 2161,
+                    "id": 1426,
                     "name": "CharacterBaseMetadata",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 2094,
-                    "src": "1425:21:6",
+                    "referencedDeclaration": 1330,
+                    "src": "1906:21:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_CharacterBaseMetadata_$2094_storage_ptr",
+                      "typeIdentifier": "t_struct$_CharacterBaseMetadata_$1330_storage_ptr",
                       "typeString": "struct IEtherealBase.CharacterBaseMetadata"
                     }
                   },
@@ -403,26 +928,26 @@
                 },
                 {
                   "constant": false,
-                  "id": 2164,
+                  "id": 1429,
                   "mutability": "mutable",
                   "name": "extraPhysicalMetaData",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2171,
-                  "src": "1480:54:6",
+                  "scope": 1436,
+                  "src": "1961:54:3",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_CharacterPhysicalMetadata_$2107_memory_ptr",
+                    "typeIdentifier": "t_struct$_CharacterPhysicalMetadata_$1343_memory_ptr",
                     "typeString": "struct IEtherealBase.CharacterPhysicalMetadata"
                   },
                   "typeName": {
-                    "id": 2163,
+                    "id": 1428,
                     "name": "CharacterPhysicalMetadata",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 2107,
-                    "src": "1480:25:6",
+                    "referencedDeclaration": 1343,
+                    "src": "1961:25:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_CharacterPhysicalMetadata_$2107_storage_ptr",
+                      "typeIdentifier": "t_struct$_CharacterPhysicalMetadata_$1343_storage_ptr",
                       "typeString": "struct IEtherealBase.CharacterPhysicalMetadata"
                     }
                   },
@@ -430,46 +955,46 @@
                 },
                 {
                   "constant": false,
-                  "id": 2166,
+                  "id": 1431,
                   "mutability": "mutable",
                   "name": "extraAbilitiesMetaData",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2171,
-                  "src": "1543:57:6",
+                  "scope": 1436,
+                  "src": "2024:57:3",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_CharacterAttributesMetadata_$2124_memory_ptr",
+                    "typeIdentifier": "t_struct$_CharacterAttributesMetadata_$1360_memory_ptr",
                     "typeString": "struct IEtherealBase.CharacterAttributesMetadata"
                   },
                   "typeName": {
-                    "id": 2165,
+                    "id": 1430,
                     "name": "CharacterAttributesMetadata",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 2124,
-                    "src": "1543:27:6",
+                    "referencedDeclaration": 1360,
+                    "src": "2024:27:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_CharacterAttributesMetadata_$2124_storage_ptr",
+                      "typeIdentifier": "t_struct$_CharacterAttributesMetadata_$1360_storage_ptr",
                       "typeString": "struct IEtherealBase.CharacterAttributesMetadata"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "1397:210:6"
+              "src": "1878:210:3"
             },
             "returnParameters": {
-              "id": 2170,
+              "id": 1435,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2169,
+                  "id": 1434,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2171,
-                  "src": "1644:7:6",
+                  "scope": 1436,
+                  "src": "2125:7:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -477,10 +1002,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2168,
+                    "id": 1433,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1644:7:6",
+                    "src": "2125:7:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -489,40 +1014,40 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1643:9:6"
+              "src": "2124:9:3"
             },
-            "scope": 2186,
-            "src": "1384:269:6",
+            "scope": 1459,
+            "src": "1865:269:3",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
             "documentation": {
-              "id": 2172,
+              "id": 1437,
               "nodeType": "StructuredDocumentation",
-              "src": "1661:168:6",
+              "src": "2142:168:3",
               "text": " @dev Burns `tokenId`. See {ERC721-_burn}.\n Requirements:\n - The caller must own `tokenId` or be an approved operator."
             },
             "functionSelector": "42966c68",
-            "id": 2177,
+            "id": 1442,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "burn",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2175,
+              "id": 1440,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2174,
+                  "id": 1439,
                   "mutability": "mutable",
                   "name": "tokenId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2177,
-                  "src": "1849:15:6",
+                  "scope": 1442,
+                  "src": "2330:15:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -530,10 +1055,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2173,
+                    "id": 1438,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1849:7:6",
+                    "src": "2330:7:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -542,100 +1067,187 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1848:17:6"
+              "src": "2329:17:3"
             },
             "returnParameters": {
-              "id": 2176,
+              "id": 1441,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1874:0:6"
+              "src": "2355:0:3"
             },
-            "scope": 2186,
-            "src": "1835:40:6",
+            "scope": 1459,
+            "src": "2316:40:3",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
             "documentation": {
-              "id": 2178,
+              "id": 1443,
               "nodeType": "StructuredDocumentation",
-              "src": "1883:201:6",
+              "src": "2364:201:3",
               "text": " @dev Pauses all token transfers.\n See {ERC721Pausable} and {Pausable-_pause}.\n Requirements:\n - the caller must have the `PAUSER_ROLE`."
             },
             "functionSelector": "8456cb59",
-            "id": 2181,
+            "id": 1446,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "pause",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2179,
+              "id": 1444,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2104:2:6"
+              "src": "2585:2:3"
             },
             "returnParameters": {
-              "id": 2180,
+              "id": 1445,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2115:0:6"
+              "src": "2596:0:3"
             },
-            "scope": 2186,
-            "src": "2090:26:6",
+            "scope": 1459,
+            "src": "2571:26:3",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
             "documentation": {
-              "id": 2182,
+              "id": 1447,
               "nodeType": "StructuredDocumentation",
-              "src": "2124:205:6",
+              "src": "2605:205:3",
               "text": " @dev Unpauses all token transfers.\n See {ERC721Pausable} and {Pausable-_unpause}.\n Requirements:\n - the caller must have the `PAUSER_ROLE`."
             },
             "functionSelector": "3f4ba83a",
-            "id": 2185,
+            "id": 1450,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "unpause",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2183,
+              "id": 1448,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2351:2:6"
+              "src": "2832:2:3"
             },
             "returnParameters": {
-              "id": 2184,
+              "id": 1449,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2362:0:6"
+              "src": "2843:0:3"
             },
-            "scope": 2186,
-            "src": "2335:28:6",
+            "scope": 1459,
+            "src": "2816:28:3",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 1451,
+              "nodeType": "StructuredDocumentation",
+              "src": "2852:48:3",
+              "text": " @dev See {IERC721-ownerOf}."
+            },
+            "functionSelector": "6352211e",
+            "id": 1458,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "ownerOf",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1454,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1453,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1458,
+                  "src": "2923:15:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1452,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2923:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2922:17:3"
+            },
+            "returnParameters": {
+              "id": 1457,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1456,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1458,
+                  "src": "2958:7:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1455,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2958:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2957:9:3"
+            },
+            "scope": 1459,
+            "src": "2906:61:3",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 2187,
-        "src": "793:1575:6"
+        "scope": 1460,
+        "src": "793:2179:3"
       }
     ],
-    "src": "33:2335:6"
+    "src": "33:2939:3"
   },
   "legacyAST": {
     "attributes": {
       "absolutePath": "/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealCharacter.sol",
       "exportedSymbols": {
         "IEtherealBase": [
-          2144
+          1380
         ],
         "IEtherealCharacter": [
-          2186
+          1459
         ]
       },
       "license": "MIT"
@@ -649,9 +1261,9 @@
             ".5"
           ]
         },
-        "id": 2146,
+        "id": 1382,
         "name": "PragmaDirective",
-        "src": "33:22:6"
+        "src": "33:22:3"
       },
       {
         "attributes": {
@@ -660,48 +1272,48 @@
             "v2"
           ]
         },
-        "id": 2147,
+        "id": 1383,
         "name": "PragmaDirective",
-        "src": "57:19:6"
+        "src": "57:19:3"
       },
       {
         "attributes": {
-          "SourceUnit": 2145,
+          "SourceUnit": 1381,
           "absolutePath": "/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealBase.sol",
           "file": "./IEtherealBase.sol",
-          "scope": 2187,
+          "scope": 1460,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 2148,
+        "id": 1384,
         "name": "ImportDirective",
-        "src": "78:29:6"
+        "src": "78:29:3"
       },
       {
         "attributes": {
           "abstract": false,
           "contractDependencies": [
-            2144
+            1380
           ],
           "contractKind": "interface",
           "fullyImplemented": false,
           "linearizedBaseContracts": [
-            2186,
-            2144
+            1459,
+            1380
           ],
           "name": "IEtherealCharacter",
-          "scope": 2187
+          "scope": 1460
         },
         "children": [
           {
             "attributes": {
               "text": " @dev {ERC721} token, including:\n  - ability for holders to burn (destroy) their tokens\n  - a minter role that allows for token minting (creation)\n  - a pauser role that allows to stop all token transfers\n  - token ID and URI autogeneration\n  - includes extra properties to store important metadata\n This contract uses {AccessControl} to lock permissioned functions using the\n different roles - head to its documentation for details.\n The account that deploys the contract will be granted the minter and pauser\n roles, as well as the default admin role, which will let it grant both minter\n and pauser roles to other accounts."
             },
-            "id": 2149,
+            "id": 1385,
             "name": "StructuredDocumentation",
-            "src": "111:680:6"
+            "src": "111:680:3"
           },
           {
             "attributes": {},
@@ -709,17 +1321,376 @@
               {
                 "attributes": {
                   "name": "IEtherealBase",
-                  "referencedDeclaration": 2144,
+                  "referencedDeclaration": 1380,
                   "type": "contract IEtherealBase"
                 },
-                "id": 2150,
+                "id": 1386,
                 "name": "UserDefinedTypeName",
-                "src": "825:13:6"
+                "src": "825:13:3"
               }
             ],
-            "id": 2151,
+            "id": 1387,
             "name": "InheritanceSpecifier",
-            "src": "825:13:6"
+            "src": "825:13:3"
+          },
+          {
+            "attributes": {
+              "functionSelector": "4e39cafc",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "characterBaseMetadata",
+              "scope": 1459,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @dev Character extra metadata tables"
+                },
+                "id": 1388,
+                "name": "StructuredDocumentation",
+                "src": "846:55:3"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_tokenId",
+                      "scope": 1395,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 1389,
+                        "name": "ElementaryTypeName",
+                        "src": "938:7:3"
+                      }
+                    ],
+                    "id": 1390,
+                    "name": "VariableDeclaration",
+                    "src": "938:16:3"
+                  }
+                ],
+                "id": 1391,
+                "name": "ParameterList",
+                "src": "937:18:3"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 1395,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "struct IEtherealBase.CharacterBaseMetadata",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "CharacterBaseMetadata",
+                          "referencedDeclaration": 1330,
+                          "type": "struct IEtherealBase.CharacterBaseMetadata"
+                        },
+                        "id": 1392,
+                        "name": "UserDefinedTypeName",
+                        "src": "978:21:3"
+                      }
+                    ],
+                    "id": 1393,
+                    "name": "VariableDeclaration",
+                    "src": "978:28:3"
+                  }
+                ],
+                "id": 1394,
+                "name": "ParameterList",
+                "src": "977:30:3"
+              }
+            ],
+            "id": 1395,
+            "name": "FunctionDefinition",
+            "src": "907:101:3"
+          },
+          {
+            "attributes": {
+              "functionSelector": "eeff53f0",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "characterPhysicalMetadata",
+              "scope": 1459,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_tokenId",
+                      "scope": 1402,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 1396,
+                        "name": "ElementaryTypeName",
+                        "src": "1049:7:3"
+                      }
+                    ],
+                    "id": 1397,
+                    "name": "VariableDeclaration",
+                    "src": "1049:16:3"
+                  }
+                ],
+                "id": 1398,
+                "name": "ParameterList",
+                "src": "1048:18:3"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 1402,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "struct IEtherealBase.CharacterPhysicalMetadata",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "CharacterPhysicalMetadata",
+                          "referencedDeclaration": 1343,
+                          "type": "struct IEtherealBase.CharacterPhysicalMetadata"
+                        },
+                        "id": 1399,
+                        "name": "UserDefinedTypeName",
+                        "src": "1089:25:3"
+                      }
+                    ],
+                    "id": 1400,
+                    "name": "VariableDeclaration",
+                    "src": "1089:32:3"
+                  }
+                ],
+                "id": 1401,
+                "name": "ParameterList",
+                "src": "1088:34:3"
+              }
+            ],
+            "id": 1402,
+            "name": "FunctionDefinition",
+            "src": "1014:109:3"
+          },
+          {
+            "attributes": {
+              "functionSelector": "e1d65d7f",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "characterAttributesMetadata",
+              "scope": 1459,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_tokenId",
+                      "scope": 1409,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 1403,
+                        "name": "ElementaryTypeName",
+                        "src": "1166:7:3"
+                      }
+                    ],
+                    "id": 1404,
+                    "name": "VariableDeclaration",
+                    "src": "1166:16:3"
+                  }
+                ],
+                "id": 1405,
+                "name": "ParameterList",
+                "src": "1165:18:3"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 1409,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "struct IEtherealBase.CharacterAttributesMetadata",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "CharacterAttributesMetadata",
+                          "referencedDeclaration": 1360,
+                          "type": "struct IEtherealBase.CharacterAttributesMetadata"
+                        },
+                        "id": 1406,
+                        "name": "UserDefinedTypeName",
+                        "src": "1206:27:3"
+                      }
+                    ],
+                    "id": 1407,
+                    "name": "VariableDeclaration",
+                    "src": "1206:34:3"
+                  }
+                ],
+                "id": 1408,
+                "name": "ParameterList",
+                "src": "1205:36:3"
+              }
+            ],
+            "id": 1409,
+            "name": "FunctionDefinition",
+            "src": "1129:113:3"
+          },
+          {
+            "attributes": {
+              "functionSelector": "bbaaa478",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "characterNameExists",
+              "scope": 1459,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_tokenId",
+                      "scope": 1416,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 1410,
+                        "name": "ElementaryTypeName",
+                        "src": "1277:7:3"
+                      }
+                    ],
+                    "id": 1411,
+                    "name": "VariableDeclaration",
+                    "src": "1277:16:3"
+                  }
+                ],
+                "id": 1412,
+                "name": "ParameterList",
+                "src": "1276:18:3"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 1416,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 1413,
+                        "name": "ElementaryTypeName",
+                        "src": "1317:4:3"
+                      }
+                    ],
+                    "id": 1414,
+                    "name": "VariableDeclaration",
+                    "src": "1317:4:3"
+                  }
+                ],
+                "id": 1415,
+                "name": "ParameterList",
+                "src": "1316:6:3"
+              }
+            ],
+            "id": 1416,
+            "name": "FunctionDefinition",
+            "src": "1248:75:3"
           },
           {
             "attributes": {
@@ -731,7 +1702,7 @@
                 null
               ],
               "name": "setBaseURI",
-              "scope": 2186,
+              "scope": 1459,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "external"
@@ -741,9 +1712,9 @@
                 "attributes": {
                   "text": " @dev External function to set the base URI for all token IDs. "
                 },
-                "id": 2152,
+                "id": 1417,
                 "name": "StructuredDocumentation",
-                "src": "854:83:6"
+                "src": "1335:83:3"
               },
               {
                 "children": [
@@ -752,7 +1723,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "_baseURI",
-                      "scope": 2157,
+                      "scope": 1422,
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "type": "string",
@@ -764,19 +1735,19 @@
                           "name": "string",
                           "type": "string"
                         },
-                        "id": 2153,
+                        "id": 1418,
                         "name": "ElementaryTypeName",
-                        "src": "963:6:6"
+                        "src": "1444:6:3"
                       }
                     ],
-                    "id": 2154,
+                    "id": 1419,
                     "name": "VariableDeclaration",
-                    "src": "963:22:6"
+                    "src": "1444:22:3"
                   }
                 ],
-                "id": 2155,
+                "id": 1420,
                 "name": "ParameterList",
-                "src": "962:24:6"
+                "src": "1443:24:3"
               },
               {
                 "attributes": {
@@ -785,14 +1756,14 @@
                   ]
                 },
                 "children": [],
-                "id": 2156,
+                "id": 1421,
                 "name": "ParameterList",
-                "src": "995:0:6"
+                "src": "1476:0:3"
               }
             ],
-            "id": 2157,
+            "id": 1422,
             "name": "FunctionDefinition",
-            "src": "943:53:6"
+            "src": "1424:53:3"
           },
           {
             "attributes": {
@@ -804,7 +1775,7 @@
                 null
               ],
               "name": "mint",
-              "scope": 2186,
+              "scope": 1459,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "external"
@@ -814,9 +1785,9 @@
                 "attributes": {
                   "text": " @dev Creates a new token for `to`. Its token ID will be automatically\n assigned (and available on the emitted {IERC721-Transfer} event), and the token\n URI autogenerated based on the base URI passed at construction.\n See {ERC721-_mint}.\n Requirements:\n - the caller must have the `MINTER_ROLE`."
                 },
-                "id": 2158,
+                "id": 1423,
                 "name": "StructuredDocumentation",
-                "src": "1004:374:6"
+                "src": "1485:374:3"
               },
               {
                 "children": [
@@ -825,7 +1796,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "to",
-                      "scope": 2171,
+                      "scope": 1436,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -838,21 +1809,21 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 2159,
+                        "id": 1424,
                         "name": "ElementaryTypeName",
-                        "src": "1406:7:6"
+                        "src": "1887:7:3"
                       }
                     ],
-                    "id": 2160,
+                    "id": 1425,
                     "name": "VariableDeclaration",
-                    "src": "1406:10:6"
+                    "src": "1887:10:3"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "mutability": "mutable",
                       "name": "extraBaseMetaData",
-                      "scope": 2171,
+                      "scope": 1436,
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "type": "struct IEtherealBase.CharacterBaseMetadata",
@@ -862,24 +1833,24 @@
                       {
                         "attributes": {
                           "name": "CharacterBaseMetadata",
-                          "referencedDeclaration": 2094,
+                          "referencedDeclaration": 1330,
                           "type": "struct IEtherealBase.CharacterBaseMetadata"
                         },
-                        "id": 2161,
+                        "id": 1426,
                         "name": "UserDefinedTypeName",
-                        "src": "1425:21:6"
+                        "src": "1906:21:3"
                       }
                     ],
-                    "id": 2162,
+                    "id": 1427,
                     "name": "VariableDeclaration",
-                    "src": "1425:46:6"
+                    "src": "1906:46:3"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "mutability": "mutable",
                       "name": "extraPhysicalMetaData",
-                      "scope": 2171,
+                      "scope": 1436,
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "type": "struct IEtherealBase.CharacterPhysicalMetadata",
@@ -889,24 +1860,24 @@
                       {
                         "attributes": {
                           "name": "CharacterPhysicalMetadata",
-                          "referencedDeclaration": 2107,
+                          "referencedDeclaration": 1343,
                           "type": "struct IEtherealBase.CharacterPhysicalMetadata"
                         },
-                        "id": 2163,
+                        "id": 1428,
                         "name": "UserDefinedTypeName",
-                        "src": "1480:25:6"
+                        "src": "1961:25:3"
                       }
                     ],
-                    "id": 2164,
+                    "id": 1429,
                     "name": "VariableDeclaration",
-                    "src": "1480:54:6"
+                    "src": "1961:54:3"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "mutability": "mutable",
                       "name": "extraAbilitiesMetaData",
-                      "scope": 2171,
+                      "scope": 1436,
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "type": "struct IEtherealBase.CharacterAttributesMetadata",
@@ -916,22 +1887,22 @@
                       {
                         "attributes": {
                           "name": "CharacterAttributesMetadata",
-                          "referencedDeclaration": 2124,
+                          "referencedDeclaration": 1360,
                           "type": "struct IEtherealBase.CharacterAttributesMetadata"
                         },
-                        "id": 2165,
+                        "id": 1430,
                         "name": "UserDefinedTypeName",
-                        "src": "1543:27:6"
+                        "src": "2024:27:3"
                       }
                     ],
-                    "id": 2166,
+                    "id": 1431,
                     "name": "VariableDeclaration",
-                    "src": "1543:57:6"
+                    "src": "2024:57:3"
                   }
                 ],
-                "id": 2167,
+                "id": 1432,
                 "name": "ParameterList",
-                "src": "1397:210:6"
+                "src": "1878:210:3"
               },
               {
                 "children": [
@@ -940,7 +1911,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "",
-                      "scope": 2171,
+                      "scope": 1436,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -952,24 +1923,24 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 2168,
+                        "id": 1433,
                         "name": "ElementaryTypeName",
-                        "src": "1644:7:6"
+                        "src": "2125:7:3"
                       }
                     ],
-                    "id": 2169,
+                    "id": 1434,
                     "name": "VariableDeclaration",
-                    "src": "1644:7:6"
+                    "src": "2125:7:3"
                   }
                 ],
-                "id": 2170,
+                "id": 1435,
                 "name": "ParameterList",
-                "src": "1643:9:6"
+                "src": "2124:9:3"
               }
             ],
-            "id": 2171,
+            "id": 1436,
             "name": "FunctionDefinition",
-            "src": "1384:269:6"
+            "src": "1865:269:3"
           },
           {
             "attributes": {
@@ -981,7 +1952,7 @@
                 null
               ],
               "name": "burn",
-              "scope": 2186,
+              "scope": 1459,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "external"
@@ -991,9 +1962,9 @@
                 "attributes": {
                   "text": " @dev Burns `tokenId`. See {ERC721-_burn}.\n Requirements:\n - The caller must own `tokenId` or be an approved operator."
                 },
-                "id": 2172,
+                "id": 1437,
                 "name": "StructuredDocumentation",
-                "src": "1661:168:6"
+                "src": "2142:168:3"
               },
               {
                 "children": [
@@ -1002,7 +1973,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "tokenId",
-                      "scope": 2177,
+                      "scope": 1442,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -1014,19 +1985,19 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 2173,
+                        "id": 1438,
                         "name": "ElementaryTypeName",
-                        "src": "1849:7:6"
+                        "src": "2330:7:3"
                       }
                     ],
-                    "id": 2174,
+                    "id": 1439,
                     "name": "VariableDeclaration",
-                    "src": "1849:15:6"
+                    "src": "2330:15:3"
                   }
                 ],
-                "id": 2175,
+                "id": 1440,
                 "name": "ParameterList",
-                "src": "1848:17:6"
+                "src": "2329:17:3"
               },
               {
                 "attributes": {
@@ -1035,14 +2006,14 @@
                   ]
                 },
                 "children": [],
-                "id": 2176,
+                "id": 1441,
                 "name": "ParameterList",
-                "src": "1874:0:6"
+                "src": "2355:0:3"
               }
             ],
-            "id": 2177,
+            "id": 1442,
             "name": "FunctionDefinition",
-            "src": "1835:40:6"
+            "src": "2316:40:3"
           },
           {
             "attributes": {
@@ -1054,7 +2025,7 @@
                 null
               ],
               "name": "pause",
-              "scope": 2186,
+              "scope": 1459,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "external"
@@ -1064,9 +2035,9 @@
                 "attributes": {
                   "text": " @dev Pauses all token transfers.\n See {ERC721Pausable} and {Pausable-_pause}.\n Requirements:\n - the caller must have the `PAUSER_ROLE`."
                 },
-                "id": 2178,
+                "id": 1443,
                 "name": "StructuredDocumentation",
-                "src": "1883:201:6"
+                "src": "2364:201:3"
               },
               {
                 "attributes": {
@@ -1075,9 +2046,9 @@
                   ]
                 },
                 "children": [],
-                "id": 2179,
+                "id": 1444,
                 "name": "ParameterList",
-                "src": "2104:2:6"
+                "src": "2585:2:3"
               },
               {
                 "attributes": {
@@ -1086,14 +2057,14 @@
                   ]
                 },
                 "children": [],
-                "id": 2180,
+                "id": 1445,
                 "name": "ParameterList",
-                "src": "2115:0:6"
+                "src": "2596:0:3"
               }
             ],
-            "id": 2181,
+            "id": 1446,
             "name": "FunctionDefinition",
-            "src": "2090:26:6"
+            "src": "2571:26:3"
           },
           {
             "attributes": {
@@ -1105,7 +2076,7 @@
                 null
               ],
               "name": "unpause",
-              "scope": 2186,
+              "scope": 1459,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "external"
@@ -1115,9 +2086,9 @@
                 "attributes": {
                   "text": " @dev Unpauses all token transfers.\n See {ERC721Pausable} and {Pausable-_unpause}.\n Requirements:\n - the caller must have the `PAUSER_ROLE`."
                 },
-                "id": 2182,
+                "id": 1447,
                 "name": "StructuredDocumentation",
-                "src": "2124:205:6"
+                "src": "2605:205:3"
               },
               {
                 "attributes": {
@@ -1126,9 +2097,9 @@
                   ]
                 },
                 "children": [],
-                "id": 2183,
+                "id": 1448,
                 "name": "ParameterList",
-                "src": "2351:2:6"
+                "src": "2832:2:3"
               },
               {
                 "attributes": {
@@ -1137,24 +2108,120 @@
                   ]
                 },
                 "children": [],
-                "id": 2184,
+                "id": 1449,
                 "name": "ParameterList",
-                "src": "2362:0:6"
+                "src": "2843:0:3"
               }
             ],
-            "id": 2185,
+            "id": 1450,
             "name": "FunctionDefinition",
-            "src": "2335:28:6"
+            "src": "2816:28:3"
+          },
+          {
+            "attributes": {
+              "functionSelector": "6352211e",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "ownerOf",
+              "scope": 1459,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @dev See {IERC721-ownerOf}."
+                },
+                "id": 1451,
+                "name": "StructuredDocumentation",
+                "src": "2852:48:3"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "tokenId",
+                      "scope": 1458,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 1452,
+                        "name": "ElementaryTypeName",
+                        "src": "2923:7:3"
+                      }
+                    ],
+                    "id": 1453,
+                    "name": "VariableDeclaration",
+                    "src": "2923:15:3"
+                  }
+                ],
+                "id": 1454,
+                "name": "ParameterList",
+                "src": "2922:17:3"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 1458,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1455,
+                        "name": "ElementaryTypeName",
+                        "src": "2958:7:3"
+                      }
+                    ],
+                    "id": 1456,
+                    "name": "VariableDeclaration",
+                    "src": "2958:7:3"
+                  }
+                ],
+                "id": 1457,
+                "name": "ParameterList",
+                "src": "2957:9:3"
+              }
+            ],
+            "id": 1458,
+            "name": "FunctionDefinition",
+            "src": "2906:61:3"
           }
         ],
-        "id": 2186,
+        "id": 1459,
         "name": "ContractDefinition",
-        "src": "793:1575:6"
+        "src": "793:2179:3"
       }
     ],
-    "id": 2187,
+    "id": 1460,
     "name": "SourceUnit",
-    "src": "33:2335:6"
+    "src": "33:2939:3"
   },
   "compiler": {
     "name": "solc",
@@ -1162,7 +2229,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.3",
-  "updatedAt": "2021-02-16T06:27:27.967Z",
+  "updatedAt": "2021-02-16T08:06:43.495Z",
   "devdoc": {
     "details": "{ERC721} token, including:  - ability for holders to burn (destroy) their tokens  - a minter role that allows for token minting (creation)  - a pauser role that allows to stop all token transfers  - token ID and URI autogeneration  - includes extra properties to store important metadata This contract uses {AccessControl} to lock permissioned functions using the different roles - head to its documentation for details. The account that deploys the contract will be granted the minter and pauser roles, as well as the default admin role, which will let it grant both minter and pauser roles to other accounts.",
     "kind": "dev",
@@ -1170,8 +2237,14 @@
       "burn(uint256)": {
         "details": "Burns `tokenId`. See {ERC721-_burn}. Requirements: - The caller must own `tokenId` or be an approved operator."
       },
+      "characterBaseMetadata(uint256)": {
+        "details": "Character extra metadata tables"
+      },
       "mint(address,(bytes32,bytes24,string,uint256,uint8),(uint24,uint24,uint24,uint16,uint16,uint8),(uint8,uint8,uint8,uint8,uint8,uint8,uint8,uint8))": {
         "details": "Creates a new token for `to`. Its token ID will be automatically assigned (and available on the emitted {IERC721-Transfer} event), and the token URI autogenerated based on the base URI passed at construction. See {ERC721-_mint}. Requirements: - the caller must have the `MINTER_ROLE`."
+      },
+      "ownerOf(uint256)": {
+        "details": "See {IERC721-ownerOf}."
       },
       "pause()": {
         "details": "Pauses all token transfers. See {ERC721Pausable} and {Pausable-_pause}. Requirements: - the caller must have the `PAUSER_ROLE`."

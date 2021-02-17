@@ -56,6 +56,8 @@ interface IEtherealBase {
       uint8 speed;
       uint8 luck;
       uint8 spirit;
+      uint8 level;
+      uint8 extraSkillsPoints;
     }
 
 

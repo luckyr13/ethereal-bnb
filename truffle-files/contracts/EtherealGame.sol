@@ -45,8 +45,11 @@ contract EtherealGame is Context, AccessControl, IEtherealBase
     bool pending;
     bool win;
     bool loss;
+    bool tie;
     uint256 expirationDate;
   }
+
+
   
   // Player role to improve access control
   bytes32 public constant PLAYER_ROLE = keccak256("PLAYER_ROLE");
@@ -228,16 +231,33 @@ contract EtherealGame is Context, AccessControl, IEtherealBase
   }
 
   /*
+  * @dev Returns the Sum of skills points on Metadata object
+  */
+  function _sumSkillsPoints(CharacterAttributesMetadata memory extraAbilitiesMetaData)
+    private
+    pure
+    returns (uint32)
+  {
+    uint32 res = extraAbilitiesMetaData.life.add(
+      extraAbilitiesMetaData.armor.add(
+        extraAbilitiesMetaData.strength
+      )
+    );
+    res = res.add(
+      extraAbilitiesMetaData.speed.add(
+        extraAbilitiesMetaData.luck.add(
+          extraAbilitiesMetaData.spirit
+        )
+      )
+    );
+
+    return res;
+  }
+
+  /*
   * @dev Create a new character
   *
-  * CharacterBaseMetadata {
-  *    bytes32 name;
-  *    bytes24 birthdate;
-  *    string description;
-  *    uint256 planetId;
-  *    uint8 genre;
-  *  }
-  *
+  * - Only 10pts for skills (abilities) can be assigned on creation 
   */
   function _createCharacter(
     // BaseMetadata
@@ -250,6 +270,10 @@ contract EtherealGame is Context, AccessControl, IEtherealBase
     private
     returns (uint256)
   {
+    require(_sumSkillsPoints(extraAbilitiesMetaData) == 10, "The sum of skills points must be equal to 10");
+    extraAbilitiesMetaData.level = 1;
+    extraAbilitiesMetaData.extraSkillsPoints = 0;
+
     IEtherealCharacter CharacterContract = IEtherealCharacter(characterContract);
     uint256 characterId = CharacterContract.mint(
       _msgSender(),
@@ -300,7 +324,7 @@ contract EtherealGame is Context, AccessControl, IEtherealBase
 
     // Initialize as true only the "pending" flag
     fightRequests[_contender].push(FightRequest(
-        _msgSender(), _characterId, 0, false, false, true, false, false,
+        _msgSender(), _characterId, 0, false, false, true, false, false, false,
         block.timestamp + 15 minutes
       ));
     totalFightRequests[_contender] = fightRequests[_contender].length;
@@ -310,9 +334,11 @@ contract EtherealGame is Context, AccessControl, IEtherealBase
 
   /*
   * @dev Accept fight
+  * Returns contender Character Id
   */
   function _acceptFight(uint256 _fightRequestId, uint256 _myCharacterId)
     private
+    returns (uint256)
   {
     require(
       _fightRequestId < totalFightRequests[_msgSender()],
@@ -334,7 +360,7 @@ contract EtherealGame is Context, AccessControl, IEtherealBase
     require(
       IBEP20(kopernikTokenContract).allowance(
         fightRequests[_msgSender()][_fightRequestId].contender, address(this)
-      ) >= 1, "Not enough tokens allowed to use"
+      ) >= 100, "Not enough tokens allowed to use"
     );
     require(
       IEtherealCharacter(characterContract).ownerOf(_myCharacterId) == _msgSender(),
@@ -350,84 +376,81 @@ contract EtherealGame is Context, AccessControl, IEtherealBase
       fightRequests[_msgSender()][_fightRequestId].contender
     );
 
-    // FIGHT
-    uint256 winner;
-    uint8 prob;
-    (winner, prob) = _fight(_myCharacterId, fightRequests[_msgSender()][_fightRequestId].contenderCharacterId);
+    return fightRequests[_msgSender()][_fightRequestId].contenderCharacterId;
 
-    // IF PLAYER 1 WINS (IF I WIN)
-    if (winner == _myCharacterId) {
-
-    } else {
-
-    }
   }
 
+  /*
+  * @dev Probabilities of _ch1 winning against _ch2
+  */
+  function _probOfCh1DefeatingCh2(
+    CharacterAttributesMetadata memory _ch1,
+    CharacterAttributesMetadata memory _ch2
+  )
+    private
+    pure
+    returns(uint16)
+  {
+    uint16 probLife = (uint16(_ch1.life).mul(100)).div(uint16(_ch1.life).add(uint16(_ch2.life)));
+    uint16 probArmor = (uint16(_ch1.armor).mul(100)).div(uint16(_ch1.armor).add(uint16(_ch2.armor)));
+    uint16 probStrength = (uint16(_ch1.strength).mul(100)).div(uint16(_ch1.strength).add(uint16(_ch2.strength)));
+    uint16 probSpeed = (uint16(_ch1.speed).mul(100)).div(uint16(_ch1.speed).add(uint16(_ch2.speed)));
+    uint16 probLuck = (uint16(_ch1.luck).mul(100)).div(uint16(_ch1.luck).add(uint16(_ch2.luck)));
+    uint16 probSpirit = (uint16(_ch1.spirit).mul(100)).div(uint16(_ch1.spirit).add(uint16(_ch2.spirit)));
+    uint16 probLevel = (uint16(_ch1.level).mul(100)).div(uint16(_ch1.level).add(uint16(_ch2.level)));
+    // Sum all probabilities
+    uint16 probFinal = (
+      probLife.add(probArmor).add(probStrength)
+    ).div(3);
+    probFinal = (probFinal.add(probSpeed).add(probLuck)).div(3);
+    probFinal = (probFinal.add(probSpirit).add(probLevel)).div(3);
+
+    return probFinal;
+  }
 
   /*
   * @dev FIGHT!
   *   returns winner
   */
   function _fight(
-    uint256 _character1Id,
-    uint256 _character2Id
+    CharacterAttributesMetadata memory _ch1,
+    CharacterAttributesMetadata memory _ch2,
+    uint256 _myCharacterId,
+    uint256 _contenderId
   )
     private
     view
-    returns(uint256, uint8)
+    returns(uint256, uint16)
   {
-    CharacterAttributesMetadata memory _ch1 = IEtherealCharacter(characterContract).characterAttributesMetadata(_character1Id);
-    ElementOfNature p1_primaryElement = _ch1.primaryElement;
-    ElementOfNature p1_secondaryElement = _ch1.secondaryElement;
-    uint8 p1_life = _ch1.life;
-    uint8 p1_armor = _ch1.armor;
-    uint8 p1_strength = _ch1.strength;
-    uint8 p1_speed = _ch1.speed;
-    uint8 p1_luck = _ch1.luck;
-    uint8 p1_spirit = _ch1.spirit;
-
-    CharacterAttributesMetadata memory _ch2 = IEtherealCharacter(characterContract).characterAttributesMetadata(_character2Id);
-    ElementOfNature p2_primaryElement = _ch2.primaryElement;
-    ElementOfNature p2_secondaryElement = _ch2.secondaryElement;
-    uint8 p2_life = _ch2.life;
-    uint8 p2_armor = _ch2.armor;
-    uint8 p2_strength = _ch2.strength;
-    uint8 p2_speed = _ch2.speed;
-    uint8 p2_luck = _ch2.luck;
-    uint8 p2_spirit = _ch2.spirit;
-
-    uint8 probPrimaryElem1 = probabilityOfWinningAgainstElem[p1_primaryElement][p2_primaryElement];
-    uint8 probPrimaryElem2 = probabilityOfWinningAgainstElem[p1_primaryElement][p2_secondaryElement];
+    // Get elements probs from table
+    uint16 probPrimaryElem1 = probabilityOfWinningAgainstElem[_ch1.primaryElement][_ch2.primaryElement];
+    uint16 probPrimaryElem2 = probabilityOfWinningAgainstElem[_ch1.primaryElement][_ch2.secondaryElement];
+    uint16 probSecondaryElem1 = probabilityOfWinningAgainstElem[_ch1.secondaryElement][_ch2.primaryElement];
+    uint16 probSecondaryElem2 = probabilityOfWinningAgainstElem[_ch1.secondaryElement][_ch2.secondaryElement];
+  
+    // Sum abilities probabilitites
+    uint16 probFinal = _probOfCh1DefeatingCh2(_ch1, _ch2);
     
-    uint8 probSecondaryElem1 = probabilityOfWinningAgainstElem[p1_secondaryElement][p2_primaryElement];
-    uint8 probSecondaryElem2 = probabilityOfWinningAgainstElem[p1_secondaryElement][p2_secondaryElement];
-    
-    uint8 probFinalElements = (
-      probPrimaryElem1.add(probPrimaryElem2).add(probSecondaryElem1).add(probSecondaryElem2)
-    ).div(4);
+    // Add probabilities from Elements of Nature
+    probFinal = (
+      probFinal.add(probPrimaryElem1).add(probPrimaryElem2)
+    ).div(3);
+    probFinal = (
+      probFinal.add(probSecondaryElem1).add(probSecondaryElem2)
+    ).div(3);
 
-    uint8 probLife = p1_life > p2_life ? 100 : 0;
-    uint8 probArmor = p1_armor > p2_armor ? 100 : 0;
-    uint8 probStrength = p1_strength > p2_strength ? 100 : 0;
-    uint8 probSpeed = p1_speed > p2_speed ? 100 : 0;
-    uint8 probLuck = p1_luck > p2_luck ? 100 : 0;
-    uint8 probSpirit = p1_spirit > p2_spirit ? 100 : 0;
-    uint8 probFinal = (
-      probLife.add(probArmor).add(probStrength).add(probSpeed).add(probLuck).add(probSpirit).add(probFinalElements)
-    ).div(7);
-
-    uint256 winner = 0;
-    probFinal = probFinal % 100;
-
-    if (probFinal >= 49 && probFinal <= 51) {
-      winner = 0;
-    } else if (probFinal > 51) {
-      winner = _character1Id;
-    } else {
-      winner = _character2Id;
+    // Possible results
+    /*
+    * NOTE: Probably a PRNG would be more fun, but we need an Oracle!
+    */
+    if (probFinal >= 60) {
+      return (_myCharacterId, probFinal);
+    } else if (probFinal < 50) {
+      return (_contenderId, probFinal);
     }
 
-    return (winner, probFinal);
+    // Default (draw)
+    return (0, probFinal);
   }
 
 
@@ -481,6 +504,73 @@ contract EtherealGame is Context, AccessControl, IEtherealBase
     require(hasRole(PLAYER_ROLE, _msgSender()), "requestFight: must have player role");
     uint256 fightId = _requestFight(_contender, _characterId);
     return fightId;
+  }
+
+  /*
+  * @dev Accept request and FIGHT!
+  * returns Winner
+  */
+  function acceptFight(
+    uint256 _fightRequestId, uint256 _myCharacterId
+  )
+    public
+    isContractActive
+    returns (uint256, uint8)
+  {
+    require(hasRole(PLAYER_ROLE, _msgSender()), "acceptFight: must have player role");
+    // ACCEPT FIGHT
+    uint256 _contenderCharacterId = _acceptFight(_fightRequestId, _myCharacterId);
+
+    // FIGHT
+    uint256 winner;
+    uint16 prob;
+    uint8 newLevel;
+    CharacterAttributesMetadata memory _ch1 = IEtherealCharacter(characterContract).characterAttributesMetadata(_myCharacterId);
+    CharacterAttributesMetadata memory _ch2 = IEtherealCharacter(characterContract).characterAttributesMetadata(_contenderCharacterId);
+    (winner, prob) = _fight(_ch1, _ch2, _myCharacterId, _contenderCharacterId);
+
+
+    // IF PLAYER 1 WINS (IF I WIN)
+    if (winner == _myCharacterId) {
+      // Upgrade Fight request status and winner
+      newLevel = IEtherealCharacter(characterContract).upgradeCharacter(_myCharacterId, 6);
+      fightRequests[_msgSender()][_fightRequestId].win = true;
+
+      // Send 1 KopernikToken to winner from loser
+      IBEP20(kopernikTokenContract).transferFrom(
+        //Sender
+        fightRequests[_msgSender()][_fightRequestId].contender,
+        // Recipient
+        _msgSender(),
+        // Amount
+        100  
+      );
+
+    } // TIE
+    else if(winner == 0) {
+      // Upgrade Fight request status
+      fightRequests[_msgSender()][_fightRequestId].tie = true;
+
+    } // ELSE PLAYER 2 WINS
+    else {
+      // Upgrade Fight request status and winner
+      newLevel = IEtherealCharacter(characterContract).upgradeCharacter(_contenderCharacterId, 4);
+      fightRequests[_msgSender()][_fightRequestId].loss = true;
+
+      // Send 1 KopernikToken to winner from loser
+      // Send 1 KopernikToken to winner from loser
+      IBEP20(kopernikTokenContract).transferFrom(
+        //Sender
+        _msgSender(),
+        // Recipient
+        fightRequests[_msgSender()][_fightRequestId].contender,
+        // Amount
+        100  
+      );
+    }
+
+    return (winner, newLevel);
+
   }
 
   /*

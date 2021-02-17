@@ -10,6 +10,8 @@ import "@openzeppelin/contracts/token/ERC721/ERC721Burnable.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721Pausable.sol";
 import '@openzeppelin/contracts/math/SafeMath.sol';
 import './IEtherealBase.sol';
+import './SafeMath8.sol';
+import './SafeMath32.sol';
 
 
 /**
@@ -30,6 +32,8 @@ import './IEtherealBase.sol';
  */
 contract EtherealCharacter is Context, AccessControl, ERC721Burnable, ERC721Pausable, IEtherealBase {
     using Counters for Counters.Counter;
+    using SafeMath8 for uint8;
+    using SafeMath32 for uint32;
 
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
     bytes32 public constant PAUSER_ROLE = keccak256("PAUSER_ROLE");
@@ -50,6 +54,8 @@ contract EtherealCharacter is Context, AccessControl, ERC721Burnable, ERC721Paus
      * @dev Emitted when `tokenId` token is transferred from `from` to `to`.
      */
     event NewBaseURI(string _baseURI);
+    event CharacterSkillsUpgrade(uint256 indexed _tokendId, uint8 _skillsPoints);
+    event CharacterLevelUpgrade(uint256 indexed _tokendId, uint8 _level);
 
     /**
      * @dev Grants `DEFAULT_ADMIN_ROLE`, `MINTER_ROLE` and `PAUSER_ROLE` to the
@@ -172,4 +178,80 @@ contract EtherealCharacter is Context, AccessControl, ERC721Burnable, ERC721Paus
     function _beforeTokenTransfer(address from, address to, uint256 tokenId) internal virtual override(ERC721, ERC721Pausable) {
         super._beforeTokenTransfer(from, to, tokenId);
     }
+
+    /*
+    * @dev Increase skills points
+    */
+    function _increaseCharacterSkillsPoints(
+      uint256 _tokenId,
+      uint8 _skillsPointsEarned
+    )
+      private
+    {
+      characterAttributesMetadata[_tokenId].extraSkillsPoints = characterAttributesMetadata[_tokenId].extraSkillsPoints.add(_skillsPointsEarned);
+      emit CharacterSkillsUpgrade(_tokenId, _skillsPointsEarned);
+    }
+
+    /*
+    * @dev Returns the Sum of skills points on Metadata object
+    */
+    function _sumSkillsPoints(CharacterAttributesMetadata memory extraAbilitiesMetaData)
+      private
+      pure
+      returns (uint32)
+    {
+      uint32 res = extraAbilitiesMetaData.life.add(
+        extraAbilitiesMetaData.armor.add(
+          extraAbilitiesMetaData.strength.add(
+              extraAbilitiesMetaData.extraSkillsPoints
+            )
+        )
+      );
+      res = res.add(
+        extraAbilitiesMetaData.speed.add(
+          extraAbilitiesMetaData.luck.add(
+            extraAbilitiesMetaData.spirit
+          )
+        )
+      );
+
+      return res;
+    }
+
+    /*
+    * @dev Upgrade character's level if all requirements are met
+    */
+    function _levelUpgrade(
+      uint256 _tokenId
+    )
+      private
+      returns (uint8)
+    {
+      uint8 newLevel = characterAttributesMetadata[_tokenId].level + 1;
+
+      if (_sumSkillsPoints(characterAttributesMetadata[_tokenId]) >= newLevel.mul(10)) {
+        characterAttributesMetadata[_tokenId].level = characterAttributesMetadata[_tokenId].level.add(1);
+        emit CharacterLevelUpgrade(_tokenId, newLevel);
+      }
+
+      return newLevel;
+    }
+
+    /*
+    * @dev Increase skills points and upgrade character level 
+    */
+    function upgradeCharacter(
+      uint256 _tokenId,
+      uint8 _skillsPointsEarned
+    )
+      external
+      returns (uint8)
+    {
+      require(hasRole(MINTER_ROLE, _msgSender()), "EtherealCharacter: must have minter role to mint");
+      _increaseCharacterSkillsPoints(_tokenId, _skillsPointsEarned);
+      uint8 newLevel = _levelUpgrade(_tokenId);
+      return newLevel;
+    }
+
+
 }

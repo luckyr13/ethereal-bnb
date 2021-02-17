@@ -89,4 +89,9 @@ interface IEtherealCharacter is IEtherealBase {
      */
     function ownerOf(uint256 tokenId) external returns (address);
 
+    /*
+    * @dev Upgrade character level and increase skills points
+    */
+    function upgradeCharacter(uint256 _tokenId, uint8 _skillsPointsEarned) external returns (uint8);
+
 }

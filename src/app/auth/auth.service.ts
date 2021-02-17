@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { WalletProviderService } from './wallet-provider.service';
+import { UserSettingsService } from './user-settings.service';
 
 @Injectable({
   providedIn: 'root'
@@ -7,8 +8,28 @@ import { WalletProviderService } from './wallet-provider.service';
 export class AuthService {
 
   constructor(
-  	private wps: WalletProviderService
+  	private wps: WalletProviderService,
+    private userSettings: UserSettingsService
   ) { }
+
+  async connectWalletAndSetListeners(option: string): Promise<string> {
+    try {
+      const res: any = await this.connectWallet(option);
+      const account = res.account;
+      const networkId = res.networkId;
+      const network = res.networkName;
+      // Set listeners 
+      this.setWalletChangeListeners();
+      this.userSettings.saveUserSettings(account, networkId, network, option);
+
+      return account;
+    } catch (err) {
+      this.userSettings.deleteUserSettings();
+      throw err;
+    }
+
+    return '';
+  }
 
   /*
   *	

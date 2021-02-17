@@ -13,6 +13,7 @@ export class MainToolbarComponent implements OnInit {
   @Input() drawer: any;
   account: string = 'Not detected';
   network: string = 'Not connected';
+  playerBalance: string = '0';
   walletImg: string = '';
 
   constructor(
@@ -53,6 +54,14 @@ export class MainToolbarComponent implements OnInit {
         default:
 
         break;
+      }
+    });
+
+    this.userSettings.playerBalance$.subscribe((playerBalance) => {
+      if (playerBalance != '') {
+        this.playerBalance = playerBalance;
+      } else {
+        this.playerBalance = '0';
       }
     });
     

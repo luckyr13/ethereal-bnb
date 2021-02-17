@@ -4,6 +4,8 @@ import {MatBottomSheet, MatBottomSheetRef} from '@angular/material/bottom-sheet'
 import { SelectWalletDialogComponent } from '../select-wallet-dialog/select-wallet-dialog.component';
 import { UserSettingsService } from '../auth/user-settings.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { KopernikTokenService } from '../contracts/KopernikToken.service';
+
 declare const window: any;
 
 @Component({
@@ -18,23 +20,30 @@ export class HomeComponent implements OnInit {
     private auth: AuthService,
     private _bottomSheet: MatBottomSheet,
     private userSettings: UserSettingsService,
-    private snackbar: MatSnackBar
+    private snackbar: MatSnackBar,
+    private kopernikToken: KopernikTokenService
   ) { }
 
 
   async connectWallet(option: string) {
     try {
-      const res: any = await this.auth.connectWallet(option);
-      const account = res.account;
-      const networkId = res.networkId;
-      const network = res.networkName;
-      this.auth.setWalletChangeListeners();
-      this.userSettings.saveUserSettings(account, networkId, network, option);
-      // this.message(`Welcome back!`, 'success');
+      const account = await this.auth.connectWalletAndSetListeners(option);
+      await this.getKoperniksBalance(account);
+      this.message(`Welcome!`, 'success');
     } catch (err) {
-      this.userSettings.deleteUserSettings();
       this.message(`${err}`, 'error');
     }
+  }
+
+  async getKoperniksBalance(account: string) {
+    let balance = 0;
+    try {
+      this.kopernikToken.init();
+      balance = await this.kopernikToken.getBalance(account);
+    } catch (err) {
+      throw err;
+    }
+    console.log('balance', balance);
   }
 
  
@@ -74,6 +83,11 @@ export class HomeComponent implements OnInit {
 
   openBottomSheet(): void {
     this._bottomSheet.open(SelectWalletDialogComponent);
+  }
+
+  logout(): void {
+    this.userSettings.deleteUserSettings();
+    window.location.reload();
   }
 
 }

@@ -117,6 +117,7 @@ contract EtherealCharacter is Context, AccessControl, ERC721Burnable, ERC721Paus
           "EtherealCharacter: name already taken by another user :) Choose another one!"
         );
 
+
         // We cannot just use balanceOf to create the new tokenId because tokens
         // can be burned (destroyed), so we need a separate counter.
         uint256 currentTokenId = _tokenIdTracker.current();

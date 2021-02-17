@@ -417,7 +417,7 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.7.5+commit.eb77ed08\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"burn\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"characterAttributesMetadata\",\"outputs\":[{\"components\":[{\"internalType\":\"enum IEtherealBase.ElementOfNature\",\"name\":\"primaryElement\",\"type\":\"uint8\"},{\"internalType\":\"enum IEtherealBase.ElementOfNature\",\"name\":\"secondaryElement\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"life\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"armor\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"strength\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"speed\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"luck\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"spirit\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"level\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"extraSkillsPoints\",\"type\":\"uint8\"}],\"internalType\":\"struct IEtherealBase.CharacterAttributesMetadata\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"characterBaseMetadata\",\"outputs\":[{\"components\":[{\"internalType\":\"bytes32\",\"name\":\"name\",\"type\":\"bytes32\"},{\"internalType\":\"bytes24\",\"name\":\"birthdate\",\"type\":\"bytes24\"},{\"internalType\":\"string\",\"name\":\"description\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"planetId\",\"type\":\"uint256\"},{\"internalType\":\"uint8\",\"name\":\"genre\",\"type\":\"uint8\"}],\"internalType\":\"struct IEtherealBase.CharacterBaseMetadata\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"characterNameExists\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"characterPhysicalMetadata\",\"outputs\":[{\"components\":[{\"internalType\":\"uint24\",\"name\":\"skintone\",\"type\":\"uint24\"},{\"internalType\":\"uint24\",\"name\":\"haircolor\",\"type\":\"uint24\"},{\"internalType\":\"uint24\",\"name\":\"eyescolor\",\"type\":\"uint24\"},{\"internalType\":\"uint16\",\"name\":\"weight\",\"type\":\"uint16\"},{\"internalType\":\"uint16\",\"name\":\"height\",\"type\":\"uint16\"},{\"internalType\":\"uint8\",\"name\":\"bodyType\",\"type\":\"uint8\"}],\"internalType\":\"struct IEtherealBase.CharacterPhysicalMetadata\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"components\":[{\"internalType\":\"bytes32\",\"name\":\"name\",\"type\":\"bytes32\"},{\"internalType\":\"bytes24\",\"name\":\"birthdate\",\"type\":\"bytes24\"},{\"internalType\":\"string\",\"name\":\"description\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"planetId\",\"type\":\"uint256\"},{\"internalType\":\"uint8\",\"name\":\"genre\",\"type\":\"uint8\"}],\"internalType\":\"struct IEtherealBase.CharacterBaseMetadata\",\"name\":\"extraBaseMetaData\",\"type\":\"tuple\"},{\"components\":[{\"internalType\":\"uint24\",\"name\":\"skintone\",\"type\":\"uint24\"},{\"internalType\":\"uint24\",\"name\":\"haircolor\",\"type\":\"uint24\"},{\"internalType\":\"uint24\",\"name\":\"eyescolor\",\"type\":\"uint24\"},{\"internalType\":\"uint16\",\"name\":\"weight\",\"type\":\"uint16\"},{\"internalType\":\"uint16\",\"name\":\"height\",\"type\":\"uint16\"},{\"internalType\":\"uint8\",\"name\":\"bodyType\",\"type\":\"uint8\"}],\"internalType\":\"struct IEtherealBase.CharacterPhysicalMetadata\",\"name\":\"extraPhysicalMetaData\",\"type\":\"tuple\"},{\"components\":[{\"internalType\":\"enum IEtherealBase.ElementOfNature\",\"name\":\"primaryElement\",\"type\":\"uint8\"},{\"internalType\":\"enum IEtherealBase.ElementOfNature\",\"name\":\"secondaryElement\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"life\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"armor\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"strength\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"speed\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"luck\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"spirit\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"level\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"extraSkillsPoints\",\"type\":\"uint8\"}],\"internalType\":\"struct IEtherealBase.CharacterAttributesMetadata\",\"name\":\"extraAbilitiesMetaData\",\"type\":\"tuple\"}],\"name\":\"mint\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"ownerOf\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"pause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_baseURI\",\"type\":\"string\"}],\"name\":\"setBaseURI\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"unpause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint8\",\"name\":\"_skillsPointsEarned\",\"type\":\"uint8\"}],\"name\":\"upgradeCharacter\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"{ERC721} token, including:  - ability for holders to burn (destroy) their tokens  - a minter role that allows for token minting (creation)  - a pauser role that allows to stop all token transfers  - token ID and URI autogeneration  - includes extra properties to store important metadata This contract uses {AccessControl} to lock permissioned functions using the different roles - head to its documentation for details. The account that deploys the contract will be granted the minter and pauser roles, as well as the default admin role, which will let it grant both minter and pauser roles to other accounts.\",\"kind\":\"dev\",\"methods\":{\"burn(uint256)\":{\"details\":\"Burns `tokenId`. See {ERC721-_burn}. Requirements: - The caller must own `tokenId` or be an approved operator.\"},\"characterBaseMetadata(uint256)\":{\"details\":\"Character extra metadata tables\"},\"mint(address,(bytes32,bytes24,string,uint256,uint8),(uint24,uint24,uint24,uint16,uint16,uint8),(uint8,uint8,uint8,uint8,uint8,uint8,uint8,uint8,uint8,uint8))\":{\"details\":\"Creates a new token for `to`. Its token ID will be automatically assigned (and available on the emitted {IERC721-Transfer} event), and the token URI autogenerated based on the base URI passed at construction. See {ERC721-_mint}. Requirements: - the caller must have the `MINTER_ROLE`.\"},\"ownerOf(uint256)\":{\"details\":\"See {IERC721-ownerOf}.\"},\"pause()\":{\"details\":\"Pauses all token transfers. See {ERC721Pausable} and {Pausable-_pause}. Requirements: - the caller must have the `PAUSER_ROLE`.\"},\"setBaseURI(string)\":{\"details\":\"External function to set the base URI for all token IDs. \"},\"unpause()\":{\"details\":\"Unpauses all token transfers. See {ERC721Pausable} and {Pausable-_unpause}. Requirements: - the caller must have the `PAUSER_ROLE`.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealCharacter.sol\":\"IEtherealCharacter\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealBase.sol\":{\"keccak256\":\"0x4639e4c2c71168848b1b59e54b755e0cf8aa569e5956f2fd92e4f66317d2d8dd\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://eeff64ac4c49b99841f6f2a3f3096780ded43c254536012d998490f13801d99e\",\"dweb:/ipfs/QmPLCHTic3v2irWPk4ZLvr39Bs6R8A3HhHx49eP7EkC3ma\"]},\"/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealCharacter.sol\":{\"keccak256\":\"0xe9e14dc78c4eb7269427b4eee4d205bd7d3df426d8939a9d230dd1c8371ed217\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://24d2bd77dabccbd5934f06e257dea475bd4e38518b6bcb206658da8145c09d1a\",\"dweb:/ipfs/QmRApHMPrMWHwk7H1A3uCwXPmbzDXXdPJ55Vn97JuK2Pb2\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.7.5+commit.eb77ed08\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"burn\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"characterAttributesMetadata\",\"outputs\":[{\"components\":[{\"internalType\":\"enum IEtherealBase.ElementOfNature\",\"name\":\"primaryElement\",\"type\":\"uint8\"},{\"internalType\":\"enum IEtherealBase.ElementOfNature\",\"name\":\"secondaryElement\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"life\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"armor\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"strength\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"speed\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"luck\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"spirit\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"level\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"extraSkillsPoints\",\"type\":\"uint8\"}],\"internalType\":\"struct IEtherealBase.CharacterAttributesMetadata\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"characterBaseMetadata\",\"outputs\":[{\"components\":[{\"internalType\":\"bytes32\",\"name\":\"name\",\"type\":\"bytes32\"},{\"internalType\":\"bytes24\",\"name\":\"birthdate\",\"type\":\"bytes24\"},{\"internalType\":\"string\",\"name\":\"description\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"planetId\",\"type\":\"uint256\"},{\"internalType\":\"uint8\",\"name\":\"genre\",\"type\":\"uint8\"}],\"internalType\":\"struct IEtherealBase.CharacterBaseMetadata\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"characterNameExists\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"characterPhysicalMetadata\",\"outputs\":[{\"components\":[{\"internalType\":\"uint24\",\"name\":\"skintone\",\"type\":\"uint24\"},{\"internalType\":\"uint24\",\"name\":\"haircolor\",\"type\":\"uint24\"},{\"internalType\":\"uint24\",\"name\":\"eyescolor\",\"type\":\"uint24\"},{\"internalType\":\"uint16\",\"name\":\"weight\",\"type\":\"uint16\"},{\"internalType\":\"uint16\",\"name\":\"height\",\"type\":\"uint16\"},{\"internalType\":\"uint8\",\"name\":\"bodyType\",\"type\":\"uint8\"}],\"internalType\":\"struct IEtherealBase.CharacterPhysicalMetadata\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"components\":[{\"internalType\":\"bytes32\",\"name\":\"name\",\"type\":\"bytes32\"},{\"internalType\":\"bytes24\",\"name\":\"birthdate\",\"type\":\"bytes24\"},{\"internalType\":\"string\",\"name\":\"description\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"planetId\",\"type\":\"uint256\"},{\"internalType\":\"uint8\",\"name\":\"genre\",\"type\":\"uint8\"}],\"internalType\":\"struct IEtherealBase.CharacterBaseMetadata\",\"name\":\"extraBaseMetaData\",\"type\":\"tuple\"},{\"components\":[{\"internalType\":\"uint24\",\"name\":\"skintone\",\"type\":\"uint24\"},{\"internalType\":\"uint24\",\"name\":\"haircolor\",\"type\":\"uint24\"},{\"internalType\":\"uint24\",\"name\":\"eyescolor\",\"type\":\"uint24\"},{\"internalType\":\"uint16\",\"name\":\"weight\",\"type\":\"uint16\"},{\"internalType\":\"uint16\",\"name\":\"height\",\"type\":\"uint16\"},{\"internalType\":\"uint8\",\"name\":\"bodyType\",\"type\":\"uint8\"}],\"internalType\":\"struct IEtherealBase.CharacterPhysicalMetadata\",\"name\":\"extraPhysicalMetaData\",\"type\":\"tuple\"},{\"components\":[{\"internalType\":\"enum IEtherealBase.ElementOfNature\",\"name\":\"primaryElement\",\"type\":\"uint8\"},{\"internalType\":\"enum IEtherealBase.ElementOfNature\",\"name\":\"secondaryElement\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"life\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"armor\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"strength\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"speed\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"luck\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"spirit\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"level\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"extraSkillsPoints\",\"type\":\"uint8\"}],\"internalType\":\"struct IEtherealBase.CharacterAttributesMetadata\",\"name\":\"extraAbilitiesMetaData\",\"type\":\"tuple\"}],\"name\":\"mint\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"ownerOf\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"pause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_baseURI\",\"type\":\"string\"}],\"name\":\"setBaseURI\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"unpause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint8\",\"name\":\"_skillsPointsEarned\",\"type\":\"uint8\"}],\"name\":\"upgradeCharacter\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"{ERC721} token, including:  - ability for holders to burn (destroy) their tokens  - a minter role that allows for token minting (creation)  - a pauser role that allows to stop all token transfers  - token ID and URI autogeneration  - includes extra properties to store important metadata This contract uses {AccessControl} to lock permissioned functions using the different roles - head to its documentation for details. The account that deploys the contract will be granted the minter and pauser roles, as well as the default admin role, which will let it grant both minter and pauser roles to other accounts.\",\"kind\":\"dev\",\"methods\":{\"burn(uint256)\":{\"details\":\"Burns `tokenId`. See {ERC721-_burn}. Requirements: - The caller must own `tokenId` or be an approved operator.\"},\"characterBaseMetadata(uint256)\":{\"details\":\"Character extra metadata tables\"},\"mint(address,(bytes32,bytes24,string,uint256,uint8),(uint24,uint24,uint24,uint16,uint16,uint8),(uint8,uint8,uint8,uint8,uint8,uint8,uint8,uint8,uint8,uint8))\":{\"details\":\"Creates a new token for `to`. Its token ID will be automatically assigned (and available on the emitted {IERC721-Transfer} event), and the token URI autogenerated based on the base URI passed at construction. See {ERC721-_mint}. Requirements: - the caller must have the `MINTER_ROLE`.\"},\"ownerOf(uint256)\":{\"details\":\"See {IERC721-ownerOf}.\"},\"pause()\":{\"details\":\"Pauses all token transfers. See {ERC721Pausable} and {Pausable-_pause}. Requirements: - the caller must have the `PAUSER_ROLE`.\"},\"setBaseURI(string)\":{\"details\":\"External function to set the base URI for all token IDs. \"},\"unpause()\":{\"details\":\"Unpauses all token transfers. See {ERC721Pausable} and {Pausable-_unpause}. Requirements: - the caller must have the `PAUSER_ROLE`.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealCharacter.sol\":\"IEtherealCharacter\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealBase.sol\":{\"keccak256\":\"0x1785fe58a448a56757597d327c323a7fe6821fcd35cdb795d19f63baabda42cf\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d109197fb277001accb73f93001fbee41b05549eed893b0d307e8174f9c9c24b\",\"dweb:/ipfs/Qmdo19SJisDdrR4gARnji7b9UABa3pyNParYn5h2MuGRs7\"]},\"/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealCharacter.sol\":{\"keccak256\":\"0xe9e14dc78c4eb7269427b4eee4d205bd7d3df426d8939a9d230dd1c8371ed217\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://24d2bd77dabccbd5934f06e257dea475bd4e38518b6bcb206658da8145c09d1a\",\"dweb:/ipfs/QmRApHMPrMWHwk7H1A3uCwXPmbzDXXdPJ55Vn97JuK2Pb2\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
@@ -426,48 +426,48 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "// SPDX-License-Identifier: MIT\r\npragma solidity 0.7.5;\r\npragma abicoder v2;\r\nimport './IEtherealBase.sol';\r\n\r\n/**\r\n * @dev {ERC721} token, including:\r\n *\r\n *  - ability for holders to burn (destroy) their tokens\r\n *  - a minter role that allows for token minting (creation)\r\n *  - a pauser role that allows to stop all token transfers\r\n *  - token ID and URI autogeneration\r\n *  - includes extra properties to store important metadata\r\n *\r\n * This contract uses {AccessControl} to lock permissioned functions using the\r\n * different roles - head to its documentation for details.\r\n *\r\n * The account that deploys the contract will be granted the minter and pauser\r\n * roles, as well as the default admin role, which will let it grant both minter\r\n * and pauser roles to other accounts.\r\n */\r\ninterface IEtherealCharacter is IEtherealBase {\r\n    /**\r\n    * @dev Character extra metadata tables\r\n    */\r\n    function characterBaseMetadata(uint256 _tokenId) external view returns(CharacterBaseMetadata memory);\r\n    function characterPhysicalMetadata(uint256 _tokenId) external view returns(CharacterPhysicalMetadata memory);\r\n    function characterAttributesMetadata(uint256 _tokenId) external view returns(CharacterAttributesMetadata memory);\r\n    function characterNameExists(uint256 _tokenId) external view returns(bool);\r\n    \r\n    /**\r\n     * @dev External function to set the base URI for all token IDs. \r\n     */\r\n    function setBaseURI(string memory _baseURI) external;\r\n\r\n    /**\r\n     * @dev Creates a new token for `to`. Its token ID will be automatically\r\n     * assigned (and available on the emitted {IERC721-Transfer} event), and the token\r\n     * URI autogenerated based on the base URI passed at construction.\r\n     *\r\n     * See {ERC721-_mint}.\r\n     *\r\n     * Requirements:\r\n     *\r\n     * - the caller must have the `MINTER_ROLE`.\r\n     */\r\n    function mint(\r\n      address to,\r\n      CharacterBaseMetadata memory extraBaseMetaData,\r\n      CharacterPhysicalMetadata memory extraPhysicalMetaData,\r\n      CharacterAttributesMetadata memory extraAbilitiesMetaData\r\n    )\r\n        external\r\n        returns (uint256);\r\n\r\n    /**\r\n     * @dev Burns `tokenId`. See {ERC721-_burn}.\r\n     *\r\n     * Requirements:\r\n     *\r\n     * - The caller must own `tokenId` or be an approved operator.\r\n     */\r\n    function burn(uint256 tokenId) external;\r\n\r\n    /**\r\n     * @dev Pauses all token transfers.\r\n     *\r\n     * See {ERC721Pausable} and {Pausable-_pause}.\r\n     *\r\n     * Requirements:\r\n     *\r\n     * - the caller must have the `PAUSER_ROLE`.\r\n     */\r\n    function pause() external;\r\n\r\n    /**\r\n     * @dev Unpauses all token transfers.\r\n     *\r\n     * See {ERC721Pausable} and {Pausable-_unpause}.\r\n     *\r\n     * Requirements:\r\n     *\r\n     * - the caller must have the `PAUSER_ROLE`.\r\n     */\r\n    function unpause() external;\r\n\r\n    /**\r\n     * @dev See {IERC721-ownerOf}.\r\n     */\r\n    function ownerOf(uint256 tokenId) external returns (address);\r\n\r\n    /*\r\n    * @dev Upgrade character level and increase skills points\r\n    */\r\n    function upgradeCharacter(uint256 _tokenId, uint8 _skillsPointsEarned) external returns (uint8);\r\n\r\n}",
-  "sourcePath": "C:\\xampp\\htdocs\\ethereal-bnb\\truffle-files\\contracts\\IEtherealCharacter.sol",
+  "sourcePath": "C:/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealCharacter.sol",
   "ast": {
     "absolutePath": "/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealCharacter.sol",
     "exportedSymbols": {
       "IEtherealBase": [
-        2942
+        192
       ],
       "IEtherealCharacter": [
-        3030
+        280
       ]
     },
-    "id": 3031,
+    "id": 281,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2944,
+        "id": 194,
         "literals": [
           "solidity",
           "0.7",
           ".5"
         ],
         "nodeType": "PragmaDirective",
-        "src": "33:22:6"
+        "src": "33:22:2"
       },
       {
-        "id": 2945,
+        "id": 195,
         "literals": [
           "abicoder",
           "v2"
         ],
         "nodeType": "PragmaDirective",
-        "src": "57:19:6"
+        "src": "57:19:2"
       },
       {
         "absolutePath": "/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealBase.sol",
         "file": "./IEtherealBase.sol",
-        "id": 2946,
+        "id": 196,
         "nodeType": "ImportDirective",
-        "scope": 3031,
-        "sourceUnit": 2943,
-        "src": "78:29:6",
+        "scope": 281,
+        "sourceUnit": 193,
+        "src": "78:29:2",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -476,66 +476,66 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 2948,
+              "id": 198,
               "name": "IEtherealBase",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2942,
-              "src": "825:13:6",
+              "referencedDeclaration": 192,
+              "src": "825:13:2",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_IEtherealBase_$2942",
+                "typeIdentifier": "t_contract$_IEtherealBase_$192",
                 "typeString": "contract IEtherealBase"
               }
             },
-            "id": 2949,
+            "id": 199,
             "nodeType": "InheritanceSpecifier",
-            "src": "825:13:6"
+            "src": "825:13:2"
           }
         ],
         "contractDependencies": [
-          2942
+          192
         ],
         "contractKind": "interface",
         "documentation": {
-          "id": 2947,
+          "id": 197,
           "nodeType": "StructuredDocumentation",
-          "src": "111:680:6",
+          "src": "111:680:2",
           "text": " @dev {ERC721} token, including:\n  - ability for holders to burn (destroy) their tokens\n  - a minter role that allows for token minting (creation)\n  - a pauser role that allows to stop all token transfers\n  - token ID and URI autogeneration\n  - includes extra properties to store important metadata\n This contract uses {AccessControl} to lock permissioned functions using the\n different roles - head to its documentation for details.\n The account that deploys the contract will be granted the minter and pauser\n roles, as well as the default admin role, which will let it grant both minter\n and pauser roles to other accounts."
         },
         "fullyImplemented": false,
-        "id": 3030,
+        "id": 280,
         "linearizedBaseContracts": [
-          3030,
-          2942
+          280,
+          192
         ],
         "name": "IEtherealCharacter",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "documentation": {
-              "id": 2950,
+              "id": 200,
               "nodeType": "StructuredDocumentation",
-              "src": "846:55:6",
+              "src": "846:55:2",
               "text": " @dev Character extra metadata tables"
             },
             "functionSelector": "4e39cafc",
-            "id": 2957,
+            "id": 207,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "characterBaseMetadata",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2953,
+              "id": 203,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2952,
+                  "id": 202,
                   "mutability": "mutable",
                   "name": "_tokenId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2957,
-                  "src": "938:16:6",
+                  "scope": 207,
+                  "src": "938:16:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -543,10 +543,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2951,
+                    "id": 201,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "938:7:6",
+                    "src": "938:7:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -555,68 +555,68 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "937:18:6"
+              "src": "937:18:2"
             },
             "returnParameters": {
-              "id": 2956,
+              "id": 206,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2955,
+                  "id": 205,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2957,
-                  "src": "978:28:6",
+                  "scope": 207,
+                  "src": "978:28:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_CharacterBaseMetadata_$2888_memory_ptr",
+                    "typeIdentifier": "t_struct$_CharacterBaseMetadata_$129_memory_ptr",
                     "typeString": "struct IEtherealBase.CharacterBaseMetadata"
                   },
                   "typeName": {
-                    "id": 2954,
+                    "id": 204,
                     "name": "CharacterBaseMetadata",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 2888,
-                    "src": "978:21:6",
+                    "referencedDeclaration": 129,
+                    "src": "978:21:2",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_CharacterBaseMetadata_$2888_storage_ptr",
+                      "typeIdentifier": "t_struct$_CharacterBaseMetadata_$129_storage_ptr",
                       "typeString": "struct IEtherealBase.CharacterBaseMetadata"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "977:30:6"
+              "src": "977:30:2"
             },
-            "scope": 3030,
-            "src": "907:101:6",
+            "scope": 280,
+            "src": "907:101:2",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
             "functionSelector": "eeff53f0",
-            "id": 2964,
+            "id": 214,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "characterPhysicalMetadata",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2960,
+              "id": 210,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2959,
+                  "id": 209,
                   "mutability": "mutable",
                   "name": "_tokenId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2964,
-                  "src": "1049:16:6",
+                  "scope": 214,
+                  "src": "1049:16:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -624,10 +624,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2958,
+                    "id": 208,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1049:7:6",
+                    "src": "1049:7:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -636,68 +636,68 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1048:18:6"
+              "src": "1048:18:2"
             },
             "returnParameters": {
-              "id": 2963,
+              "id": 213,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2962,
+                  "id": 212,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2964,
-                  "src": "1089:32:6",
+                  "scope": 214,
+                  "src": "1089:32:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_CharacterPhysicalMetadata_$2901_memory_ptr",
+                    "typeIdentifier": "t_struct$_CharacterPhysicalMetadata_$142_memory_ptr",
                     "typeString": "struct IEtherealBase.CharacterPhysicalMetadata"
                   },
                   "typeName": {
-                    "id": 2961,
+                    "id": 211,
                     "name": "CharacterPhysicalMetadata",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 2901,
-                    "src": "1089:25:6",
+                    "referencedDeclaration": 142,
+                    "src": "1089:25:2",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_CharacterPhysicalMetadata_$2901_storage_ptr",
+                      "typeIdentifier": "t_struct$_CharacterPhysicalMetadata_$142_storage_ptr",
                       "typeString": "struct IEtherealBase.CharacterPhysicalMetadata"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "1088:34:6"
+              "src": "1088:34:2"
             },
-            "scope": 3030,
-            "src": "1014:109:6",
+            "scope": 280,
+            "src": "1014:109:2",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
             "functionSelector": "e1d65d7f",
-            "id": 2971,
+            "id": 221,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "characterAttributesMetadata",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2967,
+              "id": 217,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2966,
+                  "id": 216,
                   "mutability": "mutable",
                   "name": "_tokenId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2971,
-                  "src": "1166:16:6",
+                  "scope": 221,
+                  "src": "1166:16:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -705,10 +705,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2965,
+                    "id": 215,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1166:7:6",
+                    "src": "1166:7:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -717,68 +717,68 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1165:18:6"
+              "src": "1165:18:2"
             },
             "returnParameters": {
-              "id": 2970,
+              "id": 220,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2969,
+                  "id": 219,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2971,
-                  "src": "1206:34:6",
+                  "scope": 221,
+                  "src": "1206:34:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_CharacterAttributesMetadata_$2922_memory_ptr",
+                    "typeIdentifier": "t_struct$_CharacterAttributesMetadata_$163_memory_ptr",
                     "typeString": "struct IEtherealBase.CharacterAttributesMetadata"
                   },
                   "typeName": {
-                    "id": 2968,
+                    "id": 218,
                     "name": "CharacterAttributesMetadata",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 2922,
-                    "src": "1206:27:6",
+                    "referencedDeclaration": 163,
+                    "src": "1206:27:2",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_CharacterAttributesMetadata_$2922_storage_ptr",
+                      "typeIdentifier": "t_struct$_CharacterAttributesMetadata_$163_storage_ptr",
                       "typeString": "struct IEtherealBase.CharacterAttributesMetadata"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "1205:36:6"
+              "src": "1205:36:2"
             },
-            "scope": 3030,
-            "src": "1129:113:6",
+            "scope": 280,
+            "src": "1129:113:2",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
             "functionSelector": "bbaaa478",
-            "id": 2978,
+            "id": 228,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "characterNameExists",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2974,
+              "id": 224,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2973,
+                  "id": 223,
                   "mutability": "mutable",
                   "name": "_tokenId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2978,
-                  "src": "1277:16:6",
+                  "scope": 228,
+                  "src": "1277:16:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -786,10 +786,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2972,
+                    "id": 222,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1277:7:6",
+                    "src": "1277:7:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -798,20 +798,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1276:18:6"
+              "src": "1276:18:2"
             },
             "returnParameters": {
-              "id": 2977,
+              "id": 227,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2976,
+                  "id": 226,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2978,
-                  "src": "1317:4:6",
+                  "scope": 228,
+                  "src": "1317:4:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -819,10 +819,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2975,
+                    "id": 225,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1317:4:6",
+                    "src": "1317:4:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -831,40 +831,40 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1316:6:6"
+              "src": "1316:6:2"
             },
-            "scope": 3030,
-            "src": "1248:75:6",
+            "scope": 280,
+            "src": "1248:75:2",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
             "documentation": {
-              "id": 2979,
+              "id": 229,
               "nodeType": "StructuredDocumentation",
-              "src": "1335:83:6",
+              "src": "1335:83:2",
               "text": " @dev External function to set the base URI for all token IDs. "
             },
             "functionSelector": "55f804b3",
-            "id": 2984,
+            "id": 234,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "setBaseURI",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2982,
+              "id": 232,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2981,
+                  "id": 231,
                   "mutability": "mutable",
                   "name": "_baseURI",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2984,
-                  "src": "1444:22:6",
+                  "scope": 234,
+                  "src": "1444:22:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -872,10 +872,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 2980,
+                    "id": 230,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1444:6:6",
+                    "src": "1444:6:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -884,46 +884,46 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1443:24:6"
+              "src": "1443:24:2"
             },
             "returnParameters": {
-              "id": 2983,
+              "id": 233,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1476:0:6"
+              "src": "1476:0:2"
             },
-            "scope": 3030,
-            "src": "1424:53:6",
+            "scope": 280,
+            "src": "1424:53:2",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
             "documentation": {
-              "id": 2985,
+              "id": 235,
               "nodeType": "StructuredDocumentation",
-              "src": "1485:374:6",
+              "src": "1485:374:2",
               "text": " @dev Creates a new token for `to`. Its token ID will be automatically\n assigned (and available on the emitted {IERC721-Transfer} event), and the token\n URI autogenerated based on the base URI passed at construction.\n See {ERC721-_mint}.\n Requirements:\n - the caller must have the `MINTER_ROLE`."
             },
             "functionSelector": "d8f7af39",
-            "id": 2998,
+            "id": 248,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "mint",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2994,
+              "id": 244,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2987,
+                  "id": 237,
                   "mutability": "mutable",
                   "name": "to",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2998,
-                  "src": "1887:10:6",
+                  "scope": 248,
+                  "src": "1887:10:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -931,10 +931,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2986,
+                    "id": 236,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1887:7:6",
+                    "src": "1887:7:2",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -945,26 +945,26 @@
                 },
                 {
                   "constant": false,
-                  "id": 2989,
+                  "id": 239,
                   "mutability": "mutable",
                   "name": "extraBaseMetaData",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2998,
-                  "src": "1906:46:6",
+                  "scope": 248,
+                  "src": "1906:46:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_CharacterBaseMetadata_$2888_memory_ptr",
+                    "typeIdentifier": "t_struct$_CharacterBaseMetadata_$129_memory_ptr",
                     "typeString": "struct IEtherealBase.CharacterBaseMetadata"
                   },
                   "typeName": {
-                    "id": 2988,
+                    "id": 238,
                     "name": "CharacterBaseMetadata",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 2888,
-                    "src": "1906:21:6",
+                    "referencedDeclaration": 129,
+                    "src": "1906:21:2",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_CharacterBaseMetadata_$2888_storage_ptr",
+                      "typeIdentifier": "t_struct$_CharacterBaseMetadata_$129_storage_ptr",
                       "typeString": "struct IEtherealBase.CharacterBaseMetadata"
                     }
                   },
@@ -972,26 +972,26 @@
                 },
                 {
                   "constant": false,
-                  "id": 2991,
+                  "id": 241,
                   "mutability": "mutable",
                   "name": "extraPhysicalMetaData",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2998,
-                  "src": "1961:54:6",
+                  "scope": 248,
+                  "src": "1961:54:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_CharacterPhysicalMetadata_$2901_memory_ptr",
+                    "typeIdentifier": "t_struct$_CharacterPhysicalMetadata_$142_memory_ptr",
                     "typeString": "struct IEtherealBase.CharacterPhysicalMetadata"
                   },
                   "typeName": {
-                    "id": 2990,
+                    "id": 240,
                     "name": "CharacterPhysicalMetadata",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 2901,
-                    "src": "1961:25:6",
+                    "referencedDeclaration": 142,
+                    "src": "1961:25:2",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_CharacterPhysicalMetadata_$2901_storage_ptr",
+                      "typeIdentifier": "t_struct$_CharacterPhysicalMetadata_$142_storage_ptr",
                       "typeString": "struct IEtherealBase.CharacterPhysicalMetadata"
                     }
                   },
@@ -999,46 +999,46 @@
                 },
                 {
                   "constant": false,
-                  "id": 2993,
+                  "id": 243,
                   "mutability": "mutable",
                   "name": "extraAbilitiesMetaData",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2998,
-                  "src": "2024:57:6",
+                  "scope": 248,
+                  "src": "2024:57:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_CharacterAttributesMetadata_$2922_memory_ptr",
+                    "typeIdentifier": "t_struct$_CharacterAttributesMetadata_$163_memory_ptr",
                     "typeString": "struct IEtherealBase.CharacterAttributesMetadata"
                   },
                   "typeName": {
-                    "id": 2992,
+                    "id": 242,
                     "name": "CharacterAttributesMetadata",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 2922,
-                    "src": "2024:27:6",
+                    "referencedDeclaration": 163,
+                    "src": "2024:27:2",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_CharacterAttributesMetadata_$2922_storage_ptr",
+                      "typeIdentifier": "t_struct$_CharacterAttributesMetadata_$163_storage_ptr",
                       "typeString": "struct IEtherealBase.CharacterAttributesMetadata"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "1878:210:6"
+              "src": "1878:210:2"
             },
             "returnParameters": {
-              "id": 2997,
+              "id": 247,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2996,
+                  "id": 246,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2998,
-                  "src": "2125:7:6",
+                  "scope": 248,
+                  "src": "2125:7:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1046,10 +1046,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2995,
+                    "id": 245,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2125:7:6",
+                    "src": "2125:7:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1058,40 +1058,40 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2124:9:6"
+              "src": "2124:9:2"
             },
-            "scope": 3030,
-            "src": "1865:269:6",
+            "scope": 280,
+            "src": "1865:269:2",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
             "documentation": {
-              "id": 2999,
+              "id": 249,
               "nodeType": "StructuredDocumentation",
-              "src": "2142:168:6",
+              "src": "2142:168:2",
               "text": " @dev Burns `tokenId`. See {ERC721-_burn}.\n Requirements:\n - The caller must own `tokenId` or be an approved operator."
             },
             "functionSelector": "42966c68",
-            "id": 3004,
+            "id": 254,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "burn",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3002,
+              "id": 252,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3001,
+                  "id": 251,
                   "mutability": "mutable",
                   "name": "tokenId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3004,
-                  "src": "2330:15:6",
+                  "scope": 254,
+                  "src": "2330:15:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1099,10 +1099,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3000,
+                    "id": 250,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2330:7:6",
+                    "src": "2330:7:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1111,110 +1111,110 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2329:17:6"
+              "src": "2329:17:2"
             },
             "returnParameters": {
-              "id": 3003,
+              "id": 253,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2355:0:6"
+              "src": "2355:0:2"
             },
-            "scope": 3030,
-            "src": "2316:40:6",
+            "scope": 280,
+            "src": "2316:40:2",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
             "documentation": {
-              "id": 3005,
+              "id": 255,
               "nodeType": "StructuredDocumentation",
-              "src": "2364:201:6",
+              "src": "2364:201:2",
               "text": " @dev Pauses all token transfers.\n See {ERC721Pausable} and {Pausable-_pause}.\n Requirements:\n - the caller must have the `PAUSER_ROLE`."
             },
             "functionSelector": "8456cb59",
-            "id": 3008,
+            "id": 258,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "pause",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3006,
+              "id": 256,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2585:2:6"
+              "src": "2585:2:2"
             },
             "returnParameters": {
-              "id": 3007,
+              "id": 257,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2596:0:6"
+              "src": "2596:0:2"
             },
-            "scope": 3030,
-            "src": "2571:26:6",
+            "scope": 280,
+            "src": "2571:26:2",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
             "documentation": {
-              "id": 3009,
+              "id": 259,
               "nodeType": "StructuredDocumentation",
-              "src": "2605:205:6",
+              "src": "2605:205:2",
               "text": " @dev Unpauses all token transfers.\n See {ERC721Pausable} and {Pausable-_unpause}.\n Requirements:\n - the caller must have the `PAUSER_ROLE`."
             },
             "functionSelector": "3f4ba83a",
-            "id": 3012,
+            "id": 262,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "unpause",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3010,
+              "id": 260,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2832:2:6"
+              "src": "2832:2:2"
             },
             "returnParameters": {
-              "id": 3011,
+              "id": 261,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2843:0:6"
+              "src": "2843:0:2"
             },
-            "scope": 3030,
-            "src": "2816:28:6",
+            "scope": 280,
+            "src": "2816:28:2",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
             "documentation": {
-              "id": 3013,
+              "id": 263,
               "nodeType": "StructuredDocumentation",
-              "src": "2852:48:6",
+              "src": "2852:48:2",
               "text": " @dev See {IERC721-ownerOf}."
             },
             "functionSelector": "6352211e",
-            "id": 3020,
+            "id": 270,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "ownerOf",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3016,
+              "id": 266,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3015,
+                  "id": 265,
                   "mutability": "mutable",
                   "name": "tokenId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3020,
-                  "src": "2923:15:6",
+                  "scope": 270,
+                  "src": "2923:15:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1222,10 +1222,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3014,
+                    "id": 264,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2923:7:6",
+                    "src": "2923:7:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1234,20 +1234,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2922:17:6"
+              "src": "2922:17:2"
             },
             "returnParameters": {
-              "id": 3019,
+              "id": 269,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3018,
+                  "id": 268,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3020,
-                  "src": "2958:7:6",
+                  "scope": 270,
+                  "src": "2958:7:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1255,10 +1255,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3017,
+                    "id": 267,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2958:7:6",
+                    "src": "2958:7:2",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1268,34 +1268,34 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2957:9:6"
+              "src": "2957:9:2"
             },
-            "scope": 3030,
-            "src": "2906:61:6",
+            "scope": 280,
+            "src": "2906:61:2",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
             "functionSelector": "de072a1c",
-            "id": 3029,
+            "id": 279,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "upgradeCharacter",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3025,
+              "id": 275,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3022,
+                  "id": 272,
                   "mutability": "mutable",
                   "name": "_tokenId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3029,
-                  "src": "3080:16:6",
+                  "scope": 279,
+                  "src": "3080:16:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1303,10 +1303,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3021,
+                    "id": 271,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3080:7:6",
+                    "src": "3080:7:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1316,12 +1316,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 3024,
+                  "id": 274,
                   "mutability": "mutable",
                   "name": "_skillsPointsEarned",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3029,
-                  "src": "3098:25:6",
+                  "scope": 279,
+                  "src": "3098:25:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1329,10 +1329,10 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 3023,
+                    "id": 273,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3098:5:6",
+                    "src": "3098:5:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint8",
                       "typeString": "uint8"
@@ -1341,20 +1341,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3079:45:6"
+              "src": "3079:45:2"
             },
             "returnParameters": {
-              "id": 3028,
+              "id": 278,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3027,
+                  "id": 277,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3029,
-                  "src": "3143:5:6",
+                  "scope": 279,
+                  "src": "3143:5:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1362,10 +1362,10 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 3026,
+                    "id": 276,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3143:5:6",
+                    "src": "3143:5:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint8",
                       "typeString": "uint8"
@@ -1374,30 +1374,30 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3142:7:6"
+              "src": "3142:7:2"
             },
-            "scope": 3030,
-            "src": "3054:96:6",
+            "scope": 280,
+            "src": "3054:96:2",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 3031,
-        "src": "793:2362:6"
+        "scope": 281,
+        "src": "793:2362:2"
       }
     ],
-    "src": "33:3122:6"
+    "src": "33:3122:2"
   },
   "legacyAST": {
     "attributes": {
       "absolutePath": "/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealCharacter.sol",
       "exportedSymbols": {
         "IEtherealBase": [
-          2942
+          192
         ],
         "IEtherealCharacter": [
-          3030
+          280
         ]
       },
       "license": "MIT"
@@ -1411,9 +1411,9 @@
             ".5"
           ]
         },
-        "id": 2944,
+        "id": 194,
         "name": "PragmaDirective",
-        "src": "33:22:6"
+        "src": "33:22:2"
       },
       {
         "attributes": {
@@ -1422,48 +1422,48 @@
             "v2"
           ]
         },
-        "id": 2945,
+        "id": 195,
         "name": "PragmaDirective",
-        "src": "57:19:6"
+        "src": "57:19:2"
       },
       {
         "attributes": {
-          "SourceUnit": 2943,
+          "SourceUnit": 193,
           "absolutePath": "/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealBase.sol",
           "file": "./IEtherealBase.sol",
-          "scope": 3031,
+          "scope": 281,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 2946,
+        "id": 196,
         "name": "ImportDirective",
-        "src": "78:29:6"
+        "src": "78:29:2"
       },
       {
         "attributes": {
           "abstract": false,
           "contractDependencies": [
-            2942
+            192
           ],
           "contractKind": "interface",
           "fullyImplemented": false,
           "linearizedBaseContracts": [
-            3030,
-            2942
+            280,
+            192
           ],
           "name": "IEtherealCharacter",
-          "scope": 3031
+          "scope": 281
         },
         "children": [
           {
             "attributes": {
               "text": " @dev {ERC721} token, including:\n  - ability for holders to burn (destroy) their tokens\n  - a minter role that allows for token minting (creation)\n  - a pauser role that allows to stop all token transfers\n  - token ID and URI autogeneration\n  - includes extra properties to store important metadata\n This contract uses {AccessControl} to lock permissioned functions using the\n different roles - head to its documentation for details.\n The account that deploys the contract will be granted the minter and pauser\n roles, as well as the default admin role, which will let it grant both minter\n and pauser roles to other accounts."
             },
-            "id": 2947,
+            "id": 197,
             "name": "StructuredDocumentation",
-            "src": "111:680:6"
+            "src": "111:680:2"
           },
           {
             "attributes": {},
@@ -1471,17 +1471,17 @@
               {
                 "attributes": {
                   "name": "IEtherealBase",
-                  "referencedDeclaration": 2942,
+                  "referencedDeclaration": 192,
                   "type": "contract IEtherealBase"
                 },
-                "id": 2948,
+                "id": 198,
                 "name": "UserDefinedTypeName",
-                "src": "825:13:6"
+                "src": "825:13:2"
               }
             ],
-            "id": 2949,
+            "id": 199,
             "name": "InheritanceSpecifier",
-            "src": "825:13:6"
+            "src": "825:13:2"
           },
           {
             "attributes": {
@@ -1493,7 +1493,7 @@
                 null
               ],
               "name": "characterBaseMetadata",
-              "scope": 3030,
+              "scope": 280,
               "stateMutability": "view",
               "virtual": false,
               "visibility": "external"
@@ -1503,9 +1503,9 @@
                 "attributes": {
                   "text": " @dev Character extra metadata tables"
                 },
-                "id": 2950,
+                "id": 200,
                 "name": "StructuredDocumentation",
-                "src": "846:55:6"
+                "src": "846:55:2"
               },
               {
                 "children": [
@@ -1514,7 +1514,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "_tokenId",
-                      "scope": 2957,
+                      "scope": 207,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -1526,19 +1526,19 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 2951,
+                        "id": 201,
                         "name": "ElementaryTypeName",
-                        "src": "938:7:6"
+                        "src": "938:7:2"
                       }
                     ],
-                    "id": 2952,
+                    "id": 202,
                     "name": "VariableDeclaration",
-                    "src": "938:16:6"
+                    "src": "938:16:2"
                   }
                 ],
-                "id": 2953,
+                "id": 203,
                 "name": "ParameterList",
-                "src": "937:18:6"
+                "src": "937:18:2"
               },
               {
                 "children": [
@@ -1547,7 +1547,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "",
-                      "scope": 2957,
+                      "scope": 207,
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "type": "struct IEtherealBase.CharacterBaseMetadata",
@@ -1557,27 +1557,27 @@
                       {
                         "attributes": {
                           "name": "CharacterBaseMetadata",
-                          "referencedDeclaration": 2888,
+                          "referencedDeclaration": 129,
                           "type": "struct IEtherealBase.CharacterBaseMetadata"
                         },
-                        "id": 2954,
+                        "id": 204,
                         "name": "UserDefinedTypeName",
-                        "src": "978:21:6"
+                        "src": "978:21:2"
                       }
                     ],
-                    "id": 2955,
+                    "id": 205,
                     "name": "VariableDeclaration",
-                    "src": "978:28:6"
+                    "src": "978:28:2"
                   }
                 ],
-                "id": 2956,
+                "id": 206,
                 "name": "ParameterList",
-                "src": "977:30:6"
+                "src": "977:30:2"
               }
             ],
-            "id": 2957,
+            "id": 207,
             "name": "FunctionDefinition",
-            "src": "907:101:6"
+            "src": "907:101:2"
           },
           {
             "attributes": {
@@ -1589,7 +1589,7 @@
                 null
               ],
               "name": "characterPhysicalMetadata",
-              "scope": 3030,
+              "scope": 280,
               "stateMutability": "view",
               "virtual": false,
               "visibility": "external"
@@ -1602,7 +1602,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "_tokenId",
-                      "scope": 2964,
+                      "scope": 214,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -1614,19 +1614,19 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 2958,
+                        "id": 208,
                         "name": "ElementaryTypeName",
-                        "src": "1049:7:6"
+                        "src": "1049:7:2"
                       }
                     ],
-                    "id": 2959,
+                    "id": 209,
                     "name": "VariableDeclaration",
-                    "src": "1049:16:6"
+                    "src": "1049:16:2"
                   }
                 ],
-                "id": 2960,
+                "id": 210,
                 "name": "ParameterList",
-                "src": "1048:18:6"
+                "src": "1048:18:2"
               },
               {
                 "children": [
@@ -1635,7 +1635,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "",
-                      "scope": 2964,
+                      "scope": 214,
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "type": "struct IEtherealBase.CharacterPhysicalMetadata",
@@ -1645,27 +1645,27 @@
                       {
                         "attributes": {
                           "name": "CharacterPhysicalMetadata",
-                          "referencedDeclaration": 2901,
+                          "referencedDeclaration": 142,
                           "type": "struct IEtherealBase.CharacterPhysicalMetadata"
                         },
-                        "id": 2961,
+                        "id": 211,
                         "name": "UserDefinedTypeName",
-                        "src": "1089:25:6"
+                        "src": "1089:25:2"
                       }
                     ],
-                    "id": 2962,
+                    "id": 212,
                     "name": "VariableDeclaration",
-                    "src": "1089:32:6"
+                    "src": "1089:32:2"
                   }
                 ],
-                "id": 2963,
+                "id": 213,
                 "name": "ParameterList",
-                "src": "1088:34:6"
+                "src": "1088:34:2"
               }
             ],
-            "id": 2964,
+            "id": 214,
             "name": "FunctionDefinition",
-            "src": "1014:109:6"
+            "src": "1014:109:2"
           },
           {
             "attributes": {
@@ -1677,7 +1677,7 @@
                 null
               ],
               "name": "characterAttributesMetadata",
-              "scope": 3030,
+              "scope": 280,
               "stateMutability": "view",
               "virtual": false,
               "visibility": "external"
@@ -1690,7 +1690,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "_tokenId",
-                      "scope": 2971,
+                      "scope": 221,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -1702,19 +1702,19 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 2965,
+                        "id": 215,
                         "name": "ElementaryTypeName",
-                        "src": "1166:7:6"
+                        "src": "1166:7:2"
                       }
                     ],
-                    "id": 2966,
+                    "id": 216,
                     "name": "VariableDeclaration",
-                    "src": "1166:16:6"
+                    "src": "1166:16:2"
                   }
                 ],
-                "id": 2967,
+                "id": 217,
                 "name": "ParameterList",
-                "src": "1165:18:6"
+                "src": "1165:18:2"
               },
               {
                 "children": [
@@ -1723,7 +1723,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "",
-                      "scope": 2971,
+                      "scope": 221,
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "type": "struct IEtherealBase.CharacterAttributesMetadata",
@@ -1733,27 +1733,27 @@
                       {
                         "attributes": {
                           "name": "CharacterAttributesMetadata",
-                          "referencedDeclaration": 2922,
+                          "referencedDeclaration": 163,
                           "type": "struct IEtherealBase.CharacterAttributesMetadata"
                         },
-                        "id": 2968,
+                        "id": 218,
                         "name": "UserDefinedTypeName",
-                        "src": "1206:27:6"
+                        "src": "1206:27:2"
                       }
                     ],
-                    "id": 2969,
+                    "id": 219,
                     "name": "VariableDeclaration",
-                    "src": "1206:34:6"
+                    "src": "1206:34:2"
                   }
                 ],
-                "id": 2970,
+                "id": 220,
                 "name": "ParameterList",
-                "src": "1205:36:6"
+                "src": "1205:36:2"
               }
             ],
-            "id": 2971,
+            "id": 221,
             "name": "FunctionDefinition",
-            "src": "1129:113:6"
+            "src": "1129:113:2"
           },
           {
             "attributes": {
@@ -1765,7 +1765,7 @@
                 null
               ],
               "name": "characterNameExists",
-              "scope": 3030,
+              "scope": 280,
               "stateMutability": "view",
               "virtual": false,
               "visibility": "external"
@@ -1778,7 +1778,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "_tokenId",
-                      "scope": 2978,
+                      "scope": 228,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -1790,19 +1790,19 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 2972,
+                        "id": 222,
                         "name": "ElementaryTypeName",
-                        "src": "1277:7:6"
+                        "src": "1277:7:2"
                       }
                     ],
-                    "id": 2973,
+                    "id": 223,
                     "name": "VariableDeclaration",
-                    "src": "1277:16:6"
+                    "src": "1277:16:2"
                   }
                 ],
-                "id": 2974,
+                "id": 224,
                 "name": "ParameterList",
-                "src": "1276:18:6"
+                "src": "1276:18:2"
               },
               {
                 "children": [
@@ -1811,7 +1811,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "",
-                      "scope": 2978,
+                      "scope": 228,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bool",
@@ -1823,24 +1823,24 @@
                           "name": "bool",
                           "type": "bool"
                         },
-                        "id": 2975,
+                        "id": 225,
                         "name": "ElementaryTypeName",
-                        "src": "1317:4:6"
+                        "src": "1317:4:2"
                       }
                     ],
-                    "id": 2976,
+                    "id": 226,
                     "name": "VariableDeclaration",
-                    "src": "1317:4:6"
+                    "src": "1317:4:2"
                   }
                 ],
-                "id": 2977,
+                "id": 227,
                 "name": "ParameterList",
-                "src": "1316:6:6"
+                "src": "1316:6:2"
               }
             ],
-            "id": 2978,
+            "id": 228,
             "name": "FunctionDefinition",
-            "src": "1248:75:6"
+            "src": "1248:75:2"
           },
           {
             "attributes": {
@@ -1852,7 +1852,7 @@
                 null
               ],
               "name": "setBaseURI",
-              "scope": 3030,
+              "scope": 280,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "external"
@@ -1862,9 +1862,9 @@
                 "attributes": {
                   "text": " @dev External function to set the base URI for all token IDs. "
                 },
-                "id": 2979,
+                "id": 229,
                 "name": "StructuredDocumentation",
-                "src": "1335:83:6"
+                "src": "1335:83:2"
               },
               {
                 "children": [
@@ -1873,7 +1873,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "_baseURI",
-                      "scope": 2984,
+                      "scope": 234,
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "type": "string",
@@ -1885,19 +1885,19 @@
                           "name": "string",
                           "type": "string"
                         },
-                        "id": 2980,
+                        "id": 230,
                         "name": "ElementaryTypeName",
-                        "src": "1444:6:6"
+                        "src": "1444:6:2"
                       }
                     ],
-                    "id": 2981,
+                    "id": 231,
                     "name": "VariableDeclaration",
-                    "src": "1444:22:6"
+                    "src": "1444:22:2"
                   }
                 ],
-                "id": 2982,
+                "id": 232,
                 "name": "ParameterList",
-                "src": "1443:24:6"
+                "src": "1443:24:2"
               },
               {
                 "attributes": {
@@ -1906,14 +1906,14 @@
                   ]
                 },
                 "children": [],
-                "id": 2983,
+                "id": 233,
                 "name": "ParameterList",
-                "src": "1476:0:6"
+                "src": "1476:0:2"
               }
             ],
-            "id": 2984,
+            "id": 234,
             "name": "FunctionDefinition",
-            "src": "1424:53:6"
+            "src": "1424:53:2"
           },
           {
             "attributes": {
@@ -1925,7 +1925,7 @@
                 null
               ],
               "name": "mint",
-              "scope": 3030,
+              "scope": 280,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "external"
@@ -1935,9 +1935,9 @@
                 "attributes": {
                   "text": " @dev Creates a new token for `to`. Its token ID will be automatically\n assigned (and available on the emitted {IERC721-Transfer} event), and the token\n URI autogenerated based on the base URI passed at construction.\n See {ERC721-_mint}.\n Requirements:\n - the caller must have the `MINTER_ROLE`."
                 },
-                "id": 2985,
+                "id": 235,
                 "name": "StructuredDocumentation",
-                "src": "1485:374:6"
+                "src": "1485:374:2"
               },
               {
                 "children": [
@@ -1946,7 +1946,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "to",
-                      "scope": 2998,
+                      "scope": 248,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -1959,21 +1959,21 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 2986,
+                        "id": 236,
                         "name": "ElementaryTypeName",
-                        "src": "1887:7:6"
+                        "src": "1887:7:2"
                       }
                     ],
-                    "id": 2987,
+                    "id": 237,
                     "name": "VariableDeclaration",
-                    "src": "1887:10:6"
+                    "src": "1887:10:2"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "mutability": "mutable",
                       "name": "extraBaseMetaData",
-                      "scope": 2998,
+                      "scope": 248,
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "type": "struct IEtherealBase.CharacterBaseMetadata",
@@ -1983,24 +1983,24 @@
                       {
                         "attributes": {
                           "name": "CharacterBaseMetadata",
-                          "referencedDeclaration": 2888,
+                          "referencedDeclaration": 129,
                           "type": "struct IEtherealBase.CharacterBaseMetadata"
                         },
-                        "id": 2988,
+                        "id": 238,
                         "name": "UserDefinedTypeName",
-                        "src": "1906:21:6"
+                        "src": "1906:21:2"
                       }
                     ],
-                    "id": 2989,
+                    "id": 239,
                     "name": "VariableDeclaration",
-                    "src": "1906:46:6"
+                    "src": "1906:46:2"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "mutability": "mutable",
                       "name": "extraPhysicalMetaData",
-                      "scope": 2998,
+                      "scope": 248,
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "type": "struct IEtherealBase.CharacterPhysicalMetadata",
@@ -2010,24 +2010,24 @@
                       {
                         "attributes": {
                           "name": "CharacterPhysicalMetadata",
-                          "referencedDeclaration": 2901,
+                          "referencedDeclaration": 142,
                           "type": "struct IEtherealBase.CharacterPhysicalMetadata"
                         },
-                        "id": 2990,
+                        "id": 240,
                         "name": "UserDefinedTypeName",
-                        "src": "1961:25:6"
+                        "src": "1961:25:2"
                       }
                     ],
-                    "id": 2991,
+                    "id": 241,
                     "name": "VariableDeclaration",
-                    "src": "1961:54:6"
+                    "src": "1961:54:2"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "mutability": "mutable",
                       "name": "extraAbilitiesMetaData",
-                      "scope": 2998,
+                      "scope": 248,
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "type": "struct IEtherealBase.CharacterAttributesMetadata",
@@ -2037,22 +2037,22 @@
                       {
                         "attributes": {
                           "name": "CharacterAttributesMetadata",
-                          "referencedDeclaration": 2922,
+                          "referencedDeclaration": 163,
                           "type": "struct IEtherealBase.CharacterAttributesMetadata"
                         },
-                        "id": 2992,
+                        "id": 242,
                         "name": "UserDefinedTypeName",
-                        "src": "2024:27:6"
+                        "src": "2024:27:2"
                       }
                     ],
-                    "id": 2993,
+                    "id": 243,
                     "name": "VariableDeclaration",
-                    "src": "2024:57:6"
+                    "src": "2024:57:2"
                   }
                 ],
-                "id": 2994,
+                "id": 244,
                 "name": "ParameterList",
-                "src": "1878:210:6"
+                "src": "1878:210:2"
               },
               {
                 "children": [
@@ -2061,7 +2061,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "",
-                      "scope": 2998,
+                      "scope": 248,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -2073,24 +2073,24 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 2995,
+                        "id": 245,
                         "name": "ElementaryTypeName",
-                        "src": "2125:7:6"
+                        "src": "2125:7:2"
                       }
                     ],
-                    "id": 2996,
+                    "id": 246,
                     "name": "VariableDeclaration",
-                    "src": "2125:7:6"
+                    "src": "2125:7:2"
                   }
                 ],
-                "id": 2997,
+                "id": 247,
                 "name": "ParameterList",
-                "src": "2124:9:6"
+                "src": "2124:9:2"
               }
             ],
-            "id": 2998,
+            "id": 248,
             "name": "FunctionDefinition",
-            "src": "1865:269:6"
+            "src": "1865:269:2"
           },
           {
             "attributes": {
@@ -2102,7 +2102,7 @@
                 null
               ],
               "name": "burn",
-              "scope": 3030,
+              "scope": 280,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "external"
@@ -2112,9 +2112,9 @@
                 "attributes": {
                   "text": " @dev Burns `tokenId`. See {ERC721-_burn}.\n Requirements:\n - The caller must own `tokenId` or be an approved operator."
                 },
-                "id": 2999,
+                "id": 249,
                 "name": "StructuredDocumentation",
-                "src": "2142:168:6"
+                "src": "2142:168:2"
               },
               {
                 "children": [
@@ -2123,7 +2123,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "tokenId",
-                      "scope": 3004,
+                      "scope": 254,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -2135,19 +2135,19 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 3000,
+                        "id": 250,
                         "name": "ElementaryTypeName",
-                        "src": "2330:7:6"
+                        "src": "2330:7:2"
                       }
                     ],
-                    "id": 3001,
+                    "id": 251,
                     "name": "VariableDeclaration",
-                    "src": "2330:15:6"
+                    "src": "2330:15:2"
                   }
                 ],
-                "id": 3002,
+                "id": 252,
                 "name": "ParameterList",
-                "src": "2329:17:6"
+                "src": "2329:17:2"
               },
               {
                 "attributes": {
@@ -2156,14 +2156,14 @@
                   ]
                 },
                 "children": [],
-                "id": 3003,
+                "id": 253,
                 "name": "ParameterList",
-                "src": "2355:0:6"
+                "src": "2355:0:2"
               }
             ],
-            "id": 3004,
+            "id": 254,
             "name": "FunctionDefinition",
-            "src": "2316:40:6"
+            "src": "2316:40:2"
           },
           {
             "attributes": {
@@ -2175,7 +2175,7 @@
                 null
               ],
               "name": "pause",
-              "scope": 3030,
+              "scope": 280,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "external"
@@ -2185,9 +2185,9 @@
                 "attributes": {
                   "text": " @dev Pauses all token transfers.\n See {ERC721Pausable} and {Pausable-_pause}.\n Requirements:\n - the caller must have the `PAUSER_ROLE`."
                 },
-                "id": 3005,
+                "id": 255,
                 "name": "StructuredDocumentation",
-                "src": "2364:201:6"
+                "src": "2364:201:2"
               },
               {
                 "attributes": {
@@ -2196,9 +2196,9 @@
                   ]
                 },
                 "children": [],
-                "id": 3006,
+                "id": 256,
                 "name": "ParameterList",
-                "src": "2585:2:6"
+                "src": "2585:2:2"
               },
               {
                 "attributes": {
@@ -2207,14 +2207,14 @@
                   ]
                 },
                 "children": [],
-                "id": 3007,
+                "id": 257,
                 "name": "ParameterList",
-                "src": "2596:0:6"
+                "src": "2596:0:2"
               }
             ],
-            "id": 3008,
+            "id": 258,
             "name": "FunctionDefinition",
-            "src": "2571:26:6"
+            "src": "2571:26:2"
           },
           {
             "attributes": {
@@ -2226,7 +2226,7 @@
                 null
               ],
               "name": "unpause",
-              "scope": 3030,
+              "scope": 280,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "external"
@@ -2236,9 +2236,9 @@
                 "attributes": {
                   "text": " @dev Unpauses all token transfers.\n See {ERC721Pausable} and {Pausable-_unpause}.\n Requirements:\n - the caller must have the `PAUSER_ROLE`."
                 },
-                "id": 3009,
+                "id": 259,
                 "name": "StructuredDocumentation",
-                "src": "2605:205:6"
+                "src": "2605:205:2"
               },
               {
                 "attributes": {
@@ -2247,9 +2247,9 @@
                   ]
                 },
                 "children": [],
-                "id": 3010,
+                "id": 260,
                 "name": "ParameterList",
-                "src": "2832:2:6"
+                "src": "2832:2:2"
               },
               {
                 "attributes": {
@@ -2258,14 +2258,14 @@
                   ]
                 },
                 "children": [],
-                "id": 3011,
+                "id": 261,
                 "name": "ParameterList",
-                "src": "2843:0:6"
+                "src": "2843:0:2"
               }
             ],
-            "id": 3012,
+            "id": 262,
             "name": "FunctionDefinition",
-            "src": "2816:28:6"
+            "src": "2816:28:2"
           },
           {
             "attributes": {
@@ -2277,7 +2277,7 @@
                 null
               ],
               "name": "ownerOf",
-              "scope": 3030,
+              "scope": 280,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "external"
@@ -2287,9 +2287,9 @@
                 "attributes": {
                   "text": " @dev See {IERC721-ownerOf}."
                 },
-                "id": 3013,
+                "id": 263,
                 "name": "StructuredDocumentation",
-                "src": "2852:48:6"
+                "src": "2852:48:2"
               },
               {
                 "children": [
@@ -2298,7 +2298,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "tokenId",
-                      "scope": 3020,
+                      "scope": 270,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -2310,19 +2310,19 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 3014,
+                        "id": 264,
                         "name": "ElementaryTypeName",
-                        "src": "2923:7:6"
+                        "src": "2923:7:2"
                       }
                     ],
-                    "id": 3015,
+                    "id": 265,
                     "name": "VariableDeclaration",
-                    "src": "2923:15:6"
+                    "src": "2923:15:2"
                   }
                 ],
-                "id": 3016,
+                "id": 266,
                 "name": "ParameterList",
-                "src": "2922:17:6"
+                "src": "2922:17:2"
               },
               {
                 "children": [
@@ -2331,7 +2331,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "",
-                      "scope": 3020,
+                      "scope": 270,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -2344,24 +2344,24 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 3017,
+                        "id": 267,
                         "name": "ElementaryTypeName",
-                        "src": "2958:7:6"
+                        "src": "2958:7:2"
                       }
                     ],
-                    "id": 3018,
+                    "id": 268,
                     "name": "VariableDeclaration",
-                    "src": "2958:7:6"
+                    "src": "2958:7:2"
                   }
                 ],
-                "id": 3019,
+                "id": 269,
                 "name": "ParameterList",
-                "src": "2957:9:6"
+                "src": "2957:9:2"
               }
             ],
-            "id": 3020,
+            "id": 270,
             "name": "FunctionDefinition",
-            "src": "2906:61:6"
+            "src": "2906:61:2"
           },
           {
             "attributes": {
@@ -2373,7 +2373,7 @@
                 null
               ],
               "name": "upgradeCharacter",
-              "scope": 3030,
+              "scope": 280,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "external"
@@ -2386,7 +2386,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "_tokenId",
-                      "scope": 3029,
+                      "scope": 279,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -2398,21 +2398,21 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 3021,
+                        "id": 271,
                         "name": "ElementaryTypeName",
-                        "src": "3080:7:6"
+                        "src": "3080:7:2"
                       }
                     ],
-                    "id": 3022,
+                    "id": 272,
                     "name": "VariableDeclaration",
-                    "src": "3080:16:6"
+                    "src": "3080:16:2"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "mutability": "mutable",
                       "name": "_skillsPointsEarned",
-                      "scope": 3029,
+                      "scope": 279,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint8",
@@ -2424,19 +2424,19 @@
                           "name": "uint8",
                           "type": "uint8"
                         },
-                        "id": 3023,
+                        "id": 273,
                         "name": "ElementaryTypeName",
-                        "src": "3098:5:6"
+                        "src": "3098:5:2"
                       }
                     ],
-                    "id": 3024,
+                    "id": 274,
                     "name": "VariableDeclaration",
-                    "src": "3098:25:6"
+                    "src": "3098:25:2"
                   }
                 ],
-                "id": 3025,
+                "id": 275,
                 "name": "ParameterList",
-                "src": "3079:45:6"
+                "src": "3079:45:2"
               },
               {
                 "children": [
@@ -2445,7 +2445,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "",
-                      "scope": 3029,
+                      "scope": 279,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint8",
@@ -2457,34 +2457,34 @@
                           "name": "uint8",
                           "type": "uint8"
                         },
-                        "id": 3026,
+                        "id": 276,
                         "name": "ElementaryTypeName",
-                        "src": "3143:5:6"
+                        "src": "3143:5:2"
                       }
                     ],
-                    "id": 3027,
+                    "id": 277,
                     "name": "VariableDeclaration",
-                    "src": "3143:5:6"
+                    "src": "3143:5:2"
                   }
                 ],
-                "id": 3028,
+                "id": 278,
                 "name": "ParameterList",
-                "src": "3142:7:6"
+                "src": "3142:7:2"
               }
             ],
-            "id": 3029,
+            "id": 279,
             "name": "FunctionDefinition",
-            "src": "3054:96:6"
+            "src": "3054:96:2"
           }
         ],
-        "id": 3030,
+        "id": 280,
         "name": "ContractDefinition",
-        "src": "793:2362:6"
+        "src": "793:2362:2"
       }
     ],
-    "id": 3031,
+    "id": 281,
     "name": "SourceUnit",
-    "src": "33:3122:6"
+    "src": "33:3122:2"
   },
   "compiler": {
     "name": "solc",
@@ -2492,7 +2492,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.3",
-  "updatedAt": "2021-02-17T00:37:14.239Z",
+  "updatedAt": "2021-02-17T01:21:46.255Z",
   "devdoc": {
     "details": "{ERC721} token, including:  - ability for holders to burn (destroy) their tokens  - a minter role that allows for token minting (creation)  - a pauser role that allows to stop all token transfers  - token ID and URI autogeneration  - includes extra properties to store important metadata This contract uses {AccessControl} to lock permissioned functions using the different roles - head to its documentation for details. The account that deploys the contract will be granted the minter and pauser roles, as well as the default admin role, which will let it grant both minter and pauser roles to other accounts.",
     "kind": "dev",

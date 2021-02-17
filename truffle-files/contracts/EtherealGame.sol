@@ -11,6 +11,7 @@ import './SafeMath24.sol';
 import './SafeMath32.sol';
 import './IEtherealBase.sol';
 import './IEtherealCharacter.sol';
+import './IEtherealPlanet.sol';
 import './IBEP20.sol';
 
 contract EtherealGame is Context, AccessControl, IEtherealBase
@@ -271,6 +272,11 @@ contract EtherealGame is Context, AccessControl, IEtherealBase
     returns (uint256)
   {
     require(_sumSkillsPoints(extraAbilitiesMetaData) == 10, "The sum of skills points must be equal to 10");
+    // The planet must be valid
+    require(
+      IEtherealPlanet(planetContract).getIsPlanetActive(extraBaseMetaData.planetId), "Invalid planet id"
+    );
+
     extraAbilitiesMetaData.level = 1;
     extraAbilitiesMetaData.extraSkillsPoints = 0;
 
@@ -281,6 +287,9 @@ contract EtherealGame is Context, AccessControl, IEtherealBase
       extraPhysicalMetaData,
       extraAbilitiesMetaData
     );
+    // Increment planet population counter
+    IEtherealPlanet(planetContract).increasePopulation(extraBaseMetaData.planetId);
+
     emit NewCharacterMinted(_msgSender(), extraBaseMetaData.name);
     return characterId;
   }

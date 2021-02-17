@@ -32,9 +32,11 @@ module.exports = async (deployer) => {
   // Add admin roles to Ethereal Game Contract
   const character = await EtherealCharacter.deployed();
   const weapon = await EtherealWeapon.deployed();
+  const planet = await EtherealPlanet.deployed();
 
   character.grantRole(web3.utils.sha3('MINTER_ROLE'), EtherealGame.address);
   weapon.grantRole(web3.utils.sha3('MINTER_ROLE'), EtherealGame.address);
+  planet.grantRole(web3.utils.sha3('MINTER_ROLE'), EtherealGame.address);
 
   // Send tokens to Ethereal Game Contract
   const account = await web3.eth.getAccounts();

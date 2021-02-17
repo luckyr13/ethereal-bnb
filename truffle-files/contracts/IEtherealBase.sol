@@ -75,4 +75,14 @@ interface IEtherealBase {
       uint8 luck;
       uint8 spirit;
     }
+
+    /*
+    * Planet struct
+    */
+    struct Planet {
+      bytes32 name;
+      string description;
+      uint256 population;
+      bool active;
+    }
 }

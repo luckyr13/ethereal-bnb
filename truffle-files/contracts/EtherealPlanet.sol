@@ -3,19 +3,17 @@ pragma solidity 0.7.5;
 import '@openzeppelin/contracts/access/AccessControl.sol';
 import '@openzeppelin/contracts/math/SafeMath.sol';
 import "@openzeppelin/contracts/utils/Context.sol";
+import './IEtherealBase.sol';
 
 /*
 * @title Create new planets for the Ethereal universe
 */
-contract EtherealPlanet is Context, AccessControl
+contract EtherealPlanet is Context, AccessControl, IEtherealBase
 {
 	using SafeMath for uint256;
-	struct Planet {
-		bytes32 name;
-		string description;
-		uint256 population;
-		bool active;
-	}
+
+	// Player role to improve access control
+  bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
 
 	// Planet's info
 	mapping(uint256 => Planet) public planets;
@@ -28,6 +26,9 @@ contract EtherealPlanet is Context, AccessControl
 	uint256 public totalInactivePlanets;
 	// Contract status
 	bool public active;
+
+	// Planet population
+	mapping(uint256 => uint256) public planetPopulation;
 
 	/*
 	*	@dev Check if bytes32 is empty
@@ -72,15 +73,19 @@ contract EtherealPlanet is Context, AccessControl
 	/*
 	* @dev Log new planet creation
 	*/
-	event NewPlanetCreated(uint256 planetId, bytes32 name);
+	event NewPlanetCreated(uint256 indexed planetId, bytes32 name);
 	/*
 	* @dev Log planet status update
 	*/
-	event PlanetStatusUpdated(uint256 planetId, bool newStatus);
+	event PlanetStatusUpdated(uint256 indexed planetId, bool newStatus);
 	/*
 	* @dev Log contract status update
 	*/
 	event ContractStatusUpdated(bool newStatus);
+	/*
+	* @dev A New character has born in this planet
+	*/
+	event PlanetPopulationIncreased(uint256 indexed planetId, uint256 population);
 
 
 	/*
@@ -209,6 +214,34 @@ contract EtherealPlanet is Context, AccessControl
 		}
 
 		return planetList;
+	}
+
+	/*
+	* @notice Return true if planet is active and exists
+	*/
+	function getIsPlanetActive(uint256 _planetId)
+		external
+		view
+		isContractActive
+		returns (bool)
+	{
+		bool planetStatus = planets[_planetId].active;
+		return planetStatus;
+	}
+
+	/*
+	* @notice Increase by one population counter
+	*/
+	function increasePopulation(uint256 _planetId)
+		external 
+		isContractActive
+		isPlanetActive(_planetId)
+		returns (uint256)
+	{
+		require(hasRole(MINTER_ROLE, _msgSender()), "increasePopulation: must have minter role");
+		planetPopulation[_planetId] = planetPopulation[_planetId].add(1);
+		emit PlanetPopulationIncreased(_planetId, planetPopulation[_planetId]);
+		return planetPopulation[_planetId];
 	}
 
 

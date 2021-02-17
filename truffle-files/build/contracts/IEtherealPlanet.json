@@ -1,0 +1,1557 @@
+{
+  "contractName": "IEtherealPlanet",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_name",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "string",
+          "name": "_description",
+          "type": "string"
+        }
+      ],
+      "name": "createPlanet",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_planetId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "_active",
+          "type": "bool"
+        }
+      ],
+      "name": "activateDeactivatePlanet",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "_active",
+          "type": "bool"
+        }
+      ],
+      "name": "activateDeactivateContract",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getNumActivePlanets",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getPlanets",
+      "outputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "",
+          "type": "uint256[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getInactivePlanets",
+      "outputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "",
+          "type": "uint256[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_planetId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getIsPlanetActive",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_planetId",
+          "type": "uint256"
+        }
+      ],
+      "name": "increasePopulation",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.7.5+commit.eb77ed08\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bool\",\"name\":\"_active\",\"type\":\"bool\"}],\"name\":\"activateDeactivateContract\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_planetId\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"_active\",\"type\":\"bool\"}],\"name\":\"activateDeactivatePlanet\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_name\",\"type\":\"bytes32\"},{\"internalType\":\"string\",\"name\":\"_description\",\"type\":\"string\"}],\"name\":\"createPlanet\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getInactivePlanets\",\"outputs\":[{\"internalType\":\"uint256[]\",\"name\":\"\",\"type\":\"uint256[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_planetId\",\"type\":\"uint256\"}],\"name\":\"getIsPlanetActive\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getNumActivePlanets\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getPlanets\",\"outputs\":[{\"internalType\":\"uint256[]\",\"name\":\"\",\"type\":\"uint256[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_planetId\",\"type\":\"uint256\"}],\"name\":\"increasePopulation\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealPlanet.sol\":\"IEtherealPlanet\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealBase.sol\":{\"keccak256\":\"0x1785fe58a448a56757597d327c323a7fe6821fcd35cdb795d19f63baabda42cf\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d109197fb277001accb73f93001fbee41b05549eed893b0d307e8174f9c9c24b\",\"dweb:/ipfs/Qmdo19SJisDdrR4gARnji7b9UABa3pyNParYn5h2MuGRs7\"]},\"/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealPlanet.sol\":{\"keccak256\":\"0x46589bc054b0b417d968f85540671806912eb34641a5e19dde0aa7d0c728b4d6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e23b3e6db7b7ac50db2e3ae22f846cf1e9add371359c9ce759626b64f9b14815\",\"dweb:/ipfs/QmUJRTW1h8xQE14A6vGFopsZAaCsVLdAbo4aPTXiuGGX3q\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity 0.7.5;\r\nimport './IEtherealBase.sol';\r\n\r\n/*\r\n* @title Create new planets for the Ethereal universe\r\n*/\r\ninterface IEtherealPlanet is IEtherealBase\r\n{\r\n\r\n\tfunction createPlanet(bytes32 _name, string memory _description) external returns (uint id);\r\n\r\n\t/*\r\n\t*\t@notice Update planet status\r\n\t*/\r\n\tfunction activateDeactivatePlanet(uint256 _planetId, bool _active) external;\r\n\r\n\t/*\r\n\t*\t@notice Update contract status\r\n\t*/\r\n\tfunction activateDeactivateContract(bool _active) external;\r\n\r\n\t/*\r\n\t* @notice Returns the number of active planets\r\n\t*/\r\n\tfunction getNumActivePlanets() external view returns (uint256);\r\n\r\n\t/*\r\n\t* @notice Returns the list of active planets\r\n\t*/\r\n\tfunction getPlanets() external view returns (uint256[] memory);\r\n\r\n\t/*\r\n\t* @notice Returns the list of inactive planets\r\n\t*/\r\n\tfunction getInactivePlanets() external view returns (uint256[] memory);\r\n\r\n\t/*\r\n\t* @notice Return true if planet is active and exists\r\n\t*/\r\n\tfunction getIsPlanetActive(uint256 _planetId) external view returns (bool);\r\n\r\n\t/*\r\n\t* @notice Increase by one population counter\r\n\t*/\r\n\tfunction increasePopulation(uint256 _planetId) external returns (uint256);\r\n\r\n}\r\n",
+  "sourcePath": "C:/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealPlanet.sol",
+  "ast": {
+    "absolutePath": "/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealPlanet.sol",
+    "exportedSymbols": {
+      "IEtherealBase": [
+        192
+      ],
+      "IEtherealPlanet": [
+        338
+      ]
+    },
+    "id": 339,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 282,
+        "literals": [
+          "solidity",
+          "0.7",
+          ".5"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:22:3"
+      },
+      {
+        "absolutePath": "/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealBase.sol",
+        "file": "./IEtherealBase.sol",
+        "id": 283,
+        "nodeType": "ImportDirective",
+        "scope": 339,
+        "sourceUnit": 193,
+        "src": "57:29:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 284,
+              "name": "IEtherealBase",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 192,
+              "src": "182:13:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IEtherealBase_$192",
+                "typeString": "contract IEtherealBase"
+              }
+            },
+            "id": 285,
+            "nodeType": "InheritanceSpecifier",
+            "src": "182:13:3"
+          }
+        ],
+        "contractDependencies": [
+          192
+        ],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 338,
+        "linearizedBaseContracts": [
+          338,
+          192
+        ],
+        "name": "IEtherealPlanet",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "e581e0b6",
+            "id": 294,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createPlanet",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 290,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 287,
+                  "mutability": "mutable",
+                  "name": "_name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 294,
+                  "src": "225:13:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 286,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "225:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 289,
+                  "mutability": "mutable",
+                  "name": "_description",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 294,
+                  "src": "240:26:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 288,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "240:6:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "224:43:3"
+            },
+            "returnParameters": {
+              "id": 293,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 292,
+                  "mutability": "mutable",
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 294,
+                  "src": "286:7:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 291,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "286:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "285:9:3"
+            },
+            "scope": 338,
+            "src": "203:92:3",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "00912bd0",
+            "id": 301,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "activateDeactivatePlanet",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 299,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 296,
+                  "mutability": "mutable",
+                  "name": "_planetId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 301,
+                  "src": "377:17:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 295,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "377:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 298,
+                  "mutability": "mutable",
+                  "name": "_active",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 301,
+                  "src": "396:12:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 297,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "396:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "376:33:3"
+            },
+            "returnParameters": {
+              "id": 300,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "418:0:3"
+            },
+            "scope": 338,
+            "src": "343:76:3",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "21bbf14c",
+            "id": 306,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "activateDeactivateContract",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 304,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 303,
+                  "mutability": "mutable",
+                  "name": "_active",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 306,
+                  "src": "505:12:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 302,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "505:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "504:14:3"
+            },
+            "returnParameters": {
+              "id": 305,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "527:0:3"
+            },
+            "scope": 338,
+            "src": "469:59:3",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "d64a626e",
+            "id": 311,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getNumActivePlanets",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 307,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "620:2:3"
+            },
+            "returnParameters": {
+              "id": 310,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 309,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 311,
+                  "src": "646:7:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 308,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "646:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "645:9:3"
+            },
+            "scope": 338,
+            "src": "592:63:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "f32bb423",
+            "id": 317,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPlanets",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 312,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "736:2:3"
+            },
+            "returnParameters": {
+              "id": 316,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 315,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 317,
+                  "src": "762:16:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 313,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "762:7:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 314,
+                    "nodeType": "ArrayTypeName",
+                    "src": "762:9:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "761:18:3"
+            },
+            "scope": 338,
+            "src": "717:63:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "40d89309",
+            "id": 323,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getInactivePlanets",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 318,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "871:2:3"
+            },
+            "returnParameters": {
+              "id": 322,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 321,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 323,
+                  "src": "897:16:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 319,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "897:7:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 320,
+                    "nodeType": "ArrayTypeName",
+                    "src": "897:9:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "896:18:3"
+            },
+            "scope": 338,
+            "src": "844:71:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "100e12d0",
+            "id": 330,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getIsPlanetActive",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 326,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 325,
+                  "mutability": "mutable",
+                  "name": "_planetId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 330,
+                  "src": "1012:17:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 324,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1012:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1011:19:3"
+            },
+            "returnParameters": {
+              "id": 329,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 328,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 330,
+                  "src": "1054:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 327,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1054:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1053:6:3"
+            },
+            "scope": 338,
+            "src": "985:75:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "f4107cbe",
+            "id": 337,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "increasePopulation",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 333,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 332,
+                  "mutability": "mutable",
+                  "name": "_planetId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 337,
+                  "src": "1150:17:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 331,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1150:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1149:19:3"
+            },
+            "returnParameters": {
+              "id": 336,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 335,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 337,
+                  "src": "1187:7:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 334,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1187:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1186:9:3"
+            },
+            "scope": 338,
+            "src": "1122:74:3",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 339,
+        "src": "153:1048:3"
+      }
+    ],
+    "src": "33:1170:3"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealPlanet.sol",
+      "exportedSymbols": {
+        "IEtherealBase": [
+          192
+        ],
+        "IEtherealPlanet": [
+          338
+        ]
+      },
+      "license": "MIT"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "0.7",
+            ".5"
+          ]
+        },
+        "id": 282,
+        "name": "PragmaDirective",
+        "src": "33:22:3"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 193,
+          "absolutePath": "/C/xampp/htdocs/ethereal-bnb/truffle-files/contracts/IEtherealBase.sol",
+          "file": "./IEtherealBase.sol",
+          "scope": 339,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 283,
+        "name": "ImportDirective",
+        "src": "57:29:3"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "contractDependencies": [
+            192
+          ],
+          "contractKind": "interface",
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            338,
+            192
+          ],
+          "name": "IEtherealPlanet",
+          "scope": 339
+        },
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {
+                  "name": "IEtherealBase",
+                  "referencedDeclaration": 192,
+                  "type": "contract IEtherealBase"
+                },
+                "id": 284,
+                "name": "UserDefinedTypeName",
+                "src": "182:13:3"
+              }
+            ],
+            "id": 285,
+            "name": "InheritanceSpecifier",
+            "src": "182:13:3"
+          },
+          {
+            "attributes": {
+              "functionSelector": "e581e0b6",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "createPlanet",
+              "scope": 338,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_name",
+                      "scope": 294,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 286,
+                        "name": "ElementaryTypeName",
+                        "src": "225:7:3"
+                      }
+                    ],
+                    "id": 287,
+                    "name": "VariableDeclaration",
+                    "src": "225:13:3"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_description",
+                      "scope": 294,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 288,
+                        "name": "ElementaryTypeName",
+                        "src": "240:6:3"
+                      }
+                    ],
+                    "id": 289,
+                    "name": "VariableDeclaration",
+                    "src": "240:26:3"
+                  }
+                ],
+                "id": 290,
+                "name": "ParameterList",
+                "src": "224:43:3"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "id",
+                      "scope": 294,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 291,
+                        "name": "ElementaryTypeName",
+                        "src": "286:4:3"
+                      }
+                    ],
+                    "id": 292,
+                    "name": "VariableDeclaration",
+                    "src": "286:7:3"
+                  }
+                ],
+                "id": 293,
+                "name": "ParameterList",
+                "src": "285:9:3"
+              }
+            ],
+            "id": 294,
+            "name": "FunctionDefinition",
+            "src": "203:92:3"
+          },
+          {
+            "attributes": {
+              "functionSelector": "00912bd0",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "activateDeactivatePlanet",
+              "scope": 338,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_planetId",
+                      "scope": 301,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 295,
+                        "name": "ElementaryTypeName",
+                        "src": "377:7:3"
+                      }
+                    ],
+                    "id": 296,
+                    "name": "VariableDeclaration",
+                    "src": "377:17:3"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_active",
+                      "scope": 301,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 297,
+                        "name": "ElementaryTypeName",
+                        "src": "396:4:3"
+                      }
+                    ],
+                    "id": 298,
+                    "name": "VariableDeclaration",
+                    "src": "396:12:3"
+                  }
+                ],
+                "id": 299,
+                "name": "ParameterList",
+                "src": "376:33:3"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 300,
+                "name": "ParameterList",
+                "src": "418:0:3"
+              }
+            ],
+            "id": 301,
+            "name": "FunctionDefinition",
+            "src": "343:76:3"
+          },
+          {
+            "attributes": {
+              "functionSelector": "21bbf14c",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "activateDeactivateContract",
+              "scope": 338,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_active",
+                      "scope": 306,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 302,
+                        "name": "ElementaryTypeName",
+                        "src": "505:4:3"
+                      }
+                    ],
+                    "id": 303,
+                    "name": "VariableDeclaration",
+                    "src": "505:12:3"
+                  }
+                ],
+                "id": 304,
+                "name": "ParameterList",
+                "src": "504:14:3"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 305,
+                "name": "ParameterList",
+                "src": "527:0:3"
+              }
+            ],
+            "id": 306,
+            "name": "FunctionDefinition",
+            "src": "469:59:3"
+          },
+          {
+            "attributes": {
+              "functionSelector": "d64a626e",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getNumActivePlanets",
+              "scope": 338,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 307,
+                "name": "ParameterList",
+                "src": "620:2:3"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 311,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 308,
+                        "name": "ElementaryTypeName",
+                        "src": "646:7:3"
+                      }
+                    ],
+                    "id": 309,
+                    "name": "VariableDeclaration",
+                    "src": "646:7:3"
+                  }
+                ],
+                "id": 310,
+                "name": "ParameterList",
+                "src": "645:9:3"
+              }
+            ],
+            "id": 311,
+            "name": "FunctionDefinition",
+            "src": "592:63:3"
+          },
+          {
+            "attributes": {
+              "functionSelector": "f32bb423",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getPlanets",
+              "scope": 338,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 312,
+                "name": "ParameterList",
+                "src": "736:2:3"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 317,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "uint256[]",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "type": "uint256[]"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "uint256",
+                              "type": "uint256"
+                            },
+                            "id": 313,
+                            "name": "ElementaryTypeName",
+                            "src": "762:7:3"
+                          }
+                        ],
+                        "id": 314,
+                        "name": "ArrayTypeName",
+                        "src": "762:9:3"
+                      }
+                    ],
+                    "id": 315,
+                    "name": "VariableDeclaration",
+                    "src": "762:16:3"
+                  }
+                ],
+                "id": 316,
+                "name": "ParameterList",
+                "src": "761:18:3"
+              }
+            ],
+            "id": 317,
+            "name": "FunctionDefinition",
+            "src": "717:63:3"
+          },
+          {
+            "attributes": {
+              "functionSelector": "40d89309",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getInactivePlanets",
+              "scope": 338,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 318,
+                "name": "ParameterList",
+                "src": "871:2:3"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 323,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "uint256[]",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "type": "uint256[]"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "uint256",
+                              "type": "uint256"
+                            },
+                            "id": 319,
+                            "name": "ElementaryTypeName",
+                            "src": "897:7:3"
+                          }
+                        ],
+                        "id": 320,
+                        "name": "ArrayTypeName",
+                        "src": "897:9:3"
+                      }
+                    ],
+                    "id": 321,
+                    "name": "VariableDeclaration",
+                    "src": "897:16:3"
+                  }
+                ],
+                "id": 322,
+                "name": "ParameterList",
+                "src": "896:18:3"
+              }
+            ],
+            "id": 323,
+            "name": "FunctionDefinition",
+            "src": "844:71:3"
+          },
+          {
+            "attributes": {
+              "functionSelector": "100e12d0",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getIsPlanetActive",
+              "scope": 338,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_planetId",
+                      "scope": 330,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 324,
+                        "name": "ElementaryTypeName",
+                        "src": "1012:7:3"
+                      }
+                    ],
+                    "id": 325,
+                    "name": "VariableDeclaration",
+                    "src": "1012:17:3"
+                  }
+                ],
+                "id": 326,
+                "name": "ParameterList",
+                "src": "1011:19:3"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 330,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 327,
+                        "name": "ElementaryTypeName",
+                        "src": "1054:4:3"
+                      }
+                    ],
+                    "id": 328,
+                    "name": "VariableDeclaration",
+                    "src": "1054:4:3"
+                  }
+                ],
+                "id": 329,
+                "name": "ParameterList",
+                "src": "1053:6:3"
+              }
+            ],
+            "id": 330,
+            "name": "FunctionDefinition",
+            "src": "985:75:3"
+          },
+          {
+            "attributes": {
+              "functionSelector": "f4107cbe",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "increasePopulation",
+              "scope": 338,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_planetId",
+                      "scope": 337,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 331,
+                        "name": "ElementaryTypeName",
+                        "src": "1150:7:3"
+                      }
+                    ],
+                    "id": 332,
+                    "name": "VariableDeclaration",
+                    "src": "1150:17:3"
+                  }
+                ],
+                "id": 333,
+                "name": "ParameterList",
+                "src": "1149:19:3"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 337,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 334,
+                        "name": "ElementaryTypeName",
+                        "src": "1187:7:3"
+                      }
+                    ],
+                    "id": 335,
+                    "name": "VariableDeclaration",
+                    "src": "1187:7:3"
+                  }
+                ],
+                "id": 336,
+                "name": "ParameterList",
+                "src": "1186:9:3"
+              }
+            ],
+            "id": 337,
+            "name": "FunctionDefinition",
+            "src": "1122:74:3"
+          }
+        ],
+        "id": 338,
+        "name": "ContractDefinition",
+        "src": "153:1048:3"
+      }
+    ],
+    "id": 339,
+    "name": "SourceUnit",
+    "src": "33:1170:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.7.5+commit.eb77ed08.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.3",
+  "updatedAt": "2021-02-17T01:21:46.259Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

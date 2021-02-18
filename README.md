@@ -1,6 +1,17 @@
 # EtherealBnb
 
+We believe that games must be fun!. We are developing a dApp, a new decentralized game called Ethereal's Chronicles. We are using Binance Smart Chain as our Blockchain to engage and reward our users for playing with our tokens (Kopernik token). In Ethereal's world almost everything is a crypto-collectible.
+
+Basically is a highly interactive multiplayer fighting style game. You can create new characters with awesome and unique characteristics burned and saved into BSC, so your characters are very valuable!
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.
+
+## Deployed Contracts (Last update: 2021-02-17)
+EtherealGame: 0xB775ae662C2Ba38eC533317ba776F97daebD6D71
+KopernikToken: 0x8A1C5607D5e0bAdf8929EDbbB80906164100778B
+EtherealPlanet: 0x62AC806a90977B5799F9622Ad04842A01c339Bc6
+EtherealWeapon: 0x1A9080f7e0b9F09042a40eA8616cA4939Fe8E767
+EtherealCharacter: 0x95FA15DDef966463c8C42279695232F5df6a73A3
 
 ## Development server
 

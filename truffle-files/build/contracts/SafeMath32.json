@@ -5226,7 +5226,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.3",
-  "updatedAt": "2021-02-17T01:21:46.279Z",
+  "updatedAt": "2021-02-18T01:08:21.752Z",
   "devdoc": {
     "details": "Adaptation of the SafeMath library provided by OpenZeppelin\t\tto allow safe operation using integers with less than 256bits",
     "kind": "dev",

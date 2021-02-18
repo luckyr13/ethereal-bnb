@@ -24108,7 +24108,7 @@
     "version": "0.7.5+commit.eb77ed08.Emscripten.clang"
   },
   "networks": {
-    "5777": {
+    "97": {
       "events": {
         "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925": {
           "anonymous": false,
@@ -24301,12 +24301,12 @@
         }
       },
       "links": {},
-      "address": "0xF2790b24EfF8B2888d2d1b6eB61cBdDa29678d8C",
-      "transactionHash": "0xfd1685cef23c1a48c52df586704e047e74c2489171ee8e33fa92158c14e8739b"
+      "address": "0x1A9080f7e0b9F09042a40eA8616cA4939Fe8E767",
+      "transactionHash": "0x6e4f2cc95453b219b445d2c43800b01f7806fee27fcc35103dbbeaf8a050a730"
     }
   },
   "schemaVersion": "3.3.3",
-  "updatedAt": "2021-02-17T01:22:45.567Z",
+  "updatedAt": "2021-02-18T01:21:21.530Z",
   "networkType": "ethereum",
   "devdoc": {
     "details": "{ERC721} token, including:  - ability for holders to burn (destroy) their tokens  - a minter role that allows for token minting (creation)  - a pauser role that allows to stop all token transfers  - token ID and URI autogeneration  - includes extra properties to store important metadata This contract uses {AccessControl} to lock permissioned functions using the different roles - head to its documentation for details. The account that deploys the contract will be granted the minter and pauser roles, as well as the default admin role, which will let it grant both minter and pauser roles to other accounts.",

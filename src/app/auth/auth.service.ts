@@ -12,27 +12,55 @@ export class AuthService {
     private userSettings: UserSettingsService
   ) { }
 
-  async connectWalletAndSetListeners(option: string): Promise<string> {
+  /*
+  *	Connect wallet, set wallet listeners and save user settings
+  */
+  async connectWalletAndSetListeners(_option: string, _errorCallback: any): Promise<any> {
+  	let res = {account: '', networkId: '', networkName: ''};
     try {
-      const res: any = await this.connectWallet(option);
+      res = await this.connectWallet(_option);
       const account = res.account;
       const networkId = res.networkId;
       const network = res.networkName;
-      // Set listeners 
-      this.setWalletChangeListeners();
-      this.userSettings.saveUserSettings(account, networkId, network, option);
+      // Validate network 
+      if (this.isValidNetworkId(networkId)) {
+	      // Set listeners 
+	      this.setWalletChangeListeners();
+	      // Save user settings
+	      this.userSettings.saveUserSettings(account, networkId, network, _option);
+      } else {
+      	// Update UI network info 
+      	this.userSettings.updateNetworkSettings(networkId, network);
+      	// Redirect to error page
+      	_errorCallback();
+      	await new Promise(() => {
 
-      return account;
+      		window.setTimeout(async () => {
+		      	// Throw error
+		      	throw Error('Invalid network ...');
+	      	}, 500)
+
+      	});
+      }
+
+
     } catch (err) {
       this.userSettings.deleteUserSettings();
       throw err;
     }
 
-    return '';
+    return res;
   }
 
   /*
-  *	
+  *	Validate network id
+  */
+  public isValidNetworkId(networkId: string) {
+  	return false;
+  }
+
+  /*
+  *	Connect wallet
   */
   async connectWallet(option: string) {
   	let res = { networkId: '', account: '', networkName: ''};

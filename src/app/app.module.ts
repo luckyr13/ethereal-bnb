@@ -10,6 +10,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SelectWalletDialogComponent } from './select-wallet-dialog/select-wallet-dialog.component';
+import { WrongNetworkComponent } from './wrong-network/wrong-network.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SelectWalletDialogComponent } from './select-wallet-dialog/select-walle
     MainMenuComponent,
     MainToolbarComponent,
     PageNotFoundComponent,
-    SelectWalletDialogComponent
+    SelectWalletDialogComponent,
+    WrongNetworkComponent
   ],
   imports: [
     BrowserModule,

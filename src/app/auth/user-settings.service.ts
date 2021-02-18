@@ -36,8 +36,8 @@ export class UserSettingsService {
 		this.network.next(network);
 	}
 
-  setPlayerBalance(account: string) {
-    this.playerBalance.next(account);
+  setPlayerBalance(balance: string) {
+    this.playerBalance.next(balance);
   }
 
   getWalletOptionOnLocalStorage() {
@@ -79,5 +79,13 @@ export class UserSettingsService {
     this.setAccount('');
     this.setNetworkId('');
     this.setNetwork('');
+  }
+
+  updateNetworkSettings(
+    networkId: string,
+    network: string,
+  ) {
+    this.setNetworkId(networkId);
+    this.setNetwork(network);
   }
 }

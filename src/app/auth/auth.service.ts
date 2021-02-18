@@ -56,7 +56,7 @@ export class AuthService {
   *	Validate network id
   */
   public isValidNetworkId(networkId: string) {
-  	return false;
+  	return (this.wps.getMainNetworkIdDeployedContracts() == networkId);
   }
 
   /*

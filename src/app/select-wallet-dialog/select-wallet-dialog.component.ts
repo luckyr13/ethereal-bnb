@@ -4,6 +4,7 @@ import { AuthService } from '../auth/auth.service';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import { UserSettingsService } from '../auth/user-settings.service';
 import { Router } from '@angular/router';
+import { KopernikTokenService } from '../contracts/KopernikToken.service';
 
 @Component({
   selector: 'app-select-wallet-dialog',
@@ -19,22 +20,38 @@ export class SelectWalletDialogComponent implements OnInit {
   	private auth: AuthService,
     private snackbar: MatSnackBar,
     private userSettings: UserSettingsService,
-    private router: Router
+    private router: Router,
+    private kopernikToken: KopernikTokenService,
   ) {}
 
   async connectWallet(option: string) {
     try {
-      await this.auth.connectWalletAndSetListeners(option, () => {
+      // Connect wallet
+      const res = await this.auth.connectWalletAndSetListeners(option, () => {
         this.router.navigate(['/wrong-network']);
         this.message(`Wrong network detected ...`, 'error');
         this._bottomSheetRef.dismiss();
       });
-      this._bottomSheetRef.dismiss();
+      // Get balance
+      await this.getKoperniksBalance(res.account);
       this.message(`Welcome!`, 'success');
+      this._bottomSheetRef.dismiss();
     } catch (err) {
       this.message(`${err}`, 'error', 'top');
     }
   }
+
+  async getKoperniksBalance(account: string) {
+    let balance = 0;
+    try {
+      this.kopernikToken.init();
+      balance = await this.kopernikToken.getBalance(account);
+      this.userSettings.setPlayerBalance(`${balance}`);
+    } catch (err) {
+      throw err;
+    }
+  }
+
 
   message(msg: string, panelClass: string = '', verticalPosition: any = undefined) {
     this.snackbar.open(msg, 'X', {

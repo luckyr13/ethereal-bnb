@@ -18,13 +18,37 @@
 
 <div class="main-container fadeInTransparent" *ngIf="isLoggedIn && !loading">
 	<mat-card>
-		<div class="text-right">
-			 <button (click)="start()" mat-raised-button color="accent">CHANGE WALLET</button>
+		<mat-progress-bar color="accent" mode="indeterminate" *ngIf="registerFormProcessing"></mat-progress-bar>
+		<div class="home-tools text-right">
+			 <button (click)="start()" mat-raised-button color="accent">
+			 	<mat-icon>change_circle</mat-icon> CHANGE WALLET</button>
 			 &nbsp;
-			 <button (click)="logout()" mat-raised-button color="warn">LOG OUT</button>
+			 <button (click)="logout()" mat-raised-button color="warn">
+			 	<mat-icon>logout</mat-icon> LOG OUT</button>
 		</div>
-		<div class="text-center">
-			 Welcome back!
+		<div class="text-center" *ngIf="isRegistered">
+			 WELCOME BACK _____
+		</div>
+		<div class="container-register text-center" *ngIf="!isRegistered">
+			 <h1>Welcome to Ethereal!</h1>
+			 <p>
+			 The first step in Ethereal is to register. Please fill the next form to create your account as an Ethereal Player:
+			</p>
+			<form [formGroup]="registerForm" (ngSubmit)="onSubmitRegister()">
+				<div class="form-container">
+					<mat-form-field appearance="fill" color="accent">
+						<mat-label>Enter your nickname</mat-label>
+						<input matInput maxlength="16" required formControlName="nickname">
+						<mat-error>*Required</mat-error>
+					</mat-form-field>
+				</div>
+				<div class="text-center">
+					<button mat-raised-button color="accent" [disabled]="!registerForm.valid || registerFormProcessing">
+				 	<mat-icon>save</mat-icon> REGISTER</button>
+				</div>
+
+			</form>
+			 
 		</div>
 	</mat-card>
 </div>

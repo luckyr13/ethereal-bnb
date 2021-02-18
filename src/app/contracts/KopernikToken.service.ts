@@ -7,7 +7,11 @@ import { WalletProviderService } from '../auth/wallet-provider.service';
 })
 export class KopernikTokenService
 {
-	private _contractAddress: string = '0xb1E92aF22F097948211f1F120D0340e103851619';
+	// Local
+	//private _contractAddress: string = '0xb1E92aF22F097948211f1F120D0340e103851619';
+	// BSC Testnet
+	private _contractAddress: string = '0x8A1C5607D5e0bAdf8929EDbbB80906164100778B';
+	
 	public contract: any = null;
 
 	constructor(private wps: WalletProviderService) {

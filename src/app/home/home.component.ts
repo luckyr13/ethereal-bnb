@@ -6,6 +6,8 @@ import { UserSettingsService } from '../auth/user-settings.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { KopernikTokenService } from '../contracts/KopernikToken.service';
 import { Router } from '@angular/router';
+import { EtherealGameService } from '../contracts/EtherealGame.service';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 declare const window: any;
 
@@ -16,6 +18,16 @@ declare const window: any;
 export class HomeComponent implements OnInit {
 	public loading: boolean = true;
   public isLoggedIn: boolean = false;
+  public isRegistered: boolean = false;
+  public registerForm = new FormGroup({
+    nickname: new FormControl('', [ Validators.required]),
+  });
+  registerFormProcessing: boolean = false;
+  mainAccount: string = '';
+
+  get nickname() {
+    return this.registerForm.get('nickname');
+  }
 
   constructor(
     private auth: AuthService,
@@ -23,17 +35,24 @@ export class HomeComponent implements OnInit {
     private userSettings: UserSettingsService,
     private snackbar: MatSnackBar,
     private kopernikToken: KopernikTokenService,
-    private router: Router
+    private router: Router,
+    private etherealGame: EtherealGameService
   ) { }
 
 
   async connectWallet(option: string) {
     try {
+      // Connect wallet
       const res = await this.auth.connectWalletAndSetListeners(option, () => {
         this.router.navigate(['/wrong-network']);
         this.message(`Wrong network detected ...`, 'error');
       });
+      // Save account 
+      this.mainAccount = res.account;
+      // Get balance
       await this.getKoperniksBalance(res.account);
+      // Check if player is already registered
+      await this.getIsPlayerRegistered(res.account);
       this.message(`Welcome!`, 'success');
     } catch (err) {
       this.message(`${err}`, 'error');
@@ -51,6 +70,15 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  async getIsPlayerRegistered(account: string) {
+    try {
+      this.etherealGame.init();
+      this.isRegistered = await this.etherealGame.getPlayerIsRegistered(account);
+    } catch (err) {
+      throw err;
+    } 
+  }
+
   message(msg: string, panelClass: string = '', verticalPosition: any = undefined) {
     this.snackbar.open(msg, 'X', {
       duration: 5000,
@@ -63,9 +91,11 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.loading = true;
-    this.userSettings.account$.subscribe((account) => {
+    this.userSettings.account$.subscribe(async (account) => {
       if (account && account != 'null') {
         this.isLoggedIn = true;
+        this.mainAccount = account;
+        await this.getIsPlayerRegistered(account);
       }
     });
 
@@ -90,6 +120,47 @@ export class HomeComponent implements OnInit {
   logout(): void {
     this.userSettings.deleteUserSettings();
     window.location.reload();
+  }
+
+  async onSubmitRegister() {
+     try {
+      this.etherealGame.init();
+      let nickname = this.nickname!.value ? this.nickname!.value : '';
+      nickname = nickname.trim();
+      this.registerFormProcessing = true;
+      this.disableRegisterForm();
+      // Check if nickname is available
+      const isNicknameTaken = await this.etherealGame.getPlayerNicknameExists(nickname);
+      if (isNicknameTaken) {
+        throw Error('Nickname already taken. Please choose another one!');
+      }
+      // Register player
+      const receipt = await this.etherealGame.registerPlayer(nickname, this.mainAccount);
+      this.etherealGame.setRegisterPlayerListeners(this.mainAccount, (event: any) => {
+
+        this.message(`Player succesfully registered!`, 'success');
+        window.setTimeout(() => {
+          window.location.reload();
+        }, 1000);
+      });
+
+      
+    } catch (err) { 
+      this.message(`${err}`, 'error');
+      console.error(err);
+     
+      this.registerFormProcessing = false;
+      this.enablegisterForm();
+    }
+
+  }
+
+  disableRegisterForm() {
+    this.nickname!.disable();
+  }
+
+  enablegisterForm() {
+    this.nickname!.enable();
   }
 
 }

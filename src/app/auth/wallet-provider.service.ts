@@ -16,6 +16,7 @@ export class WalletProviderService {
       56: 'Binance Smart Chain (56)',
       97: 'Binance Smart Chain TESTING Network (97)'
   };
+  private _networkIdDeployed: string = '97';
 
   constructor() {
   }
@@ -89,6 +90,14 @@ export class WalletProviderService {
       // We recommend reloading the page unless you have a very good reason not to.
       window.location.reload();
     });
+  }
+
+  public getMainNetworkIdDeployedContracts(): string {
+    return this._networkIdDeployed;
+  }
+
+  public getMainNetworkNameDeployedContracts(): string {
+    return this.networkIdToName[this._networkIdDeployed];
   }
 
 

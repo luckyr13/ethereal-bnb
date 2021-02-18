@@ -1,8 +1,23 @@
-<h1 class="text-center big-text red">Wrong <br><span class="white"><br>&nbsp;&nbsp;&nbsp;network</span>!</h1>
-<p class="text-center">To play Ethereal's game you need to switch your wallet to the BINANCE SMART CHAIN TESTING NETWORK.</p>
-<p class="text-center">Please follow the next step to switch to the right network:</p>
-
-<div class="text-center">
-	<button class="btn-home" (click)="goBackHome()" mat-raised-button color="primary">
-		<mat-icon>navigate_before</mat-icon> TRY AGAIN</button>
+<div class="container-wrong-network">
+	<mat-card>
+		<h1 class="text-center big-text red">Wrong <br><span class="white"><br>&nbsp;&nbsp;&nbsp;network</span>!</h1>
+		<p class="text-center">To play Ethereal's game you need to switch your wallet to the <strong class="yellow">{{ validNetworkName }}</strong>.</p>
+		<p class="text-center">Please follow the next step if you are using Binance Wallet to switch to the right network:</p>
+		<div class="text-center">
+			<video width="50%" autoplay muted controls>
+			  <source src="assets/videos/switchBinanceToTestnet.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+		</div>
+		<p class="text-center">Are you using <strong class="purple">Metamask</strong> instead? Please follow the instructions on the next link to connect your Metamask with Binance Smart Chain.</p>
+		<div class="text-center">
+			<a class="green" href="https://docs.binance.org/smart-chain/wallet/metamask.html#connect-your-metamask-with-binance-smart-chain"
+				target="_blank">Connect Your MetaMask With Binance Smart Chain</a>
+		</div>
+		<br>
+		<div class="text-center">
+			<button class="btn-home" (click)="goBackHome()" mat-raised-button color="primary">
+				<mat-icon>navigate_before</mat-icon> GO BACK AND RETRY</button>
+		</div>
+	</mat-card>
 </div>

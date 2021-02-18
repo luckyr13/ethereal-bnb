@@ -1,5 +1,14 @@
 .main-container {
+	padding: 20px;
+}
+
+.home-tools {
+	margin-top: 20px;
 	padding: 10px;
+}
+
+mat-card {
+	padding: 0px;
 }
 
 .mt-40 {
@@ -54,4 +63,18 @@
 		display: block;
 	}
 
+}
+
+.form-container {
+	margin: 0 auto;
+	width: 50%;
+	margin-bottom: 20px;
+}
+
+.form-container mat-form-field {
+	width: 100%;
+}
+
+.container-register {
+	padding-bottom: 20px;
 }

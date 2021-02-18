@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { WrongNetworkComponent } from './wrong-network/wrong-network.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
 	{
@@ -10,6 +11,9 @@ const routes: Routes = [
 	},
 	{
 		path: '', redirectTo: 'home', pathMatch: 'full'
+	},
+	{
+		path: 'about', component: AboutComponent
 	},
 	{
 		path: 'wrong-network', component: WrongNetworkComponent

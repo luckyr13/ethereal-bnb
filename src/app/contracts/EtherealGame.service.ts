@@ -20,6 +20,10 @@ export class EtherealGameService
 		this.contract = new this.wps.web3.eth.Contract(EtherealGameABI.abi, this._contractAddress);
 	}
 
+	public getContractAddress(): string {
+		return this._contractAddress;
+	}
+
 	public async getPlayerIsRegistered(_account: string): Promise<any> {
 		return await this.contract.methods.playerIsRegistered(_account).call();
 	}
@@ -56,5 +60,25 @@ export class EtherealGameService
 			throw Error(err);
 		}
 	}
+
+	public async getNumPlayers(): Promise<any> {
+		return this.contract.methods.numPlayers().call();
+	}
+
+	public async getFightRequests(_account: string): Promise<any> {
+		return this.contract.methods.fightRequests(_account).call();
+	}
+
+	public async getTotalFightRequests(_account: string): Promise<any> {
+		return this.contract.methods.totalFightRequests(_account).call();
+	}
+
+	public async getProbabilityOfWinningAgainstElem(_elementOfNatureId: string): Promise<any> {
+		return this.contract.methods.probabilityOfWinningAgainstElem(_elementOfNatureId).call();
+	}
+
+	
+
+
 
 }

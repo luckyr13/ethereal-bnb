@@ -154,6 +154,19 @@ export class AuthService {
   	this.wps.onChainChanged();
   }
 
+  async getMainAccount() {
+  	let account = '';
+  	try {
+  		account = await this.wps.getAccounts();
+  		if (account.length) {
+  			account = account[0];
+  		}
+  	} catch (err) {
+  		// throw err;
+  	}
+  	return account;
+  }
+
 
 
 }

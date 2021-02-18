@@ -1,0 +1,100 @@
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../auth/auth.service';
+import { UserSettingsService } from '../auth/user-settings.service';
+import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { KopernikTokenService } from '../contracts/KopernikToken.service';
+import { EtherealGameService } from '../contracts/EtherealGame.service';
+
+@Component({
+  templateUrl: './about.component.html',
+  styleUrls: ['./about.component.scss']
+})
+export class AboutComponent implements OnInit {
+	public loading: boolean = true;
+  public isLoggedIn: boolean = true;
+  public mainAccount: string = '';
+  public totalPlayers: number = 0;
+  public etherealGameContractAddress: string = '';
+
+  constructor(
+    private auth: AuthService,
+    private router: Router,
+    private snackbar: MatSnackBar,
+    private kopernikToken: KopernikTokenService,
+    private userSettings: UserSettingsService,
+    private etherealGame: EtherealGameService
+  ) { }
+
+
+
+  message(msg: string, panelClass: string = '', verticalPosition: any = undefined) {
+    this.snackbar.open(msg, 'X', {
+      duration: 5000,
+      horizontalPosition: 'center',
+      verticalPosition: verticalPosition,
+      panelClass: panelClass
+    });
+  }
+
+
+  async ngOnInit() {
+    this.loading = true;
+    this.etherealGameContractAddress = this.etherealGame.getContractAddress();
+
+    this.userSettings.account$.subscribe(async (account) => {
+      if (account && account != 'null') {
+        this.isLoggedIn = true;
+        this.mainAccount = account;
+      }
+    });
+
+    window.setTimeout(async () =>{
+      const wallet = this.userSettings.getWalletOptionOnLocalStorage();
+      this.mainAccount = await this.auth.getMainAccount();
+      if (wallet && wallet != 'null' && !this.mainAccount) {
+        await this.connectWallet(wallet);
+      }
+      this.loading = false;
+
+    }, 1000);
+
+  }
+
+  async connectWallet(option: string) {
+    try {
+      // Connect wallet
+      const res = await this.auth.connectWalletAndSetListeners(option, () => {
+        this.router.navigate(['/wrong-network']);
+        this.message(`Wrong network detected ...`, 'error');
+      });
+      // Get balance
+      await this.getKoperniksBalance(res.account);
+      // Get total players 
+      await this.geTotalPlayers();
+    } catch (err) {
+      this.message(`${err}`, 'error');
+    }
+  }
+
+  async getKoperniksBalance(account: string) {
+    let balance = 0;
+    try {
+      this.kopernikToken.init();
+      balance = await this.kopernikToken.getBalance(account);
+      this.userSettings.setPlayerBalance(`${balance}`);
+    } catch (err) {
+      throw err;
+    }
+  }
+
+  async geTotalPlayers() {
+    try {
+      this.etherealGame.init();
+      this.totalPlayers = await this.etherealGame.getNumPlayers();
+    } catch (err) {
+      throw err;
+    }
+  }
+
+}

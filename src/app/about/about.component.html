@@ -1,0 +1,26 @@
+<mat-progress-bar color="accent" mode="indeterminate" *ngIf="loading"></mat-progress-bar>
+<div class="about-container fadeInTransparent" *ngIf="!loading">
+	
+		<div class="col-6 text-center">
+			 <img width="300px" src="./assets/img/tomMedium.png" alt="Tom" title="Tom">
+		</div>
+		<div class="col-6 text-center">
+			<mat-card>
+				 <h1 class="text-center">
+						 About <span class="ethereal-title">Ethereal's Chronicles</span>
+					</h1>
+					<h3 class="text-center">
+						 Contract info:
+					</h3>
+					<div class="text-left">
+						<mat-list>
+							<mat-list-item> Address: {{ etherealGameContractAddress }} </mat-list-item>
+							<mat-list-item> Total players: {{ totalPlayers }} </mat-list-item>
+						</mat-list>
+						 
+					</div>
+			</mat-card>
+		</div>
+		
+	
+</div>

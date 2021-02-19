@@ -1,33 +1,28 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../auth/auth.service';
-import { UserSettingsService } from '../auth/user-settings.service';
+import { AuthService } from '../../auth/auth.service';
+import { UserSettingsService } from '../../auth/user-settings.service';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { KopernikTokenService } from '../contracts/KopernikToken.service';
-import { EtherealGameService } from '../contracts/EtherealGame.service';
-import { EtherealCharacterService } from '../contracts/EtherealCharacter.service';
+import { EtherealCharacterService } from '../../contracts/EtherealCharacter.service';
+import { KopernikTokenService } from '../../contracts/KopernikToken.service';
 
 @Component({
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss']
+  templateUrl: './list.component.html',
+  styleUrls: ['./list.component.scss']
 })
-export class AboutComponent implements OnInit {
-	public loading: boolean = true;
+export class ListComponent implements OnInit {
+  public loading: boolean = true;
   public isLoggedIn: boolean = true;
   public mainAccount: string = '';
-  public totalPlayers: number = 0;
-  public etherealGameContractAddress: string = '';
-  public kopernikContractAddress: string = '';
-  public etherealCharacterContractAddress: string = '';
+  public totalCharacters: number = 0;
 
   constructor(
     private auth: AuthService,
     private router: Router,
     private snackbar: MatSnackBar,
-    private kopernikToken: KopernikTokenService,
     private userSettings: UserSettingsService,
-    private etherealGame: EtherealGameService,
-    private etherealCharacter: EtherealCharacterService
+    private etherealCharacter: EtherealCharacterService,
+    private kopernikToken: KopernikTokenService
   ) { }
 
 
@@ -44,9 +39,6 @@ export class AboutComponent implements OnInit {
 
   async ngOnInit() {
     this.loading = true;
-    this.etherealGameContractAddress = this.etherealGame.getContractAddress();
-    this.kopernikContractAddress = this.kopernikToken.getContractAddress();
-    this.etherealCharacterContractAddress = this.etherealCharacter.getContractAddress();
 
     this.userSettings.account$.subscribe(async (account) => {
       if (account && account != 'null') {
@@ -60,12 +52,10 @@ export class AboutComponent implements OnInit {
       this.mainAccount = await this.auth.getMainAccount();
       if (wallet && wallet != 'null' && !this.mainAccount) {
         await this.connectWallet(wallet);
-        // Get total players 
-        await this.geTotalPlayers();
       } else if (wallet && this.mainAccount) {
 
-        // Get total players 
-        await this.geTotalPlayers();
+        // Get my total characters 
+        await this.getMyCharacters(this.mainAccount);
 
       }
       this.loading = false;
@@ -83,6 +73,8 @@ export class AboutComponent implements OnInit {
       });
       // Get balance
       await this.getKoperniksBalance(res.account);
+      // Get my total characters 
+      await this.getMyCharacters(this.mainAccount);
     } catch (err) {
       this.message(`${err}`, 'error');
     }
@@ -99,13 +91,12 @@ export class AboutComponent implements OnInit {
     }
   }
 
-  async geTotalPlayers() {
+  async getMyCharacters(account: string) {
     try {
-      this.etherealGame.init();
-      this.totalPlayers = await this.etherealGame.getNumPlayers();
+      this.etherealCharacter.init();
+      this.totalCharacters = await this.etherealCharacter.getBalanceOf(account);
     } catch (err) {
       throw err;
     }
   }
-
 }

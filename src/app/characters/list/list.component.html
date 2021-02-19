@@ -1,0 +1,30 @@
+<mat-progress-bar color="accent" mode="indeterminate" *ngIf="loading"></mat-progress-bar>
+<div class="characters-container fadeInTransparent" *ngIf="!loading">
+	
+		<div class="col-6 text-center">
+			 <img width="300px" src="./assets/img/ihor.png" alt="Ihor" title="Ihor">
+		</div>
+		<div class="col-6 text-center">
+			<mat-card>
+					<div class="list-characters-tools text-right">
+						 <button routerLink="new" mat-raised-button color="accent">
+						 	<mat-icon>create</mat-icon> CREATE NEW</button>
+						 &nbsp;
+						 <button routerLink="/home" mat-raised-button color="warn">
+						 	<mat-icon>navigate_before</mat-icon> RETURN HOME</button>
+					</div>
+					<h1 class="ethereal-text text-center">My Ethereal's Characters</h1>
+					<h3 class="text-center">
+						 Characters list:
+					</h3>
+					<div class="text-left">
+						<mat-list>
+							<mat-list-item><span class="blue">Total characters created:</span>&nbsp;{{ totalCharacters }} </mat-list-item>
+						</mat-list>
+						 
+					</div>
+			</mat-card>
+		</div>
+		
+	
+</div>

@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SelectWalletDialogComponent } from './select-wallet-dialog/select-wallet-dialog.component';
 import { WrongNetworkComponent } from './wrong-network/wrong-network.component';
 import { AboutComponent } from './about/about.component';
+import { CharactersModule } from './characters/characters.module';
 
 @NgModule({
   declarations: [
@@ -27,8 +28,9 @@ import { AboutComponent } from './about/about.component';
   imports: [
     BrowserModule,
     SharedModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
+    CharactersModule,
+    AppRoutingModule,
   ],
   entryComponents: [
     SelectWalletDialogComponent

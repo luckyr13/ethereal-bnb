@@ -59,7 +59,10 @@ export class MainToolbarComponent implements OnInit {
 
     this.userSettings.playerBalance$.subscribe((playerBalance) => {
       if (playerBalance != '') {
-        this.playerBalance = playerBalance;
+        const tmpBalance = parseInt(playerBalance);
+        const decimals = tmpBalance % 100;
+        const number = tmpBalance / 100;
+        this.playerBalance = `${number}.${decimals}`;
       } else {
         this.playerBalance = '0';
       }

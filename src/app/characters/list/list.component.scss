@@ -1,4 +1,4 @@
-.about-container {
+.characters-container {
 	padding: 20px;
 }
 
@@ -6,8 +6,14 @@ mat-card {
 	padding: 20px;
 }
 
-.ethereal-title {
+.ethereal-text {
 	color: #FFF;
 	font-family: 'Potta One', cursive;
 	text-shadow: 2px 2px 5px #32edff;
+	margin-bottom: 20px;
+}
+
+.list-characters-tools {
+	margin-top: 20px;
+	padding: 10px;
 }

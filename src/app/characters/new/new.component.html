@@ -1,0 +1,19 @@
+<mat-progress-bar color="accent" mode="indeterminate" *ngIf="loading"></mat-progress-bar>
+<div class="characters-container fadeInTransparent" *ngIf="!loading">
+
+	<div class="col-center">
+		<mat-card>
+				<div class="new-character-tools text-right">
+					 <button routerLink="/characters" mat-raised-button color="warn">
+					 	<mat-icon>navigate_before</mat-icon> RETURN</button>
+				</div>
+				<h1 class="ethereal-text text-center">Create new character</h1>
+				<div class="text-left">
+					FORM
+					 
+				</div>
+		</mat-card>
+	</div>
+		
+	
+</div>

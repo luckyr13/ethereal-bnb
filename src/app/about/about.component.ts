@@ -16,6 +16,7 @@ export class AboutComponent implements OnInit {
   public mainAccount: string = '';
   public totalPlayers: number = 0;
   public etherealGameContractAddress: string = '';
+  public kopernikContractAddress: string = '';
 
   constructor(
     private auth: AuthService,
@@ -41,6 +42,7 @@ export class AboutComponent implements OnInit {
   async ngOnInit() {
     this.loading = true;
     this.etherealGameContractAddress = this.etherealGame.getContractAddress();
+    this.kopernikContractAddress = this.kopernikToken.getContractAddress();
 
     this.userSettings.account$.subscribe(async (account) => {
       if (account && account != 'null') {
@@ -54,6 +56,13 @@ export class AboutComponent implements OnInit {
       this.mainAccount = await this.auth.getMainAccount();
       if (wallet && wallet != 'null' && !this.mainAccount) {
         await this.connectWallet(wallet);
+        // Get total players 
+        await this.geTotalPlayers();
+      } else if (wallet && this.mainAccount) {
+
+        // Get total players 
+        await this.geTotalPlayers();
+
       }
       this.loading = false;
 
@@ -70,8 +79,6 @@ export class AboutComponent implements OnInit {
       });
       // Get balance
       await this.getKoperniksBalance(res.account);
-      // Get total players 
-      await this.geTotalPlayers();
     } catch (err) {
       this.message(`${err}`, 'error');
     }

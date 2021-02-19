@@ -33,8 +33,6 @@ export class EtherealGameService
 		return await this.contract.methods.playerNicknameExists(_nickname).call();
 	}
 
-	
-
 	public setRegisterPlayerListeners(account: string, _callback: any) {
 		this.contract.events.NewPlayerRegistered({
 		    filter: {player: [account]},
@@ -77,6 +75,14 @@ export class EtherealGameService
 		return this.contract.methods.probabilityOfWinningAgainstElem(_elementOfNatureId).call();
 	}
 
+	public async getPlayerData(_account: string): Promise<any> {
+		return this.contract.methods.playerData(_account).call();
+	}
+
+	public hexToUtf8(_s: string): string {
+		return this.wps.web3.utils.hexToUtf8(_s);
+	}
+	
 	
 
 

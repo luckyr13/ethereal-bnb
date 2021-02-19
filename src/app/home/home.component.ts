@@ -24,6 +24,11 @@ export class HomeComponent implements OnInit {
   });
   registerFormProcessing: boolean = false;
   mainAccount: string = '';
+  etherealPlayerName: string = '';
+  wins: number = 0;
+  loss: number = 0;
+  tie: number = 0;
+  gaveup: number = 0;
 
   get nickname() {
     return this.registerForm.get('nickname');
@@ -53,6 +58,15 @@ export class HomeComponent implements OnInit {
       await this.getKoperniksBalance(res.account);
       // Check if player is already registered
       await this.getIsPlayerRegistered(res.account);
+      // If is registered 
+      if (this.isRegistered) {
+        const playerData = await this.etherealGame.getPlayerData(this.mainAccount);
+        this.etherealPlayerName = this.etherealGame.hexToUtf8(playerData.nickname);
+        this.wins = parseInt(playerData.wins);
+        this.loss = parseInt(playerData.loss);
+        this.tie = parseInt(playerData.tie);
+        this.gaveup = parseInt(playerData.gaveup);
+      }
       this.message(`Welcome!`, 'success');
     } catch (err) {
       this.message(`${err}`, 'error');

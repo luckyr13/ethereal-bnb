@@ -18,6 +18,10 @@ export class KopernikTokenService
 		
 	}
 
+	public getContractAddress(): string {
+		return this._contractAddress;
+	}
+
 	public init() {
 		this.contract = new this.wps.web3.eth.Contract(KopernikTokenABI.abi, this._contractAddress);
 	}

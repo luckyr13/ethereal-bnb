@@ -17,7 +17,7 @@
 </div>
 
 <div class="main-container fadeInTransparent" *ngIf="isLoggedIn && !loading">
-	<mat-card>
+	<mat-card class="main-container-card">
 		<mat-progress-bar color="accent" mode="indeterminate" *ngIf="registerFormProcessing"></mat-progress-bar>
 		<div class="home-tools text-right">
 			 <button (click)="start()" mat-raised-button color="accent">
@@ -27,8 +27,28 @@
 			 	<mat-icon>logout</mat-icon> LOG OUT</button>
 		</div>
 		<div class="text-center" *ngIf="isRegistered">
-			 WELCOME BACK _____
+			 <h1>WELCOME BACK <span class="ethereal-text">{{etherealPlayerName}}</span></h1>
+			 <mat-list>
+					<mat-list-item><span class="blue">Wins:</span>&nbsp;{{ wins }} </mat-list-item>
+					<mat-list-item><span class="blue">Loss:</span>&nbsp;{{ loss }} </mat-list-item>
+					<mat-list-item><span class="blue">Ties:</span>&nbsp;{{ tie }} </mat-list-item>
+					<mat-list-item><span class="blue">Gaveup:</span>&nbsp;{{ gaveup }} </mat-list-item>
+				</mat-list>
+				<div class="menu-options-priv">
+					<div class="col-6">
+						<button class="menu-option-priv-btn" mat-raised-button color="primary">
+						 	<mat-icon>hail</mat-icon> MY CHARACTERS
+						</button>
+					</div>
+					<div class="col-6">
+						<button class="menu-option-priv-btn" mat-raised-button color="accent">
+						 	<mat-icon>bolt</mat-icon> FIGHT
+						</button>
+					</div>
+				</div>
+				
 		</div>
+
 		<div class="container-register text-center" *ngIf="!isRegistered">
 			 <h1>Welcome to Ethereal!</h1>
 			 <p>

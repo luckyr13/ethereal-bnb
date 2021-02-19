@@ -164,7 +164,7 @@ export class HomeComponent implements OnInit {
       console.error(err);
      
       this.registerFormProcessing = false;
-      this.enablegisterForm();
+      this.enableRegisterForm();
     }
 
   }
@@ -173,7 +173,7 @@ export class HomeComponent implements OnInit {
     this.nickname!.disable();
   }
 
-  enablegisterForm() {
+  enableRegisterForm() {
     this.nickname!.enable();
   }
 

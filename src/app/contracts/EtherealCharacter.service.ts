@@ -28,7 +28,7 @@ export class EtherealCharacterService
 	}
 
 	public async getCharacterNameExists(_name: string): Promise<any> {
-		_name = this.wps.web3.utils.utf8ToHex(_name);
+		_name = this._padHex(_name, 64)
 		return await this.contract.methods.characterNameExists(_name).call();
 	}
 
@@ -66,6 +66,13 @@ export class EtherealCharacterService
 		});
 	}
 
+	private _padHex(_s: string, _n: number) {
+		const res = this.wps.web3.utils.padLeft(
+			this.wps.web3.utils.utf8ToHex(_s), _n
+		);
+		return res;
+	}
+
 	public async mintCharacter(
 		_to: string,
 		_baseData: ICharacterBaseMetadata,
@@ -73,8 +80,10 @@ export class EtherealCharacterService
 		_attributesData: ICharacterAttributesMetadata
 	): Promise<any> {
 		try {
-			_baseData.name = this.wps.web3.utils.utf8ToHex(_baseData.name);
-			_baseData.description = this.wps.web3.utils.utf8ToHex(_baseData.description);
+			_baseData.name = this._padHex(_baseData.name, 64);
+			_baseData.description = this._padHex(_baseData.description, 64);
+			_baseData.birthdate = this._padHex(_baseData.birthdate, 48);
+
 			return this.contract.methods.mint(_to, _baseData, _physicalData, _attributesData).send({from: _to});
 		} catch (err) {
 			throw Error(err);

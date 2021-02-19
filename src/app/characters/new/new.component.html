@@ -9,8 +9,22 @@
 				</div>
 				<h1 class="ethereal-text text-center">Create new character</h1>
 				<div class="text-left">
-					FORM
-					 
+					 <p>
+					 Please fill the next form to create your own character on Ethereal's universe. Your character is a NFT (Non-Fungible Token), this is very special. All characters in Ethereal are unique and lives on Binance Smart Chain. Fight agains your friends and people all over the world with your custom character.
+					</p>
+					<form [formGroup]="createCharacterForm" (ngSubmit)="onSubmitRegister()">
+						<div class="form-container">
+							<mat-form-field appearance="fill" color="accent">
+								<mat-label>Character's name</mat-label>
+								<input matInput maxlength="16" required formControlName="name">
+								<mat-error>*Required</mat-error>
+							</mat-form-field>
+						</div>
+						<div class="text-center">
+							<button mat-raised-button color="accent" [disabled]="!createCharacterForm.valid || createCharacterFormProcessing">
+						 	<mat-icon>save</mat-icon> CREATE</button>
+						</div>
+					</form>
 				</div>
 		</mat-card>
 	</div>

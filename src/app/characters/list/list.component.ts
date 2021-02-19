@@ -5,6 +5,8 @@ import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { EtherealCharacterService } from '../../contracts/EtherealCharacter.service';
 import { KopernikTokenService } from '../../contracts/KopernikToken.service';
+import {ELEMENTSOFNATURE} from '../../contracts/ElementsOfNature';
+import {PLANETS} from '../../contracts/PlanetsTMP';
 
 @Component({
   templateUrl: './list.component.html',
@@ -16,6 +18,9 @@ export class ListComponent implements OnInit {
   public mainAccount: string = '';
   public totalCharacters: number = 0;
   public characters: any[] = [];
+  public elementsOfNature = ELEMENTSOFNATURE;
+  public planetsNames = PLANETS;
+  public genderNames = ['MALE', 'FEMALE', 'UNDEFINED'];
 
   constructor(
     private auth: AuthService,

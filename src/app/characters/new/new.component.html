@@ -19,6 +19,143 @@
 								<input matInput maxlength="16" required formControlName="name">
 								<mat-error>*Required</mat-error>
 							</mat-form-field>
+							<mat-form-field appearance="fill" color="accent">
+								<mat-label>Description</mat-label>
+								<input matInput maxlength="64" required formControlName="description">
+								<mat-error>*Required</mat-error>
+							</mat-form-field>
+							<mat-form-field class="example-full-width" appearance="fill" color="accent">
+							  <mat-label>Choose a birthdate</mat-label>
+							  <input matInput [matDatepicker]="picker" maxlength="10" required formControlName="birthdate">
+							  <mat-datepicker-toggle matSuffix [for]="picker">
+							    <mat-icon matDatepickerToggleIcon>date_range</mat-icon>
+							  </mat-datepicker-toggle>
+							  <mat-datepicker #picker></mat-datepicker>
+								<mat-error>*Required</mat-error>
+							</mat-form-field>
+							<mat-form-field appearance="fill">
+							  <mat-label>Select your planet</mat-label>
+							  <mat-select formControlName="planetid" >
+							    <mat-option *ngFor="let planet of planets" [value]="planet.id" >
+							      {{planet.name}}
+							    </mat-option>
+							  </mat-select>
+							</mat-form-field>
+							<mat-form-field appearance="fill">
+							  <mat-label>Gender</mat-label>
+							  <mat-select formControlName="gender" >
+							    <mat-option value="0" >
+							      MALE
+							    </mat-option>
+							    <mat-option value="1" >
+							      FEMALE
+							    </mat-option>
+							    <mat-option value="2" >
+							      OTHER
+							    </mat-option>
+							  </mat-select>
+							</mat-form-field>
+							<mat-form-field appearance="fill">
+							  <mat-label>Primary element</mat-label>
+							  <mat-select formControlName="primaryelement" >
+							    <mat-option *ngFor="let element of elementsOfNature | keyvalue" [value]="element.key">
+							      {{element.value}}
+							    </mat-option>
+							  </mat-select>
+							</mat-form-field>
+							<mat-form-field appearance="fill">
+							  <mat-label>Secondary element</mat-label>
+							  <mat-select formControlName="secondaryelement" >
+							    <mat-option *ngFor="let element of elementsOfNature | keyvalue" [value]="element.key">
+							      {{element.value}}
+							    </mat-option>
+							  </mat-select>
+							</mat-form-field>
+
+							<mat-divider></mat-divider>
+
+							<h2>Attributes</h2>
+							<div>
+							  <mat-label>Life</mat-label>
+							  <mat-slider
+							  	style="width: 100%"
+								  thumbLabel
+								  [displayWith]="formatLabel"
+								  tickInterval="1"
+								  min="1"
+								  max="10"
+								  required
+								  formControlName="life"
+								  ></mat-slider>
+							</div>
+							<div>
+							  <mat-label>Armor</mat-label>
+							  <mat-slider
+							  	style="width: 100%"
+								  thumbLabel
+								  [displayWith]="formatLabel"
+								  tickInterval="1"
+								  min="1"
+								  max="10"
+								  formControlName="armor"
+								  ></mat-slider>
+							</div>
+							<div>
+							  <mat-label>Strength</mat-label>
+							  <mat-slider
+							  	style="width: 100%"
+								  thumbLabel
+								  [displayWith]="formatLabel"
+								  tickInterval="1"
+								  min="1"
+								  max="10"
+								  formControlName="strength"
+								  ></mat-slider>
+							</div>
+							<div>
+							  <mat-label>Speed</mat-label>
+							  <mat-slider
+							  	style="width: 100%"
+								  thumbLabel
+								  [displayWith]="formatLabel"
+								  tickInterval="1"
+								  min="1"
+								  max="10"
+								  formControlName="speed"
+								  ></mat-slider>
+							</div>
+							<div>
+							  <mat-label>Luck</mat-label>
+							  <mat-slider
+							  	style="width: 100%"
+								  thumbLabel
+								  [displayWith]="formatLabel"
+								  tickInterval="1"
+								  min="1"
+								  max="10"
+								  formControlName="luck"
+								  ></mat-slider>
+							</div>
+							<div>
+							  <mat-label>Spirit</mat-label>
+							  <mat-slider
+							  	style="width: 100%"
+								  thumbLabel
+								  [displayWith]="formatLabel"
+								  tickInterval="1"
+								  min="1"
+								  max="10"
+								  formControlName="spirit"
+								  ></mat-slider>
+							</div>
+							<div>
+							  <span>{{ getTotalPointsUsed() }}</span> of 10 points used
+							</div>
+
+
+							
+							<mat-divider></mat-divider>
+
 						</div>
 						<div class="text-center">
 							<button mat-raised-button color="accent" [disabled]="!createCharacterForm.valid || createCharacterFormProcessing">

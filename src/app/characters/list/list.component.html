@@ -27,9 +27,17 @@
 						    <div mat-line>Description: {{character.characterBaseMetadata.description}} </div>
 						    <div mat-line>
 						    	Birthdate: {{character.characterBaseMetadata.birthdate | date}} |
-						    	Planet: {{character.characterBaseMetadata.planetId}} |
-						    	Genre: {{character.characterBaseMetadata.genre}} |
-						    	Element: {{character.characterAttributesMetadata.primaryElement}} 
+						    	Planet: {{ planetsNames[character.characterBaseMetadata.planetId] }} |
+						    	Genre: {{ genderNames[character.characterBaseMetadata.genre] }} |
+						    	Element: {{ elementsOfNature[character.characterAttributesMetadata.primaryElement] }} 
+						    </div>
+						    <div mat-line>
+						    	Life: {{character.characterAttributesMetadata.life}} |
+						    	Armor: {{character.characterAttributesMetadata.armor}} |
+						    	Strength: {{character.characterAttributesMetadata.strength}} |
+						    	Speed: {{character.characterAttributesMetadata.speed}} |
+						    	Luck: {{character.characterAttributesMetadata.luck}} |
+						    	Spirit: {{character.characterAttributesMetadata.spirit}}
 						    </div>
 						    <div mat-line></div>
 						    <button mat-icon-button color="accent">

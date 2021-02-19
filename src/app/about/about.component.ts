@@ -19,6 +19,7 @@ export class AboutComponent implements OnInit {
   public etherealGameContractAddress: string = '';
   public kopernikContractAddress: string = '';
   public etherealCharacterContractAddress: string = '';
+  public etherealKopernikBalance: string = '';
 
   constructor(
     private auth: AuthService,
@@ -62,10 +63,13 @@ export class AboutComponent implements OnInit {
         await this.connectWallet(wallet);
         // Get total players 
         await this.geTotalPlayers();
+        // Get Ethereal's balance 
+        await this.getEtherealKopkerniksBalance();
       } else if (wallet && this.mainAccount) {
-
         // Get total players 
         await this.geTotalPlayers();
+        // Get Ethereal's balance 
+        await this.getEtherealKopkerniksBalance();
 
       }
       this.loading = false;
@@ -97,6 +101,23 @@ export class AboutComponent implements OnInit {
     } catch (err) {
       throw err;
     }
+  }
+
+  async getEtherealKopkerniksBalance() {
+    try {
+      this.kopernikToken.init();
+      this.etherealKopernikBalance = await this.kopernikToken.getBalance(
+        this.etherealGameContractAddress
+      );
+      const tmpBalance = parseInt(this.etherealKopernikBalance);
+      const decimals = tmpBalance % 100;
+      const number = tmpBalance / 100;
+
+      this.etherealKopernikBalance = `${number}.${decimals}`;
+    } catch (err) {
+      throw err;
+    }
+    
   }
 
   async geTotalPlayers() {

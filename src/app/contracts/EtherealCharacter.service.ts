@@ -39,9 +39,18 @@ export class EtherealCharacterService
 			characterAttributesMetadata: null
 		};
 		try {
-			res.characterBaseMetadata = await this.contract.methods.characterBaseMetadata(_tokenId).call();
-			res.characterPhysicalMetadata = await this.contract.methods.characterPhysicalMetadata(_tokenId).call();
-			res.characterAttributesMetadata = await this.contract.methods.characterAttributesMetadata(_tokenId).call();
+			let characterBaseMetadata = await this.contract.methods.characterBaseMetadata(_tokenId).call();
+			let characterPhysicalMetadata = await this.contract.methods.characterPhysicalMetadata(_tokenId).call();
+			let characterAttributesMetadata = await this.contract.methods.characterAttributesMetadata(_tokenId).call();
+
+			// Parse hex fields to utf8 
+			characterBaseMetadata.name = this.hexToUtf8(characterBaseMetadata.name);
+			characterBaseMetadata.description = this.hexToUtf8(characterBaseMetadata.description);
+			characterBaseMetadata.birthdate = this.hexToUtf8(characterBaseMetadata.birthdate);
+
+			res.characterBaseMetadata = characterBaseMetadata;
+			res.characterPhysicalMetadata = characterPhysicalMetadata;
+			res.characterAttributesMetadata = characterAttributesMetadata;
 		} catch (err) {
 			throw err;
 		}
@@ -100,6 +109,26 @@ export class EtherealCharacterService
 
 	public hexToUtf8(_s: string): string {
 		return this.wps.web3.utils.hexToUtf8(_s);
+	}
+
+	public async getAllMyCharacters(_account: string, _totalCharacters: number) {
+		let res = [];
+		try {
+			const totalSupply = await this.contract.methods.totalSupply().call();
+			for (let i = 0; i < totalSupply; i++) {
+				if (await this.contract.methods.ownerOf(i).call() == _account) {
+					let metadata = await this.getCharacterMetadata(''+i);
+					res.push(metadata);
+				}
+				if (res.length == _totalCharacters) {
+					break;
+				}
+			}
+
+		} catch (err) {
+			throw Error(err);
+		}
+		return res;
 	}
 	
 	

@@ -15,6 +15,7 @@ export class ListComponent implements OnInit {
   public isLoggedIn: boolean = true;
   public mainAccount: string = '';
   public totalCharacters: number = 0;
+  public characters: any[] = [];
 
   constructor(
     private auth: AuthService,
@@ -55,7 +56,7 @@ export class ListComponent implements OnInit {
       } else if (wallet && this.mainAccount) {
 
         // Get my total characters 
-        await this.getMyCharacters(this.mainAccount);
+        await this.getMyTotalCharacters(this.mainAccount);
 
       }
       this.loading = false;
@@ -74,7 +75,7 @@ export class ListComponent implements OnInit {
       // Get balance
       await this.getKoperniksBalance(res.account);
       // Get my total characters 
-      await this.getMyCharacters(this.mainAccount);
+      await this.getMyTotalCharacters(this.mainAccount);
     } catch (err) {
       this.message(`${err}`, 'error');
     }
@@ -91,12 +92,29 @@ export class ListComponent implements OnInit {
     }
   }
 
-  async getMyCharacters(account: string) {
+  async getMyTotalCharacters(account: string) {
     try {
       this.etherealCharacter.init();
       this.totalCharacters = await this.etherealCharacter.getBalanceOf(account);
+
+      if (this.totalCharacters > 0) {
+        await this.getCharactersList(account, this.totalCharacters);
+      }
     } catch (err) {
       throw err;
     }
   }
+
+  async getCharactersList(account: string, totalCharacters: number) {
+
+    try {
+      this.etherealCharacter.init();
+      this.characters = await this.etherealCharacter.getAllMyCharacters(account, totalCharacters);
+    } catch (err) {
+      throw err;
+    }
+  }
+
+
+
 }

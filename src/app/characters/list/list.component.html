@@ -19,7 +19,24 @@
 					</h3>
 					<div class="text-left">
 						<mat-list>
-							<mat-list-item><span class="blue">Total characters created:</span>&nbsp;{{ totalCharacters }} </mat-list-item>
+							<mat-list-item>
+								<span class="blue">Total characters created:</span>&nbsp;{{ totalCharacters }}
+							</mat-list-item>
+							<mat-list-item *ngFor="let character of characters">
+						    <div mat-line>Name: {{character.characterBaseMetadata.name}}</div>
+						    <div mat-line>Description: {{character.characterBaseMetadata.description}} </div>
+						    <div mat-line>
+						    	Birthdate: {{character.characterBaseMetadata.birthdate | date}} |
+						    	Planet: {{character.characterBaseMetadata.planetId}} |
+						    	Genre: {{character.characterBaseMetadata.genre}} |
+						    	Element: {{character.characterAttributesMetadata.primaryElement}} 
+						    </div>
+						    <div mat-line></div>
+						    <button mat-icon-button color="accent">
+					        <mat-icon>info</mat-icon>
+					     </button>
+  							<mat-divider></mat-divider>
+							</mat-list-item>
 						</mat-list>
 						 
 					</div>

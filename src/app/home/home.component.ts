@@ -67,7 +67,7 @@ export class HomeComponent implements OnInit {
         this.tie = parseInt(playerData.tie);
         this.gaveup = parseInt(playerData.gaveup);
       }
-      this.message(`Welcome!`, 'success');
+      //this.message(`Welcome!`, 'success');
     } catch (err) {
       this.message(`${err}`, 'error');
     }

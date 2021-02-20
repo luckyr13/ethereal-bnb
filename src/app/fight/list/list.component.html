@@ -1,0 +1,28 @@
+<mat-progress-bar color="accent" mode="indeterminate" *ngIf="loading"></mat-progress-bar>
+<div class="fights-container fadeInTransparent" *ngIf="!loading">
+	
+		<div class="col-6 text-center">
+			 <img width="300px" src="./assets/img/lola.png" alt="Lola" title="Lola">
+		</div>
+		<div class="col-6 text-center">
+			<mat-card>
+					<div class="list-fights-tools text-right">
+						 <button routerLink="new" mat-raised-button color="primary">
+						 	<mat-icon>bolt</mat-icon> START A FIGHT</button>
+						 &nbsp;
+						 <button routerLink="/home" mat-raised-button color="warn">
+						 	<mat-icon>navigate_before</mat-icon> RETURN HOME</button>
+					</div>
+					<h1 class="ethereal-text text-center">Ethereal Tournament</h1>
+					<h3 class="text-center">
+						 Fight requests:
+					</h3>
+					<div class="text-left">
+						{{fightRequests | json}}
+						 
+					</div>
+			</mat-card>
+		</div>
+		
+	
+</div>

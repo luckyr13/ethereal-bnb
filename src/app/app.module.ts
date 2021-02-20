@@ -13,6 +13,7 @@ import { SelectWalletDialogComponent } from './select-wallet-dialog/select-walle
 import { WrongNetworkComponent } from './wrong-network/wrong-network.component';
 import { AboutComponent } from './about/about.component';
 import { CharactersModule } from './characters/characters.module';
+import { FightModule } from './fight/fight.module';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { CharactersModule } from './characters/characters.module';
     SharedModule,
     BrowserAnimationsModule,
     CharactersModule,
+    FightModule,
     AppRoutingModule,
   ],
   entryComponents: [

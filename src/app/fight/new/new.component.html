@@ -1,0 +1,48 @@
+<mat-progress-bar color="accent" mode="indeterminate" *ngIf="loading"></mat-progress-bar>
+<div class="fight-container fadeInTransparent" *ngIf="!loading">
+
+	<div class="col-center">
+		<mat-card>
+				<div class="new-fight-tools text-right">
+					 <button routerLink="/characters" mat-raised-button color="warn">
+					 	<mat-icon>navigate_before</mat-icon> RETURN</button>
+				</div>
+				<h1 class="ethereal-text text-center">CHOOSE YOUR FIGHTER</h1>
+				<div class="text-left">
+					<mat-list>
+						<mat-list-item>
+							<span class="blue">Total characters created:</span>&nbsp;{{ totalCharacters }}
+						</mat-list-item>
+						<mat-list-item *ngFor="let character of characters">
+					    <div mat-line>Name: {{character.characterBaseMetadata.name}}</div>
+					    <div mat-line>Description: {{character.characterBaseMetadata.description}} </div>
+					    <div mat-line>
+					    	Birthdate: {{character.characterBaseMetadata.birthdate | date}} |
+					    	Planet: {{ planetsNames[character.characterBaseMetadata.planetId] }} |
+					    	Genre: {{ genderNames[character.characterBaseMetadata.genre] }} |
+					    	Element: {{ elementsOfNature[character.characterAttributesMetadata.primaryElement] }} 
+					    </div>
+					    <div mat-line>
+					    	Life: {{character.characterAttributesMetadata.life}} |
+					    	Armor: {{character.characterAttributesMetadata.armor}} |
+					    	Strength: {{character.characterAttributesMetadata.strength}} |
+					    	Speed: {{character.characterAttributesMetadata.speed}} |
+					    	Luck: {{character.characterAttributesMetadata.luck}} |
+					    	Spirit: {{character.characterAttributesMetadata.spirit}} |
+					    	Level: {{character.characterAttributesMetadata.level}} |
+					    	SP: {{character.characterAttributesMetadata.extraSkillsPoints}}
+					    </div>
+					    <div mat-line></div>
+					    <button mat-icon-button style="color: yellow" (click)="modalSearchOpponent()">
+				        <mat-icon>sports_kabaddi</mat-icon>
+				     </button>
+							<mat-divider></mat-divider>
+						</mat-list-item>
+					</mat-list>
+					 
+				</div>
+		</mat-card>
+	</div>
+		
+	
+</div>

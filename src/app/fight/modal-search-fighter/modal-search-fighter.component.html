@@ -1,0 +1,16 @@
+<h1 mat-dialog-title class="fight-text text-center">Choose your opponent</h1>
+<div mat-dialog-content>
+	<mat-progress-bar color="accent" mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
+	<mat-list>
+		<mat-list-item *ngFor="let fighter of fighters">
+	    <div mat-line>Name: {{fighter.address}}</div>
+	    <button mat-icon-button style="color: yellow" >
+        <mat-icon>sports_kabaddi</mat-icon>
+     </button>
+			<mat-divider></mat-divider>
+		</mat-list-item>
+	</mat-list>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Close</button>
+</div>

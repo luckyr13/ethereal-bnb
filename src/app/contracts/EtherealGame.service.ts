@@ -82,6 +82,22 @@ export class EtherealGameService
 	public hexToUtf8(_s: string): string {
 		return this.wps.web3.utils.hexToUtf8(_s);
 	}
+
+	public async getAllFighters(_totalFighters: number) {
+		let res: any = [];
+		try {
+			for (let i = 0; i < _totalFighters; i++) {
+				const address = await this.contract.methods.players(i).call();
+				const metadata = await this.getPlayerData(address);
+				res.push({address: address, metadata: metadata});
+			}
+
+		} catch (err) {
+			throw Error(err);
+		}
+		console.log(res);
+		return res;
+	}
 	
 	
 

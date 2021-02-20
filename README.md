@@ -1,5 +1,7 @@
-# EtherealBnb
-
+# Ethereal's Chronicles dApp
+<p align="center">
+  <img src="./src/assets/img/cronLogoMedium.png" width="200">
+</p>
 We believe that games must be fun!. We are developing a dApp, a new decentralized game called Ethereal's Chronicles. We are using Binance Smart Chain as our Blockchain to engage and reward our users for playing with our tokens (Kopernik token). In Ethereal's world almost everything is a crypto-collectible.
 
 Basically is a highly interactive multiplayer fighting style game. You can create new characters with awesome and unique characteristics burned and saved into BSC, so your characters are very valuable!

@@ -6,6 +6,15 @@ Basically is a highly interactive multiplayer fighting style game. You can creat
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.
 
+## DEMO
+You can play our first stable demo here: [https://bafzbeidekq3xo74yjxycvaa5asbiwoyevrc7timckvwym4caea52zjbmum.textile.space/](https://bafzbeidekq3xo74yjxycvaa5asbiwoyevrc7timckvwym4caea52zjbmum.textile.space/)
+
+## HOW TO CONFIGURE METAMASK?
+Please follow the instructions on the next link to connect your Metamask with Binance Smart Chain. [Connect Your MetaMask With Binance Smart Chain](https://docs.binance.org/smart-chain/wallet/metamask.html#connect-your-metamask-with-binance-smart-chain)
+
+## FREE BINANCE TOKENS FOR TESTNET
+Get FREE TESTNET BNB from the Binance faucet and start playing for FREE. [Binance Faucet](https://testnet.binance.org/faucet-smart)
+
 ## Deployed Contracts (Last update: 2021-02-17)
 EtherealGame: 0xB775ae662C2Ba38eC533317ba776F97daebD6D71
 KopernikToken: 0x8A1C5607D5e0bAdf8929EDbbB80906164100778B

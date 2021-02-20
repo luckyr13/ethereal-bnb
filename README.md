@@ -4,12 +4,15 @@
 </p>
 We believe that games must be fun!. We are developing a dApp, a new decentralized game called Ethereal's Chronicles. We are using Binance Smart Chain as our Blockchain to engage and reward our users for playing with our tokens (Kopernik token). In Ethereal's world almost everything is a crypto-collectible.
 
-Basically is a highly interactive multiplayer fighting style game. You can create new characters with awesome and unique characteristics burned and saved into BSC, so your characters are very valuable!
+Basically is a highly interactive multiplayer fighting style game. You can create new characters with awesome and unique characteristics burned and saved into BSC and use them to fight other's players characters. Every character is unique, special and very valuable!
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.
 
 ## DEMO
 You can play our first stable demo here: [https://bafzbeidekq3xo74yjxycvaa5asbiwoyevrc7timckvwym4caea52zjbmum.textile.space/](https://bafzbeidekq3xo74yjxycvaa5asbiwoyevrc7timckvwym4caea52zjbmum.textile.space/)
+
+## HOW TO PLAY?
+Go to the dApp website and click the "START" button, choose your wallet and register yourself as a player. Remember: You are going to need BNB (from testnet) in order to play!
 
 ## HOW TO CONFIGURE METAMASK?
 Please follow the instructions on the next link to connect your Metamask with Binance Smart Chain. [Connect Your MetaMask With Binance Smart Chain](https://docs.binance.org/smart-chain/wallet/metamask.html#connect-your-metamask-with-binance-smart-chain)

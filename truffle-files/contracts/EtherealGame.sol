@@ -274,7 +274,7 @@ contract EtherealGame is Context, AccessControl, IEtherealBase
     require(_sumSkillsPoints(extraAbilitiesMetaData) == 10, "The sum of skills points must be equal to 10");
     // The planet must be valid
     require(
-      IEtherealPlanet(planetContract).getIsPlanetActive(extraBaseMetaData.planetId), "Invalid planet id"
+      IEtherealPlanet(planetContract).getIsPlanetActive(extraBaseMetaData.planetId) == true, "Invalid planet id"
     );
 
     extraAbilitiesMetaData.level = 1;
@@ -380,7 +380,7 @@ contract EtherealGame is Context, AccessControl, IEtherealBase
     fightRequests[_msgSender()][_fightRequestId].accepted = true;
     fightRequests[_msgSender()][_fightRequestId].pending = false;
     fightRequests[_msgSender()][_fightRequestId].myCharacterId = _myCharacterId;
-    NewFightRequestAccepted(
+    emit NewFightRequestAccepted(
       _msgSender(), 
       fightRequests[_msgSender()][_fightRequestId].contender
     );

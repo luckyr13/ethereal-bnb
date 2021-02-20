@@ -43,4 +43,11 @@ module.exports = async (deployer) => {
   const kopernik = await KopernikToken.deployed();
   const initKoperniks = 1000000000;
   kopernik.transfer(EtherealGame.address, initKoperniks);
+
+  // Create planets 
+  await planet.createPlanet(web3.utils.utf8ToHex('Earth'), web3.utils.utf8ToHex('Earth is the third planet from the Sun and the only astronomical object known to harbor life.') );
+  await planet.createPlanet(web3.utils.utf8ToHex('Mars'), web3.utils.utf8ToHex('Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being larger than only Mercury.') );
+  await planet.createPlanet(web3.utils.utf8ToHex('X7'), web3.utils.utf8ToHex('No data available') );
+  await planet.createPlanet(web3.utils.utf8ToHex('Aetherial'), web3.utils.utf8ToHex('A very mystical planet.') );
+
 };

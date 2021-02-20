@@ -3,8 +3,12 @@
 	<mat-progress-bar color="accent" mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
 	<mat-list>
 		<mat-list-item *ngFor="let fighter of fighters">
-	    <div mat-line>Name: {{fighter.address}}</div>
-	    <button mat-icon-button style="color: yellow" >
+	    <div mat-line>
+	    	<span class="blue">Name:</span> {{fighter.metadata.nickname}} | <span class="blue">W:</span> {{fighter.metadata.wins}}
+	    	| <span class="blue">L:</span>{{fighter.metadata.loss}} | <span class="blue">T:</span>{{fighter.metadata.tie}}
+	    	| <span class="blue">#CH:</span>{{fighter.numCharacters}} 
+	    </div>
+	    <button mat-icon-button class="btn-request" [disabled]="disableButtons" (click)="requestFight(fighter.address)">
         <mat-icon>sports_kabaddi</mat-icon>
      </button>
 			<mat-divider></mat-divider>

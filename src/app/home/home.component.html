@@ -28,6 +28,12 @@
 		</div>
 		<div class="text-center" *ngIf="isRegistered">
 			 <h1>WELCOME BACK <span class="ethereal-text">{{etherealPlayerName}}</span></h1>
+			 
+			 <span class="blue">Balance in contract:</span>&nbsp;{{ balanceInContract }} Koperniks
+				<button mat-button color="accent" (click)="modalAllowance()">
+	        <mat-icon>add</mat-icon> Allow more
+	     	</button>
+
 			 <mat-list>
 					<mat-list-item><span class="blue">Wins:</span>&nbsp;{{ wins }} </mat-list-item>
 					<mat-list-item><span class="blue">Loss:</span>&nbsp;{{ loss }} </mat-list-item>

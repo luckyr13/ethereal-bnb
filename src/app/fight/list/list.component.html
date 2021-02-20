@@ -18,7 +18,27 @@
 						 Fight requests:
 					</h3>
 					<div class="text-left">
-						{{fightRequests | json}}
+						<mat-list>
+							<mat-list-item *ngFor="let freq of fightRequests">
+						    <div mat-line>Address: {{freq.contender}}</div>
+						    <div mat-line>
+						    	Accepted: {{ freq.accepted }}
+						    	| Rejected: {{ freq.rejected }}
+						    	| Pending: {{ freq.pending }}
+						    	| W: {{ freq.win }}
+						    	| L: {{ freq.loss }}
+						    	| T: {{ freq.tie }}
+						    </div>
+						    <div mat-line>
+						    	Expires on: {{freq.expirationDate}}
+						    </div>
+						    <button mat-icon-button (click)="acceptFightModal(freq.id)" color="accent">
+					        <mat-icon>sports_kabaddi</mat-icon>
+					     	</button>
+  							<mat-divider></mat-divider>
+							</mat-list-item>
+						</mat-list>
+
 						 
 					</div>
 			</mat-card>

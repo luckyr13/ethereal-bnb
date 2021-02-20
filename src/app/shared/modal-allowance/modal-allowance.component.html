@@ -1,0 +1,23 @@
+<h1 mat-dialog-title class="fight-text text-center">Update tokens allowance</h1>
+<div mat-dialog-content>
+	<mat-progress-bar color="accent" mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
+	<h2>Kopernik tokens available: {{ balance }}</h2>
+	<div>
+	  <mat-label>Increase allowance of your Kopernik tokens to Ethereal game (*you need to allow some Koperniks in order to Fight with other players):</mat-label>
+	  <br><br><br>
+	  <mat-slider
+	  	style="width: 100%"
+		  thumbLabel
+		  [displayWith]="formatLabel"
+		  tickInterval="1"
+		  min="1"
+		  [max]="balance"
+		  required
+		  #amount
+		  ></mat-slider>
+	</div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Close</button>
+  <button mat-button color="accent" (click)="approve(amount.value)">Approve</button>
+</div>

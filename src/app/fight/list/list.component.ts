@@ -5,6 +5,8 @@ import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { KopernikTokenService } from '../../contracts/KopernikToken.service';
 import { EtherealGameService } from '../../contracts/EtherealGame.service';
+import {MatDialog} from '@angular/material/dialog';
+import { ModalAcceptFightComponent } from '../modal-accept-fight/modal-accept-fight.component';
 
 @Component({
   selector: 'app-list',
@@ -24,7 +26,8 @@ export class ListComponent implements OnInit {
     private snackbar: MatSnackBar,
     private userSettings: UserSettingsService,
     private etherealGame: EtherealGameService,
-    private kopernikToken: KopernikTokenService
+    private kopernikToken: KopernikTokenService,
+    public dialog: MatDialog
   ) { }
 
 
@@ -56,8 +59,8 @@ export class ListComponent implements OnInit {
         await this.connectWallet(wallet);
       } else if (wallet && this.mainAccount) {
 
-        // Get my total characters 
-        await this.getMyTotalCharacters(this.mainAccount);
+        // Get list of fight requests
+        await this.getReceivedFightRequests(this.mainAccount);
 
       }
       this.loading = false;
@@ -76,7 +79,7 @@ export class ListComponent implements OnInit {
       // Get balance
       await this.getKoperniksBalance(res.account);
       // Get my total characters 
-      await this.getMyTotalCharacters(this.mainAccount);
+      await this.getReceivedFightRequests(this.mainAccount);
     } catch (err) {
       this.message(`${err}`, 'error');
     }
@@ -93,7 +96,7 @@ export class ListComponent implements OnInit {
     }
   }
 
-  async getMyTotalCharacters(account: string) {
+  async getReceivedFightRequests(account: string) {
     try {
       this.etherealGame.init();
       this.totalFightRequests = await this.etherealGame.getTotalFightRequests(account);
@@ -106,14 +109,29 @@ export class ListComponent implements OnInit {
     }
   }
 
-  async getFightRequestsList(account: string, totalCharacters: number) {
+  async getFightRequestsList(account: string, totalFightRequests: number) {
 
     try {
       this.etherealGame.init();
-      this.fightRequests = await this.etherealGame.getFightRequests(account);
+      for (let i = 0; i < totalFightRequests; i++) {
+        const metadata = await this.etherealGame.getFightRequestMetadata(account, i);
+        metadata.id = i;
+        this.fightRequests.push(metadata);
+      }
     } catch (err) {
       throw err;
     }
+  }
+
+  acceptFightModal(_fightRequestId: string) {
+     let dialogRef = this.dialog.open(ModalAcceptFightComponent, {
+      data: { mainAccount: this.mainAccount, fightRequestId: _fightRequestId },
+      disableClose: true
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 
 }

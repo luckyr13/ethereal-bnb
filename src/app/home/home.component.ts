@@ -8,6 +8,8 @@ import { KopernikTokenService } from '../contracts/KopernikToken.service';
 import { Router } from '@angular/router';
 import { EtherealGameService } from '../contracts/EtherealGame.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import {MatDialog} from '@angular/material/dialog';
+import { ModalAllowanceComponent } from '../shared/modal-allowance/modal-allowance.component';
 
 declare const window: any;
 
@@ -19,6 +21,7 @@ export class HomeComponent implements OnInit {
 	public loading: boolean = true;
   public isLoggedIn: boolean = false;
   public isRegistered: boolean = false;
+  public balanceInContract: string = '0';
   public registerForm = new FormGroup({
     nickname: new FormControl('', [ Validators.required]),
   });
@@ -41,7 +44,8 @@ export class HomeComponent implements OnInit {
     private snackbar: MatSnackBar,
     private kopernikToken: KopernikTokenService,
     private router: Router,
-    private etherealGame: EtherealGameService
+    private etherealGame: EtherealGameService,
+    public dialog: MatDialog
   ) { }
 
 
@@ -58,6 +62,9 @@ export class HomeComponent implements OnInit {
       await this.getKoperniksBalance(res.account);
       // Check if player is already registered
       await this.getIsPlayerRegistered(res.account);
+      // Get allowed balance 
+      await this.getAllowedBalanceInContract(this.mainAccount);
+
       // If is registered 
       if (this.isRegistered) {
         const playerData = await this.etherealGame.getPlayerData(this.mainAccount);
@@ -110,6 +117,8 @@ export class HomeComponent implements OnInit {
         this.isLoggedIn = true;
         this.mainAccount = account;
         await this.getIsPlayerRegistered(account);
+        // Get allowed balance 
+        await this.getAllowedBalanceInContract(this.mainAccount);
       }
     });
 
@@ -176,5 +185,27 @@ export class HomeComponent implements OnInit {
   enableRegisterForm() {
     this.nickname!.enable();
   }
+
+
+  modalAllowance() {
+    let dialogRef = this.dialog.open(ModalAllowanceComponent, {
+      data: { mainAccount: this.mainAccount },
+      disableClose: true
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+
+  async getAllowedBalanceInContract(owner: string) {
+    const spender = this.etherealGame.getContractAddress();
+    const b = await this.kopernikToken.getAllowedBalanceForEtherealGame(
+      owner, spender
+     );
+
+    this.balanceInContract = `${parseInt(b) / 100}`;
+  }
+
 
 }

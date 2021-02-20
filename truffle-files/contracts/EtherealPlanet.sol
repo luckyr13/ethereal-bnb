@@ -111,9 +111,9 @@ contract EtherealPlanet is Context, AccessControl, IEtherealBase
 		returns (uint id)
 	{
 		require(hasRole(DEFAULT_ADMIN_ROLE, _msgSender()), "createPlanet: must have admin role");
-		totalNumPlanets = totalNumPlanets.add(1);
 		uint256 planetId = totalNumPlanets;
 		planets[planetId] = Planet(_name, _description, 0, true);
+		totalNumPlanets = totalNumPlanets.add(1);
 		planetNameExists[_name] = true;
 		emit NewPlanetCreated(planetId, _name);
 		return planetId;

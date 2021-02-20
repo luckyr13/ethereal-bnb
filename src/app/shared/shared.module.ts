@@ -1,4 +1,5 @@
-import { NgModule } from '@angular/core';
+import { NgModule  } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -18,11 +19,18 @@ import {MatNativeDateModule} from '@angular/material/core';
 import {MatSelectModule} from '@angular/material/select';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatSliderModule} from '@angular/material/slider';
+import { ModalAllowanceComponent } from './modal-allowance/modal-allowance.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [ModalAllowanceComponent],
   imports: [
+    MatProgressBarModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatSliderModule,
+    MatFormFieldModule,
+    CommonModule
   ],
   exports: [
     LayoutModule,
@@ -47,6 +55,8 @@ import {MatSliderModule} from '@angular/material/slider';
   ],
   providers: [
     MatDatepickerModule
+  ], entryComponents: [
+    ModalAllowanceComponent
   ]
 })
 export class SharedModule { }

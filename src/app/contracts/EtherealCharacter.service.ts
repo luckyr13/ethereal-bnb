@@ -12,6 +12,8 @@ export class EtherealCharacterService
 {
 	// BSC Testnet
 	private _contractAddress: string = '0x95FA15DDef966463c8C42279695232F5df6a73A3';
+	// local
+	//private _contractAddress: string = '0x956FeC9fDAAb06DA62C056ae3509a3897938Fb9C';
 	
 	public contract: any = null;
 
@@ -82,23 +84,6 @@ export class EtherealCharacterService
 		return res;
 	}
 
-	public async mintCharacter(
-		_to: string,
-		_baseData: ICharacterBaseMetadata,
-		_physicalData: ICharacterPhysicalMetadata,
-		_attributesData: ICharacterAttributesMetadata
-	): Promise<any> {
-		try {
-			_baseData.name = this._padHex(_baseData.name, 64);
-			_baseData.description = this._padHex(_baseData.description, 64);
-			_baseData.birthdate = this._padHex(_baseData.birthdate, 48);
-
-			return this.contract.methods.mint(_to, _baseData, _physicalData, _attributesData).send({from: _to});
-		} catch (err) {
-			throw Error(err);
-		}
-	}
-
 	public async getBalanceOf(_account: string) {
 		try {
 			return this.contract.methods.balanceOf(_account).call();
@@ -118,6 +103,7 @@ export class EtherealCharacterService
 			for (let i = 0; i < totalSupply; i++) {
 				if (await this.contract.methods.ownerOf(i).call() == _account) {
 					let metadata = await this.getCharacterMetadata(''+i);
+					metadata.id = i;
 					res.push(metadata);
 				}
 				if (res.length == _totalCharacters) {

@@ -12,6 +12,8 @@ export class EtherealPlanetService
 {
 	// BSC Testnet
 	private _contractAddress: string = '0x62AC806a90977B5799F9622Ad04842A01c339Bc6';
+	// local 
+	//private _contractAddress: string = '0x6F5789f71b1A269E8dD92C15A52641Bf6180415f';
 	
 	public contract: any = null;
 

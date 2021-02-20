@@ -11,6 +11,7 @@ import {ICharacterPhysicalMetadata} from '../../contracts/ICharacterPhysicalMeta
 import {ICharacterAttributesMetadata} from '../../contracts/ICharacterAttributesMetadata';
 import { IEtherealPlanet } from '../../contracts/IEtherealPlanet';
 import { EtherealPlanetService } from '../../contracts/EtherealPlanet.service';
+import { EtherealGameService } from '../../contracts/EtherealGame.service';
 import {ELEMENTSOFNATURE} from '../../contracts/ElementsOfNature';
 
 @Component({
@@ -48,7 +49,8 @@ export class NewComponent implements OnInit {
     private userSettings: UserSettingsService,
     private etherealCharacter: EtherealCharacterService,
     private kopernikToken: KopernikTokenService,
-    private etherealPlanet: EtherealPlanetService
+    private etherealPlanet: EtherealPlanetService,
+    private etherealGame: EtherealGameService
   ) { }
 
   get name() {
@@ -234,7 +236,8 @@ export class NewComponent implements OnInit {
       }
 
       // Register player
-      const receipt = await this.etherealCharacter.mintCharacter(
+      this.etherealGame.init();
+      const receipt = await this.etherealGame.createCharacter(
         this.mainAccount, base, physical, attributes
       );
       this.etherealCharacter.setMintedCharacterListeners(this.mainAccount, (event: any) => {
@@ -264,6 +267,11 @@ export class NewComponent implements OnInit {
     this.primaryelement!.disable();
     this.secondaryelement!.disable();
     this.life!.disable();
+    this.armor!.disable();
+    this.strength!.disable();
+    this.speed!.disable();
+    this.luck!.disable();
+    this.spirit!.disable();
   }
 
   enableCreateCharacterForm() {
@@ -274,12 +282,15 @@ export class NewComponent implements OnInit {
     this.primaryelement!.enable();
     this.secondaryelement!.enable();
     this.life!.enable();
+    this.armor!.enable();
+    this.strength!.enable();
+    this.speed!.enable();
+    this.luck!.enable();
+    this.spirit!.enable();
+
   }
 
   formatLabel(value: number) {
-    if (value >= 1000) {
-      return Math.round(value / 1000) + 'pts';
-    }
     return value;
   }
 

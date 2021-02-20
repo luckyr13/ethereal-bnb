@@ -124,9 +124,9 @@ export class NewComponent implements OnInit {
     }
   }
 
-  modalSearchOpponent() {
+  modalSearchOpponent(_myCharacterId: string) {
     let dialogRef = this.dialog.open(ModalSearchFighterComponent, {
-      data: { name: 'austin' },
+      data: { mainAccount: this.mainAccount, myCharacterId: _myCharacterId },
       disableClose: true
     });
 

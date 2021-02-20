@@ -14,7 +14,8 @@ export class WalletProviderService {
       4: 'Ethereum Rinkeby (4)',
       5: 'Ethereum Goerli (5)',
       56: 'Binance Smart Chain (56)',
-      97: 'Binance Smart Chain TESTING Network (97)'
+      97: 'Binance Smart Chain TESTING Network (97)',
+      5777: 'Ganache?'
   };
   private _networkIdDeployed: string = '97';
 

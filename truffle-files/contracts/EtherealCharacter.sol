@@ -248,7 +248,7 @@ contract EtherealCharacter is Context, AccessControl, ERC721Burnable, ERC721Paus
       external
       returns (uint8)
     {
-      require(hasRole(MINTER_ROLE, _msgSender()), "EtherealCharacter: must have minter role to mint");
+      require(hasRole(MINTER_ROLE, _msgSender()), "EtherealCharacter: must have minter role to upgrade");
       _increaseCharacterSkillsPoints(_tokenId, _skillsPointsEarned);
       uint8 newLevel = _levelUpgrade(_tokenId);
       return newLevel;

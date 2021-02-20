@@ -14,26 +14,26 @@
 							<span class="blue">Total characters created:</span>&nbsp;{{ totalCharacters }}
 						</mat-list-item>
 						<mat-list-item *ngFor="let character of characters">
-					    <div mat-line>Name: {{character.characterBaseMetadata.name}}</div>
-					    <div mat-line>Description: {{character.characterBaseMetadata.description}} </div>
+					    <div mat-line><span class="blue">Name:</span> {{character.characterBaseMetadata.name}}</div>
+					    <div mat-line><span class="blue">Description:</span> {{character.characterBaseMetadata.description}} </div>
 					    <div mat-line>
-					    	Birthdate: {{character.characterBaseMetadata.birthdate | date}} |
-					    	Planet: {{ planetsNames[character.characterBaseMetadata.planetId] }} |
-					    	Genre: {{ genderNames[character.characterBaseMetadata.genre] }} |
-					    	Element: {{ elementsOfNature[character.characterAttributesMetadata.primaryElement] }} 
+					    	<span class="blue">Birthdate:</span> {{character.characterBaseMetadata.birthdate}} |
+					    	<span class="blue">Planet:</span> {{ planetsNames[character.characterBaseMetadata.planetId] }} |
+					    	<span class="blue">Genre:</span> {{ genderNames[character.characterBaseMetadata.genre] }} |
+					    	<span class="blue">Element:</span> {{ elementsOfNature[character.characterAttributesMetadata.primaryElement] }} 
 					    </div>
 					    <div mat-line>
-					    	Life: {{character.characterAttributesMetadata.life}} |
-					    	Armor: {{character.characterAttributesMetadata.armor}} |
-					    	Strength: {{character.characterAttributesMetadata.strength}} |
-					    	Speed: {{character.characterAttributesMetadata.speed}} |
-					    	Luck: {{character.characterAttributesMetadata.luck}} |
-					    	Spirit: {{character.characterAttributesMetadata.spirit}} |
-					    	Level: {{character.characterAttributesMetadata.level}} |
-					    	SP: {{character.characterAttributesMetadata.extraSkillsPoints}}
+					    	<span class="blue">Life:</span> {{character.characterAttributesMetadata.life}} |
+					    	<span class="blue">Armor:</span> {{character.characterAttributesMetadata.armor}} |
+					    	<span class="blue">Strength:</span> {{character.characterAttributesMetadata.strength}} |
+					    	<span class="blue">Speed:</span> {{character.characterAttributesMetadata.speed}} |
+					    	<span class="blue">Luck:</span> {{character.characterAttributesMetadata.luck}} |
+					    	<span class="blue">Spirit:</span> {{character.characterAttributesMetadata.spirit}} |
+					    	<span class="blue">Level:</span> {{character.characterAttributesMetadata.level}} |
+					    	<span class="blue">SP:</span> {{character.characterAttributesMetadata.extraSkillsPoints}}
 					    </div>
 					    <div mat-line></div>
-					    <button mat-icon-button style="color: yellow" (click)="modalSearchOpponent()">
+					    <button mat-icon-button style="color: yellow" (click)="modalSearchOpponent(character.id)">
 				        <mat-icon>sports_kabaddi</mat-icon>
 				     </button>
 							<mat-divider></mat-divider>

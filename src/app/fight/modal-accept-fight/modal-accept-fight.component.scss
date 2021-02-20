@@ -2,15 +2,15 @@
 .fight-text {
 	color: #FFF;
 	font-family: 'Potta One', cursive;
-	text-shadow: 2px 2px 5px yellow;
+	text-shadow: 2px 2px 5px red;
 	margin-bottom: 20px;
 }
 
-.btn-request {
+.btn-accept-request {
 	color: yellow;
 }
 
-.btn-request:disabled {
+.btn-accept-request:disabled {
 	color: gray;
 
 }

@@ -14,19 +14,16 @@
 						 	<mat-icon>navigate_before</mat-icon> RETURN HOME</button>
 					</div>
 					<h1 class="ethereal-text text-center">My Ethereal's Characters</h1>
-					<h3 class="text-center">
-						 Characters list:
-					</h3>
 					<div class="text-left">
 						<mat-list>
 							<mat-list-item>
-								<span class="blue">Total characters created:</span>&nbsp;{{ totalCharacters }}
+								<span class="blue">Total characters:</span>&nbsp;{{ totalCharacters }}
 							</mat-list-item>
 							<mat-list-item *ngFor="let character of characters">
 						    <div mat-line>Name: {{character.characterBaseMetadata.name}}</div>
 						    <div mat-line>Description: {{character.characterBaseMetadata.description}} </div>
 						    <div mat-line>
-						    	Birthdate: {{character.characterBaseMetadata.birthdate | date}} |
+						    	Birthdate: {{character.characterBaseMetadata.birthdate}} |
 						    	Planet: {{ planetsNames[character.characterBaseMetadata.planetId] }} |
 						    	Genre: {{ genderNames[character.characterBaseMetadata.genre] }} |
 						    	Element: {{ elementsOfNature[character.characterAttributesMetadata.primaryElement] }} 
@@ -44,7 +41,7 @@
 						    <div mat-line></div>
 						    <button mat-icon-button color="accent">
 					        <mat-icon>info</mat-icon>
-					     </button>
+					     	</button>
   							<mat-divider></mat-divider>
 							</mat-list-item>
 						</mat-list>

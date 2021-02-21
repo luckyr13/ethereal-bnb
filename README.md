@@ -4,7 +4,7 @@
 </p>
 Hello, we are the Guzmán brothers. We believe that games must be fun!. We are developing a dApp, a new decentralized game called Ethereal's Chronicles. We are using Binance Smart Chain as our Blockchain to engage and reward our users for playing with our tokens (Kopernik token based on BEP20 protocol). In Ethereal's world almost everything is a crypto-collectible.
 
-Basically is a highly interactive multiplayer fighting style game. You can create new characters with awesome and unique characteristics burned and saved into BSC and use them to fight other's players characters. Every character is unique, special and very valuable!
+Basically is a highly interactive multiplayer fighting style game. You can create new characters (ERC-721 collectibles) with awesome and unique characteristics burned and saved into BSC and use them to fight other's players characters. Every character is unique, special and very valuable!
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.
 

@@ -11,6 +11,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## DEMO
 You can play our first stable demo here: [https://bafzbeidekq3xo74yjxycvaa5asbiwoyevrc7timckvwym4caea52zjbmum.textile.space/](https://bafzbeidekq3xo74yjxycvaa5asbiwoyevrc7timckvwym4caea52zjbmum.textile.space/)
 
+## DEMO VIDEO
+Watch our demo video here: https://www.youtube.com/watch?v=vXsJ3irwx7Y
+
 ## HOW TO PLAY?
 Go to the dApp website and click the "START" button, choose your wallet and register yourself as a player. Remember: You are going to need BNB (from testnet) in order to play!
 

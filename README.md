@@ -2,7 +2,7 @@
 <p align="center">
   <img src="./src/assets/img/cronLogoMedium.png" width="200">
 </p>
-We believe that games must be fun!. We are developing a dApp, a new decentralized game called Ethereal's Chronicles. We are using Binance Smart Chain as our Blockchain to engage and reward our users for playing with our tokens (Kopernik token). In Ethereal's world almost everything is a crypto-collectible.
+Hello, we are the Guzmán brothers. We believe that games must be fun!. We are developing a dApp, a new decentralized game called Ethereal's Chronicles. We are using Binance Smart Chain as our Blockchain to engage and reward our users for playing with our tokens (Kopernik token). In Ethereal's world almost everything is a crypto-collectible.
 
 Basically is a highly interactive multiplayer fighting style game. You can create new characters with awesome and unique characteristics burned and saved into BSC and use them to fight other's players characters. Every character is unique, special and very valuable!
 
@@ -54,6 +54,15 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Troubleshooting
 
 If you don't have installed Angular cli then you can try running this dapp using the node package manager: npm run ng serve
+
+## About Ethereal's Game
+We create our own images for Ethereal's Game. All characters were made by the ukrainian artist Ihor Khoynyak, one of the most talented artists in the world!
+
+Also the characters and the game were in turn based on the histories written by Luis Guzmán. Coding made by Ricardo Guzmán. Thank God that finally we made this project happen.
+
+## Contact
+
+This project is still in beta stage, please reach us if you need some help about the game or if you find any bug to the email: criptoalfacoaching@gmail.com
 
 ## Further help
 

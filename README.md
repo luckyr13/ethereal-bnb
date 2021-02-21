@@ -61,7 +61,7 @@ If you don't have installed Angular cli then you can try running this dapp using
 ## About Ethereal's Game
 We create our own images for Ethereal's Game. All characters were made by the ukrainian artist Ihor Khoynyak, one of the most talented artists in the world!
 
-Also the characters and the game were in turn based on the histories written by Luis Guzmán. Coding made by Ricardo Guzmán. Thank God that finally we made this project happen.
+Also the characters and the game were in turn based on the histories written by Miguel Guzmán. Coding made by Ricardo Guzmán. Thank God that finally we made this project happen.
 
 ## Contact
 

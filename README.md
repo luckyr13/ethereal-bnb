@@ -8,6 +8,9 @@ Basically is a highly interactive multiplayer fighting style game. You can creat
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.
 
+### IMPORTANT NOTE:
+We stopped maintaining this dapp a while ago! But because it's a decentralized app, it should work for a long time. Please enjoy! but keep in mind that it should be used for testing purposes only.
+
 ## DEMO
 You can play our first stable demo here: [https://bafzbeidekq3xo74yjxycvaa5asbiwoyevrc7timckvwym4caea52zjbmum.textile.space/](https://bafzbeidekq3xo74yjxycvaa5asbiwoyevrc7timckvwym4caea52zjbmum.textile.space/)
 

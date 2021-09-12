@@ -66,9 +66,6 @@ We create our own images for Ethereal's Game. All characters were made by the uk
 
 Also the characters and the game were in turn based on the stories written by Miguel Guzmán. Coding made by Ricardo Guzmán. Thank God that finally we made this project happen.
 
-## Contact
-
-This project is still in beta stage, please reach us if you need some help about the game or if you find any bug to the email: criptoalfacoaching@gmail.com
 
 ## Further help
 
